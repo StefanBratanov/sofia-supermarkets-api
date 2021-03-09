@@ -1,0 +1,2 @@
+logging.level:
+  org.apache.pdfbox.io.ScratchFileBuffer: WARN
