@@ -1,46 +1,44 @@
 package com.stefata.sofiasupermarketsapi
 
-import org.apache.pdfbox.pdmodel.PDDocument
-import org.apache.pdfbox.text.PDFTextStripper
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.stefata.sofiasupermarketsapi.model.Product
+import com.stefata.sofiasupermarketsapi.model.Supermarket.BILLA
+import org.apache.commons.lang3.StringUtils.normalizeSpace
+import org.jsoup.Jsoup
 import org.junit.jupiter.api.Test
 import java.nio.file.Files
 import java.nio.file.Paths
-import java.nio.file.StandardOpenOption
-import java.util.stream.Collectors
+import java.nio.file.StandardOpenOption.CREATE
+import java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+import java.util.Objects.nonNull
+import kotlin.text.RegexOption.IGNORE_CASE
 
 class SofiaSupermarketsApiApplicationTests {
 
     @Test
-    fun contextLoads() {
+    fun readsBilla() {
+        val doc = Jsoup.connect("https://ssbbilla.site/weekly").get()
 
-        val pdfFile =
-            Paths.get("C:\\Users\\StefanPC\\IdeaProjects\\sofia-supermarkets-api\\src\\test\\resources\\BILLA Bulgaria - BG_weekly_leaflet_04.03.2021-10.03.2021_CW09__WEB.pdf")
+        val productsDivs = doc.select(".productSection > .product")
 
-        val pdf = PDDocument.load(pdfFile.toFile())
+        val products = productsDivs.map {
+            val productName = it.select(".actualProduct").text()
+            val oldPrice = it.select(".price").first()?.text()
+            val price = it.select(".price").last()?.text()
+            Product(supermarket = BILLA, name = productName, price = price?.toDouble(), oldPrice = oldPrice?.toDouble())
+        }.filter {
+            nonNull(it.price)
+        }.map {
+            val productName = it.name
+            val normalizedName = productName.replace("Най.*добра.*цена.*".toRegex(IGNORE_CASE), "")
+                .replace("Изпечен.*всеки.*минути".toRegex(IGNORE_CASE), "")
+                .replace("Виж още.*".toRegex(IGNORE_CASE), "")
+            it.copy(name = normalizeSpace(normalizedName))
+        }
 
-        val pdfStripper = PDFTextStripper()
+        val json = ObjectMapper().writeValueAsString(products)
 
-        pdfStripper.startPage = 7
-        pdfStripper.endPage = 7
-
-        val text = pdfStripper.getText(pdf)
-
-        val splitRegex = "(?=-\\d{1,2}%)".toRegex()
-
-        val lines = text.split(splitRegex).stream()
-            .map { it.split(System.lineSeparator()).stream().collect(Collectors.joining()) }
-            .collect(Collectors.toList())
-
-        println(lines.size)
-
-        Files.writeString(
-            pdfFile.resolveSibling("text.txt"),
-            lines.stream().collect(Collectors.joining(System.lineSeparator())),
-            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
-        )
-
-        //println(value)
-
+        Files.writeString(Paths.get("billa.json"), json, CREATE, TRUNCATE_EXISTING)
 
     }
 
