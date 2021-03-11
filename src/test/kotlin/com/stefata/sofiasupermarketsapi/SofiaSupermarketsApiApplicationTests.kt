@@ -28,6 +28,7 @@ class SofiaSupermarketsApiApplicationTests {
             val productName = it.select(".actualProduct").text()
             val oldPrice = it.select(".price").first()?.text()
             val price = it.select(".price").last()?.text()
+
             Product(name = productName, price = price?.toDouble(), oldPrice = oldPrice?.toDouble())
         }.filter {
             nonNull(it.price)
@@ -54,14 +55,14 @@ class SofiaSupermarketsApiApplicationTests {
             val title = it.select(".m-offer-tile__title").text()
             val quantity = it.select(".m-offer-tile__quantity").text()
 
-            val oldPrice = it.select(".a-pricetag__old-price")?.text()?.replace(",",".")
-            val price = it.select(".a-pricetag__price")?.text()?.replace(",",".")
+            val oldPrice = it.select(".a-pricetag__old-price")?.text()
+            val price = it.select(".a-pricetag__price")?.text()
 
             Product(
                 name = normalizeSpace("$subtitle $title"),
                 quantity = normalizeSpace(quantity),
-                price = price?.toDouble(),
-                oldPrice = oldPrice?.toDouble()
+                price = normalizePrice(price),
+                oldPrice = normalizePrice(oldPrice)
             )
         }
 
@@ -69,6 +70,38 @@ class SofiaSupermarketsApiApplicationTests {
 
         Files.writeString(Paths.get("kaufland.json"), json, CREATE, TRUNCATE_EXISTING)
 
+    }
+
+    @Test
+    fun readsTMarket() {
+        val doc = Jsoup.connect("https://tmarketonline.bg/category/visokoalkoholni-napitki").get()
+
+        val products = doc.select("._products-list").select("div[data-box=product]").map {
+            val productName = it.select("._product-name").text()
+
+            var price = it.select("._product-price-compare")
+            var oldPrice = it.select("._product-price-old")
+
+            if (!price.hasText()) {
+                val onlyPrice = it.select(".price")
+                price = onlyPrice
+                oldPrice = onlyPrice
+            }
+
+            Product(
+                name = productName,
+                price = normalizePrice(price.text()),
+                oldPrice = normalizePrice(oldPrice.text())
+            )
+        }
+
+        val json = ObjectMapper().writeValueAsString(products)
+
+        Files.writeString(Paths.get("tmarket.json"), json, CREATE, TRUNCATE_EXISTING)
+    }
+
+    private fun normalizePrice(price: String?): Double? {
+        return price?.replace("лв.*".toRegex(), "")?.replace(',', '.')?.toDouble()
     }
 
 }
