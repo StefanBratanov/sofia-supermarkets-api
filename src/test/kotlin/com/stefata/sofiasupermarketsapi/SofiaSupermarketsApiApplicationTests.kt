@@ -3,8 +3,12 @@ package com.stefata.sofiasupermarketsapi
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefata.sofiasupermarketsapi.model.Product
 import org.apache.commons.lang3.StringUtils.normalizeSpace
+import org.apache.logging.log4j.util.Strings
+import org.apache.pdfbox.pdmodel.PDDocument
 import org.jsoup.Jsoup
 import org.junit.jupiter.api.Test
+import technology.tabula.ObjectExtractor
+import technology.tabula.extractors.BasicExtractionAlgorithm
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.nio.file.StandardOpenOption.CREATE
@@ -98,6 +102,36 @@ class SofiaSupermarketsApiApplicationTests {
         val json = ObjectMapper().writeValueAsString(products)
 
         Files.writeString(Paths.get("tmarket.json"), json, CREATE, TRUNCATE_EXISTING)
+    }
+
+    @Test
+    fun readsFantastico() {
+        val pdf = Paths.get("fantastiko.pdf")
+//        FileUtils.copyURLToFile(
+//            URL("https://broshura.bg/platform/download/1103-17032021"), pdf.toFile(),
+//            60000, 60000
+//        )
+
+        val doc = PDDocument.load(pdf.toFile())
+
+        val bea = BasicExtractionAlgorithm()
+        val oe = ObjectExtractor(doc)
+        val page = oe.extract(1)
+
+        val tables = bea.extract(page)
+
+        val textChunks = tables.flatMap {
+            it.rows
+        }.flatten().filter {
+            !Strings.isBlank(it.text)
+        }
+
+        val text = textChunks.joinToString(separator = System.lineSeparator())
+
+        Files.writeString(Paths.get("fantastico.txt"), text, CREATE, TRUNCATE_EXISTING)
+
+        doc.close()
+
     }
 
     private fun normalizePrice(price: String?): Double? {
