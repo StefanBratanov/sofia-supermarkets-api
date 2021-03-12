@@ -3,12 +3,11 @@ package com.stefata.sofiasupermarketsapi
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefata.sofiasupermarketsapi.model.Product
 import org.apache.commons.lang3.StringUtils.normalizeSpace
-import org.apache.logging.log4j.util.Strings
 import org.apache.pdfbox.pdmodel.PDDocument
+import org.apache.pdfbox.text.PDFTextStripper
+import org.apache.pdfbox.text.TextPosition
 import org.jsoup.Jsoup
 import org.junit.jupiter.api.Test
-import technology.tabula.ObjectExtractor
-import technology.tabula.extractors.BasicExtractionAlgorithm
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.nio.file.StandardOpenOption.CREATE
@@ -114,23 +113,42 @@ class SofiaSupermarketsApiApplicationTests {
 
         val doc = PDDocument.load(pdf.toFile())
 
-        val bea = BasicExtractionAlgorithm()
-        val oe = ObjectExtractor(doc)
-        val page = oe.extract(1)
+        val pdfTextStripper = PDFTextStripperWithCoordinates()
 
-        val tables = bea.extract(page)
+        pdfTextStripper.startPage = 1
+        pdfTextStripper.endPage = 1
 
-        val textChunks = tables.flatMap {
-            it.rows
-        }.flatten().filter {
-            !Strings.isBlank(it.text)
-        }
+        //don't need the output of this operation
+        pdfTextStripper.getText(doc)
 
-        val text = textChunks.joinToString(separator = System.lineSeparator())
+        println(pdfTextStripper.strippedTexts)
 
-        Files.writeString(Paths.get("fantastico.txt"), text, CREATE, TRUNCATE_EXISTING)
+
+//        Files.writeString(Paths.get("fantastico.txt"), text, CREATE, TRUNCATE_EXISTING)
 
         doc.close()
+
+    }
+
+    data class TextWithCoordinates(val text: String?)
+
+    class PDFTextStripperWithCoordinates : PDFTextStripper() {
+
+        val strippedTexts: MutableList<TextWithCoordinates> = mutableListOf()
+
+        override fun startDocument(document: PDDocument?) {
+            strippedTexts.clear()
+        }
+
+        override fun writeString(text: String?, textPositions: MutableList<TextPosition>?) {
+            val toAdd = TextWithCoordinates(text = text)
+            strippedTexts.add(toAdd)
+            textPositions?.forEach {
+                println("${it.xDirAdj}_${it.yDirAdj}_${it.heightDir}_${it.widthDirAdj}")
+
+            }
+            super.writeString(text, textPositions)
+        }
 
     }
 

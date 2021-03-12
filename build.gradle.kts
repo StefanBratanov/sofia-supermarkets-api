@@ -23,10 +23,7 @@ dependencies {
     implementation("org.apache.commons:commons-lang3")
     implementation("commons-io:commons-io:2.8.0")
     implementation("org.jsoup:jsoup:1.13.1")
-    implementation("technology.tabula:tabula:1.0.4") {
-        exclude("org.slf4j", "slf4j-simple")
-        exclude("commons-logging", "commons-logging")
-    }
+    implementation("org.apache.pdfbox:pdfbox:2.0.22")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
