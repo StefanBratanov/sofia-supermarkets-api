@@ -28,7 +28,7 @@ class KMeansWithInitialCenters(
         // number of clusters has to be smaller or equal the number of data points
         // number of clusters has to be smaller or equal the number of data points
         if (points!!.size < k) {
-            throw NumberIsTooSmallException(points!!.size, k, false)
+            throw NumberIsTooSmallException(points.size, k, false)
         }
 
         // create the initial clusters
@@ -41,7 +41,7 @@ class KMeansWithInitialCenters(
 
         // create an array containing the latest assignment of a point to a cluster
         // no need to initialize the array, as it will be filled with the first assignment
-        val assignments = IntArray(points!!.size)
+        val assignments = IntArray(points.size)
         assignPointsToClusters(clusters, points, assignments)
 
         // iterate through updating the centers until we're done
@@ -54,11 +54,11 @@ class KMeansWithInitialCenters(
                 ArrayList<CentroidCluster<TextWithCoordinates>>()
             for (cluster in clusters) {
                 val newCenter: Clusterable
-                if (cluster.getPoints().isEmpty()) {
+                if (cluster.points.isEmpty()) {
                     newCenter = getPointFromLargestVarianceCluster(clusters)
                     emptyCluster = true
                 } else {
-                    newCenter = centroidOf(cluster.getPoints(), cluster.getCenter().point.size)
+                    newCenter = centroidOf(cluster.points, cluster.center.point.size)
                 }
                 newClusters.add(CentroidCluster<TextWithCoordinates>(newCenter))
             }
@@ -80,15 +80,14 @@ class KMeansWithInitialCenters(
         assignments: IntArray
     ): Int {
         var assignedDifferently = 0
-        var pointIndex = 0
-        for (p in points) {
+        for ((pointIndex, p) in points.withIndex()) {
             val clusterIndex = getNearestCluster(clusters, p)
             if (clusterIndex != assignments[pointIndex]) {
                 assignedDifferently++
             }
             val cluster: CentroidCluster<TextWithCoordinates> = clusters[clusterIndex]
             cluster.addPoint(p)
-            assignments[pointIndex++] = clusterIndex
+            assignments[pointIndex] = clusterIndex
         }
         return assignedDifferently
     }
@@ -131,15 +130,13 @@ class KMeansWithInitialCenters(
         point: TextWithCoordinates
     ): Int {
         var minDistance = Double.MAX_VALUE
-        var clusterIndex = 0
         var minCluster = 0
-        for (c in clusters) {
-            val distance = distance(point, c.getCenter())
+        for ((clusterIndex, c) in clusters.withIndex()) {
+            val distance = distance(point, c.center)
             if (distance < minDistance) {
                 minDistance = distance
                 minCluster = clusterIndex
             }
-            clusterIndex++
         }
         return minCluster
     }
@@ -147,7 +144,7 @@ class KMeansWithInitialCenters(
     private fun centroidOf(points: Collection<TextWithCoordinates>, dimension: Int): Clusterable {
         val centroid = DoubleArray(dimension)
         for (p in points) {
-            val point: DoubleArray = p.getPoint()
+            val point: DoubleArray = p.point
             for (i in centroid.indices) {
                 centroid[i] += point[i]
             }
