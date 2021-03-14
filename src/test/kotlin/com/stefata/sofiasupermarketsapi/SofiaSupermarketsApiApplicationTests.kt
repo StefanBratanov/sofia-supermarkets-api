@@ -137,7 +137,7 @@ class SofiaSupermarketsApiApplicationTests {
         pdfTextStripper.getText(doc)
 
         pdfTextStripper.strippedTexts.forEach {
-            println("${it.text} -> x=${it.x} y=${it.y}")
+            println("${it.text} -> x=${it.x} y=${it.y} -> ${it.isTitle}")
         }
 
         val initialCenters = pdfTextStripper.strippedTexts.filter {
@@ -201,7 +201,8 @@ class PDFTextStripperWithCoordinates(val regexesToRemove: List<Regex>) : PDFText
                 }
                 val toAdd = TextWithCoordinates(
                     text = clusterText,
-                    x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble()
+                    x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble(),
+                    isTitle = isTitle(clusterTp.map { it.textPosition })
                 )
                 strippedTexts.add(toAdd)
             }
@@ -209,12 +210,23 @@ class PDFTextStripperWithCoordinates(val regexesToRemove: List<Regex>) : PDFText
             val (x, y) = getAverageXAndY(textPositions)
             val toAdd = TextWithCoordinates(
                 text = text,
-                x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble()
+                x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble(),
+                isTitle = isTitle(textPositions)
             )
             strippedTexts.add(toAdd)
         }
     }
 
+}
+
+private fun isTitle(textPositions: List<TextPosition>?): Boolean {
+    val isBold = textPositions?.any {
+        it.font.name.contains("Bold".toRegex(IGNORE_CASE))
+    }
+    val isTitle = textPositions?.any {
+        it.font.name.contains("myriad".toRegex(IGNORE_CASE))
+    }
+    return isBold == true && isTitle == true
 }
 
 private fun getAverageXAndY(textPositions: List<TextPosition>?): Pair<Double?, Double?> {
