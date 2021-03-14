@@ -1,11 +1,13 @@
 package com.stefata.sofiasupermarketsapi
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.stefata.sofiasupermarketsapi.ml.KMeansWithInitialCenters
 import com.stefata.sofiasupermarketsapi.model.Product
+import com.stefata.sofiasupermarketsapi.ml.TextWithCoordinates
 import org.apache.commons.lang3.StringUtils.normalizeSpace
+import org.apache.commons.math3.ml.clustering.CentroidCluster
 import org.apache.commons.math3.ml.clustering.Clusterable
 import org.apache.commons.math3.ml.clustering.DBSCANClusterer
-import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import org.apache.pdfbox.text.TextPosition
@@ -138,7 +140,13 @@ class SofiaSupermarketsApiApplicationTests {
             println("${it.text} -> x=${it.x} y=${it.y}")
         }
 
-        val kMeansPlus = KMeansPlusPlusClusterer<TextWithCoordinates>(12, 100)
+        val initialCenters = pdfTextStripper.strippedTexts.filter {
+            it.text?.contains("лв|") == true
+        }.map {
+            CentroidCluster<TextWithCoordinates>(it)
+        }
+
+        val kMeansPlus = KMeansWithInitialCenters(initialCenters.size, 100, initialCenters)
         val clusteredTexts = kMeansPlus.cluster(pdfTextStripper.strippedTexts)
 
         val groupedText = clusteredTexts.joinToString(separator = System.lineSeparator()) { cluster ->
@@ -150,13 +158,6 @@ class SofiaSupermarketsApiApplicationTests {
         Files.writeString(Paths.get("fantastico.txt"), groupedText, CREATE, TRUNCATE_EXISTING)
 
         doc.close()
-    }
-
-}
-
-class TextWithCoordinates(val text: String?, val x: Double?, val y: Double?) : Clusterable {
-    override fun getPoint(): DoubleArray {
-        return doubleArrayOf(x!!, y!!)
     }
 
 }
