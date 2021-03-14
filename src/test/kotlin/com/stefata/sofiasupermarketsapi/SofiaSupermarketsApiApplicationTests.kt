@@ -147,10 +147,12 @@ class SofiaSupermarketsApiApplicationTests {
         }
 
         val kMeansPlus = KMeansWithInitialCenters(initialCenters.size, 100, initialCenters)
-        val clusteredTexts = kMeansPlus.cluster(pdfTextStripper.strippedTexts)
+        val clusteredTexts = kMeansPlus.cluster(pdfTextStripper.strippedTexts).map {
+            it.points
+        }
 
         val groupedText = clusteredTexts.joinToString(separator = System.lineSeparator()) { cluster ->
-            cluster.points.joinToString(" | ") {
+            cluster.joinToString(" | ") {
                 it.text.toString()
             }
         }
