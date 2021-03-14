@@ -21,6 +21,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.apache.commons:commons-lang3")
+    implementation("org.apache.commons:commons-math3:3.6.1")
     implementation("commons-io:commons-io:2.8.0")
     implementation("org.jsoup:jsoup:1.13.1")
     implementation("org.apache.pdfbox:pdfbox:2.0.22")

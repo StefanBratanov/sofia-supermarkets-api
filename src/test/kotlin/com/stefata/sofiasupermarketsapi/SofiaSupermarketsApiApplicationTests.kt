@@ -3,6 +3,9 @@ package com.stefata.sofiasupermarketsapi
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefata.sofiasupermarketsapi.model.Product
 import org.apache.commons.lang3.StringUtils.normalizeSpace
+import org.apache.commons.math3.ml.clustering.Clusterable
+import org.apache.commons.math3.ml.clustering.DBSCANClusterer
+import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import org.apache.pdfbox.text.TextPosition
@@ -13,6 +16,7 @@ import java.nio.file.Paths
 import java.nio.file.StandardOpenOption.CREATE
 import java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
 import java.util.Objects.nonNull
+import kotlin.math.roundToLong
 import kotlin.text.RegexOption.IGNORE_CASE
 
 class SofiaSupermarketsApiApplicationTests {
@@ -103,6 +107,15 @@ class SofiaSupermarketsApiApplicationTests {
         Files.writeString(Paths.get("tmarket.json"), json, CREATE, TRUNCATE_EXISTING)
     }
 
+    private val regexesToRemoveFantastico = listOf(
+        "www\\.fantastico\\.bg".toRegex(IGNORE_CASE),
+        "ОФЕРТА ЗА ПЕРИОДА".toRegex(IGNORE_CASE),
+        "fantastico\\.stores".toRegex(IGNORE_CASE),
+        "Продуктите се продават в количества".toRegex(IGNORE_CASE),
+        "си запазва правото на промяна".toRegex(IGNORE_CASE),
+        "Промоцията е валидна".toRegex(IGNORE_CASE)
+    )
+
     @Test
     fun readsFantastico() {
         val pdf = Paths.get("fantastiko.pdf")
@@ -113,47 +126,106 @@ class SofiaSupermarketsApiApplicationTests {
 
         val doc = PDDocument.load(pdf.toFile())
 
-        val pdfTextStripper = PDFTextStripperWithCoordinates()
+        val pdfTextStripper = PDFTextStripperWithCoordinates(regexesToRemoveFantastico)
 
-        pdfTextStripper.startPage = 1
-        pdfTextStripper.endPage = 1
+        pdfTextStripper.startPage = 17
+        pdfTextStripper.endPage = 17
 
         //don't need the output of this operation
         pdfTextStripper.getText(doc)
 
-        println(pdfTextStripper.strippedTexts)
+        pdfTextStripper.strippedTexts.forEach {
+            println("${it.text} -> x=${it.x} y=${it.y}")
+        }
 
+        val kMeansPlus = KMeansPlusPlusClusterer<TextWithCoordinates>(12, 100)
+        val clusteredTexts = kMeansPlus.cluster(pdfTextStripper.strippedTexts)
 
-//        Files.writeString(Paths.get("fantastico.txt"), text, CREATE, TRUNCATE_EXISTING)
+        val groupedText = clusteredTexts.joinToString(separator = System.lineSeparator()) { cluster ->
+            cluster.points.joinToString(" | ") {
+                it.text.toString()
+            }
+        }
+
+        Files.writeString(Paths.get("fantastico.txt"), groupedText, CREATE, TRUNCATE_EXISTING)
 
         doc.close()
-
     }
 
-    data class TextWithCoordinates(val text: String?)
+}
 
-    class PDFTextStripperWithCoordinates : PDFTextStripper() {
+class TextWithCoordinates(val text: String?, val x: Double?, val y: Double?) : Clusterable {
+    override fun getPoint(): DoubleArray {
+        return doubleArrayOf(x!!, y!!)
+    }
 
-        val strippedTexts: MutableList<TextWithCoordinates> = mutableListOf()
+}
 
-        override fun startDocument(document: PDDocument?) {
-            strippedTexts.clear()
+class ClusterableTextPosition(val textPosition: TextPosition) : Clusterable {
+
+    override fun getPoint(): DoubleArray {
+        return doubleArrayOf(textPosition.x.toDouble())
+    }
+
+}
+
+class PDFTextStripperWithCoordinates(val regexesToRemove: List<Regex>) : PDFTextStripper() {
+
+    val strippedTexts: MutableList<TextWithCoordinates> = mutableListOf()
+    val dbScanClusterer = DBSCANClusterer<ClusterableTextPosition>(10.0, 1)
+
+    override fun startDocument(document: PDDocument?) {
+        strippedTexts.clear()
+    }
+
+    override fun writeString(text: String?, textPositions: MutableList<TextPosition>?) {
+        super.writeString(text, textPositions)
+        val shouldRemove = regexesToRemove.any { rgx ->
+            rgx.containsMatchIn(text.toString())
         }
-
-        override fun writeString(text: String?, textPositions: MutableList<TextPosition>?) {
-            val toAdd = TextWithCoordinates(text = text)
-            strippedTexts.add(toAdd)
-            textPositions?.forEach {
-                println("${it.xDirAdj}_${it.yDirAdj}_${it.heightDir}_${it.widthDirAdj}")
-
+        if (shouldRemove) {
+            return;
+        }
+        val clusterableTextPositions = textPositions?.map {
+            ClusterableTextPosition(it)
+        }
+        val clusters = dbScanClusterer.cluster(clusterableTextPositions)
+        if (clusters.size > 1) {
+            println("Separating $text because it is too far apart")
+            clusters.map { cluster ->
+                val clusterTp = cluster.points
+                val (x, y) = getAverageXAndY(clusterTp.map { it.textPosition })
+                val clusterText = clusterTp.joinToString("") {
+                    it.textPosition.unicode
+                }
+                val toAdd = TextWithCoordinates(
+                    text = clusterText,
+                    x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble()
+                )
+                strippedTexts.add(toAdd)
             }
-            super.writeString(text, textPositions)
+        } else {
+            val (x, y) = getAverageXAndY(textPositions)
+            val toAdd = TextWithCoordinates(
+                text = text,
+                x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble()
+            )
+            strippedTexts.add(toAdd)
         }
-
     }
 
-    private fun normalizePrice(price: String?): Double? {
-        return price?.replace("лв.*".toRegex(), "")?.replace(',', '.')?.toDouble()
-    }
+}
 
+private fun getAverageXAndY(textPositions: List<TextPosition>?): Pair<Double?, Double?> {
+    val x = textPositions?.map {
+        it.x
+    }?.average()
+    val y = textPositions?.map {
+        it.y
+    }?.average()
+    return Pair(x, y)
+}
+
+private fun normalizePrice(price: String?): Double? {
+    return price?.replace("лв.*".toRegex(), "")?.replace(',', '.')?.toDouble()
 }
