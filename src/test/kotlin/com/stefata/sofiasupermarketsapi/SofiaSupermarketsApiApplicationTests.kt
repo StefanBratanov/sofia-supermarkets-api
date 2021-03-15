@@ -1,9 +1,12 @@
 package com.stefata.sofiasupermarketsapi
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.stefata.sofiasupermarketsapi.SofiaSupermarketsApiApplicationTests.ProductSection
+import com.stefata.sofiasupermarketsapi.SofiaSupermarketsApiApplicationTests.ProductSection.*
 import com.stefata.sofiasupermarketsapi.ml.KMeansWithInitialCenters
-import com.stefata.sofiasupermarketsapi.model.Product
 import com.stefata.sofiasupermarketsapi.ml.TextWithCoordinates
+import com.stefata.sofiasupermarketsapi.model.Product
+import org.apache.commons.lang3.StringUtils.isNotBlank
 import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.apache.commons.math3.ml.clustering.CentroidCluster
 import org.apache.commons.math3.ml.clustering.Clusterable
@@ -120,6 +123,24 @@ class SofiaSupermarketsApiApplicationTests {
         "за магазините.*цени".toRegex(IGNORE_CASE)
     )
 
+    enum class ProductSection {
+        NAME,
+        QUANTITY,
+        OLD_PRICE,
+        NEW_PRICE,
+        DISCOUNT,
+        LV_BR
+    }
+
+    private val productSectionResolver: Map<ProductSection, (String) -> Boolean> = mapOf(
+        OLD_PRICE to { text -> text.matches("\\d{1,2}\\.\\d{2}".toRegex()) },
+        NEW_PRICE to { text -> text.matches("\\d{3,4}".toRegex()) },
+        DISCOUNT to { text -> text.matches("-?\\d{1,2}%".toRegex()) },
+        LV_BR to { text -> text.contains("лв|") },
+        QUANTITY to { text -> text.contains("\\d+\\s*(мл|г|л|бр|см)".toRegex(IGNORE_CASE)) },
+        NAME to { true }
+    )
+
     @Test
     fun readsFantastico() {
         val pdf = Paths.get("fantastiko.pdf")
@@ -132,15 +153,11 @@ class SofiaSupermarketsApiApplicationTests {
 
         val pdfTextStripper = PDFTextStripperWithCoordinates(regexesToRemoveFantastico)
 
-        pdfTextStripper.startPage = 16
-        pdfTextStripper.endPage = 16
+        pdfTextStripper.startPage = 17
+        pdfTextStripper.endPage = 17
 
         //don't need the output of this operation
         pdfTextStripper.getText(doc)
-
-        pdfTextStripper.strippedTexts.forEach {
-            println("${it.text} -> x=${it.x} y=${it.y} -> ${it.isTitle}")
-        }
 
         val initialCenters = pdfTextStripper.strippedTexts.filter {
             it.text?.contains("лв|") == true
@@ -156,17 +173,77 @@ class SofiaSupermarketsApiApplicationTests {
             it.points
         }
 
-        val groupedText = clusteredTexts.joinToString(separator = System.lineSeparator()) { cluster ->
-            cluster.joinToString(" | ") {
-                it.text.toString()
+        val clusteredTextsWithSection = clusteredTexts.map { cluster ->
+            cluster.map {
+                val section = productSectionResolver.entries.first { (_, v) ->
+                    v.invoke(it.text!!)
+                }.key
+                Pair(section, it)
+            }
+        }.filter { cluster ->
+            val nameCount = cluster.count {
+                it.first == NAME
+            }
+            val newPricesCount = cluster.count {
+                it.first == NEW_PRICE
+            }
+            val oldPricesCount = cluster.count {
+                it.first == OLD_PRICE
+            }
+            nameCount >= 1 && newPricesCount == 1 && oldPricesCount == 1
+        }
+
+        val products = clusteredTextsWithSection.mapNotNull {
+            val name = getName(it)
+            val oldPrice = it.first { sectionAndText ->
+                sectionAndText.first == OLD_PRICE
+            }.second.text
+            val newPrice = it.first { sectionAndText ->
+                sectionAndText.first == NEW_PRICE
+            }.second.text?.replace("^0".toRegex(), "")
+            val quantity = it.firstOrNull { sectionAndText ->
+                sectionAndText.first == QUANTITY
+            }?.second?.text
+
+            Product(
+                name = normalizeSpace(name),
+                price = normalizePrice(newPrice)?.div(100),
+                oldPrice = normalizePrice(oldPrice),
+                quantity = normalizeSpace(quantity)
+            ).takeIf {
+                isNotBlank(name)
             }
         }
 
-        Files.writeString(Paths.get("fantastico.txt"), groupedText, CREATE, TRUNCATE_EXISTING)
+        val json = ObjectMapper().writeValueAsString(products)
+
+        Files.writeString(Paths.get("fantastico.json"), json, CREATE, TRUNCATE_EXISTING)
 
         doc.close()
     }
 
+}
+
+private fun getName(it: List<Pair<ProductSection, TextWithCoordinates>>): String {
+    var name = ""
+    var nameHasBold = false
+    for (sectionAndText in it) {
+        if (sectionAndText.first == NAME) {
+            name += " " + sectionAndText.second.text
+            if (sectionAndText.second.isBold) {
+                nameHasBold = true;
+            }
+        }
+        if (sectionAndText.first != NAME && isNotBlank(name)) {
+            if (!nameHasBold) {
+                name = ""
+                continue
+            } else {
+                break
+            }
+        }
+    }
+    return name
 }
 
 class ClusterableTextPosition(val textPosition: TextPosition) : Clusterable {
@@ -207,18 +284,18 @@ class PDFTextStripperWithCoordinates(private val regexesToRemove: List<Regex>) :
                     it.textPosition.unicode
                 }
                 val toAdd = TextWithCoordinates(
-                    text = clusterText,
+                    text = clusterText.trim(),
                     x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble(),
-                    isTitle = isTitle(clusterTp.map { it.textPosition })
+                    isBold = isBold(clusterTp.map { it.textPosition })
                 )
                 strippedTexts.add(toAdd)
             }
         } else {
             val (x, y) = getAverageXAndY(textPositions)
             val toAdd = TextWithCoordinates(
-                text = text,
+                text = text?.trim(),
                 x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble(),
-                isTitle = isTitle(textPositions)
+                isBold = isBold(textPositions)
             )
             strippedTexts.add(toAdd)
         }
@@ -226,14 +303,14 @@ class PDFTextStripperWithCoordinates(private val regexesToRemove: List<Regex>) :
 
 }
 
-private fun isTitle(textPositions: List<TextPosition>?): Boolean {
+private fun isBold(textPositions: List<TextPosition>?): Boolean {
     val isBold = textPositions?.any {
         it.font.name.contains("Bold".toRegex(IGNORE_CASE))
     }
-    val isTitle = textPositions?.any {
+    val isBlack = textPositions?.any {
         it.font.name.contains("myriad".toRegex(IGNORE_CASE))
     }
-    return isBold == true && isTitle == true
+    return isBold == true && isBlack == true
 }
 
 private fun getAverageXAndY(textPositions: List<TextPosition>?): Pair<Double?, Double?> {
