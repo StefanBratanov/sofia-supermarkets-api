@@ -224,26 +224,12 @@ class SofiaSupermarketsApiApplicationTests {
 
 }
 
-private fun getName(it: List<Pair<ProductSection, TextWithCoordinates>>): String {
-    var name = ""
-    var nameHasBold = false
-    for (sectionAndText in it) {
-        if (sectionAndText.first == NAME) {
-            name += " " + sectionAndText.second.text
-            if (sectionAndText.second.isBold) {
-                nameHasBold = true;
-            }
-        }
-        if (sectionAndText.first != NAME && isNotBlank(name)) {
-            if (!nameHasBold) {
-                name = ""
-                continue
-            } else {
-                break
-            }
-        }
+private fun getName(cluster: List<Pair<ProductSection, TextWithCoordinates>>): String {
+    return cluster.filter {
+        it.first == NAME
+    }.joinToString(" ") {
+        it.second.text.toString()
     }
-    return name
 }
 
 class ClusterableTextPosition(val textPosition: TextPosition) : Clusterable {
