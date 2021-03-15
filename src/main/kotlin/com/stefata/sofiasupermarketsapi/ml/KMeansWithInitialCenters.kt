@@ -4,6 +4,7 @@ import org.apache.commons.math3.exception.ConvergenceException
 import org.apache.commons.math3.exception.NumberIsTooSmallException
 import org.apache.commons.math3.exception.util.LocalizedFormats
 import org.apache.commons.math3.ml.clustering.*
+import org.apache.commons.math3.ml.distance.DistanceMeasure
 import org.apache.commons.math3.random.JDKRandomGenerator
 import org.apache.commons.math3.stat.descriptive.moment.Variance
 import org.apache.commons.math3.util.MathUtils
@@ -14,9 +15,9 @@ import java.util.*
  * only difference is that we can define our own initial centers
  */
 class KMeansWithInitialCenters(
-    k: Int, maxIterations: Int,
+    k: Int, maxIterations: Int, measure: DistanceMeasure,
     private var initialCenters: List<CentroidCluster<TextWithCoordinates>>
-) : KMeansPlusPlusClusterer<TextWithCoordinates>(k, maxIterations) {
+) : KMeansPlusPlusClusterer<TextWithCoordinates>(k, maxIterations, measure) {
 
     private val random = JDKRandomGenerator()
 

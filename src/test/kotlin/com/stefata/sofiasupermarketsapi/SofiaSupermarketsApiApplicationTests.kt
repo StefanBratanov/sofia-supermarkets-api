@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.apache.commons.math3.ml.clustering.CentroidCluster
 import org.apache.commons.math3.ml.clustering.Clusterable
 import org.apache.commons.math3.ml.clustering.DBSCANClusterer
+import org.apache.commons.math3.ml.distance.ManhattanDistance
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import org.apache.pdfbox.text.TextPosition
@@ -115,7 +116,8 @@ class SofiaSupermarketsApiApplicationTests {
         "fantastico\\.stores".toRegex(IGNORE_CASE),
         "Продуктите се продават в количества".toRegex(IGNORE_CASE),
         "си запазва правото на промяна".toRegex(IGNORE_CASE),
-        "Промоцията е валидна".toRegex(IGNORE_CASE)
+        "(Промоцията|акцията) е валидна".toRegex(IGNORE_CASE),
+        "за магазините.*цени".toRegex(IGNORE_CASE)
     )
 
     @Test
@@ -130,8 +132,8 @@ class SofiaSupermarketsApiApplicationTests {
 
         val pdfTextStripper = PDFTextStripperWithCoordinates(regexesToRemoveFantastico)
 
-        pdfTextStripper.startPage = 17
-        pdfTextStripper.endPage = 17
+        pdfTextStripper.startPage = 16
+        pdfTextStripper.endPage = 16
 
         //don't need the output of this operation
         pdfTextStripper.getText(doc)
@@ -146,7 +148,10 @@ class SofiaSupermarketsApiApplicationTests {
             CentroidCluster<TextWithCoordinates>(it)
         }
 
-        val kMeansPlus = KMeansWithInitialCenters(initialCenters.size, 100, initialCenters)
+        val kMeansPlus = KMeansWithInitialCenters(
+            initialCenters.size, 100, ManhattanDistance(),
+            initialCenters
+        )
         val clusteredTexts = kMeansPlus.cluster(pdfTextStripper.strippedTexts).map {
             it.points
         }
@@ -172,10 +177,10 @@ class ClusterableTextPosition(val textPosition: TextPosition) : Clusterable {
 
 }
 
-class PDFTextStripperWithCoordinates(val regexesToRemove: List<Regex>) : PDFTextStripper() {
+class PDFTextStripperWithCoordinates(private val regexesToRemove: List<Regex>) : PDFTextStripper() {
 
     val strippedTexts: MutableList<TextWithCoordinates> = mutableListOf()
-    val dbScanClusterer = DBSCANClusterer<ClusterableTextPosition>(10.0, 1)
+    private val dbScanClusterer = DBSCANClusterer<ClusterableTextPosition>(15.0, 1)
 
     override fun startDocument(document: PDDocument?) {
         strippedTexts.clear()
@@ -187,7 +192,7 @@ class PDFTextStripperWithCoordinates(val regexesToRemove: List<Regex>) : PDFText
             rgx.containsMatchIn(text.toString())
         }
         if (shouldRemove) {
-            return;
+            return
         }
         val clusterableTextPositions = textPositions?.map {
             ClusterableTextPosition(it)
