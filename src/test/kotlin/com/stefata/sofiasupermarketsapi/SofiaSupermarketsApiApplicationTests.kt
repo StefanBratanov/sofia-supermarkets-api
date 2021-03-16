@@ -4,19 +4,15 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefata.sofiasupermarketsapi.SofiaSupermarketsApiApplicationTests.ProductSection
 import com.stefata.sofiasupermarketsapi.SofiaSupermarketsApiApplicationTests.ProductSection.*
 import com.stefata.sofiasupermarketsapi.ml.KMeansWithInitialCenters
-import com.stefata.sofiasupermarketsapi.pdf.TextWithCoordinates
 import com.stefata.sofiasupermarketsapi.model.Product
 import com.stefata.sofiasupermarketsapi.pdf.PDFTextStripperWithCoordinates
+import com.stefata.sofiasupermarketsapi.pdf.TextWithCoordinates
 import org.apache.commons.lang3.StringUtils.isNotBlank
 import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.apache.commons.math3.ml.clustering.CentroidCluster
-import org.apache.commons.math3.ml.clustering.Clusterable
-import org.apache.commons.math3.ml.clustering.DBSCANClusterer
 import org.apache.commons.math3.ml.distance.ManhattanDistance
 import org.apache.logging.log4j.util.Strings
 import org.apache.pdfbox.pdmodel.PDDocument
-import org.apache.pdfbox.text.PDFTextStripper
-import org.apache.pdfbox.text.TextPosition
 import org.jsoup.Jsoup
 import org.junit.jupiter.api.Test
 import java.nio.file.Files
@@ -24,12 +20,11 @@ import java.nio.file.Paths
 import java.nio.file.StandardOpenOption.CREATE
 import java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
 import java.util.Objects.nonNull
-import kotlin.math.roundToLong
 import kotlin.text.RegexOption.IGNORE_CASE
 
 class SofiaSupermarketsApiApplicationTests {
 
-    private val regexesToRemove = listOf(
+    private val regexesToIgnoreBilla = listOf(
         "Най.*добра.*цена.*".toRegex(IGNORE_CASE),
         "Изпечен.*всеки.*минути".toRegex(IGNORE_CASE),
         "Виж още.*".toRegex(IGNORE_CASE)
@@ -49,7 +44,7 @@ class SofiaSupermarketsApiApplicationTests {
             nonNull(it.price)
         }.map {
             val normalizedName =
-                regexesToRemove.fold(it.name) { name, toRemove -> name.replace(toRemove, "") }
+                regexesToIgnoreBilla.fold(it.name) { name, toRemove -> name.replace(toRemove, "") }
             it.copy(name = normalizeSpace(normalizedName))
         }
 
@@ -225,6 +220,38 @@ class SofiaSupermarketsApiApplicationTests {
         doc.close()
     }
 
+
+    @Test
+    fun readsLidl() {
+
+        val doc = Jsoup.connect("https://www.lidl.bg/bg/c/niska-cena-visoko-kachestvo/c1847/w1").get()
+
+        val products = doc.select("div[data-price],div[data-currency]").map {
+            val name = it.select(".product__title").text()
+            val oldPrice = it.select(".pricebox__recommended-retail-price")?.textNodes()?.takeIf { tn ->
+                tn.isNotEmpty()
+            }?.first()?.text()
+            val newPrice = it.select(".pricebox__price")?.text()
+            val quantity = it.select(".pricebox__basic-quantity")?.text()
+
+            val picUrl = it.select(".picture")?.select("img")?.attr("src")
+
+            Product(
+                name = normalizeSpace(name),
+                price = normalizePrice(newPrice),
+                oldPrice = normalizePrice(oldPrice),
+                quantity = normalizeSpace(quantity),
+                picUrl = picUrl
+            )
+
+        }
+
+        val json = ObjectMapper().writeValueAsString(products)
+
+        Files.writeString(Paths.get("lidl.json"), json, CREATE, TRUNCATE_EXISTING)
+
+    }
+
 }
 
 private fun getName(cluster: List<Pair<ProductSection, TextWithCoordinates>>): String {
@@ -238,5 +265,5 @@ private fun getName(cluster: List<Pair<ProductSection, TextWithCoordinates>>): S
 }
 
 private fun normalizePrice(price: String?): Double? {
-    return price?.replace("лв.*".toRegex(), "")?.replace(',', '.')?.toDouble()
+    return price?.replace("лв.*".toRegex(), "")?.replace(',', '.')?.trim()?.toDouble()
 }
