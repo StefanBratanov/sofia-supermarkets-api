@@ -4,14 +4,16 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefata.sofiasupermarketsapi.SofiaSupermarketsApiApplicationTests.ProductSection
 import com.stefata.sofiasupermarketsapi.SofiaSupermarketsApiApplicationTests.ProductSection.*
 import com.stefata.sofiasupermarketsapi.ml.KMeansWithInitialCenters
-import com.stefata.sofiasupermarketsapi.ml.TextWithCoordinates
+import com.stefata.sofiasupermarketsapi.pdf.TextWithCoordinates
 import com.stefata.sofiasupermarketsapi.model.Product
+import com.stefata.sofiasupermarketsapi.pdf.PDFTextStripperWithCoordinates
 import org.apache.commons.lang3.StringUtils.isNotBlank
 import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.apache.commons.math3.ml.clustering.CentroidCluster
 import org.apache.commons.math3.ml.clustering.Clusterable
 import org.apache.commons.math3.ml.clustering.DBSCANClusterer
 import org.apache.commons.math3.ml.distance.ManhattanDistance
+import org.apache.logging.log4j.util.Strings
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import org.apache.pdfbox.text.TextPosition
@@ -113,7 +115,7 @@ class SofiaSupermarketsApiApplicationTests {
         Files.writeString(Paths.get("tmarket.json"), json, CREATE, TRUNCATE_EXISTING)
     }
 
-    private val regexesToRemoveFantastico = listOf(
+    private val regexesToIgnoreFantastico = listOf(
         "www\\.fantastico\\.bg".toRegex(IGNORE_CASE),
         "ОФЕРТА ЗА ПЕРИОДА".toRegex(IGNORE_CASE),
         "fantastico\\.stores".toRegex(IGNORE_CASE),
@@ -151,7 +153,7 @@ class SofiaSupermarketsApiApplicationTests {
 
         val doc = PDDocument.load(pdf.toFile())
 
-        val pdfTextStripper = PDFTextStripperWithCoordinates(regexesToRemoveFantastico)
+        val pdfTextStripper = PDFTextStripperWithCoordinates(regexesToIgnoreFantastico)
 
         pdfTextStripper.startPage = 17
         pdfTextStripper.endPage = 17
@@ -187,23 +189,24 @@ class SofiaSupermarketsApiApplicationTests {
             val newPricesCount = cluster.count {
                 it.first == NEW_PRICE
             }
-            val oldPricesCount = cluster.count {
-                it.first == OLD_PRICE
-            }
-            nameCount >= 1 && newPricesCount == 1 && oldPricesCount == 1
+            nameCount >= 1 && newPricesCount == 1
         }
 
         val products = clusteredTextsWithSection.mapNotNull {
             val name = getName(it)
-            val oldPrice = it.first { sectionAndText ->
+            val oldPrice = it.firstOrNull { sectionAndText ->
                 sectionAndText.first == OLD_PRICE
-            }.second.text
+            }?.second?.text
             val newPrice = it.first { sectionAndText ->
                 sectionAndText.first == NEW_PRICE
             }.second.text?.replace("^0".toRegex(), "")
-            val quantity = it.firstOrNull { sectionAndText ->
+            val quantity = it.filter { sectionAndText ->
                 sectionAndText.first == QUANTITY
-            }?.second?.text
+            }.joinToString(separator = " ") { sectionAndText ->
+                sectionAndText.second.text.toString()
+            }.takeUnless { text ->
+                Strings.isBlank(text)
+            }
 
             Product(
                 name = normalizeSpace(name),
@@ -227,86 +230,11 @@ class SofiaSupermarketsApiApplicationTests {
 private fun getName(cluster: List<Pair<ProductSection, TextWithCoordinates>>): String {
     return cluster.filter {
         it.first == NAME
+    }.filter {
+        it.second.font?.name?.contains("Officina") == false
     }.joinToString(" ") {
         it.second.text.toString()
     }
-}
-
-class ClusterableTextPosition(val textPosition: TextPosition) : Clusterable {
-
-    override fun getPoint(): DoubleArray {
-        return doubleArrayOf(textPosition.x.toDouble())
-    }
-
-}
-
-class PDFTextStripperWithCoordinates(private val regexesToRemove: List<Regex>) : PDFTextStripper() {
-
-    val strippedTexts: MutableList<TextWithCoordinates> = mutableListOf()
-    private val dbScanClusterer = DBSCANClusterer<ClusterableTextPosition>(15.0, 1)
-
-    override fun startDocument(document: PDDocument?) {
-        strippedTexts.clear()
-    }
-
-    override fun writeString(text: String?, textPositions: MutableList<TextPosition>?) {
-        super.writeString(text, textPositions)
-        val shouldRemove = regexesToRemove.any { rgx ->
-            rgx.containsMatchIn(text.toString())
-        }
-        if (shouldRemove) {
-            return
-        }
-        val clusterableTextPositions = textPositions?.map {
-            ClusterableTextPosition(it)
-        }
-        val clusters = dbScanClusterer.cluster(clusterableTextPositions)
-        if (clusters.size > 1) {
-            println("Separating $text because it is too far apart")
-            clusters.map { cluster ->
-                val clusterTp = cluster.points
-                val (x, y) = getAverageXAndY(clusterTp.map { it.textPosition })
-                val clusterText = clusterTp.joinToString("") {
-                    it.textPosition.unicode
-                }
-                val toAdd = TextWithCoordinates(
-                    text = clusterText.trim(),
-                    x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble(),
-                    isBold = isBold(clusterTp.map { it.textPosition })
-                )
-                strippedTexts.add(toAdd)
-            }
-        } else {
-            val (x, y) = getAverageXAndY(textPositions)
-            val toAdd = TextWithCoordinates(
-                text = text?.trim(),
-                x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble(),
-                isBold = isBold(textPositions)
-            )
-            strippedTexts.add(toAdd)
-        }
-    }
-
-}
-
-private fun isBold(textPositions: List<TextPosition>?): Boolean {
-    val isBold = textPositions?.any {
-        it.font.name.contains("Bold".toRegex(IGNORE_CASE))
-    }
-    val isBlack = textPositions?.any {
-        it.font.name.contains("myriad".toRegex(IGNORE_CASE))
-    }
-    return isBold == true && isBlack == true
-}
-
-private fun getAverageXAndY(textPositions: List<TextPosition>?): Pair<Double?, Double?> {
-    val x = textPositions?.map {
-        it.x
-    }?.average()
-    val y = textPositions?.map {
-        it.y
-    }?.average()
-    return Pair(x, y)
 }
 
 private fun normalizePrice(price: String?): Double? {

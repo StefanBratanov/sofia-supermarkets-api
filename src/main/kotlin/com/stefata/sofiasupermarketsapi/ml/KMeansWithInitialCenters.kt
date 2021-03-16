@@ -1,5 +1,6 @@
 package com.stefata.sofiasupermarketsapi.ml
 
+import com.stefata.sofiasupermarketsapi.pdf.TextWithCoordinates
 import org.apache.commons.math3.exception.ConvergenceException
 import org.apache.commons.math3.exception.NumberIsTooSmallException
 import org.apache.commons.math3.exception.util.LocalizedFormats
