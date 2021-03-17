@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component
 import java.net.URL
 import java.util.*
 
-@Component
+@Component("Billa")
 class BillaProductsExtractor : UrlProductsExtractor {
 
     private val regexesToIgnoreBilla = listOf(

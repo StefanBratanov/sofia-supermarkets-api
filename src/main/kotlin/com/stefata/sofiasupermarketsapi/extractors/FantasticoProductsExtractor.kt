@@ -10,8 +10,10 @@ import com.stefata.sofiasupermarketsapi.pdf.TextWithCoordinates
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.apache.logging.log4j.util.Strings
+import org.springframework.stereotype.Component
 import java.nio.file.Path
 
+@Component("Fantastico")
 class FantasticoProductsExtractor : PdfProductsExtractor {
 
     private val regexesToIgnore = listOf(

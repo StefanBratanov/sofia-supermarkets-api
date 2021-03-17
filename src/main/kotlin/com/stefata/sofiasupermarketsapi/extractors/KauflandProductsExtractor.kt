@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils
 import org.springframework.stereotype.Component
 import java.net.URL
 
-@Component
+@Component("Kaufland")
 class KauflandProductsExtractor : UrlProductsExtractor {
 
     override fun extract(url: URL): List<Product> {

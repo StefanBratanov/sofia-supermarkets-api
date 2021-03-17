@@ -6,7 +6,7 @@ import com.stefata.sofiasupermarketsapi.model.Product
 import org.springframework.stereotype.Component
 import java.net.URL
 
-@Component
+@Component("TMarket")
 class TMarketProductsExtractor : UrlProductsExtractor {
 
     override fun extract(url: URL): List<Product> {
