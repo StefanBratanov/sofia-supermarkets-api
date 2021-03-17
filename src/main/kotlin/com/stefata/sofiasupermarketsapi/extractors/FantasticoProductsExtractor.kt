@@ -1,5 +1,7 @@
 package com.stefata.sofiasupermarketsapi.extractors
 
+import com.stefata.sofiasupermarketsapi.common.Log
+import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.common.normalizePrice
 import com.stefata.sofiasupermarketsapi.interfaces.PdfProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
@@ -13,6 +15,7 @@ import org.apache.logging.log4j.util.Strings
 import org.springframework.stereotype.Component
 import java.nio.file.Path
 
+@Log
 @Component("Fantastico")
 class FantasticoProductsExtractor : PdfProductsExtractor {
 
@@ -36,6 +39,8 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
     )
 
     override fun extract(pdf: Path): List<Product> {
+
+        log.info("Processing Fantastico PDF: {}", pdf.fileName)
 
         val pdfDoc = getPDocument(pdf)
         val initialCenterPredicate: (TextWithCoordinates) -> Boolean = {

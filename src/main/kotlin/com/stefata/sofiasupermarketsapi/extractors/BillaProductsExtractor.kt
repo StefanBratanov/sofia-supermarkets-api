@@ -1,5 +1,7 @@
 package com.stefata.sofiasupermarketsapi.extractors
 
+import com.stefata.sofiasupermarketsapi.common.Log
+import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
 import org.apache.commons.lang3.StringUtils
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Component
 import java.net.URL
 import java.util.*
 
+@Log
 @Component("Billa")
 class BillaProductsExtractor : UrlProductsExtractor {
 
@@ -17,6 +20,8 @@ class BillaProductsExtractor : UrlProductsExtractor {
     )
 
     override fun extract(url: URL): List<Product> {
+
+        log.info("Processing Billa URL: {}", url.toString())
 
         return getHtmlDoc(url).select(".productSection > .product").map {
             val productName = it.select(".actualProduct").text()

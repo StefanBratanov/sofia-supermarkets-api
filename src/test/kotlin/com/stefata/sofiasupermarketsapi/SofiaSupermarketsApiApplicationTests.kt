@@ -36,7 +36,8 @@ class SofiaSupermarketsApiApplicationTests {
     @Test
     fun readsTMarket() {
         val tMarketProductsExtractor = TMarketProductsExtractor()
-        val products = tMarketProductsExtractor.extract(URL("https://tmarketonline.bg/category/visokoalkoholni-napitki"))
+        val products =
+            tMarketProductsExtractor.extract(URL("https://tmarketonline.bg/category/visokoalkoholni-napitki"))
         val json = ObjectMapper().writeValueAsString(products)
 
         Files.writeString(Paths.get("tmarket.json"), json, CREATE, TRUNCATE_EXISTING)
@@ -45,10 +46,6 @@ class SofiaSupermarketsApiApplicationTests {
     @Test
     fun readsFantastico() {
         val pdf = Paths.get("fantastiko.pdf")
-//        FileUtils.copyURLToFile(
-//            URL("https://broshura.bg/platform/download/1103-17032021"), pdf.toFile(),
-//            60000, 60000
-//        )
         val fantasticoProductsExtractor = FantasticoProductsExtractor()
         val products = fantasticoProductsExtractor.extract(pdf)
         val json = ObjectMapper().writeValueAsString(products)
