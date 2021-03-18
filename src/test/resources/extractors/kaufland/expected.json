@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Шуменско Светло пиво",
+    "quantity": "0,5 л кен",
+    "price": 0.79,
+    "oldPrice": 1.15,
+    "picUrl": null
+  },
+  {
+    "name": "Горна Баня Минерална вода",
+    "quantity": "11 л",
+    "price": 2.49,
+    "oldPrice": 3.29,
+    "picUrl": null
+  },
+  {
+    "name": "Бургаско Светло пиво",
+    "quantity": "0,5 л",
+    "price": 0.75,
+    "oldPrice": 1.15,
+    "picUrl": null
+  },
+  {
+    "name": "Велинград Минерална вода",
+    "quantity": "1,5 л",
+    "price": 0.54,
+    "oldPrice": 0.85,
+    "picUrl": null
+  },
+  {
+    "name": "Асеновград Червено или бяло вино",
+    "quantity": "3 л BiB",
+    "price": 10.99,
+    "oldPrice": 16.49,
+    "picUrl": null
+  },
+  {
+    "name": "Villa Yambol Червено или бяло вино различни сортове",
+    "quantity": "0,75 л",
+    "price": 4.49,
+    "oldPrice": 5.99,
+    "picUrl": null
+  },
+  {
+    "name": "J&B Скоч уиски",
+    "quantity": "0,7 л",
+    "price": 16.99,
+    "oldPrice": 22.49,
+    "picUrl": null
+  },
+  {
+    "name": "Tullamore Dew Ирландско уиски",
+    "quantity": "1 л",
+    "price": 26.99,
+    "oldPrice": 37.99,
+    "picUrl": null
+  },
+  {
+    "name": "Пещерска Гроздова ракия",
+    "quantity": "0,7 л",
+    "price": 7.99,
+    "oldPrice": 9.99,
+    "picUrl": null
+  },
+  {
+    "name": "Каменица Светло пиво",
+    "quantity": "0,5 л бутилка",
+    "price": 0.79,
+    "oldPrice": 1.29,
+    "picUrl": null
+  },
+  {
+    "name": "Aspasia Негазирана напитка различни вкусове",
+    "quantity": "2 л PET",
+    "price": 0.99,
+    "oldPrice": 1.99,
+    "picUrl": null
+  },
+  {
+    "name": "Пиринско Светло пиво",
+    "quantity": "2 л PET",
+    "price": 1.79,
+    "oldPrice": 2.39,
+    "picUrl": null
+  },
+  {
+    "name": "Queens Нектар или Плодова напитка различни видове",
+    "quantity": "1 л",
+    "price": 1.69,
+    "oldPrice": 2.29,
+    "picUrl": null
+  },
+  {
+    "name": "Derby Газирана напитка",
+    "quantity": "3 л PET",
+    "price": 0.89,
+    "oldPrice": 1.39,
+    "picUrl": null
+  }
+]

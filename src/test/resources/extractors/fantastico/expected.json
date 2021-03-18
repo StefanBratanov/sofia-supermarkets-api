@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Бонбони FERRERO ROCHER",
+    "quantity": "300 г",
+    "price": 13.99,
+    "oldPrice": 19.99,
+    "picUrl": null
+  },
+  {
+    "name": "Крем сирене PHILADELPHIA",
+    "quantity": "Original 300 г",
+    "price": 3.99,
+    "oldPrice": 5.49,
+    "picUrl": null
+  },
+  {
+    "name": "Захар СЛАДЕЯ 1 кг",
+    "quantity": null,
+    "price": 1.29,
+    "oldPrice": 1.59,
+    "picUrl": null
+  },
+  {
+    "name": "Бира АРИАНА светло",
+    "quantity": "PET, 2 л",
+    "price": 1.79,
+    "oldPrice": 2.59,
+    "picUrl": null
+  },
+  {
+    "name": "Био маслиново масло Екстра Върджин COSTA d‘ORO",
+    "quantity": "750 мл",
+    "price": 9.99,
+    "oldPrice": 12.99,
+    "picUrl": null
+  },
+  {
+    "name": "Разтворимо кафе NESCAFE Classic",
+    "quantity": "250 г",
+    "price": 7.69,
+    "oldPrice": 12.99,
+    "picUrl": null
+  },
+  {
+    "name": "Узо PLOMARI",
+    "quantity": "700 мл",
+    "price": 14.99,
+    "oldPrice": 19.49,
+    "picUrl": null
+  },
+  {
+    "name": "Вино Сира; Мавруд и Димят ЗАГРЕЙ bag-in-box",
+    "quantity": "3 л",
+    "price": 11.99,
+    "oldPrice": 15.99,
+    "picUrl": null
+  },
+  {
+    "name": "Вино CONTOUR Каберне Совиньон и Пино Ноар; Совиньон Блан и Пино Гри",
+    "quantity": "750 мл",
+    "price": 5.99,
+    "oldPrice": 8.49,
+    "picUrl": null
+  },
+  {
+    "name": "Вино AFRICAN WINERY Pinotage; Chenin Blanc",
+    "quantity": "750 мл",
+    "price": 7.19,
+    "oldPrice": 8.99,
+    "picUrl": null
+  },
+  {
+    "name": "Ракия СУНГУРЛАРСКА Специална",
+    "quantity": "700 мл",
+    "price": 13.99,
+    "oldPrice": 17.99,
+    "picUrl": null
+  },
+  {
+    "name": "Водка SAVOY",
+    "quantity": "700 мл",
+    "price": 7.39,
+    "oldPrice": 9.99,
+    "picUrl": null
+  },
+  {
+    "name": "Вино MEZZEK различни видове",
+    "quantity": "750 мл",
+    "price": 7.49,
+    "oldPrice": 10.99,
+    "picUrl": null
+  },
+  {
+    "name": "Вино ТЪРГОВИЩЕ различни видове",
+    "quantity": "750 мл",
+    "price": 4.99,
+    "oldPrice": 6.79,
+    "picUrl": null
+  },
+  {
+    "name": "Ирландско уиски JAMESON",
+    "quantity": "700 мл",
+    "price": 21.99,
+    "oldPrice": 29.99,
+    "picUrl": null
+  },
+  {
+    "name": "Шотландско уиски TEACHERS",
+    "quantity": "700 мл",
+    "price": 12.99,
+    "oldPrice": 17.99,
+    "picUrl": null
+  },
+  {
+    "name": "Водка SOBIESKI Premium",
+    "quantity": "700 мл",
+    "price": 8.99,
+    "oldPrice": 12.49,
+    "picUrl": null
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Ликьор DAMA 17% 500мл",
+    "quantity": null,
+    "price": 7.49,
+    "oldPrice": 8.49,
+    "picUrl": null
+  },
+  {
+    "name": "Водка BARSKA 37.5% 700мл",
+    "quantity": null,
+    "price": 7.99,
+    "oldPrice": 9.99,
+    "picUrl": null
+  },
+  {
+    "name": "Водка AURORA 37.5% 700 мл",
+    "quantity": null,
+    "price": 8.99,
+    "oldPrice": 10.49,
+    "picUrl": null
+  },
+  {
+    "name": "Узо ZORBAS 40% 700 мл",
+    "quantity": null,
+    "price": 9.49,
+    "oldPrice": 11.19,
+    "picUrl": null
+  },
+  {
+    "name": "Водка ХЛЕБНИЙ ДАР класик 40 % 700 мл",
+    "quantity": null,
+    "price": 9.99,
+    "oldPrice": 11.99,
+    "picUrl": null
+  },
+  {
+    "name": "Водка ХЛЕБНИЙ ДАР Пшенична 40 % 700 мл",
+    "quantity": null,
+    "price": 9.99,
+    "oldPrice": 11.99,
+    "picUrl": null
+  },
+  {
+    "name": "Ракия КАРНОБАТСКА гроздова 40% 1 л",
+    "quantity": null,
+    "price": 10.99,
+    "oldPrice": 14.29,
+    "picUrl": null
+  },
+  {
+    "name": "Уиски BALLANTINES 40% 500мл",
+    "quantity": null,
+    "price": 10.99,
+    "oldPrice": 15.69,
+    "picUrl": null
+  },
+  {
+    "name": "Водка ЗЕЛЕНАЯ МАРКА Традиционна 700 мл",
+    "quantity": null,
+    "price": 11.99,
+    "oldPrice": 16.99,
+    "picUrl": null
+  },
+  {
+    "name": "Водка ЗЕЛЕНАЯ МАРКА Кедрова 700 мл",
+    "quantity": null,
+    "price": 11.99,
+    "oldPrice": 16.99,
+    "picUrl": null
+  },
+  {
+    "name": "Вермут MARTINI Extra Dry 18% 1 л",
+    "quantity": null,
+    "price": 15.99,
+    "oldPrice": 20.89,
+    "picUrl": null
+  },
+  {
+    "name": "Вермут MARTINI Bianco 15% 1 л",
+    "quantity": null,
+    "price": 15.99,
+    "oldPrice": 21.49,
+    "picUrl": null
+  },
+  {
+    "name": "Уиски OLD SMUGGLER 40% 700ml",
+    "quantity": null,
+    "price": 15.99,
+    "oldPrice": 17.99,
+    "picUrl": null
+  },
+  {
+    "name": "Джин GORDONS 37.5% 700 мл",
+    "quantity": null,
+    "price": 17.49,
+    "oldPrice": 19.99,
+    "picUrl": null
+  },
+  {
+    "name": "Бренди METAXA 5* 38% 700 мл",
+    "quantity": null,
+    "price": 17.99,
+    "oldPrice": 22.99,
+    "picUrl": null
+  },
+  {
+    "name": "Ракия БУРГАСКА гроздова 40% 1.5 л",
+    "quantity": null,
+    "price": 18.99,
+    "oldPrice": 20.99,
+    "picUrl": null
+  },
+  {
+    "name": "Пастис RICARD 45% 700 мл",
+    "quantity": null,
+    "price": 19.99,
+    "oldPrice": 23.99,
+    "picUrl": null
+  },
+  {
+    "name": "Водка РУССКИЙ СТАНДАРТ Голд 700мл",
+    "quantity": null,
+    "price": 20.99,
+    "oldPrice": 23.99,
+    "picUrl": null
+  },
+  {
+    "name": "Уиски KILBEGGAN 40% 700ml",
+    "quantity": null,
+    "price": 20.99,
+    "oldPrice": 23.99,
+    "picUrl": null
+  },
+  {
+    "name": "Бърбън JIM BEAM 40% 1 л",
+    "quantity": null,
+    "price": 21.89,
+    "oldPrice": 31.89,
+    "picUrl": null
+  },
+  {
+    "name": "Уиски JAMESON 40% 700 мл",
+    "quantity": null,
+    "price": 21.99,
+    "oldPrice": 28.69,
+    "picUrl": null
+  },
+  {
+    "name": "Уиски GRANTS 40% 1 л",
+    "quantity": null,
+    "price": 24.99,
+    "oldPrice": 31.99,
+    "picUrl": null
+  },
+  {
+    "name": "Уиски BUSHMILLS 40% 1 л",
+    "quantity": null,
+    "price": 27.99,
+    "oldPrice": 38.99,
+    "picUrl": null
+  },
+  {
+    "name": "Уиски BUSHMILLS Black Bush 40% 700 мл",
+    "quantity": null,
+    "price": 31.99,
+    "oldPrice": 37.99,
+    "picUrl": null
+  }
+]
