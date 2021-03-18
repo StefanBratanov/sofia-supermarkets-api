@@ -28,6 +28,10 @@ class PdfPageProductsExtractor(
             CentroidCluster<TextWithCoordinates>(it)
         }
 
+        if (initialCenters.isEmpty()) {
+            return emptyList()
+        }
+
         val kMeansPlus = KMeansWithInitialCenters(
             initialCenters.size, 100, ManhattanDistance(), initialCenters
         )

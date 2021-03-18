@@ -34,8 +34,12 @@ internal class FantasticoProductsExtractorTest {
     @Disabled("used for manual testing")
     fun `test fetching from real pdf`() {
 
-        val pdf = Paths.get("fantastiko.pdf")
+        val pdf = Paths.get("fantastico_2.pdf")
         val products = underTest.extract(pdf)
+
+        val json = objectMapper.writeValueAsString(products)
+
+        println(json)
 
         assertThat(products).isNotEmpty()
     }

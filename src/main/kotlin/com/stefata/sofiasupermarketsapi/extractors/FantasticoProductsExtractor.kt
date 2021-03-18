@@ -50,6 +50,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
             PdfPageProductsExtractor(pdfDoc, regexesToIgnore, initialCenterPredicate, productSectionResolver)
 
         val products = generateSequence(1, { it + 1 }).take(pdfDoc.numberOfPages).flatMap { pageNumber ->
+            log.info("Processing page {}/{}", pageNumber, pdfDoc.numberOfPages)
             pageProductsExtractor.getProductTextsWithSections(pageNumber).mapNotNull {
                 val name = getName(it)
                 val oldPrice = it.firstOrNull { sectionAndText ->
