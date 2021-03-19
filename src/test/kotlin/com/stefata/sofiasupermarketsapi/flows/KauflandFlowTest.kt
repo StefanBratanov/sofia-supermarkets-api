@@ -6,10 +6,13 @@ import com.stefata.sofiasupermarketsapi.getProductWithName
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.links.KauflandSublinksScraper
 import com.stefata.sofiasupermarketsapi.model.Supermarket
+import com.stefata.sofiasupermarketsapi.model.SupermarketData
+import com.stefata.sofiasupermarketsapi.repository.SupermarketDataRepository
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
+import io.mockk.verify
 import io.mockk.verifyAll
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -23,6 +26,9 @@ internal class KauflandFlowTest {
 
     @MockK
     lateinit var urlProductsExtractor: UrlProductsExtractor
+
+    @MockK
+    lateinit var supermarketDataRepository: SupermarketDataRepository
 
     @InjectMockKs
     lateinit var underTest: KauflandFlow
@@ -45,12 +51,22 @@ internal class KauflandFlowTest {
         every { urlProductsExtractor.extract(url2) } returns listOf(world)
         every { urlProductsExtractor.extract(url3) } returns listOf(foo, bar)
 
+        every { supermarketDataRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
+
         underTest.runSafely()
 
         verifyAll {
             urlProductsExtractor.extract(url1)
             urlProductsExtractor.extract(url2)
             urlProductsExtractor.extract(url3)
+        }
+
+        val expectedToSave = SupermarketData(supermarket = "Kaufland", products = listOf(hello, world, foo, bar))
+        verify {
+            supermarketDataRepository.saveIfProductsNotEmpty(match {
+                it.supermarket == expectedToSave.supermarket &&
+                        it.products == expectedToSave.products
+            })
         }
     }
 
