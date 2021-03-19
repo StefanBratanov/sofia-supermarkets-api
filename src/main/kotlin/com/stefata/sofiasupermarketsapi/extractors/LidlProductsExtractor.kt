@@ -2,6 +2,7 @@ package com.stefata.sofiasupermarketsapi.extractors
 
 import com.stefata.sofiasupermarketsapi.common.Log
 import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
+import com.stefata.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefata.sofiasupermarketsapi.common.normalizePrice
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
@@ -17,7 +18,7 @@ class LidlProductsExtractor : UrlProductsExtractor {
 
         log.info("Processing Lidl URL: {}", url.toString())
 
-        return getHtmlDoc(url).select("div[data-price],div[data-currency]").map {
+        return getHtmlDocument(url).select("div[data-price],div[data-currency]").map {
             val name = it.select(".product__title").text()
             val oldPrice = it.select(".pricebox__recommended-retail-price")?.textNodes()?.takeIf { tn ->
                 tn.isNotEmpty()

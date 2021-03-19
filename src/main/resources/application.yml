@@ -1,2 +1,5 @@
 logging.level:
   org.apache.pdfbox.io.ScratchFileBuffer: WARN
+
+kaufland:
+  base.url: https://www.kaufland.bg/aktualni-predlozheniya/ot-ponedelnik.html
