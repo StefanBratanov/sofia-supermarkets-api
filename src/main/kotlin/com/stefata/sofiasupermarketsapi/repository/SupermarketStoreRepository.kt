@@ -2,17 +2,17 @@ package com.stefata.sofiasupermarketsapi.repository
 
 import com.stefata.sofiasupermarketsapi.common.Log
 import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
-import com.stefata.sofiasupermarketsapi.model.SupermarketData
+import com.stefata.sofiasupermarketsapi.model.SupermarketStore
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 import java.util.Objects.isNull
 
 @Log
 @Repository
-interface SupermarketDataRepository : CrudRepository<SupermarketData, String> {
+interface SupermarketStoreRepository : CrudRepository<SupermarketStore, String> {
 
     @JvmDefault
-    fun saveIfProductsNotEmpty(entity: SupermarketData): SupermarketData {
+    fun saveIfProductsNotEmpty(entity: SupermarketStore): SupermarketStore {
         val toSave = entity.takeUnless {
             it.products.isNullOrEmpty()
         }

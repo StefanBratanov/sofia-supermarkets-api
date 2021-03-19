@@ -2,12 +2,12 @@ package com.stefata.sofiasupermarketsapi.flows
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import com.stefata.sofiasupermarketsapi.getProductWithName
+import com.stefata.sofiasupermarketsapi.getProduct
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.links.KauflandSublinksScraper
 import com.stefata.sofiasupermarketsapi.model.Supermarket
-import com.stefata.sofiasupermarketsapi.model.SupermarketData
-import com.stefata.sofiasupermarketsapi.repository.SupermarketDataRepository
+import com.stefata.sofiasupermarketsapi.model.SupermarketStore
+import com.stefata.sofiasupermarketsapi.repository.SupermarketStoreRepository
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -28,7 +28,7 @@ internal class KauflandFlowTest {
     lateinit var urlProductsExtractor: UrlProductsExtractor
 
     @MockK
-    lateinit var supermarketDataRepository: SupermarketDataRepository
+    lateinit var supermarketStoreRepository: SupermarketStoreRepository
 
     @InjectMockKs
     lateinit var underTest: KauflandFlow
@@ -42,16 +42,16 @@ internal class KauflandFlowTest {
 
         every { kauflandSublinksScraper.getSublinks() } returns listOf(url1, url2, url3)
 
-        val hello = getProductWithName("hello")
-        val world = getProductWithName("world")
-        val foo = getProductWithName("foo")
-        val bar = getProductWithName("bar")
+        val hello = getProduct("hello")
+        val world = getProduct("world")
+        val foo = getProduct("foo")
+        val bar = getProduct("bar")
 
         every { urlProductsExtractor.extract(url1) } returns listOf(hello)
         every { urlProductsExtractor.extract(url2) } returns listOf(world)
         every { urlProductsExtractor.extract(url3) } returns listOf(foo, bar)
 
-        every { supermarketDataRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
+        every { supermarketStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
         underTest.runSafely()
 
@@ -61,9 +61,9 @@ internal class KauflandFlowTest {
             urlProductsExtractor.extract(url3)
         }
 
-        val expectedToSave = SupermarketData(supermarket = "Kaufland", products = listOf(hello, world, foo, bar))
+        val expectedToSave = SupermarketStore(supermarket = "Kaufland", products = listOf(hello, world, foo, bar))
         verify {
-            supermarketDataRepository.saveIfProductsNotEmpty(match {
+            supermarketStoreRepository.saveIfProductsNotEmpty(match {
                 it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
             })

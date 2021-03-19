@@ -1,0 +1,26 @@
+[
+  {
+    "supermarket": "foo",
+    "products": [
+      {
+        "name": "hello",
+        "quantity": null,
+        "price": 1.1,
+        "oldPrice": null,
+        "picUrl": null
+      }
+    ]
+  },
+  {
+    "supermarket": "bar",
+    "products": [
+      {
+        "name": "world",
+        "quantity": null,
+        "price": 1.2,
+        "oldPrice": null,
+        "picUrl": null
+      }
+    ]
+  }
+]

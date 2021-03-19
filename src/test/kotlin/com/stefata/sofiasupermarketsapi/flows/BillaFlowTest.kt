@@ -2,11 +2,11 @@ package com.stefata.sofiasupermarketsapi.flows
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import com.stefata.sofiasupermarketsapi.getProductWithName
+import com.stefata.sofiasupermarketsapi.getProduct
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Supermarket
-import com.stefata.sofiasupermarketsapi.model.SupermarketData
-import com.stefata.sofiasupermarketsapi.repository.SupermarketDataRepository
+import com.stefata.sofiasupermarketsapi.model.SupermarketStore
+import com.stefata.sofiasupermarketsapi.repository.SupermarketStoreRepository
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -26,7 +26,7 @@ internal class BillaFlowTest {
     lateinit var urlProductsExtractor: UrlProductsExtractor
 
     @MockK
-    lateinit var supermarketDataRepository: SupermarketDataRepository
+    lateinit var supermarketStoreRepository: SupermarketStoreRepository
 
     @InjectMockKs
     lateinit var underTest: BillaFlow
@@ -34,18 +34,18 @@ internal class BillaFlowTest {
     @Test
     fun `runs flow for billa`() {
 
-        val hello = getProductWithName("hello")
+        val hello = getProduct("hello")
 
         every { urlProductsExtractor.extract(url) } returns listOf(hello)
-        every { supermarketDataRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
+        every { supermarketStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
         underTest.runSafely()
 
         verify { urlProductsExtractor.extract(url) }
 
-        val expectedToSave = SupermarketData(supermarket = "Billa", products = listOf(hello))
+        val expectedToSave = SupermarketStore(supermarket = "Billa", products = listOf(hello))
         verify {
-            supermarketDataRepository.saveIfProductsNotEmpty(match {
+            supermarketStoreRepository.saveIfProductsNotEmpty(match {
                 it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
             })
