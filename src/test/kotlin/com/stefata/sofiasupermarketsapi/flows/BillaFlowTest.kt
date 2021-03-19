@@ -1,7 +1,10 @@
 package com.stefata.sofiasupermarketsapi.flows
 
+import assertk.assertThat
+import assertk.assertions.isEqualTo
 import com.stefata.sofiasupermarketsapi.getProductWithName
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
+import com.stefata.sofiasupermarketsapi.model.Supermarket
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -33,6 +36,11 @@ internal class BillaFlowTest {
         underTest.runSafely()
 
         verify { urlProductsExtractor.extract(url) }
+    }
+
+    @Test
+    fun `gets correct supermarket name`() {
+        assertThat(underTest.getSupermarket()).isEqualTo(Supermarket.BILLA)
     }
 
 }
