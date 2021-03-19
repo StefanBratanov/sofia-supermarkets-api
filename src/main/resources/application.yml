@@ -3,3 +3,6 @@ logging.level:
 
 kaufland:
   base.url: https://www.kaufland.bg/aktualni-predlozheniya/ot-ponedelnik.html
+
+billa:
+  url: https://ssbbilla.site/weekly

@@ -1,8 +1,7 @@
 package com.stefata.sofiasupermarketsapi
 
-import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
-import com.stefata.sofiasupermarketsapi.links.KauflandSublinksScraper
-import org.springframework.beans.factory.annotation.Qualifier
+import com.stefata.sofiasupermarketsapi.flows.BillaFlow
+import com.stefata.sofiasupermarketsapi.flows.KauflandFlow
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -17,15 +16,13 @@ fun main(args: Array<String>) {
 
 @Component
 class Main(
-    val kauflandSublinksScraper: KauflandSublinksScraper,
-    @Qualifier("Kaufland") val urlProductsExtractor: UrlProductsExtractor
+    val kauflandFlow: KauflandFlow,
+    val billaFlow: BillaFlow
 ) : CommandLineRunner {
 
     override fun run(vararg args: String?) {
-        kauflandSublinksScraper.getSublinks().forEach {
-            val products = urlProductsExtractor.extract(it)
-            println(products)
-        }
+        kauflandFlow.runSafely()
+        billaFlow.runSafely()
     }
 
 }

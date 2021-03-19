@@ -54,21 +54,20 @@ class PDFTextStripperWithCoordinates(private val regexesToIgnore: List<Regex>) :
         }
     }
 
-}
-
-private class ClusterableTextPosition(val textPosition: TextPosition) : Clusterable {
-
-    override fun getPoint(): DoubleArray {
-        return doubleArrayOf(textPosition.x.toDouble())
+    private class ClusterableTextPosition(val textPosition: TextPosition) : Clusterable {
+        override fun getPoint(): DoubleArray {
+            return doubleArrayOf(textPosition.x.toDouble())
+        }
     }
-}
 
-private fun getAverageXAndY(textPositions: List<TextPosition>?): Pair<Double?, Double?> {
-    val x = textPositions?.map {
-        it.x
-    }?.average()
-    val y = textPositions?.map {
-        it.y
-    }?.average()
-    return Pair(x, y)
+    private fun getAverageXAndY(textPositions: List<TextPosition>?): Pair<Double?, Double?> {
+        val x = textPositions?.map {
+            it.x
+        }?.average()
+        val y = textPositions?.map {
+            it.y
+        }?.average()
+        return Pair(x, y)
+    }
+
 }

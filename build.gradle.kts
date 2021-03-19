@@ -25,9 +25,11 @@ dependencies {
     implementation("commons-io:commons-io:2.8.0")
     implementation("org.jsoup:jsoup:1.13.1")
     implementation("org.apache.pdfbox:pdfbox:2.0.22")
-    implementation("org.junit.jupiter:junit-jupiter:5.4.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.23.1")
+    testImplementation("io.mockk:mockk:1.11.0")
+    testImplementation("com.ninja-squad:springmockk:3.0.1")
     testImplementation("org.skyscreamer:jsonassert:1.5.0")
 }
 

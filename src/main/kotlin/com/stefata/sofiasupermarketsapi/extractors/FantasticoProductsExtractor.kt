@@ -83,15 +83,14 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         return products
     }
 
-
-}
-
-private fun getName(cluster: List<Pair<ProductSection, TextWithCoordinates>>): String {
-    return cluster.filter {
-        it.first == NAME
-    }.filter {
-        it.second.font?.name?.contains("Officina") == false
-    }.joinToString(" ") {
-        it.second.text.toString()
+    private fun getName(cluster: List<Pair<ProductSection, TextWithCoordinates>>): String {
+        return cluster.filter {
+            it.first == NAME
+        }.filter {
+            it.second.font?.name?.contains("Officina") == false
+        }.joinToString(" ") {
+            it.second.text.toString()
+        }
     }
+
 }

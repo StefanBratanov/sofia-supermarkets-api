@@ -24,18 +24,16 @@ class KauflandProductsExtractor : UrlProductsExtractor {
             val title = it.select(".m-offer-tile__title").text()
             val quantity = it.select(".m-offer-tile__quantity").text()
 
-            val oldPrice = it.select(".a-pricetag__old-price")?.text()
-            val price = it.select(".a-pricetag__price")?.text()
-
-            val noOldPrice = oldPrice?.contains("само".toRegex(IGNORE_CASE))?.takeUnless { flag ->
-                flag
+            val oldPrice = it.select(".a-pricetag__old-price")?.text().takeUnless { text ->
+                text?.contains("само".toRegex(IGNORE_CASE)) == true
             }
+            val price = it.select(".a-pricetag__price")?.text()
 
             Product(
                 name = StringUtils.normalizeSpace("$subtitle $title"),
                 quantity = StringUtils.normalizeSpace(quantity),
                 price = normalizePrice(price),
-                oldPrice = noOldPrice?.let { normalizePrice(oldPrice) }
+                oldPrice = normalizePrice(oldPrice)
             )
         }
     }
