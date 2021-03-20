@@ -4,6 +4,7 @@
     "quantity": null,
     "price": 7.49,
     "oldPrice": 8.49,
+    "category": null,
     "picUrl": null
   },
   {
@@ -11,6 +12,7 @@
     "quantity": null,
     "price": 7.99,
     "oldPrice": 9.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -18,6 +20,7 @@
     "quantity": null,
     "price": 8.99,
     "oldPrice": 10.49,
+    "category": null,
     "picUrl": null
   },
   {
@@ -25,6 +28,7 @@
     "quantity": null,
     "price": 9.49,
     "oldPrice": 11.19,
+    "category": null,
     "picUrl": null
   },
   {
@@ -32,6 +36,7 @@
     "quantity": null,
     "price": 9.99,
     "oldPrice": 11.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -39,6 +44,7 @@
     "quantity": null,
     "price": 9.99,
     "oldPrice": 11.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -46,6 +52,7 @@
     "quantity": null,
     "price": 10.99,
     "oldPrice": 14.29,
+    "category": null,
     "picUrl": null
   },
   {
@@ -53,6 +60,7 @@
     "quantity": null,
     "price": 10.99,
     "oldPrice": 15.69,
+    "category": null,
     "picUrl": null
   },
   {
@@ -60,6 +68,7 @@
     "quantity": null,
     "price": 11.99,
     "oldPrice": 16.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -67,6 +76,7 @@
     "quantity": null,
     "price": 11.99,
     "oldPrice": 16.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -74,6 +84,7 @@
     "quantity": null,
     "price": 15.99,
     "oldPrice": 20.89,
+    "category": null,
     "picUrl": null
   },
   {
@@ -81,6 +92,7 @@
     "quantity": null,
     "price": 15.99,
     "oldPrice": 21.49,
+    "category": null,
     "picUrl": null
   },
   {
@@ -88,6 +100,7 @@
     "quantity": null,
     "price": 15.99,
     "oldPrice": 17.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -95,6 +108,7 @@
     "quantity": null,
     "price": 17.49,
     "oldPrice": 19.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -102,6 +116,7 @@
     "quantity": null,
     "price": 17.99,
     "oldPrice": 22.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -109,6 +124,7 @@
     "quantity": null,
     "price": 18.99,
     "oldPrice": 20.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -116,6 +132,7 @@
     "quantity": null,
     "price": 19.99,
     "oldPrice": 23.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -123,6 +140,7 @@
     "quantity": null,
     "price": 20.99,
     "oldPrice": 23.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -130,6 +148,7 @@
     "quantity": null,
     "price": 20.99,
     "oldPrice": 23.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -137,6 +156,7 @@
     "quantity": null,
     "price": 21.89,
     "oldPrice": 31.89,
+    "category": null,
     "picUrl": null
   },
   {
@@ -144,6 +164,7 @@
     "quantity": null,
     "price": 21.99,
     "oldPrice": 28.69,
+    "category": null,
     "picUrl": null
   },
   {
@@ -151,6 +172,7 @@
     "quantity": null,
     "price": 24.99,
     "oldPrice": 31.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -158,6 +180,7 @@
     "quantity": null,
     "price": 27.99,
     "oldPrice": 38.99,
+    "category": null,
     "picUrl": null
   },
   {
@@ -165,6 +188,7 @@
     "quantity": null,
     "price": 31.99,
     "oldPrice": 37.99,
+    "category": null,
     "picUrl": null
   }
 ]
