@@ -1,6 +1,9 @@
 logging.level:
   org.apache.pdfbox.io.ScratchFileBuffer: WARN
 
+flows.runner:
+  cron: "0 0/30 * * * ?"
+
 kaufland:
   base.url: https://www.kaufland.bg/aktualni-predlozheniya/ot-ponedelnik.html
 
