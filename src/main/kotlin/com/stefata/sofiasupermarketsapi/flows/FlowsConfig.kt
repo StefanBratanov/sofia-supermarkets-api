@@ -10,7 +10,8 @@ import org.springframework.context.annotation.Configuration
 class FlowsConfig(
     val billaFlow: BillaFlow,
     val kauflandFlow: KauflandFlow,
-    val lidlFlow: LidlFlow
+    val lidlFlow: LidlFlow,
+    val fantasticoFlow: FantasticoFlow
 ) {
 
     @Bean
@@ -18,7 +19,8 @@ class FlowsConfig(
         return mapOf(
             BILLA to billaFlow,
             KAUFLAND to kauflandFlow,
-            LIDL to lidlFlow
+            LIDL to lidlFlow,
+            FANTASTICO to fantasticoFlow
         )
     }
 }

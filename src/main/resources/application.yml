@@ -10,5 +10,8 @@ kaufland:
 lidl:
   base.url: https://www.lidl.bg
 
+fantastico:
+  url: https://www.fantastico.bg/special-offers
+
 billa:
   url: https://ssbbilla.site/weekly
