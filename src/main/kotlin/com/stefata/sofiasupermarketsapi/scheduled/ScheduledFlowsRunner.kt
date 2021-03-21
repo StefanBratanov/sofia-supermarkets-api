@@ -15,7 +15,7 @@ class ScheduledFlowsRunner(
 
     @Scheduled(cron = "\${flows.runner.cron}")
     fun runFlows() {
-        log.info("Scheduled to run flows")
+        log.info("Scheduled to run flows for {}",flows.keys)
         flows.forEach { (_, flow) ->
             flow.runSafely()
         }

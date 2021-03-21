@@ -16,7 +16,7 @@ class KauflandSublinksScraper(
 
     override fun getSublinks(): List<URL> {
 
-        log.info("Scraping {} for links", baseUrl)
+        log.info("Scraping {} for sublinks", baseUrl)
 
         return getHtmlDocument(baseUrl).select("a[title='Разгледай всички предложения в тази категория']")
             .map {

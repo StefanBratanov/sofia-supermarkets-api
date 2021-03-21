@@ -4,6 +4,7 @@ import com.ninjasquad.springmockk.MockkBean
 import com.stefata.sofiasupermarketsapi.flows.BillaFlow
 import com.stefata.sofiasupermarketsapi.flows.FlowsConfig
 import com.stefata.sofiasupermarketsapi.flows.KauflandFlow
+import com.stefata.sofiasupermarketsapi.flows.LidlFlow
 import io.mockk.justRun
 import io.mockk.verifyAll
 import org.junit.jupiter.api.Test
@@ -22,6 +23,9 @@ internal class ScheduledFlowsRunnerTest {
     @MockkBean
     lateinit var kauflandFlow: KauflandFlow
 
+    @MockkBean
+    lateinit var lidlFlow: LidlFlow
+
     @Autowired
     lateinit var underTest: ScheduledFlowsRunner
 
@@ -30,12 +34,14 @@ internal class ScheduledFlowsRunnerTest {
 
         justRun { billaFlow.runSafely() }
         justRun { kauflandFlow.runSafely() }
+        justRun { lidlFlow.runSafely() }
 
         underTest.runFlows()
 
         verifyAll {
             billaFlow.runSafely()
             kauflandFlow.runSafely()
+            lidlFlow.runSafely()
         }
 
     }

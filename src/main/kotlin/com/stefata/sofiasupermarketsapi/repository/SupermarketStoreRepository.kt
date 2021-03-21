@@ -17,7 +17,7 @@ interface SupermarketStoreRepository : CrudRepository<SupermarketStore, String> 
             it.products.isNullOrEmpty()
         }
         if (isNull(toSave)) {
-            log.info("Products are empty for {}. Will not save.", entity.supermarket)
+            log.warn("Products are empty for {}. Will not save.", entity.supermarket)
             return entity
         }
         return save(entity)
