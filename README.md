@@ -1,3 +1,5 @@
+[![Java CI with Gradle](https://github.com/Stefata/sofia-supermarkets-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/Stefata/sofia-supermarkets-api/actions/workflows/gradle.yml)
+
 # sofia-supermarkets-api
 An API to retrieve products information from supermarkets in Sofia
 
