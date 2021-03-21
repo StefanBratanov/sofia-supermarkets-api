@@ -1,5 +1,14 @@
 # sofia-supermarkets-api
-An API to retrieve products information from supermarkets in Sofia written in Kotlin
+An API to retrieve products information from supermarkets in Sofia
+
+## Tech Stack
+* Kotlin
+* Gradle  
+* Spring Boot
+
+## Running Locally
+* **Unix** `./gradlew bootRun`
+* **Windows** `gradlew.bat bootRun`
 
 ## Supported supermarkets
 
