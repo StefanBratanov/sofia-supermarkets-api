@@ -5,25 +5,25 @@ import assertk.assertions.hasSize
 import assertk.assertions.isEqualTo
 import assertk.assertions.isTrue
 import com.stefata.sofiasupermarketsapi.getProduct
-import com.stefata.sofiasupermarketsapi.model.SupermarketStore
+import com.stefata.sofiasupermarketsapi.model.ProductStore
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.map.repository.config.EnableMapRepositories
 
 @EnableMapRepositories
-@SpringBootTest(classes = [SupermarketStoreRepository::class])
-class SupermarketStoreRepositoryTest {
+@SpringBootTest(classes = [ProductStoreRepository::class])
+class ProductStoreRepositoryTest {
 
     @Autowired
-    lateinit var underTest: SupermarketStoreRepository
+    lateinit var underTest: ProductStoreRepository
 
     @Test
     fun `test saving and retrieving data`() {
         val foo = getProduct("foo")
         val bar = getProduct("bar")
 
-        val myStoreEntry = SupermarketStore(supermarket = "myStore", products = listOf(foo, bar))
+        val myStoreEntry = ProductStore(supermarket = "myStore", products = listOf(foo, bar))
 
         underTest.saveIfProductsNotEmpty(myStoreEntry)
 
@@ -33,7 +33,7 @@ class SupermarketStoreRepositoryTest {
 
         assertThat(underTest.findAll().toList()).hasSize(1)
 
-        val emptyStoreEntry = SupermarketStore(supermarket = "myStore", products = emptyList())
+        val emptyStoreEntry = ProductStore(supermarket = "myStore", products = emptyList())
 
         underTest.saveIfProductsNotEmpty(emptyStoreEntry)
 
@@ -43,7 +43,7 @@ class SupermarketStoreRepositoryTest {
 
         assertThat(underTest.findAll().toList()).hasSize(1)
 
-        val anotherStoryEntry = SupermarketStore(supermarket = "anotherStore", products = listOf(foo, bar))
+        val anotherStoryEntry = ProductStore(supermarket = "anotherStore", products = listOf(foo, bar))
 
         underTest.saveIfProductsNotEmpty(anotherStoryEntry)
 

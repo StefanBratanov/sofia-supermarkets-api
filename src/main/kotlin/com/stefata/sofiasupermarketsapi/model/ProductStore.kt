@@ -4,8 +4,8 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.keyvalue.annotation.KeySpace
 import java.util.*
 
-@KeySpace("SupermarketStore")
-data class SupermarketStore(
+@KeySpace("ProductStore")
+data class ProductStore(
     @Id val supermarket: String,
     val updatedAt: Date? = Date(),
     val products: List<Product>? = emptyList()

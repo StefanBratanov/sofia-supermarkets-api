@@ -5,9 +5,9 @@ import assertk.assertions.isEqualTo
 import com.stefata.sofiasupermarketsapi.getProduct
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.links.KauflandSublinksScraper
+import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.model.Supermarket
-import com.stefata.sofiasupermarketsapi.model.SupermarketStore
-import com.stefata.sofiasupermarketsapi.repository.SupermarketStoreRepository
+import com.stefata.sofiasupermarketsapi.repository.ProductStoreRepository
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -28,7 +28,7 @@ internal class KauflandFlowTest {
     lateinit var urlProductsExtractor: UrlProductsExtractor
 
     @MockK
-    lateinit var supermarketStoreRepository: SupermarketStoreRepository
+    lateinit var productStoreRepository: ProductStoreRepository
 
     @InjectMockKs
     lateinit var underTest: KauflandFlow
@@ -51,7 +51,7 @@ internal class KauflandFlowTest {
         every { urlProductsExtractor.extract(url2) } returns listOf(world)
         every { urlProductsExtractor.extract(url3) } returns listOf(foo, bar)
 
-        every { supermarketStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
+        every { productStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
         underTest.runSafely()
 
@@ -61,9 +61,9 @@ internal class KauflandFlowTest {
             urlProductsExtractor.extract(url3)
         }
 
-        val expectedToSave = SupermarketStore(supermarket = "Kaufland", products = listOf(hello, world, foo, bar))
+        val expectedToSave = ProductStore(supermarket = "Kaufland", products = listOf(hello, world, foo, bar))
         verify {
-            supermarketStoreRepository.saveIfProductsNotEmpty(match {
+            productStoreRepository.saveIfProductsNotEmpty(match {
                 it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
             })

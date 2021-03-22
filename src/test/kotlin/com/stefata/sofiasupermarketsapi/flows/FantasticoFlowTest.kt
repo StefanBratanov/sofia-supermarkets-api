@@ -6,9 +6,9 @@ import assertk.assertions.isFalse
 import com.stefata.sofiasupermarketsapi.brochure.FantasticoBrochureDownloader
 import com.stefata.sofiasupermarketsapi.getProduct
 import com.stefata.sofiasupermarketsapi.interfaces.PdfProductsExtractor
+import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.model.Supermarket
-import com.stefata.sofiasupermarketsapi.model.SupermarketStore
-import com.stefata.sofiasupermarketsapi.repository.SupermarketStoreRepository
+import com.stefata.sofiasupermarketsapi.repository.ProductStoreRepository
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -31,7 +31,7 @@ internal class FantasticoFlowTest {
     lateinit var pdfProductsExtractor: PdfProductsExtractor
 
     @MockK
-    lateinit var supermarketStoreRepository: SupermarketStoreRepository
+    lateinit var productStoreRepository: ProductStoreRepository
 
     @InjectMockKs
     lateinit var underTest: FantasticoFlow
@@ -47,15 +47,15 @@ internal class FantasticoFlowTest {
 
         every { fantasticoBrochureDownloader.download() } returns randomFile
         every { pdfProductsExtractor.extract(any()) } returns listOf(foo, bar)
-        every { supermarketStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
+        every { productStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
         underTest.runSafely()
 
         verify { pdfProductsExtractor.extract(any()) }
 
-        val expectedToSave = SupermarketStore(supermarket = "Fantastico", products = listOf(foo, bar))
+        val expectedToSave = ProductStore(supermarket = "Fantastico", products = listOf(foo, bar))
         verify {
-            supermarketStoreRepository.saveIfProductsNotEmpty(match {
+            productStoreRepository.saveIfProductsNotEmpty(match {
                 it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
             })

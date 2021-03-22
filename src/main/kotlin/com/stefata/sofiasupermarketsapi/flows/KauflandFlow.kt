@@ -5,9 +5,9 @@ import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.interfaces.SupermarketFlow
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.links.KauflandSublinksScraper
+import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.model.Supermarket
-import com.stefata.sofiasupermarketsapi.model.SupermarketStore
-import com.stefata.sofiasupermarketsapi.repository.SupermarketStoreRepository
+import com.stefata.sofiasupermarketsapi.repository.ProductStoreRepository
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Component
 
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component
 class KauflandFlow(
     val kauflandSublinksScraper: KauflandSublinksScraper,
     @Qualifier("Kaufland") val urlProductsExtractor: UrlProductsExtractor,
-    val supermarketStoreRepository: SupermarketStoreRepository
+    val productStoreRepository: ProductStoreRepository
 ) : SupermarketFlow {
 
     override fun run() {
@@ -27,8 +27,8 @@ class KauflandFlow(
         log.info("Retrieved ${products.size} products")
         log.info("Saving ${getSupermarket().title} products")
 
-        val toSave = SupermarketStore(supermarket = getSupermarket().title, products = products)
-        supermarketStoreRepository.saveIfProductsNotEmpty(toSave)
+        val toSave = ProductStore(supermarket = getSupermarket().title, products = products)
+        productStoreRepository.saveIfProductsNotEmpty(toSave)
 
     }
 

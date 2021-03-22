@@ -4,9 +4,9 @@ import assertk.assertThat
 import assertk.assertions.isEqualTo
 import com.stefata.sofiasupermarketsapi.getProduct
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
+import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.model.Supermarket
-import com.stefata.sofiasupermarketsapi.model.SupermarketStore
-import com.stefata.sofiasupermarketsapi.repository.SupermarketStoreRepository
+import com.stefata.sofiasupermarketsapi.repository.ProductStoreRepository
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -26,7 +26,7 @@ internal class BillaFlowTest {
     lateinit var urlProductsExtractor: UrlProductsExtractor
 
     @MockK
-    lateinit var supermarketStoreRepository: SupermarketStoreRepository
+    lateinit var productStoreRepository: ProductStoreRepository
 
     @InjectMockKs
     lateinit var underTest: BillaFlow
@@ -37,15 +37,15 @@ internal class BillaFlowTest {
         val hello = getProduct("hello")
 
         every { urlProductsExtractor.extract(url) } returns listOf(hello)
-        every { supermarketStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
+        every { productStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
         underTest.runSafely()
 
         verify { urlProductsExtractor.extract(url) }
 
-        val expectedToSave = SupermarketStore(supermarket = "Billa", products = listOf(hello))
+        val expectedToSave = ProductStore(supermarket = "Billa", products = listOf(hello))
         verify {
-            supermarketStoreRepository.saveIfProductsNotEmpty(match {
+            productStoreRepository.saveIfProductsNotEmpty(match {
                 it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
             })
