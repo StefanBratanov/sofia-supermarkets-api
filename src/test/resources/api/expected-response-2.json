@@ -1,0 +1,14 @@
+[
+  {
+    "supermarket": "foo",
+    "products": [
+      {
+        "name": "hello",
+        "quantity": null,
+        "price": 1.1,
+        "oldPrice": null,
+        "picUrl": null
+      }
+    ]
+  }
+]

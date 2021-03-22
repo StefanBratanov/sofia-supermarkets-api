@@ -29,8 +29,19 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
         )
 
         val expectedJson = readResource("/api/expected-response.json")
+        val expectedJson2 = readResource("/api/expected-response-2.json")
 
         mockMvc.perform(get("/products").accept(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk)
+            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(content().json(expectedJson))
+
+        mockMvc.perform(get("/products?supermarkets=foo").accept(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk)
+            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(content().json(expectedJson2))
+
+        mockMvc.perform(get("/products?supermarkets=foo,bar").accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk)
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(content().json(expectedJson))

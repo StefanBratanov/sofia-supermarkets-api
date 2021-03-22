@@ -11,11 +11,12 @@ import springfox.documentation.spring.web.plugins.Docket
 class ApiConfig {
 
     @Bean
-    fun api() : Docket {
+    fun api(): Docket {
         return Docket(DocumentationType.SWAGGER_2)
             .select()
             .apis(RequestHandlerSelectors.basePackage("com.stefata.sofiasupermarketsapi"))
             .paths(PathSelectors.any())
             .build()
     }
+
 }
