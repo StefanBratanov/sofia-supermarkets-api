@@ -10,6 +10,7 @@ An API to retrieve products information from supermarkets in Sofia
 * Spring Boot
 
 ## Running Locally
+Install JDK 15 or above from [here](https://jdk.java.net/)
 * **Unix** `./gradlew bootRun`
 * **Windows** `gradlew.bat bootRun`
 
