@@ -19,7 +19,11 @@ class KauflandProductsExtractor : UrlProductsExtractor {
 
         log.info("Processing Kaufland URL: {}", url.toString())
 
-        return getHtmlDocument(url).select(".o-overview-list__list-item").mapNotNull {
+        val document = getHtmlDocument(url)
+
+        val category = document.select(".a-icon-tile-headline__container .a-headline")?.text()
+
+        return document.select(".o-overview-list__list-item").mapNotNull {
             val subtitle = it.select(".m-offer-tile__subtitle").text()
             val title = it.select(".m-offer-tile__title").text()
             val quantity = it.select(".m-offer-tile__quantity").text()
@@ -29,11 +33,15 @@ class KauflandProductsExtractor : UrlProductsExtractor {
             }
             val price = it.select(".a-pricetag__price")?.text()
 
+            val picUrl = it.select(".m-offer-tile__image img")?.attr("data-src")
+
             Product(
                 name = StringUtils.normalizeSpace("$subtitle $title"),
                 quantity = StringUtils.normalizeSpace(quantity),
                 price = normalizePrice(price),
-                oldPrice = normalizePrice(oldPrice)
+                oldPrice = normalizePrice(oldPrice),
+                category = category,
+                picUrl = picUrl
             )
         }
     }

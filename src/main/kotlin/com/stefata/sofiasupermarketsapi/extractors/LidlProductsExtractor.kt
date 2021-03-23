@@ -19,7 +19,11 @@ class LidlProductsExtractor : UrlProductsExtractor {
 
         log.info("Processing Lidl URL: {}", url.toString())
 
-        return getHtmlDocument(url).select("div[data-price],div[data-currency]")
+        val document = getHtmlDocument(url)
+
+        val category = document.select("meta[name=description]")?.attr("content")
+
+        return document.select("div[data-price],div[data-currency]")
             .filter {
                 isNotBlank(it.attr("data-price"))
             }
@@ -38,7 +42,8 @@ class LidlProductsExtractor : UrlProductsExtractor {
                     price = normalizePrice(newPrice),
                     oldPrice = normalizePrice(oldPrice),
                     quantity = StringUtils.normalizeSpace(quantity),
-                    picUrl = picUrl
+                    picUrl = picUrl,
+                    category = category
                 )
 
             }
