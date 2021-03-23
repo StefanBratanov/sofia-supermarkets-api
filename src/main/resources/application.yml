@@ -15,3 +15,6 @@ fantastico:
 
 billa:
   url: https://ssbbilla.site/weekly
+
+tmarket:
+  base.url: https://tmarketonline.bg/

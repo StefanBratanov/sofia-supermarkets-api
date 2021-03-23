@@ -26,6 +26,9 @@ internal class ScheduledFlowsRunnerTest {
     @MockkBean
     lateinit var fantasticoFlow: FantasticoFlow
 
+    @MockkBean
+    lateinit var tMarketFlow: TMarketFlow
+
     @Autowired
     lateinit var underTest: ScheduledFlowsRunner
 
@@ -36,6 +39,7 @@ internal class ScheduledFlowsRunnerTest {
         justRun { kauflandFlow.runSafely() }
         justRun { lidlFlow.runSafely() }
         justRun { fantasticoFlow.runSafely() }
+        justRun { tMarketFlow.runSafely() }
 
         underTest.runFlows()
 
@@ -44,6 +48,7 @@ internal class ScheduledFlowsRunnerTest {
             kauflandFlow.runSafely()
             lidlFlow.runSafely()
             fantasticoFlow.runSafely()
+            tMarketFlow.runSafely()
         }
 
     }
