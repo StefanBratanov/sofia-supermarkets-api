@@ -22,6 +22,7 @@ Navigate to <http://localhost:8080/swagger-ui/> to check the API documentation a
 - [x] Kaufland
 - [x] Lidl
 - [x] T-Market
+- [ ] METRO  
 - [ ] Kam Market
 - [ ] CBA
 - [ ] ProMarket

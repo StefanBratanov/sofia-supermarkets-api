@@ -36,6 +36,10 @@ dependencies {
     testImplementation("org.skyscreamer:jsonassert:1.5.0")
 }
 
+springBoot {
+    buildInfo()
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict","-Xjvm-default=enable")
