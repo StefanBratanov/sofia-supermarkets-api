@@ -13,7 +13,7 @@ An API to retrieve products information from supermarkets in Sofia
 * **Unix** `./gradlew bootRun`
 * **Windows** `gradlew.bat bootRun`
 
-Navigate to `http://localhost:8080/swagger-ui/` to check the API documentation and test the endpoints
+Navigate to <http://localhost:8080/swagger-ui/> to check the API documentation and test the endpoints
 
 ## Supported supermarkets
 
