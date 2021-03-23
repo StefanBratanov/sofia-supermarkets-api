@@ -2,6 +2,7 @@ package com.stefata.sofiasupermarketsapi.api
 
 import com.ninjasquad.springmockk.MockkBean
 import com.stefata.sofiasupermarketsapi.getProduct
+import com.stefata.sofiasupermarketsapi.model.Product
 import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.readResource
 import com.stefata.sofiasupermarketsapi.repository.ProductStoreRepository
@@ -23,13 +24,16 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @Test
     fun `test getting data for products`() {
+        val offerProduct = Product(name = "bitcoin", price = 1.12, oldPrice = 0.89)
+
         every { productStoreRepository.findAll() } returns listOf(
-            ProductStore(supermarket = "foo", products = listOf(getProduct("hello", 1.1))),
+            ProductStore(supermarket = "foo", products = listOf(getProduct("hello", 1.1), offerProduct)),
             ProductStore(supermarket = "bar", products = listOf(getProduct("world", 1.2))),
         )
 
         val expectedJson = readResource("/api/expected-response.json")
         val expectedJson2 = readResource("/api/expected-response-2.json")
+        val expectedJsonOffers = readResource("/api/expected-response-offers.json")
 
         mockMvc.perform(get("/products").accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk)
@@ -45,6 +49,16 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(status().isOk)
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(content().json(expectedJson))
+
+        mockMvc.perform(get("/products?offers=false").accept(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk)
+            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(content().json(expectedJson))
+
+        mockMvc.perform(get("/products?offers=true").accept(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk)
+            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(content().json(expectedJsonOffers))
 
     }
 

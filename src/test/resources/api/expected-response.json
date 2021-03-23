@@ -8,6 +8,13 @@
         "price": 1.1,
         "oldPrice": null,
         "picUrl": null
+      },
+      {
+        "name": "bitcoin",
+        "quantity": null,
+        "price": 1.12,
+        "oldPrice": 0.89,
+        "picUrl": null
       }
     ]
   },
