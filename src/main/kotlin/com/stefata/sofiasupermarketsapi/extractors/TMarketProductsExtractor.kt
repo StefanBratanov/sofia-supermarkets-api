@@ -4,8 +4,10 @@ import com.stefata.sofiasupermarketsapi.common.Log
 import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefata.sofiasupermarketsapi.common.normalizePrice
+import com.stefata.sofiasupermarketsapi.common.separateNameAndQuantity
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
+import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.apache.logging.log4j.util.Strings
 import org.springframework.stereotype.Component
 import java.net.URL
@@ -38,8 +40,11 @@ class TMarketProductsExtractor : UrlProductsExtractor {
                 Strings.isBlank(purl)
             }
 
+            val nameAndQuantity = separateNameAndQuantity(productName)
+
             Product(
-                name = productName,
+                name = normalizeSpace(nameAndQuantity.first),
+                quantity = normalizeSpace(nameAndQuantity.second),
                 price = normalizePrice(price.text()),
                 oldPrice = normalizePrice(oldPrice?.text()),
                 category = category,

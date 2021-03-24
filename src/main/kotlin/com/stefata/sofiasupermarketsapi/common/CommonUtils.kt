@@ -6,6 +6,8 @@ import java.net.URL
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Paths
+import java.util.Objects.isNull
+import kotlin.text.RegexOption.IGNORE_CASE
 
 fun normalizePrice(price: String?): Double? {
     return price?.replace("лв.*".toRegex(), "")?.replace(',', '.')?.trim()?.toDouble()
@@ -21,4 +23,16 @@ fun getHtmlDocument(url: URL): Document {
 fun readResource(resource: String): String {
     val uri = object {}.javaClass.getResource(resource).toURI()
     return Files.readString(Paths.get(uri), StandardCharsets.UTF_8)
+}
+
+private val quantityRegex = "(\\d*(,|\\.|))?\\d+\\s*(кг|бр|л|мл|г|м|ml|g|kg|l)\\.?(?!оди)".toRegex(IGNORE_CASE)
+
+fun separateNameAndQuantity(name: String): Pair<String?, String?> {
+    val matchResult = quantityRegex.find(name)
+    if (isNull(matchResult)) {
+        return Pair(name, null)
+    }
+    val quantity = matchResult?.value
+    val modifiedName = quantity?.let { name.replace(it, "") }
+    return Pair(modifiedName?.replace("(за|-)\\s*\$".toRegex(IGNORE_CASE), ""), quantity)
 }

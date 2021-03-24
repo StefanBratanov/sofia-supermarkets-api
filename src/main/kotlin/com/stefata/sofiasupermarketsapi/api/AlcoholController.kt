@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import kotlin.text.RegexOption.IGNORE_CASE
 
-@Api(tags = ["Product"])
+@Api(tags = ["Product"], description = "All operations for supermarket products")
 @RestController
 class AlcoholController(
     val productStoreController: ProductStoreController

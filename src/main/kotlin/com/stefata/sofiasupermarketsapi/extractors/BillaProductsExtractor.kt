@@ -3,21 +3,24 @@ package com.stefata.sofiasupermarketsapi.extractors
 import com.stefata.sofiasupermarketsapi.common.Log
 import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.common.getHtmlDocument
+import com.stefata.sofiasupermarketsapi.common.separateNameAndQuantity
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
-import org.apache.commons.lang3.StringUtils
+import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.springframework.stereotype.Component
 import java.net.URL
 import java.util.*
+import kotlin.text.RegexOption.IGNORE_CASE
 
 @Log
 @Component("Billa")
 class BillaProductsExtractor : UrlProductsExtractor {
 
     private val regexesToIgnoreBilla = listOf(
-        "Най.*добра.*цена.*".toRegex(RegexOption.IGNORE_CASE),
-        "Изпечен.*всеки.*минути".toRegex(RegexOption.IGNORE_CASE),
-        "Виж още.*".toRegex(RegexOption.IGNORE_CASE)
+        "Най.*добра.*цена.*".toRegex(IGNORE_CASE),
+        "Изпечен.*всеки.*минути".toRegex(IGNORE_CASE),
+        "Виж още.*".toRegex(IGNORE_CASE),
+        "Продукт означен.*със символа.*звезда".toRegex(IGNORE_CASE)
     )
 
     override fun extract(url: URL): List<Product> {
@@ -35,7 +38,8 @@ class BillaProductsExtractor : UrlProductsExtractor {
         }.map {
             val normalizedName =
                 regexesToIgnoreBilla.fold(it.name) { name, toRemove -> name.replace(toRemove, "") }
-            it.copy(name = StringUtils.normalizeSpace(normalizedName))
+            val nameAndQuantity = separateNameAndQuantity(normalizedName)
+            it.copy(name = normalizeSpace(nameAndQuantity.first), quantity = normalizeSpace(nameAndQuantity.second))
         }
     }
 
