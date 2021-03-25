@@ -87,7 +87,7 @@
         "price": 0.79,
         "oldPrice": 1.25,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Бира Budweiser 0,5 л",
@@ -95,7 +95,7 @@
         "price": 1.69,
         "oldPrice": 2.09,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Бира Warsteiner 0,5 л",
@@ -103,7 +103,7 @@
         "price": 1.79,
         "oldPrice": 2.19,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Бърбън Jim Beam 0,7 л",
@@ -111,7 +111,7 @@
         "price": 16.99,
         "oldPrice": 23.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Ракия Сунгурларска отлежала 0,7 л Произход - България",
@@ -119,7 +119,7 @@
         "price": 11.49,
         "oldPrice": 14.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Уиски Johnnie Walker Blonde 0,7 л",
@@ -127,7 +127,7 @@
         "price": 28.99,
         "oldPrice": 38.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Водка Zubrowka Biala 0,7 л",
@@ -135,7 +135,7 @@
         "price": 11.49,
         "oldPrice": 13.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Водка Absolut 0,7 л",
@@ -143,7 +143,7 @@
         "price": 14.99,
         "oldPrice": 20.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Ракия Дядова Усуканица 0,7 л Произход - България",
@@ -151,7 +151,7 @@
         "price": 10.99,
         "oldPrice": 13.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино Santa Helena 0,75 л Продукт означени със символа синя звезда",
@@ -159,7 +159,7 @@
         "price": 7.99,
         "oldPrice": 9.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино Quantum 0,75 л",
@@ -167,7 +167,7 @@
         "price": 6.19,
         "oldPrice": 8.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино Chateau Karnobat 3 л Произход - България",
@@ -175,7 +175,7 @@
         "price": 10.69,
         "oldPrice": 13.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Бира Ариана 2 л Произход - България",
@@ -183,7 +183,7 @@
         "price": 1.79,
         "oldPrice": 2.49,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       }
     ]
   },
@@ -873,7 +873,7 @@
         "price": 1.99,
         "oldPrice": 2.89,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Водка ТЪРГОВИЩЕ",
@@ -881,7 +881,7 @@
         "price": 8.49,
         "oldPrice": 10.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Бира ЗАГОРКА кен",
@@ -889,7 +889,7 @@
         "price": 0.79,
         "oldPrice": 1.25,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Бира ZATECKY HUS кен",
@@ -897,7 +897,7 @@
         "price": 0.99,
         "oldPrice": 1.65,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Спиртна напитка ГРОЗДЕН Мускатова",
@@ -905,7 +905,7 @@
         "price": 7.29,
         "oldPrice": 9.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Уиски JIM BEAM Classic",
@@ -913,7 +913,7 @@
         "price": 16.99,
         "oldPrice": 24.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Шотландско уиски GRANT‘S Triple Wood; Ale Cask; Rum Cask",
@@ -921,7 +921,7 @@
         "price": 16.99,
         "oldPrice": 24.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Водка ЦАРСКАЯ оригинальная",
@@ -929,7 +929,7 @@
         "price": 13.99,
         "oldPrice": 19.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Бренди METAXA 5 звезди кутия",
@@ -937,7 +937,7 @@
         "price": 16.99,
         "oldPrice": 25.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Шотландско уиски SINGLETON",
@@ -945,7 +945,7 @@
         "price": 42.99,
         "oldPrice": 55.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино Шардоне; Каберне Совиньон DOMAINE BOYAR",
@@ -953,7 +953,7 @@
         "price": 13.99,
         "oldPrice": 19.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино Совиньон Блан DUSKY SOUNDS",
@@ -961,7 +961,7 @@
         "price": 12.99,
         "oldPrice": 17.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино Мавруд; Мерло и Каберне совиньон ПРЕСЛАВ",
@@ -969,7 +969,7 @@
         "price": 8.49,
         "oldPrice": 10.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Напитка на винена основа FRUTINO различни видове",
@@ -977,7 +977,7 @@
         "price": 5.99,
         "oldPrice": 8.29,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Напитка на винена основа MONCIGALE Fruits and Wine различни видове",
@@ -985,7 +985,7 @@
         "price": 5.59,
         "oldPrice": 7.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино ANGEL различни видове",
@@ -993,7 +993,7 @@
         "price": 7.99,
         "oldPrice": 11.49,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино DOMAINE BOYAR Тракийска Низина",
@@ -1001,7 +1001,7 @@
         "price": 5.59,
         "oldPrice": 7.49,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино Каберне и Мавруд АСЕНОВГРАД Пенливо вино ARGEO Просеко произход Италия",
@@ -1009,7 +1009,7 @@
         "price": 12.99,
         "oldPrice": 18.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Вино QUANTUM различни видове",
@@ -1017,7 +1017,7 @@
         "price": 6.19,
         "oldPrice": 9.49,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       },
       {
         "name": "Водка LITHUANIAN Original",
@@ -1025,7 +1025,7 @@
         "price": 7.99,
         "oldPrice": 10.99,
         "category": null,
-        "picUrl": null
+        "picUrl": "http://www.foo.bar"
       }
     ]
   }

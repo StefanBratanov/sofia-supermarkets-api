@@ -1,10 +1,12 @@
 package com.stefata.sofiasupermarketsapi.api
 
+import com.stefata.sofiasupermarketsapi.interfaces.ImageSearch
 import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.model.Supermarket.KAUFLAND
 import com.stefata.sofiasupermarketsapi.model.Supermarket.TMARKET
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
+import org.apache.logging.log4j.util.Strings
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import kotlin.text.RegexOption.IGNORE_CASE
@@ -12,7 +14,8 @@ import kotlin.text.RegexOption.IGNORE_CASE
 @Api(tags = ["Product"], description = "All operations for supermarket products")
 @RestController
 class AlcoholController(
-    val productStoreController: ProductStoreController
+    val productStoreController: ProductStoreController,
+    val imageSearch: ImageSearch
 ) {
 
     private val tMarketCategoryRegexes = listOf("Бира", "Вино", "(?<!без)алкохолни").map {
@@ -68,6 +71,16 @@ class AlcoholController(
                 }
             }
 
+        }.map {
+            val productsWithPics = it.products?.map { product ->
+                if (Strings.isBlank(product.picUrl)) {
+                    val picUrl = imageSearch.search("${product.name} ${product.quantity}")
+                    product.copy(picUrl = picUrl)
+                } else {
+                    product
+                }
+            }
+            it.copy(products = productsWithPics)
         }
     }
 }

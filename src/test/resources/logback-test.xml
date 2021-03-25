@@ -2,4 +2,5 @@
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml" />
     <logger name="org.apache.pdfbox.io.ScratchFileBuffer" level="ERROR"/>
+    <logger name="org.mockserver.log" level="WARN"/>
 </configuration>

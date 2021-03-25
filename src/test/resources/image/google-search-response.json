@@ -1,0 +1,248 @@
+{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - JAMESON Ирландско уиски",
+        "totalResults": "71000",
+        "searchTerms": "JAMESON Ирландско уиски",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "0b1305ac3733516ec",
+        "searchType": "image"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - JAMESON Ирландско уиски",
+        "totalResults": "71000",
+        "searchTerms": "JAMESON Ирландско уиски",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "0b1305ac3733516ec",
+        "searchType": "image"
+      }
+    ]
+  },
+  "context": {
+    "title": "sofia-supermarkets-api"
+  },
+  "searchInformation": {
+    "searchTime": 0.561251,
+    "formattedSearchTime": "0.56",
+    "totalResults": "71000",
+    "formattedTotalResults": "71,000"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "Whiskystore.bg: Уиски Jameson 1 л.",
+      "htmlTitle": "Whiskystore.bg: <b>Уиски Jameson</b> 1 л.",
+      "link": "https://whiskystore.bg/userfiles/productlargeimages/product_2376.jpg",
+      "displayLink": "whiskystore.bg",
+      "snippet": "Whiskystore.bg: Уиски Jameson 1 л.",
+      "htmlSnippet": "Whiskystore.bg: <b>Уиски Jameson</b> 1 л.",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://whiskystore.bg/product/397/uiski-jameson-1-l.html",
+        "height": 800,
+        "width": 800,
+        "byteSize": 127859,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMq3tEOrSMYdLKqaSwRY09_XMeR-We7b7_4FXuVXzeYbBSpf9tFeY3NdM&s",
+        "thumbnailHeight": 143,
+        "thumbnailWidth": 143
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Ирландско уиски Jameson Black Barrel с две чаши 700мл.",
+      "htmlTitle": "<b>Ирландско уиски Jameson</b> Black Barrel с две чаши 700мл.",
+      "link": "https://cdncloudcart.com/16474/products/images/2518/jameson-black-barrel-s-dve-casi-700ml-image_5fbd72066e05c_800x800.jpeg?1606251032",
+      "displayLink": "edrinks.bg",
+      "snippet": "Ирландско уиски Jameson Black Barrel с две чаши 700мл.",
+      "htmlSnippet": "<b>Ирландско уиски Jameson</b> Black Barrel с две чаши 700мл.",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://edrinks.bg/product/jameson-black-barrel-pack",
+        "height": 800,
+        "width": 800,
+        "byteSize": 93603,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhfP59yoVVMCuXrPYjIoQTTlww-vOkacYpxA5_hGkogXB0EDjOJF9dZUv_&s",
+        "thumbnailHeight": 143,
+        "thumbnailWidth": 143
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Jameson 18 Year Old — Джеймисън 18 годишно от Whisky.bg",
+      "htmlTitle": "<b>Jameson</b> 18 Year Old — Джеймисън 18 годишно от Whisky.bg",
+      "link": "https://whisky.bg/wp-content/uploads/2015/02/jameson-18-year.jpg",
+      "displayLink": "whisky.bg",
+      "snippet": "Jameson 18 Year Old — Джеймисън 18 годишно от Whisky.bg",
+      "htmlSnippet": "<b>Jameson</b> 18 Year Old — Джеймисън 18 годишно от Whisky.bg",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://whisky.bg/shop/jameson-18-year-old/",
+        "height": 562,
+        "width": 562,
+        "byteSize": 67605,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Z4lL8QB9FEAQVdw4jlc56DfUz-5dgh8kBKCKvkLaOQuPSBqJTxSDgIg&s",
+        "thumbnailHeight": 133,
+        "thumbnailWidth": 133
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Jameson Crested 700ml на топ цена — PartyDrinks.BG",
+      "htmlTitle": "<b>Jameson</b> Crested 700ml на топ цена — PartyDrinks.BG",
+      "link": "https://partydrinks.bg/image/catalog/NEW_20200724/Whisky11/%20%D1%83%D0%B8%D1%81%D0%BA%D0%B8%20Jameson%20Crested%20700ml%2040.jpg",
+      "displayLink": "partydrinks.bg",
+      "snippet": "Jameson Crested 700ml на топ цена — PartyDrinks.BG",
+      "htmlSnippet": "<b>Jameson</b> Crested 700ml на топ цена — PartyDrinks.BG",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://partydrinks.bg/alcohol-drinks/whisky/jameson-crested-700ml",
+        "height": 2289,
+        "width": 2289,
+        "byteSize": 699467,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcVgxk9bwMzUBYuiJJMwtPbwsRPrFHMG3K5RV7nMaIceiWGeNho2xf4Lw7&s",
+        "thumbnailHeight": 150,
+        "thumbnailWidth": 150
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Jameson",
+      "htmlTitle": "<b>Jameson</b>",
+      "link": "https://media-s3-us-east-1.ceros.com/economedia/images/2020/12/14/04fe18358fe8257f8057eb428a150a71/jameson-original-jameson-digitalassets-fy21-q2-image-16x9-hr-christmas-hot-toddy-1.jpg",
+      "displayLink": "view.ceros.com",
+      "snippet": "jameson-original-jameson- ...",
+      "htmlSnippet": "<b>jameson</b>-original-<b>jameson</b>- ...",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://view.ceros.com/economedia/jameson-1?heightOverride=9550&mobileHeightOverride=14100",
+        "height": 2260,
+        "width": 3390,
+        "byteSize": 4294000,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBvAJN_wJ6GtWJ2f-mFrVtnWuQNNHepIlZIVmCgp4s2t6qmzfsIfkPBw&s",
+        "thumbnailHeight": 100,
+        "thumbnailWidth": 150
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Jameson Black Barrel 700ml на топ цена — PartyDrinks.BG",
+      "htmlTitle": "<b>Jameson</b> Black Barrel 700ml на топ цена — PartyDrinks.BG",
+      "link": "https://partydrinks.bg/image/catalog/NEW_20200724/%20%D1%83%D0%B8%D1%81%D0%BA%D0%B8%20Jameson%20Black%20Barrel%20700ml%2040.jpg",
+      "displayLink": "partydrinks.bg",
+      "snippet": "Jameson Black Barrel 700ml на топ цена — PartyDrinks.BG",
+      "htmlSnippet": "<b>Jameson</b> Black Barrel 700ml на топ цена — PartyDrinks.BG",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://partydrinks.bg/alcohol-drinks/whisky/jameson-black-barrel-700ml",
+        "height": 2289,
+        "width": 2289,
+        "byteSize": 745631,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YQZ_1Ajf1DSX9eR9pqk-w_14P5BtOtf9iVdlmCVozGf2XOiZm-Dcbi0O&s",
+        "thumbnailHeight": 150,
+        "thumbnailWidth": 150
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Ирландско уиски Jameson RedBreast Single Pot Still, 12 годишно ...",
+      "htmlTitle": "<b>Ирландско уиски Jameson</b> RedBreast Single Pot Still, 12 годишно ...",
+      "link": "https://whiskystore.bg/userfiles/productlargeimages/product_5536.jpg",
+      "displayLink": "whiskystore.bg",
+      "snippet": "Ирландско уиски Jameson RedBreast Single Pot Still, 12 годишно ...",
+      "htmlSnippet": "<b>Ирландско уиски Jameson</b> RedBreast Single Pot Still, 12 годишно ...",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://whiskystore.bg/product/65/irlandsko-uiski-jameson-redbreast-single-pot-still-12-godishno-0-7-lit.html",
+        "height": 800,
+        "width": 800,
+        "byteSize": 44488,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvF6iZVtETLhZnqb7RO31gXZRlxZJn13Wm_wUJoBYvkp2bPw-ad-qWxU&s",
+        "thumbnailHeight": 143,
+        "thumbnailWidth": 143
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Jameson with 2 glasses 700ml на топ цена — PartyDrinks.BG",
+      "htmlTitle": "<b>Jameson</b> with 2 glasses 700ml на топ цена — PartyDrinks.BG",
+      "link": "https://partydrinks.bg/image/catalog/NEW_20200724/Whisky11/%20%D1%83%D0%B8%D1%81%D0%BA%D0%B8%20Jameson%20with%202%20glasses%20700ml.jpg",
+      "displayLink": "partydrinks.bg",
+      "snippet": "Jameson with 2 glasses 700ml на топ цена — PartyDrinks.BG",
+      "htmlSnippet": "<b>Jameson</b> with 2 glasses 700ml на топ цена — PartyDrinks.BG",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://partydrinks.bg/alcohol-drinks/whisky/jameson-with-2-glasses-700ml",
+        "height": 2289,
+        "width": 2289,
+        "byteSize": 1021961,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVQ4PfHyR4JybzPfgn58NmiMqYjrzyO-LUJNlxqhjUDkErde18HyXB3DU&s",
+        "thumbnailHeight": 150,
+        "thumbnailWidth": 150
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Jameson",
+      "htmlTitle": "<b>Jameson</b>",
+      "link": "https://media-s3-us-east-1.ceros.com/economedia/images/2020/12/05/b444baa67bb589537fd194973e29b627/irish-boulevardier-1.jpg",
+      "displayLink": "view.ceros.com",
+      "snippet": "irish-boulevardier-1.jpg",
+      "htmlSnippet": "irish-boulevardier-1.jpg",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://view.ceros.com/economedia/jameson-1?heightOverride=9550&mobileHeightOverride=14100",
+        "height": 1045,
+        "width": 1858,
+        "byteSize": 662542,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVvWhFbYsg4uhpY-AMcopNrP2aN49xykGTR7IDOm6fvX25e5rrWGGf8w&s",
+        "thumbnailHeight": 84,
+        "thumbnailWidth": 150
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Jameson Caskmates 700ml на топ цена — PartyDrinks.BG",
+      "htmlTitle": "<b>Jameson</b> Caskmates 700ml на топ цена — PartyDrinks.BG",
+      "link": "https://partydrinks.bg/image/catalog/NEW_20200724/Whisky11/%20%D1%83%D0%B8%D1%81%D0%BA%D0%B8%20Jameson%20Caskmates%20700ml%2040.jpg",
+      "displayLink": "partydrinks.bg",
+      "snippet": "Jameson Caskmates 700ml на топ цена — PartyDrinks.BG",
+      "htmlSnippet": "<b>Jameson</b> Caskmates 700ml на топ цена — PartyDrinks.BG",
+      "mime": "image/jpeg",
+      "fileFormat": "image/jpeg",
+      "image": {
+        "contextLink": "https://partydrinks.bg/alcohol-drinks/whisky/jameson-caskmates-700ml",
+        "height": 3464,
+        "width": 3464,
+        "byteSize": 858135,
+        "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd7YJHfSmzHQYMuJytLqgZL8vIy-Qc4swjAlOyOIyogA6Vw9l2Wy0z44c&s",
+        "thumbnailHeight": 150,
+        "thumbnailWidth": 150
+      }
+    }
+  ]
+}

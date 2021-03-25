@@ -18,3 +18,17 @@ billa:
 
 tmarket:
   base.url: https://tmarketonline.bg/
+
+google:
+  custom.search:
+    url: https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY:}&cx=0b1305ac3733516ec&searchType=image
+
+spring:
+  jpa:
+    hibernate.ddl-auto: none
+  datasource:
+    hikari:
+      maximum-pool-size: 2
+    url: "jdbc:postgresql://queenie.db.elephantsql.com:5432/nwshtxej"
+    username: ${DB_USERNAME:}
+    password: ${DB_PASSWORD:}

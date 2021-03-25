@@ -9,7 +9,7 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
-@WebMvcTest
+@WebMvcTest(controllers = [SupermarketController::class])
 internal class SupermarketControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @Test
