@@ -4,7 +4,6 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import java.net.URL
 import java.nio.charset.StandardCharsets
-import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.Objects.isNull
 import kotlin.text.RegexOption.IGNORE_CASE
@@ -18,11 +17,6 @@ fun getHtmlDocument(url: URL): Document {
         return Jsoup.parse(Paths.get(url.toURI()).toFile(), StandardCharsets.UTF_8.name())
     }
     return Jsoup.parse(url, 60000)
-}
-
-fun readResource(resource: String): String {
-    val uri = object {}.javaClass.getResource(resource).toURI()
-    return Files.readString(Paths.get(uri), StandardCharsets.UTF_8)
 }
 
 private val quantityRegex = "(\\d*(,|\\.|))?\\d+\\s*(кг|бр|л|мл|г|м|ml|g|kg|l)\\.?(?!оди)".toRegex(IGNORE_CASE)
