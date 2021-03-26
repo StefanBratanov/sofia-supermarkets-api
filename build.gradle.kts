@@ -38,6 +38,7 @@ dependencies {
     implementation("commons-io:commons-io:2.8.0")
     implementation("org.jsoup:jsoup:1.13.1")
     implementation("org.apache.pdfbox:pdfbox:2.0.22")
+    implementation("me.xdrop:fuzzywuzzy:1.3.1")
     testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.23.1")

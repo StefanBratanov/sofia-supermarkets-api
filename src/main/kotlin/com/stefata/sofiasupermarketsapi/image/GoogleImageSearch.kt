@@ -5,6 +5,7 @@ import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.interfaces.ImageSearch
 import com.stefata.sofiasupermarketsapi.model.ProductImage
 import com.stefata.sofiasupermarketsapi.repository.ProductImageRepository
+import me.xdrop.fuzzywuzzy.FuzzySearch
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.cache.annotation.Cacheable
 import org.springframework.http.HttpMethod
@@ -13,6 +14,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Component
 import org.springframework.web.client.HttpStatusCodeException
 import org.springframework.web.client.RestTemplate
+import java.util.Objects.isNull
 
 @Log
 @Component
@@ -52,7 +54,9 @@ class GoogleImageSearch(
             return null
         }
 
-        val imageLink = response.body!!.items?.firstOrNull {
+        val imageLink = response.body!!.items?.sortedByDescending {
+            if (isNull(it.title)) 0 else FuzzySearch.ratio(query.toLowerCase(), it.title!!.toLowerCase())
+        }?.firstOrNull {
             val sizeIsGood = it.image.width >= minWidth && it.image.height >= minHeight
             sizeIsGood && it.fileFormat?.equals("image/", ignoreCase = true) == false
         }?.link

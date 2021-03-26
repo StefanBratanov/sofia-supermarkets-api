@@ -22,7 +22,8 @@ class BillaProductsExtractor : UrlProductsExtractor {
         "Виж още.*".toRegex(IGNORE_CASE),
         "Продукт означен.*със символа.*звезда".toRegex(IGNORE_CASE),
         "(\\*\\s*)?(\\*+)?цената не включва амбалаж".toRegex(IGNORE_CASE),
-        "(;\\s*)?цена на амбалаж - .*\$".toRegex(IGNORE_CASE)
+        "(;\\s*)?цена на амбалаж - .*\$".toRegex(IGNORE_CASE),
+        "Произход\\s*-\\s*България".toRegex(IGNORE_CASE)
     )
 
     override fun extract(url: URL): List<Product> {

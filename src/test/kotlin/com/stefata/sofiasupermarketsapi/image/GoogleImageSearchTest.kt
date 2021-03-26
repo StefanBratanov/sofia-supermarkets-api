@@ -41,7 +41,7 @@ internal class GoogleImageSearchTest {
             request()
                 .withPath("/search")
                 .withQueryStringParameter(
-                    Parameter.param("q", "JAMESON Ирландско уиски")
+                    Parameter.param("q", "JAMESON Ирландско уиски 0,7 л")
                 )
         ).respond(
             response()
@@ -70,8 +70,8 @@ internal class GoogleImageSearchTest {
         every { productImageRepository.save(any()) } returns ProductImage("foo", "bar")
 
         val expectedImage = ProductImage(
-            "JAMESON Ирландско уиски",
-            "https://whiskystore.bg/userfiles/productlargeimages/product_2376.jpg"
+            "JAMESON Ирландско уиски 0,7 л",
+            "https://cdncloudcart.com/16474/products/images/2518/jameson-black-barrel-s-dve-casi-700ml-image_5fbd72066e05c_800x800.jpeg?1606251032"
         )
 
         val result = underTest.search(expectedImage.product)
