@@ -1,5 +1,13 @@
-logging.level:
-  org.apache.pdfbox.io.ScratchFileBuffer: WARN
+logging:
+  file:
+    name: ${java.io.tmpdir}/${spring.application.name}.log
+    max-size: 50MB
+  level:
+    org.apache.pdfbox.io.ScratchFileBuffer: WARN
+
+management:
+  endpoints:
+    web.exposure.include: "*"
 
 flows.runner:
   cron: "0 0/30 * * * ?"
@@ -24,6 +32,7 @@ google:
     url: https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY:}&cx=0b1305ac3733516ec&searchType=image
 
 spring:
+  application.name: sofia-supermarkets-api
   jpa:
     hibernate.ddl-auto: none
   datasource:
