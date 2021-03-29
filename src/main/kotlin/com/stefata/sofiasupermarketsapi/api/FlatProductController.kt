@@ -51,7 +51,7 @@ class FlatProductController(
         return price?.takeUnless {
             isNull(oldPrice)
         }?.let {
-            (100 - ((oldPrice!! / price) * 100)).toInt().absoluteValue
+            ((1 - (price.div(oldPrice!!))) * 100).toInt().absoluteValue
         }
     }
 }
