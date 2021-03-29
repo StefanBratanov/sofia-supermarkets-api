@@ -1,5 +1,7 @@
 package com.stefata.sofiasupermarketsapi.pdf
 
+import com.stefata.sofiasupermarketsapi.common.Log
+import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import org.apache.commons.math3.ml.clustering.Clusterable
 import org.apache.commons.math3.ml.clustering.DBSCANClusterer
 import org.apache.pdfbox.pdmodel.PDDocument
@@ -7,6 +9,7 @@ import org.apache.pdfbox.text.PDFTextStripper
 import org.apache.pdfbox.text.TextPosition
 import kotlin.math.roundToLong
 
+@Log
 class PDFTextStripperWithCoordinates(private val regexesToIgnore: List<Regex>) : PDFTextStripper() {
 
     val strippedTexts: MutableList<TextWithCoordinates> = mutableListOf()
@@ -29,7 +32,7 @@ class PDFTextStripperWithCoordinates(private val regexesToIgnore: List<Regex>) :
         }
         val clusters = dbScanClusterer.cluster(clusterableTextPositions)
         if (clusters.size > 1) {
-            println("Separating $text because it is too far apart")
+            log.info("Separating $text because it is too far apart")
             clusters.map { cluster ->
                 val clusterTp = cluster.points
                 val (x, y) = getAverageXAndY(clusterTp.map { it.textPosition })
