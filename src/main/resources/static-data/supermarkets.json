@@ -1,7 +1,27 @@
 [
   {
-    "name" : "Billa",
-    "website" : "https://www.billa.bg/",
-    "logo" : "/assets/billa.png"
+    "name": "Billa",
+    "website": "https://www.billa.bg/",
+    "logo": "/assets/billa.png"
+  },
+  {
+    "name": "Fantastico",
+    "website": "https://www.fantastico.bg/",
+    "logo": "/assets/fantastico.png"
+  },
+  {
+    "name": "Kaufland",
+    "website": "https://www.billa.bg/",
+    "logo": "/assets/kaufland.png"
+  },
+  {
+    "name": "Lidl",
+    "website": "https://www.lidl.bg/",
+    "logo": "/assets/lidl.png"
+  },
+  {
+    "name": "T-Market",
+    "website": "https://tmarket.bg/",
+    "logo": "/assets/t-market.png"
   }
 ]
