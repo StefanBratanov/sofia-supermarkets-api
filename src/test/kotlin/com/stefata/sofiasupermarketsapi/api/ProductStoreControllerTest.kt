@@ -40,12 +40,12 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(content().json(expectedJson))
 
-        mockMvc.perform(get("/products?supermarkets=foo").accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/products?supermarket=foo").accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk)
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(content().json(expectedJson2))
 
-        mockMvc.perform(get("/products?supermarkets=foo,bar").accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/products?supermarket=foo,bar").accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk)
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(content().json(expectedJson))

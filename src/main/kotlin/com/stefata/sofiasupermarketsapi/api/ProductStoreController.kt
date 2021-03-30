@@ -18,11 +18,11 @@ class ProductStoreController(
     @GetMapping("/products")
     fun products(productCriteria: ProductCriteria): List<ProductStore> {
 
-        val productStores = if (productCriteria.supermarkets.isNullOrEmpty()) {
+        val productStores = if (productCriteria.supermarket.isNullOrEmpty()) {
             productStoreRepository.findAll().toList()
         } else {
             productStoreRepository.findAll().filter { productStoreEntry ->
-                productCriteria.supermarkets!!.any {
+                productCriteria.supermarket!!.any {
                     it.equals(productStoreEntry.supermarket, ignoreCase = true)
                 }
             }
