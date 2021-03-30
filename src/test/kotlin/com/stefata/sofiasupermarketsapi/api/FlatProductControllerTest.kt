@@ -29,7 +29,9 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
     fun `test getting alcohol products`() {
 
         val alcohols = readResource("/api/alcohol/expected.json")
+        val beer = readResource("/api/alcohol/only-beer.json")
         val expectedJson = readResource("/api/flat/expected.json")
+        val expectedBeer = readResource("/api/flat/expected-beer.json")
 
         val supermarketStaticData = Supermarket.values().map {
             SupermarketController.SupermarketStaticData(
@@ -37,12 +39,22 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
             )
         }
 
-        every { alcoholController.alcohol(any()) } returns objectMapper.readValue(alcohols)
+        every { alcoholController.alcohol(any(), null) } returns objectMapper.readValue(alcohols)
+        every { alcoholController.alcohol(any(), listOf("beer")) } returns objectMapper.readValue(beer)
         every { supermarketController.supermarkets() } returns supermarketStaticData
 
         mockMvc.perform(MockMvcRequestBuilders.get("/products/flat/alcohol").accept(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
+
+        mockMvc.perform(
+            MockMvcRequestBuilders.get("/products/flat/alcohol?category=beer")
+                .accept(MediaType.APPLICATION_JSON)
+        )
+            .andExpect(MockMvcResultMatchers.status().isOk)
+            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.content().json(expectedBeer, false))
+
     }
 }

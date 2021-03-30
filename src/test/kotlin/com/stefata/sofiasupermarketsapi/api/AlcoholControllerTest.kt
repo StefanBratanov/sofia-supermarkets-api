@@ -39,5 +39,25 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
 
+        val onlyBeer = readResource("/api/alcohol/only-beer.json")
+
+        mockMvc.perform(
+            MockMvcRequestBuilders.get("/products/alcohol?category=beer")
+                .accept(MediaType.APPLICATION_JSON)
+        )
+            .andExpect(MockMvcResultMatchers.status().isOk)
+            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.content().json(onlyBeer, false))
+
+        val beerAndWhiskey = readResource("/api/alcohol/beer-and-whiskey.json")
+
+        mockMvc.perform(
+            MockMvcRequestBuilders.get("/products/alcohol?category=beer,whiskey")
+                .accept(MediaType.APPLICATION_JSON)
+        )
+            .andExpect(MockMvcResultMatchers.status().isOk)
+            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.content().json(beerAndWhiskey, false))
+
     }
 }

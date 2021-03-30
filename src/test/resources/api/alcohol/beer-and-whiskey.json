@@ -1,0 +1,464 @@
+[
+  {
+    "supermarket": "Lidl",
+    "updatedAt": "2021-03-24T11:00:46.659+00:00",
+    "products": [
+      {
+        "name": "Mythos Бира",
+        "quantity": "6 x 0,33 l/опаковка",
+        "price": 3.89,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/6204148/xs/6204148_0.jpg"
+      },
+      {
+        "name": "Johnnie Walker Уиски",
+        "quantity": "0,7 l/опаковка",
+        "price": 25.49,
+        "oldPrice": null,
+        "category": "Whiskey",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/2236/xs/2236_10.jpg"
+      },
+      {
+        "name": "Queen Margot Шотландско уиски",
+        "quantity": "0,75 l/опаковка",
+        "price": 14.99,
+        "oldPrice": null,
+        "category": "Whiskey",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/128107/xs/128107_10.jpg"
+      }
+    ]
+  },
+  {
+    "supermarket": "Billa",
+    "updatedAt": "2021-03-24T11:00:34.233+00:00",
+    "products": [
+      {
+        "name": "Бира Загорка 0,5 л",
+        "quantity": null,
+        "price": 0.79,
+        "oldPrice": 1.25,
+        "category": "Beer",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Бира Budweiser 0,5 л",
+        "quantity": null,
+        "price": 1.69,
+        "oldPrice": 2.09,
+        "category": "Beer",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Бира Warsteiner 0,5 л",
+        "quantity": null,
+        "price": 1.79,
+        "oldPrice": 2.19,
+        "category": "Beer",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Бърбън Jim Beam 0,7 л",
+        "quantity": null,
+        "price": 16.99,
+        "oldPrice": 23.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Уиски Johnnie Walker Blonde 0,7 л",
+        "quantity": null,
+        "price": 28.99,
+        "oldPrice": 38.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Бира Ариана 2 л Произход - България",
+        "quantity": null,
+        "price": 1.79,
+        "oldPrice": 2.49,
+        "category": "Beer",
+        "picUrl": "http://www.foo.bar"
+      }
+    ]
+  },
+  {
+    "supermarket": "Kaufland",
+    "updatedAt": "2021-03-24T11:00:42.095+00:00",
+    "products": [
+      {
+        "name": "Загорка ретро Светло пиво",
+        "quantity": "0,5 л",
+        "price": 0.89,
+        "oldPrice": 1.29,
+        "category": "Beer",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_00038315_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Jameson Ирландско уиски",
+        "quantity": "0,7 л",
+        "price": 21.69,
+        "oldPrice": 28.69,
+        "category": "Whiskey",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02100065_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Johnnie Walker Шотландско уиски",
+        "quantity": "1 л",
+        "price": 22.89,
+        "oldPrice": 33.29,
+        "category": "Whiskey",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02100650_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Glenfiddich Шотландско уиски",
+        "quantity": "0,7 л",
+        "price": 43.99,
+        "oldPrice": 56.99,
+        "category": "Whiskey",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02100830_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Каменица Светло пиво",
+        "quantity": "0,5 л кен",
+        "price": 0.79,
+        "oldPrice": 1.25,
+        "category": "Beer",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02300112_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Бургаско Светло пиво",
+        "quantity": "2 л РЕТ",
+        "price": 1.79,
+        "oldPrice": 2.59,
+        "category": "Beer",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02300144_P.jpg/150x/tileImage1.jpg"
+      }
+    ]
+  },
+  {
+    "supermarket": "T-Market",
+    "updatedAt": "2021-03-24T11:01:18.112+00:00",
+    "products": [
+      {
+        "name": "Бира ПИРИНСКО буилка 500мл",
+        "quantity": null,
+        "price": 0.97,
+        "oldPrice": 1.15,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44329/bira-pirinsko-builka-500ml-image_5f4cbc66ead3d_600x600.jpeg?1598865130"
+      },
+      {
+        "name": "Бира ПИРИНСКО кен 500 мл",
+        "quantity": null,
+        "price": 1.01,
+        "oldPrice": 1.19,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39749/bira-pirinsko-ken-500-ml-image_5eb962efc9d5e_600x600.jpeg?1589207810"
+      },
+      {
+        "name": "Бира ПИРИНСКО АЙС кен 500мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": 1.29,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44346/bira-pirinsko-ajs-ken-500ml-image_5f4cbc7251ad3_600x600.png?1598865149"
+      },
+      {
+        "name": "Бира ПИРИНСКО кен безалкохолна 0.0% 500мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": 1.29,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44347/bira-pirinsko-ken-bezalkoholna-0-0--500ml-image_5f4cbc72f0363_600x600.png?1598865145"
+      },
+      {
+        "name": "Бира HEINEKEN кен 500 мл",
+        "quantity": null,
+        "price": 1.39,
+        "oldPrice": 1.89,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39657/bira-heineken-ken-500-ml-image_5ea2d06a2968e_600x600.png?1587732147"
+      },
+      {
+        "name": "Бира AMSTEL Premium 5% кен 500 мл",
+        "quantity": null,
+        "price": 1.52,
+        "oldPrice": 1.79,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39840/bira-amstel-premium-5--ken-500-ml-image_5ea2d3f9b4e4c_600x600.png?1587732299"
+      },
+      {
+        "name": "Бира ПИРИНСКО 1.2л",
+        "quantity": null,
+        "price": 1.52,
+        "oldPrice": 1.79,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44333/bira-pirinsko-1-2l-image_5f4cbc6aa64f2_600x600.jpeg?1598865131"
+      },
+      {
+        "name": "Бира AMSTEL Premium 5% 1л",
+        "quantity": null,
+        "price": 1.77,
+        "oldPrice": 2.09,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44112/bira-amstel-premium-5--1l-image_5f4cedc8b0816_600x600.png?1598877159"
+      },
+      {
+        "name": "Бира АРИАНА 2л",
+        "quantity": null,
+        "price": 1.79,
+        "oldPrice": 2.59,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44093/bira-ariana-2l-image_5f4cf16003f68_600x600.png?1598878075"
+      },
+      {
+        "name": "Бира BARLEY",
+        "quantity": null,
+        "price": 0.75,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/46349/bira-barley-image_60181663b1338_600x600.jpeg?1612191352"
+      },
+      {
+        "name": "Бира ШУМЕНСКО бутилка 330мл",
+        "quantity": null,
+        "price": 0.79,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44340/bira-sumensko-butilka-330ml-image_5f4cbc6d95aa6_600x600.jpeg?1598865135"
+      },
+      {
+        "name": "Бира ASTIKA кен 500мл",
+        "quantity": null,
+        "price": 1.05,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/42033/bira-astika-ken-500ml-image_5f3a89bec6b52_600x600.png?1597692592"
+      },
+      {
+        "name": "Бира ARIANA Радлер Ягода, мента 0.0% 330мл",
+        "quantity": null,
+        "price": 1.05,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44135/bira-ariana-radler-agoda-menta-0-0--330ml-image_5f4cbbeba60af_600x600.png?1598865047"
+      },
+      {
+        "name": "Бира АРИАНА Радлер Малина 0.0% 330мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44126/bira-ariana-radler-malina-0-0--330ml-image_5f4cbbe371d7e_600x600.png?1598865040"
+      },
+      {
+        "name": "Бира АРИАНА Радлер Лимон 0.0% 330мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44128/bira-ariana-radler-limon-0-0--330ml-image_5f4cbbe40653a_600x600.png?1598865041"
+      },
+      {
+        "name": "Бира АРИАНА Радлер Портокал, Грейпфрут 0.0% 330мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44131/bira-ariana-radler-portokal-grejpfrut-0-0--330ml-image_5f4cbbe4cca99_600x600.png?1598865044"
+      },
+      {
+        "name": "Бира БОЛЯРКА кен 500мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44383/bira-bolarka-ken-500ml-image_5f4cbc951b097_600x600.jpeg?1598865160"
+      },
+      {
+        "name": "Бира ZAGORKA бутилка 500мл",
+        "quantity": null,
+        "price": 1.15,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44101/bira-zagorka-butilka-500ml-image_5f4cbbc8d70f4_600x600.jpeg?1598865020"
+      },
+      {
+        "name": "Бира ZAGORKA кен 500 мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39441/bira-zagorka-ken-500-ml-image_5ea2cccb19e12_600x600.jpeg?1587731964"
+      },
+      {
+        "name": "Бира АРИАНА кен 500 мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39444/bira-ariana-ken-500-ml-image_5ef48548dc901_600x600.png?1593083231"
+      },
+      {
+        "name": "Бира ШУМЕНСКО 4.8% кен 500мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/42050/bira-sumensko-4-8--ken-500ml-image_5f439b50ab12d_600x600.jpeg?1598266216"
+      },
+      {
+        "name": "Бира CESKA Koruna 4.1% кен 500мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/43732/bira-ceska-koruna-4-1--ken-500ml-image_5f4cba4270f84_600x600.jpeg?1598864772"
+      },
+      {
+        "name": "Бира ШУМЕНСКО бутилка 500мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44334/bira-sumensko-butilka-500ml-image_5f4ce39e54c0d_600x600.png?1598874554"
+      },
+      {
+        "name": "Уиски OLD SMUGGLER 40% 700ml",
+        "quantity": null,
+        "price": 15.99,
+        "oldPrice": 17.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44357/uiski-old-smuggler-40--700ml-image_5f9b54db0a387_600x600.jpeg?1604015340"
+      },
+      {
+        "name": "Уиски JOHNNIE WALKER red label 40% 700 мл",
+        "quantity": null,
+        "price": 17.79,
+        "oldPrice": 25.49,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/41585/uiski-johnnie-walker-red-label-40--700-ml-image_5f0ef776f13d1_600x600.png?1594819636"
+      },
+      {
+        "name": "Уиски TULLAMORE DEW 40% 700 мл",
+        "quantity": null,
+        "price": 20.99,
+        "oldPrice": 28.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39218/uiski-tullamore-dew-40--700-ml-image_5ea2c7cedf20a_600x600.png?1587731286"
+      },
+      {
+        "name": "Уиски KILBEGGAN 40% 700ml",
+        "quantity": null,
+        "price": 20.99,
+        "oldPrice": 23.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44360/uiski-kilbeggan-40--700ml-image_5f9b57cca1dc5_600x600.jpeg?1604016094"
+      },
+      {
+        "name": "Уиски GRANTS 40% 1 л",
+        "quantity": null,
+        "price": 24.99,
+        "oldPrice": 31.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39427/uiski-grants-40--1-l-image_5ea2cc9869350_600x600.png?1587731954"
+      },
+      {
+        "name": "Уиски JACK DANIEL'S 40% 700 мл",
+        "quantity": null,
+        "price": 30.99,
+        "oldPrice": 42.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39415/uiski-jack-daniels-40--700-ml-image_5ea2cc7db64e2_600x600.png?1587731946"
+      },
+      {
+        "name": "Уиски BUSHMILLS Black Bush 40% 700 мл",
+        "quantity": null,
+        "price": 31.99,
+        "oldPrice": 37.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39614/uiski-bushmills-black-bush-40--700-ml-image_5ea2cfa7401c8_600x600.png?1587732107"
+      },
+      {
+        "name": "Уиски JOHNNIE WALKER Black 40% 700 мл",
+        "quantity": null,
+        "price": 36.99,
+        "oldPrice": 48.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39349/uiski-johnnie-walker-black-40--700-ml-image_5ea2cba696afc_600x600.png?1587731896"
+      },
+      {
+        "name": "Уиски BUSHMILLS 10 годишно 40% 700 мл",
+        "quantity": null,
+        "price": 37.99,
+        "oldPrice": 46.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39365/uiski-bushmills-10-godisno-40--700-ml-image_5ea2cbe8017e3_600x600.png?1587731910"
+      },
+      {
+        "name": "Уиски BALLANTINES 12 годишно 700 мл",
+        "quantity": null,
+        "price": 39.99,
+        "oldPrice": 45.89,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39329/uiski-ballantines-12-godisno-700-ml-image_5ea2cab88cc1d_600x600.png?1587731391"
+      }
+    ]
+  },
+  {
+    "supermarket": "Fantastico",
+    "updatedAt": "2021-03-24T11:00:51.355+00:00",
+    "products": [
+      {
+        "name": "Бира SCHOFFERHOFER пшенична бутилка",
+        "quantity": "500 мл",
+        "price": 1.99,
+        "oldPrice": 2.89,
+        "category": "Beer",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Бира ЗАГОРКА кен",
+        "quantity": "500 мл",
+        "price": 0.79,
+        "oldPrice": 1.25,
+        "category": "Beer",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Бира ZATECKY HUS кен",
+        "quantity": "500 мл",
+        "price": 0.99,
+        "oldPrice": 1.65,
+        "category": "Beer",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Уиски JIM BEAM Classic",
+        "quantity": "700 мл",
+        "price": 16.99,
+        "oldPrice": 24.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Шотландско уиски GRANT‘S Triple Wood; Ale Cask; Rum Cask",
+        "quantity": "700 мл",
+        "price": 16.99,
+        "oldPrice": 24.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo.bar"
+      },
+      {
+        "name": "Шотландско уиски SINGLETON",
+        "quantity": "12 г, 700 мл",
+        "price": 42.99,
+        "oldPrice": 55.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo.bar"
+      }
+    ]
+  }
+]

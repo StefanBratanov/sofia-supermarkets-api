@@ -2,7 +2,9 @@ package com.stefata.sofiasupermarketsapi.api
 
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
+import io.swagger.annotations.ApiParam
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import java.util.Objects.isNull
 import kotlin.math.absoluteValue
@@ -16,8 +18,12 @@ class FlatProductController(
 
     @ApiOperation(value = "Get all alcohol products from supermarkets in a flat format")
     @GetMapping("/products/flat/alcohol")
-    fun alcoholFlat(productCriteria: ProductCriteria): List<FlatProduct> {
-        val alcoholProductStore = alcoholController.alcohol(productCriteria)
+    fun alcoholFlat(
+        productCriteria: ProductCriteria,
+        @ApiParam(value = "Get only certain category/ies") @RequestParam(required = false)
+        category: List<String>?
+    ): List<FlatProduct> {
+        val alcoholProductStore = alcoholController.alcohol(productCriteria, category)
         val supermarkets = supermarketController.supermarkets()
 
         return alcoholProductStore.flatMap {

@@ -8,8 +8,10 @@ import com.stefata.sofiasupermarketsapi.model.Supermarket.KAUFLAND
 import com.stefata.sofiasupermarketsapi.model.Supermarket.TMARKET
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
+import io.swagger.annotations.ApiParam
 import org.apache.logging.log4j.util.Strings
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import java.util.Objects.isNull
 import kotlin.text.RegexOption.IGNORE_CASE
@@ -48,7 +50,7 @@ class AlcoholController(
         Other to listOf(
             "(?<!\\sс\\s)узо", "\\s+мента", "мента\\s+",
             "ликьор", "^ром\\s+", "\\s+ром\\s+", "\\s+ром\$", "текила", "бренди", "коняк", "абсент",
-            "(?<!вър)джин","Пастис"
+            "(?<!вър)джин", "Пастис"
         )
     ).mapValues {
         it.value.map { regex ->
@@ -58,7 +60,11 @@ class AlcoholController(
 
     @ApiOperation(value = "Get all alcohol products from supermarkets")
     @GetMapping("/products/alcohol")
-    fun alcohol(productCriteria: ProductCriteria): List<ProductStore> {
+    fun alcohol(
+        productCriteria: ProductCriteria,
+        @ApiParam(value = "Get only certain category/ies") @RequestParam(required = false)
+        category: List<String>?
+    ): List<ProductStore> {
 
         return productStoreController.products(productCriteria).map {
 
@@ -108,6 +114,17 @@ class AlcoholController(
                 }
             }
             it.copy(products = productsWithPics)
+        }.map {
+            val filteredProducts = it.products?.filter { product ->
+                if (category.isNullOrEmpty()) {
+                    true
+                } else {
+                    category.any { c ->
+                        c.equals(product.category, ignoreCase = true)
+                    }
+                }
+            }
+            it.copy(products = filteredProducts)
         }
     }
 
