@@ -18,9 +18,11 @@ import org.mockserver.model.Parameter
 import org.mockserver.springtest.MockServerTest
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.TestPropertySource
 import java.util.*
 
 @SpringBootTest(classes = [GoogleImageSearch::class])
+@TestPropertySource(properties = ["google.image.search.url=http://foo.bar"])
 @MockServerTest("google.custom.search.url=http://localhost:\${mockServerPort}/search?test=test")
 internal class GoogleImageSearchTest {
 

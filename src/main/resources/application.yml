@@ -28,6 +28,8 @@ tmarket:
   base.url: https://tmarketonline.bg/
 
 google:
+  image.search:
+    url: https://www.google.bg/search?source=lnms&tbm=isch
   custom.search:
     url: https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY:}&cx=0b1305ac3733516ec&searchType=image
 
