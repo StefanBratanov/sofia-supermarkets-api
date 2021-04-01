@@ -109,16 +109,6 @@ class AlcoholController(
             }
 
         }.map {
-            val productsWithPics = it.products?.map { product ->
-                if (Strings.isBlank(product.picUrl)) {
-                    val picUrl = imageSearch.search("${product.name} ${product.quantity}")
-                    product.copy(picUrl = picUrl)
-                } else {
-                    product
-                }
-            }
-            it.copy(products = productsWithPics)
-        }.map {
             val filteredProducts = it.products?.filter { product ->
                 if (category.isNullOrEmpty()) {
                     true
@@ -133,7 +123,18 @@ class AlcoholController(
                 }
             }
             it.copy(products = filteredProducts)
+        }.map {
+            val productsWithPics = it.products?.map { product ->
+                if (Strings.isBlank(product.picUrl)) {
+                    val picUrl = imageSearch.search("${product.name} ${product.quantity}")
+                    product.copy(picUrl = picUrl)
+                } else {
+                    product
+                }
+            }
+            it.copy(products = productsWithPics)
         }
+
     }
 
     private fun alcoholProductOrNull(product: Product): Product? {
