@@ -87,7 +87,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         return cluster.filter {
             it.first == NAME
         }.filter {
-            it.second.font?.name?.contains("Officina") == false
+            it.second.font?.name?.contains("myriad", ignoreCase = true) == true
         }.joinToString(" ") {
             it.second.text.toString()
         }

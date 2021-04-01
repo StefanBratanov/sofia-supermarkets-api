@@ -58,6 +58,10 @@ class AlcoholController(
         }
     }
 
+    private val ignoreContains = listOf("бонбони", "шоколад").map {
+        it.toRegex(IGNORE_CASE)
+    }
+
     @ApiOperation(value = "Get all alcohol products from supermarkets")
     @GetMapping("/products/alcohol")
     fun alcohol(
@@ -122,6 +126,10 @@ class AlcoholController(
                     category.any { c ->
                         c.equals(product.category, ignoreCase = true)
                     }
+                }
+            }?.filter {
+                ignoreContains.none { regex ->
+                    it.name.contains(regex)
                 }
             }
             it.copy(products = filteredProducts)
