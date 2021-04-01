@@ -7,13 +7,17 @@ import com.stefata.sofiasupermarketsapi.common.normalizePrice
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
 import org.apache.commons.lang3.StringUtils
+import org.apache.commons.validator.routines.UrlValidator
 import org.apache.logging.log4j.util.Strings.isNotBlank
 import org.springframework.stereotype.Component
 import java.net.URL
+import java.util.*
 
 @Log
 @Component("Lidl")
-class LidlProductsExtractor : UrlProductsExtractor {
+class LidlProductsExtractor(
+    private val urlValidator: UrlValidator = UrlValidator()
+) : UrlProductsExtractor {
 
     override fun extract(url: URL): List<Product> {
 
@@ -35,7 +39,16 @@ class LidlProductsExtractor : UrlProductsExtractor {
                 val newPrice = it.select(".pricebox__price")?.text()
                 val quantity = it.select(".pricebox__basic-quantity")?.text()
 
-                val picUrl = it.select(".picture")?.select("img")?.attr("src")
+                var picUrl = it.select(".picture").select("source[data-srcset]").first()
+                    ?.attr("data-srcset")?.split(",")
+                    ?.map { picUrl -> picUrl.trim() }
+                    ?.firstOrNull { picUrl ->
+                        urlValidator.isValid(picUrl)
+                    }
+
+                if (Objects.isNull(picUrl)) {
+                    picUrl = it.select(".picture")?.select("img")?.attr("src")
+                }
 
                 Product(
                     name = StringUtils.normalizeSpace(name),
