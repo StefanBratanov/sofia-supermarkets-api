@@ -25,6 +25,11 @@ repositories {
 }
 
 publishing {
+    publications {
+        create<MavenPublication>("bootJava") {
+            artifact(tasks.getByName("bootJar"))
+        }
+    }
     repositories {
         maven {
             name = "GitHubPackages"
