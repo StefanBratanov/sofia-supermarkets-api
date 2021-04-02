@@ -1,7 +1,6 @@
 [![build](https://github.com/Stefata/sofia-supermarkets-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/Stefata/sofia-supermarkets-api/actions/workflows/gradle.yml)
 [![codecov](https://codecov.io/gh/Stefata/sofia-supermarkets-api/branch/master/graph/badge.svg?token=3V3THIY6AX)](https://codecov.io/gh/Stefata/sofia-supermarkets-api)
-
-![GitHub release (latest by date)(https://img.shields.io/github/v/release/stefata/sofia-supermarkets-api)](https://github.com/Stefata/sofia-supermarkets-api/packages/706880)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/stefata/sofia-supermarkets-api)](https://github.com/Stefata/sofia-supermarkets-api/releases/latest)
 
 # sofia-supermarkets-api
 An API to retrieve products information from supermarkets in Sofia
