@@ -11,10 +11,13 @@ import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.apache.logging.log4j.util.Strings
 import org.springframework.stereotype.Component
 import java.net.URL
+import kotlin.text.RegexOption.IGNORE_CASE
 
 @Log
 @Component("TMarket")
 class TMarketProductsExtractor : UrlProductsExtractor {
+
+    private val ignoreRegex = "Очаквайте".toRegex(IGNORE_CASE)
 
     override fun extract(url: URL): List<Product> {
 
@@ -24,7 +27,7 @@ class TMarketProductsExtractor : UrlProductsExtractor {
 
         val category = document.select("._section-title > h1")?.text()
 
-        return document.select("._products-list").select("div[data-box=product]").map {
+        return document.select("._products-list").select("div[data-box=product]").mapNotNull {
             val productName = it.select("._product-name").text()
 
             var price = it.select("._product-price-compare")
@@ -42,14 +45,18 @@ class TMarketProductsExtractor : UrlProductsExtractor {
 
             val nameAndQuantity = separateNameAndQuantity(productName)
 
-            Product(
-                name = normalizeSpace(nameAndQuantity.first),
-                quantity = normalizeSpace(nameAndQuantity.second),
-                price = normalizePrice(price.text()),
-                oldPrice = normalizePrice(oldPrice?.text()),
-                category = category,
-                picUrl = picUrl
-            )
+            if (price.text().contains(ignoreRegex)) {
+                null
+            } else {
+                Product(
+                    name = normalizeSpace(nameAndQuantity.first),
+                    quantity = normalizeSpace(nameAndQuantity.second),
+                    price = normalizePrice(price.text()),
+                    oldPrice = normalizePrice(oldPrice?.text()),
+                    category = category,
+                    picUrl = picUrl
+                )
+            }
         }
     }
 }
