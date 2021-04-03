@@ -9,12 +9,17 @@ import io.mockk.every
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
+import org.springframework.context.annotation.ComponentScan
+import org.springframework.context.annotation.FilterType
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
-@WebMvcTest(controllers = [AlcoholController::class])
+@WebMvcTest(
+    controllers = [AlcoholController::class],
+    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])]
+)
 internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 
     private val objectMapper = jacksonObjectMapper()
