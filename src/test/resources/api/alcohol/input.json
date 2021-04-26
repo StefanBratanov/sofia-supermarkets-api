@@ -1738,6 +1738,14 @@
         "oldPrice": null,
         "category": null,
         "picUrl": null
+      },
+      {
+        "name": "Подправки PICANTINA джинджифил; куркума; черен пипер млян",
+        "quantity": "10 г",
+        "price": 0.3,
+        "oldPrice": 0.42,
+        "category": "Other",
+        "picUrl": "https://hypermag.bg/6216-home_default/podpravka-picantina-djindjifil-10gr.jpg"
       }
     ]
   }

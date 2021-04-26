@@ -37,8 +37,10 @@ class KauflandProductsExtractor(
             }
             val price = it.select(".a-pricetag__price")?.text()
 
-            var picUrl = it.select(".m-offer-tile__image img")?.attr("data-srcset")
-                ?.split(",")?.map { urls -> urls.trim() }?.lastOrNull()
+            val picUrls = it.select(".m-offer-tile__image img")?.attr("data-srcset")
+                ?.split(",")?.map { urls -> urls.trim() }
+
+            var picUrl = picUrls?.getOrNull(1)
                 ?.split("\\s+".toRegex())?.first { picUrl ->
                     urlValidator.isValid(picUrl)
                 }
