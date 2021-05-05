@@ -44,7 +44,7 @@ class AlcoholController(
             "шардоне", "^бордо\\s+", "\\s+бордо\\s+", "\\s+бордо\$", "^розе\\s+", "\\s+розе\\s+", "\\s+розе\$",
             "винена\\s+основа"
         ),
-        Rakia to listOf("ракия", "спиртна"),
+        Rakia to listOf("(?<!т)ракия", "спиртна"),
         Vodka to listOf("водка", "vodka"),
         Whiskey to listOf("уиски", "whiskey", "jack\\s+daniels", "bushmills", "бърбън"),
         Other to listOf(
