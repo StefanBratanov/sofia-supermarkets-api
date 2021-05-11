@@ -1422,5 +1422,13 @@
     "oldPrice": 7.99,
     "category": null,
     "picUrl": null
+  },
+  {
+    "name": "Бира Пиринско Младо",
+    "quantity": "0,33 л",
+    "price": 0.59,
+    "oldPrice": 0.89,
+    "category": null,
+    "picUrl": null
   }
 ]

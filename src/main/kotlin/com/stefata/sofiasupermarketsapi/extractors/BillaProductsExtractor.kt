@@ -22,8 +22,10 @@ class BillaProductsExtractor : UrlProductsExtractor {
         "Виж още.*".toRegex(IGNORE_CASE),
         "Продукт означен.*със символа.*звезда".toRegex(IGNORE_CASE),
         "(\\*\\s*)?(\\*+)?цената не включва амбалаж".toRegex(IGNORE_CASE),
-        "(;\\s*)?цена на амбалаж - .*\$".toRegex(IGNORE_CASE),
+        "(\\*\\s*)?(\\**)?цената е без амбалаж".toRegex(IGNORE_CASE),
+        "([;-]\\s*)?цена на амбалаж\\s?(-)? .*\$".toRegex(IGNORE_CASE),
         "Произход\\s*-\\s*България".toRegex(IGNORE_CASE),
+        "Сега в Billa".toRegex(IGNORE_CASE),
         "\\*+".toRegex(IGNORE_CASE)
     )
 

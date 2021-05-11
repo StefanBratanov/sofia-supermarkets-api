@@ -1373,5 +1373,27 @@
     "discount": 27,
     "category": "Vodka",
     "picUrl": "http://www.foo.bar"
+  },
+  {
+    "supermarket": "Fantastico",
+    "logo": "http://fantastico.bg",
+    "name": "Анасонова Напитка",
+    "quantity": null,
+    "price": 39.99,
+    "oldPrice": null,
+    "discount": null,
+    "category": "Other",
+    "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
+  },
+  {
+    "supermarket": "Fantastico",
+    "logo": "http://fantastico.bg",
+    "name": "ПЕЩЕРА Мастика",
+    "quantity": null,
+    "price": 39.99,
+    "oldPrice": null,
+    "discount": null,
+    "category": "Other",
+    "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
   }
 ]

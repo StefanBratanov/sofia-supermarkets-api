@@ -1754,6 +1754,22 @@
         "oldPrice": null,
         "category": "Rakia",
         "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
+      },
+      {
+        "name": "Анасонова Напитка",
+        "quantity": null,
+        "price": 39.99,
+        "oldPrice": null,
+        "category": null,
+        "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
+      },
+      {
+        "name": "ПЕЩЕРА Мастика",
+        "quantity": null,
+        "price": 39.99,
+        "oldPrice": null,
+        "category": null,
+        "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
       }
     ]
   }
