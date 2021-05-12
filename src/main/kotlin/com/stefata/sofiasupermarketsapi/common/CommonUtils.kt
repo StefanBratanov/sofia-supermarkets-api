@@ -2,6 +2,7 @@ package com.stefata.sofiasupermarketsapi.common
 
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import java.net.HttpURLConnection
 import java.net.URL
 import java.nio.charset.StandardCharsets
 import java.nio.file.Paths
@@ -29,4 +30,14 @@ fun separateNameAndQuantity(name: String): Pair<String?, String?> {
     val quantity = matchResult?.value
     val modifiedName = quantity?.let { name.replace(it, "") }
     return Pair(modifiedName?.replace("(за|-)\\s*\$".toRegex(IGNORE_CASE), ""), quantity)
+}
+
+fun checkIfUrlHasAcceptableHttpResponse(url: String): Boolean {
+    val connection = URL(url).openConnection() as HttpURLConnection
+    connection.requestMethod = "HEAD"
+    return try {
+        connection.responseCode != HttpURLConnection.HTTP_NOT_FOUND
+    } catch (e: Exception) {
+        false
+    }
 }

@@ -2,6 +2,7 @@ package com.stefata.sofiasupermarketsapi.image
 
 import com.stefata.sofiasupermarketsapi.common.Log
 import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
+import com.stefata.sofiasupermarketsapi.common.checkIfUrlHasAcceptableHttpResponse
 import com.stefata.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefata.sofiasupermarketsapi.interfaces.ImageSearch
 import com.stefata.sofiasupermarketsapi.model.ProductImage
@@ -19,6 +20,7 @@ import org.springframework.web.client.RestTemplate
 import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
+import java.util.*
 import java.util.Objects.isNull
 import java.util.Objects.nonNull
 
@@ -42,8 +44,16 @@ class GoogleImageSearch(
 
     @Cacheable("productImages")
     override fun search(query: String): String? {
+        return search(query, true)
+    }
 
-        val maybeProductImage = productImageRepository.findById(query)
+    fun search(query: String, useDatabase: Boolean): String? {
+
+        val maybeProductImage = if (useDatabase) {
+            productImageRepository.findById(query)
+        } else {
+            Optional.empty()
+        }
 
         if (maybeProductImage.isPresent) {
             log.info("Retrieved image url for {} from database", query)
@@ -57,7 +67,9 @@ class GoogleImageSearch(
             val googleResultHtml = getHtmlDocument(URL(urlWithQuery)).html()
             val imageLink = findImage(googleResultHtml)
             if (nonNull(imageLink)) {
-                saveImageToDatabase(query, imageLink)
+                if (useDatabase) {
+                    saveImageToDatabase(query, imageLink)
+                }
                 return imageLink
             }
         } catch (ex: Exception) {
@@ -88,7 +100,9 @@ class GoogleImageSearch(
             sizeIsGood && it.fileFormat?.equals("image/", ignoreCase = true) == false
         }?.link
 
-        saveImageToDatabase(query, imageLink)
+        if (useDatabase) {
+            saveImageToDatabase(query, imageLink)
+        }
 
         return imageLink
     }
@@ -106,7 +120,7 @@ class GoogleImageSearch(
         }.map {
             it.groups[1]?.value
         }.firstOrNull {
-            urlValidator.isValid(it)
+            urlValidator.isValid(it) && it?.let { url -> checkIfUrlHasAcceptableHttpResponse(url) } == true
         }
     }
 

@@ -15,6 +15,9 @@ flows.runner:
 alcohol.retriever:
   cron: "0 0/5 * * * ?"
 
+image.verifier:
+  cron: "0 0/5 * * * ?"
+
 kaufland:
   base.url: https://www.kaufland.bg/aktualni-predlozheniya/ot-ponedelnik.html
 
