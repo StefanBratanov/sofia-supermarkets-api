@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Мастика ПЕЩЕРА",
+    "quantity": "700 мл",
+    "price": 7.99,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Ирландско уиски BUSHMILLS",
+    "quantity": "700 мл",
+    "price": 21.49,
+    "oldPrice": 29.99,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Бърбън уиски JIM BEAM",
+    "quantity": "1 л",
+    "price": 21.99,
+    "oldPrice": 32.99,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Сливова ракия ТРОЯНСКА",
+    "quantity": "700 мл",
+    "price": 10.99,
+    "oldPrice": 14.99,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Бира КАМЕНИЦА",
+    "quantity": "кен, 500 мл",
+    "price": 0.79,
+    "oldPrice": 1.25,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Вино Шардоне; Мерло LOVICO Вино ПОМОРИЕ РАКОВИНА различни видове",
+    "quantity": "bag-in-box, 3 л 750 мл",
+    "price": 4.79,
+    "oldPrice": 6.49,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Вино ZAGAREUS Tiara различни видове",
+    "quantity": "750 мл",
+    "price": 6.99,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Бяло вино VILLA ANTINORI произход Италия",
+    "quantity": "750 мл",
+    "price": 17.99,
+    "oldPrice": 25.99,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Вино TERRA TANGRA различни видове",
+    "quantity": "750 мл",
+    "price": 9.99,
+    "oldPrice": 12.99,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Бира ШУМЕНСКО",
+    "quantity": "РЕТ, 1 л",
+    "price": 1.39,
+    "oldPrice": 1.79,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Бира HEINEKEN бутилка*, *с включен",
+    "quantity": "кен, 500 мл 500 мл амбалаж 0,20лв",
+    "price": 1.39,
+    "oldPrice": 2.09,
+    "category": null,
+    "picUrl": null
+  },
+  {
+    "name": "Бира MADONNA различни видове бутилка,",
+    "quantity": "500 мл",
+    "price": 1.69,
+    "oldPrice": 2.29,
+    "category": null,
+    "picUrl": null
+  }
+]

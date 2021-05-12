@@ -31,6 +31,19 @@ internal class FantasticoProductsExtractorTest {
     }
 
     @Test
+    fun `test extracting products 2`() {
+
+        val testPdf = getPath("/extractors/fantastico/fantastico_test_2.pdf")
+
+        val products = underTest.extract(testPdf)
+
+        val actualJson = objectMapper.writeValueAsString(products)
+        val expectedJson = readResource("/extractors/fantastico/expected_2.json")
+
+        JSONAssert.assertEquals(expectedJson, actualJson, NON_EXTENSIBLE)
+    }
+
+    @Test
     @Disabled("used for manual testing")
     fun `test fetching from real pdf`() {
 
