@@ -16,11 +16,20 @@ class CloudinaryCdnUploader(
 
     @Cacheable("cdnImages")
     override fun upload(key: String, url: String): String {
+        val search = cloudinary.search()
+        val searchResult = search.expression("metadata.image_key=\"${key}\"")
+            .execute()["resources"] as List<Map<Any, Any>>
+
+        if (searchResult.isNotEmpty()) {
+            log.info("Found a result for {} in CDN", key)
+            return searchResult.first()["url"] as String
+        }
+
         log.info("Uploading image for {} to CDN", key)
 
         return cloudinary.uploader().upload(
             url, mapOf(
-                "tags" to arrayOf(key),
+                "metadata" to "image_key=${key}",
                 "folder" to "alcohol",
                 "transformation" to EagerTransformation()
                     .responsiveWidth(true)
