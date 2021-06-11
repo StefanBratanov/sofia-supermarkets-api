@@ -39,6 +39,12 @@ google:
   custom.search:
     url: https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY:}&cx=0b1305ac3733516ec&searchType=image
 
+cloudinary:
+  cloud.name: dhf90uh66
+  api:
+    key: 131315184557651
+    secret: ${CLOUDINARY_API_SECRET:}
+
 spring:
   application.name: sofia-supermarkets-api
   jpa:

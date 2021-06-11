@@ -19,6 +19,7 @@ The following environment variables need to be set prior to running
 * DB_USERNAME
 * DB_PASSWORD
 * GOOGLE_API_KEY
+* CLOUDINARY_API_SECRET
 
 Navigate to <http://localhost:8080/swagger-ui/> to check the API documentation and test the endpoints
 

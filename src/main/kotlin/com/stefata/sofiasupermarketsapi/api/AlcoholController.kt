@@ -1,6 +1,7 @@
 package com.stefata.sofiasupermarketsapi.api
 
 import com.stefata.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.*
+import com.stefata.sofiasupermarketsapi.interfaces.CdnUploader
 import com.stefata.sofiasupermarketsapi.interfaces.ImageSearch
 import com.stefata.sofiasupermarketsapi.model.Product
 import com.stefata.sofiasupermarketsapi.model.ProductStore
@@ -14,13 +15,15 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import java.util.Objects.isNull
+import java.util.Objects.nonNull
 import kotlin.text.RegexOption.IGNORE_CASE
 
 @Api(tags = ["Product"], description = "All operations for supermarket products")
 @RestController
 class AlcoholController(
     val productStoreController: ProductStoreController,
-    val imageSearch: ImageSearch
+    val imageSearch: ImageSearch,
+    val cdnUploader: CdnUploader
 ) {
 
     private val bira = "Бира"
@@ -67,7 +70,9 @@ class AlcoholController(
     fun alcohol(
         productCriteria: ProductCriteria,
         @ApiParam(value = "Get only certain category/ies") @RequestParam(required = false)
-        category: List<String>?
+        category: List<String>?,
+        @ApiParam(value = "Getting the cdn url of the custom searched images")
+        @RequestParam(required = false, defaultValue = "true") useCdn: Boolean
     ): List<ProductStore> {
 
         return productStoreController.products(productCriteria).map {
@@ -126,8 +131,14 @@ class AlcoholController(
         }.map {
             val productsWithPics = it.products?.map { product ->
                 if (Strings.isBlank(product.picUrl)) {
-                    val picUrl = imageSearch.search("${product.name} ${product.quantity}")
-                    product.copy(picUrl = picUrl)
+                    val productKey = "${product.name} ${product.quantity}"
+                    val picUrl = imageSearch.search(productKey)
+                    if (useCdn && nonNull(picUrl)) {
+                        val cdnUrl = cdnUploader.upload(productKey, picUrl!!)
+                        product.copy(picUrl = cdnUrl)
+                    } else {
+                        product.copy(picUrl = picUrl)
+                    }
                 } else {
                     product
                 }

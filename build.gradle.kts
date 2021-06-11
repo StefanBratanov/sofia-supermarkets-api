@@ -60,6 +60,7 @@ dependencies {
     implementation("org.jsoup:jsoup:1.13.1")
     implementation("org.apache.pdfbox:pdfbox:2.0.22")
     implementation("me.xdrop:fuzzywuzzy:1.3.1")
+    implementation("com.cloudinary:cloudinary-http44:1.29.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.23.1")

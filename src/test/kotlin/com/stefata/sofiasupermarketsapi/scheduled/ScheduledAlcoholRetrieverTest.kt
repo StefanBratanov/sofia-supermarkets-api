@@ -21,13 +21,13 @@ internal class ScheduledAlcoholRetrieverTest {
 
     @Test
     fun `retrieves alcohol`() {
-        every { alcoholController.alcohol(any(), any()) } returns emptyList()
+        every { alcoholController.alcohol(any(), any(),any()) } returns emptyList()
 
         scheduledAlcoholRetriever.retrieveAlcohol()
 
         val productCriteria = ProductCriteria(null, false)
         verify {
-            alcoholController.alcohol(productCriteria, null)
+            alcoholController.alcohol(productCriteria, null, true)
         }
     }
 }

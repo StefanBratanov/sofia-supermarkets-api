@@ -21,9 +21,11 @@ class FlatProductController(
     fun alcoholFlat(
         productCriteria: ProductCriteria,
         @ApiParam(value = "Get only certain category/ies") @RequestParam(required = false)
-        category: List<String>?
+        category: List<String>?,
+        @ApiParam(value = "Getting the cdn url of the custom searched images")
+        @RequestParam(required = false, defaultValue = "true") useCdn: Boolean
     ): List<FlatProduct> {
-        val alcoholProductStore = alcoholController.alcohol(productCriteria, category)
+        val alcoholProductStore = alcoholController.alcohol(productCriteria, category, useCdn)
         val supermarkets = supermarketController.supermarkets()
 
         return alcoholProductStore.flatMap {

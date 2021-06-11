@@ -1,0 +1,1048 @@
+[
+  {
+    "supermarket": "Lidl",
+    "updatedAt": "2021-03-24T11:00:46.659+00:00",
+    "products": [
+      {
+        "name": "Узо",
+        "quantity": "0,7 l/опаковка",
+        "price": 7.49,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/21979/xs/21979_03.jpg"
+      },
+      {
+        "name": "Узо",
+        "quantity": "0,7 l/опаковка",
+        "price": 6.29,
+        "oldPrice": 7.99,
+        "category": "Other",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/21979/xs/21979_0.jpg"
+      },
+      {
+        "name": "Mythos Бира",
+        "quantity": "6 x 0,33 l/опаковка",
+        "price": 3.89,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/6204148/xs/6204148_0.jpg"
+      },
+      {
+        "name": "Johnnie Walker Уиски",
+        "quantity": "0,7 l/опаковка",
+        "price": 25.49,
+        "oldPrice": null,
+        "category": "Whiskey",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/2236/xs/2236_10.jpg"
+      },
+      {
+        "name": "Queen Margot Шотландско уиски",
+        "quantity": "0,75 l/опаковка",
+        "price": 14.99,
+        "oldPrice": null,
+        "category": "Whiskey",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/128107/xs/128107_10.jpg"
+      },
+      {
+        "name": "Пино Гриджо, Италия",
+        "quantity": "0,75 l/опаковка",
+        "price": 3.99,
+        "oldPrice": 5.49,
+        "category": "Wine",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/27596/xs/27596_0.jpg"
+      },
+      {
+        "name": "Cimarosa Шардоне Коломбар, Южна Африка",
+        "quantity": "0,75 l/опаковка",
+        "price": 4.79,
+        "oldPrice": 6.49,
+        "category": "Wine",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/34517/xs/34517_0.jpg"
+      },
+      {
+        "name": "Бордо бяло, Франция",
+        "quantity": "0,75 l/опаковка",
+        "price": 4.99,
+        "oldPrice": 6.49,
+        "category": "Wine",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/68154/xs/68154_0.jpg"
+      },
+      {
+        "name": "Пенливо вино",
+        "quantity": "3 x 0,2 l/опаковка",
+        "price": 2.58,
+        "oldPrice": 3.87,
+        "category": "Wine",
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/54772/xs/54772_0.jpg"
+      }
+    ]
+  },
+  {
+    "supermarket": "Billa",
+    "updatedAt": "2021-03-24T11:00:34.233+00:00",
+    "products": [
+      {
+        "name": "Бира Загорка 0,5 л",
+        "quantity": null,
+        "price": 0.79,
+        "oldPrice": 1.25,
+        "category": "Beer",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Бира Budweiser 0,5 л",
+        "quantity": null,
+        "price": 1.69,
+        "oldPrice": 2.09,
+        "category": "Beer",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Бира Warsteiner 0,5 л",
+        "quantity": null,
+        "price": 1.79,
+        "oldPrice": 2.19,
+        "category": "Beer",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Бърбън Jim Beam 0,7 л",
+        "quantity": null,
+        "price": 16.99,
+        "oldPrice": 23.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Ракия Сунгурларска отлежала 0,7 л Произход - България",
+        "quantity": null,
+        "price": 11.49,
+        "oldPrice": 14.99,
+        "category": "Rakia",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Уиски Johnnie Walker Blonde 0,7 л",
+        "quantity": null,
+        "price": 28.99,
+        "oldPrice": 38.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Водка Zubrowka Biala 0,7 л",
+        "quantity": null,
+        "price": 11.49,
+        "oldPrice": 13.99,
+        "category": "Vodka",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Водка Absolut 0,7 л",
+        "quantity": null,
+        "price": 14.99,
+        "oldPrice": 20.99,
+        "category": "Vodka",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Ракия Дядова Усуканица 0,7 л Произход - България",
+        "quantity": null,
+        "price": 10.99,
+        "oldPrice": 13.99,
+        "category": "Rakia",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино Santa Helena 0,75 л Продукт означени със символа синя звезда",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.99,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино Quantum 0,75 л",
+        "quantity": null,
+        "price": 6.19,
+        "oldPrice": 8.99,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино Chateau Karnobat 3 л Произход - България",
+        "quantity": null,
+        "price": 10.69,
+        "oldPrice": 13.99,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Бира Ариана 2 л Произход - България",
+        "quantity": null,
+        "price": 1.79,
+        "oldPrice": 2.49,
+        "category": "Beer",
+        "picUrl": "http://www.foo69.bar"
+      }
+    ]
+  },
+  {
+    "supermarket": "Kaufland",
+    "updatedAt": "2021-03-24T11:00:42.095+00:00",
+    "products": [
+      {
+        "name": "Mezzek Червено, бяло вино или розе",
+        "quantity": "2 л BIB",
+        "price": 11.99,
+        "oldPrice": 18.49,
+        "category": "Wine",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_00012112_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Meltemi Узо",
+        "quantity": "2 л",
+        "price": 22.99,
+        "oldPrice": 37.99,
+        "category": "Other",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_00022724_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Загорка ретро Светло пиво",
+        "quantity": "0,5 л",
+        "price": 0.89,
+        "oldPrice": 1.29,
+        "category": "Beer",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_00038315_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Contour Червено, бяло вино или розе",
+        "quantity": "0,75 л",
+        "price": 5.99,
+        "oldPrice": 7.99,
+        "category": "Wine",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_00091836_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Suhindol Червено или бяло вино",
+        "quantity": "3 л BiB",
+        "price": 6.99,
+        "oldPrice": 13.99,
+        "category": "Wine",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_01800951_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Jameson Ирландско уиски",
+        "quantity": "0,7 л",
+        "price": 21.69,
+        "oldPrice": 28.69,
+        "category": "Whiskey",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02100065_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Johnnie Walker Шотландско уиски",
+        "quantity": "1 л",
+        "price": 22.89,
+        "oldPrice": 33.29,
+        "category": "Whiskey",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02100650_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Glenfiddich Шотландско уиски",
+        "quantity": "0,7 л",
+        "price": 43.99,
+        "oldPrice": 56.99,
+        "category": "Whiskey",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02100830_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Ямболска Гроздова ракия",
+        "quantity": "0,7 л",
+        "price": 6.99,
+        "oldPrice": 9.49,
+        "category": "Rakia",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02200280_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Stolichnaya Водка",
+        "quantity": "0,7 л",
+        "price": 12.99,
+        "oldPrice": 18.49,
+        "category": "Vodka",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02200311_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Каменица Светло пиво",
+        "quantity": "0,5 л кен",
+        "price": 0.79,
+        "oldPrice": 1.25,
+        "category": "Beer",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02300112_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Бургаско Светло пиво",
+        "quantity": "2 л РЕТ",
+        "price": 1.79,
+        "oldPrice": 2.59,
+        "category": "Beer",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02300144_P.jpg/150x/tileImage1.jpg"
+      }
+    ]
+  },
+  {
+    "supermarket": "T-Market",
+    "updatedAt": "2021-03-24T11:01:18.112+00:00",
+    "products": [
+      {
+        "name": "Бира ПИРИНСКО буилка 500мл",
+        "quantity": null,
+        "price": 0.97,
+        "oldPrice": 1.15,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44329/bira-pirinsko-builka-500ml-image_5f4cbc66ead3d_600x600.jpeg?1598865130"
+      },
+      {
+        "name": "Бира ПИРИНСКО кен 500 мл",
+        "quantity": null,
+        "price": 1.01,
+        "oldPrice": 1.19,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39749/bira-pirinsko-ken-500-ml-image_5eb962efc9d5e_600x600.jpeg?1589207810"
+      },
+      {
+        "name": "Бира ПИРИНСКО АЙС кен 500мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": 1.29,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44346/bira-pirinsko-ajs-ken-500ml-image_5f4cbc7251ad3_600x600.png?1598865149"
+      },
+      {
+        "name": "Бира ПИРИНСКО кен безалкохолна 0.0% 500мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": 1.29,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44347/bira-pirinsko-ken-bezalkoholna-0-0--500ml-image_5f4cbc72f0363_600x600.png?1598865145"
+      },
+      {
+        "name": "Бира HEINEKEN кен 500 мл",
+        "quantity": null,
+        "price": 1.39,
+        "oldPrice": 1.89,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39657/bira-heineken-ken-500-ml-image_5ea2d06a2968e_600x600.png?1587732147"
+      },
+      {
+        "name": "Бира AMSTEL Premium 5% кен 500 мл",
+        "quantity": null,
+        "price": 1.52,
+        "oldPrice": 1.79,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39840/bira-amstel-premium-5--ken-500-ml-image_5ea2d3f9b4e4c_600x600.png?1587732299"
+      },
+      {
+        "name": "Бира ПИРИНСКО 1.2л",
+        "quantity": null,
+        "price": 1.52,
+        "oldPrice": 1.79,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44333/bira-pirinsko-1-2l-image_5f4cbc6aa64f2_600x600.jpeg?1598865131"
+      },
+      {
+        "name": "Бира AMSTEL Premium 5% 1л",
+        "quantity": null,
+        "price": 1.77,
+        "oldPrice": 2.09,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44112/bira-amstel-premium-5--1l-image_5f4cedc8b0816_600x600.png?1598877159"
+      },
+      {
+        "name": "Бира АРИАНА 2л",
+        "quantity": null,
+        "price": 1.79,
+        "oldPrice": 2.59,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44093/bira-ariana-2l-image_5f4cf16003f68_600x600.png?1598878075"
+      },
+      {
+        "name": "Бира BARLEY",
+        "quantity": null,
+        "price": 0.75,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/46349/bira-barley-image_60181663b1338_600x600.jpeg?1612191352"
+      },
+      {
+        "name": "Бира ШУМЕНСКО бутилка 330мл",
+        "quantity": null,
+        "price": 0.79,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44340/bira-sumensko-butilka-330ml-image_5f4cbc6d95aa6_600x600.jpeg?1598865135"
+      },
+      {
+        "name": "Бира ASTIKA кен 500мл",
+        "quantity": null,
+        "price": 1.05,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/42033/bira-astika-ken-500ml-image_5f3a89bec6b52_600x600.png?1597692592"
+      },
+      {
+        "name": "Бира ARIANA Радлер Ягода, мента 0.0% 330мл",
+        "quantity": null,
+        "price": 1.05,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44135/bira-ariana-radler-agoda-menta-0-0--330ml-image_5f4cbbeba60af_600x600.png?1598865047"
+      },
+      {
+        "name": "Бира АРИАНА Радлер Малина 0.0% 330мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44126/bira-ariana-radler-malina-0-0--330ml-image_5f4cbbe371d7e_600x600.png?1598865040"
+      },
+      {
+        "name": "Бира АРИАНА Радлер Лимон 0.0% 330мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44128/bira-ariana-radler-limon-0-0--330ml-image_5f4cbbe40653a_600x600.png?1598865041"
+      },
+      {
+        "name": "Бира АРИАНА Радлер Портокал, Грейпфрут 0.0% 330мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44131/bira-ariana-radler-portokal-grejpfrut-0-0--330ml-image_5f4cbbe4cca99_600x600.png?1598865044"
+      },
+      {
+        "name": "Бира БОЛЯРКА кен 500мл",
+        "quantity": null,
+        "price": 1.09,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44383/bira-bolarka-ken-500ml-image_5f4cbc951b097_600x600.jpeg?1598865160"
+      },
+      {
+        "name": "Бира ZAGORKA бутилка 500мл",
+        "quantity": null,
+        "price": 1.15,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44101/bira-zagorka-butilka-500ml-image_5f4cbbc8d70f4_600x600.jpeg?1598865020"
+      },
+      {
+        "name": "Бира ZAGORKA кен 500 мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39441/bira-zagorka-ken-500-ml-image_5ea2cccb19e12_600x600.jpeg?1587731964"
+      },
+      {
+        "name": "Бира АРИАНА кен 500 мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39444/bira-ariana-ken-500-ml-image_5ef48548dc901_600x600.png?1593083231"
+      },
+      {
+        "name": "Бира ШУМЕНСКО 4.8% кен 500мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/42050/bira-sumensko-4-8--ken-500ml-image_5f439b50ab12d_600x600.jpeg?1598266216"
+      },
+      {
+        "name": "Бира CESKA Koruna 4.1% кен 500мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/43732/bira-ceska-koruna-4-1--ken-500ml-image_5f4cba4270f84_600x600.jpeg?1598864772"
+      },
+      {
+        "name": "Бира ШУМЕНСКО бутилка 500мл",
+        "quantity": null,
+        "price": 1.19,
+        "oldPrice": null,
+        "category": "Beer",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44334/bira-sumensko-butilka-500ml-image_5f4ce39e54c0d_600x600.png?1598874554"
+      },
+      {
+        "name": "Вино TCHERGA* червена 750 мл",
+        "quantity": null,
+        "price": 6.99,
+        "oldPrice": 10.89,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39524/vino-tcherga-cervena-750-ml-image_5ea2ce0db4c18_600x600.png?1587732035"
+      },
+      {
+        "name": "Вино TCHERGA* бяло 750 мл",
+        "quantity": null,
+        "price": 6.99,
+        "oldPrice": 9.99,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39525/vino-tcherga-balo-750-ml-image_5ea2ce156121f_600x600.png?1587732036"
+      },
+      {
+        "name": "Вино TCHERGA Рoзе 750 мл",
+        "quantity": null,
+        "price": 6.99,
+        "oldPrice": 9.99,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39529/vino-tcherga-roze-750-ml-image_5ea2ce19e1513_600x600.jpeg?1587732037"
+      },
+      {
+        "name": "Вино TCHERGA Фрагмент Розе 750 мл",
+        "quantity": null,
+        "price": 6.99,
+        "oldPrice": 9.99,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/40057/vino-tcherga-fragment-roze-750-ml-image_5ea2d7c7e1e4a_600x600.png?1587732475"
+      },
+      {
+        "name": "Вино QUANTUM Пино ноар & Meрло 750 мл",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.19,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39681/vino-quantum-pino-noar--merlo-750-ml-image_5ea2d0efc39ba_600x600.png?1587732168"
+      },
+      {
+        "name": "Вино QUANTUM Сира & Каберне 750 мл",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.19,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39685/vino-quantum-sira--kaberne-750-ml-image_5ea2d109b199b_600x600.png?1587732171"
+      },
+      {
+        "name": "Вино QUANTUM Траминер 750 мл",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.19,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39691/vino-quantum-traminer-750-ml-image_5ea2d11fa5558_600x600.png?1587732173"
+      },
+      {
+        "name": "Вино QUANTUM Шардоне 750 мл",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.19,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39697/vino-quantum-sardone-750-ml-image_5ea2d13dc601e_600x600.png?1587732178"
+      },
+      {
+        "name": "Вино QUANTUM Розе Пино ноар & Сира 750 мл",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.19,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39702/vino-quantum-roze-pino-noar--sira-750-ml-image_5ea2d15770b42_600x600.png?1587732189"
+      },
+      {
+        "name": "Вино QUANTUM Мавруд & Мерло 750 мл",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.19,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39779/vino-quantum-mavrud--merlo-750-ml-image_5ea2d2ca176c9_600x600.png?1587732254"
+      },
+      {
+        "name": "Вино QUANTUM Pinot Grigio & Шардоне 750 мл",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.19,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39784/vino-quantum-pinot-grigio--sardone-750-ml-image_5ea2d2d8a5eca_600x600.png?1587732255"
+      },
+      {
+        "name": "Вино TERRA MARKELLI Мерло 3 л",
+        "quantity": null,
+        "price": 10.49,
+        "oldPrice": 11.69,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/40082/vino-terra-markelli-merlo-3-l-image_5ea2d84993197_600x600.png?1587732498"
+      },
+      {
+        "name": "Вино TERRA MARKELLI Розе 3 л",
+        "quantity": null,
+        "price": 10.49,
+        "oldPrice": 11.69,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/40087/vino-terra-markelli-roze-3-l-image_5ea2d85947740_600x600.png?1587732505"
+      },
+      {
+        "name": "Вино TERRA MARKELLI Шардоне 3 л",
+        "quantity": null,
+        "price": 10.49,
+        "oldPrice": 11.69,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/42056/vino-terra-markelli-sardone-image_5f461ff009a97_600x600.jpeg?1598431388"
+      },
+      {
+        "name": "Вино MINKOV BROTHERS Червено Кюве 750 мл",
+        "quantity": null,
+        "price": 13.49,
+        "oldPrice": 15.99,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39934/vino-minkov-brothers-cerveno-kuve-750-ml-image_5ea2d59c057f5_600x600.png?1587732372"
+      },
+      {
+        "name": "Вино MINKOV BROTHERS Бяло Кюве 750 мл",
+        "quantity": null,
+        "price": 13.49,
+        "oldPrice": 15.99,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39939/vino-minkov-brothers-balo-kuve-750-ml-image_5ea2d5ae98bce_600x600.png?1587732375"
+      },
+      {
+        "name": "Вино MINKOV BROTHERS Каберне Совиньон 750 мл",
+        "quantity": null,
+        "price": 13.49,
+        "oldPrice": 15.99,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/40076/vino-minkov-brothers-kaberne-sovinon-750-ml-image_5ea2d82f1d601_600x600.png?1587732495"
+      },
+      {
+        "name": "Вино MINKOV BROTHERS Шардоне 750 мл",
+        "quantity": null,
+        "price": 13.49,
+        "oldPrice": 15.99,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/40080/vino-minkov-brothers-sardone-750-ml-image_5ea2d8343114e_600x600.png?1587732495"
+      },
+      {
+        "name": "Вино МЕХАНДЖИЙСКО бяло 11% 750мл",
+        "quantity": null,
+        "price": 2.29,
+        "oldPrice": null,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44168/vino-mehandzijsko-balo-11--750ml-image_5f4cea1196eaf_600x600.png?1598876206"
+      },
+      {
+        "name": "Вино МЕХАНДЖИЙСКО червено 11.5% 750мл",
+        "quantity": null,
+        "price": 2.29,
+        "oldPrice": null,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44203/vino-mehandzijsko-cerveno-11-5--750ml-image_5f4ce727945ef_600x600.png?1598875507"
+      },
+      {
+        "name": "Вино ЛОВДЖИЙСКО Червено 2л",
+        "quantity": null,
+        "price": 3.89,
+        "oldPrice": null,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44193/vino-lovdzijsko-cerveno-2l-image_5f4ce7d345fd6_600x600.png?1598875659"
+      },
+      {
+        "name": "Вино RETSINA Маламатина бяло 500мл",
+        "quantity": null,
+        "price": 4.65,
+        "oldPrice": null,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/43520/vino-retsina-malamatina-balo-500ml-image_5f4cb9752c034_600x600.jpeg?1598864233"
+      },
+      {
+        "name": "Вино VINI DI Мускат 11.5% 750мл",
+        "quantity": null,
+        "price": 4.99,
+        "oldPrice": null,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/43472/vino-vini-di-muskat-11-5--750ml-image_5f4cfd6a54216_600x600.png?1598883525"
+      },
+      {
+        "name": "Вино LOVICO Шардоне 750мл",
+        "quantity": null,
+        "price": 4.99,
+        "oldPrice": null,
+        "category": "Wine",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44385/vino-lovico-sardone-750ml-image_5f4cbc97a1b60_600x600.jpeg?1598865163"
+      },
+      {
+        "name": "Ликьор DAMA 17% 500мл",
+        "quantity": null,
+        "price": 7.49,
+        "oldPrice": 8.49,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44007/likor-dama-17--500ml-image_5ff47c679173d_600x600.jpeg?1609871461"
+      },
+      {
+        "name": "Спиртна напитка Грозден 40% 700мл",
+        "quantity": null,
+        "price": 7.99,
+        "oldPrice": 9.79,
+        "category": "Rakia",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44164/spirtna-napitka-grozden-40--700ml-image_5f9b55db53adc_600x600.jpeg?1604015597"
+      },
+      {
+        "name": "Водка SOBIESKI Premium 37,5% 700 мл",
+        "quantity": null,
+        "price": 8.99,
+        "oldPrice": 11.89,
+        "category": "Vodka",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/41662/vodka-sobieski-premium-375--700-ml-image_5efde85108b33_600x600.jpeg?1593698514"
+      },
+      {
+        "name": "Водка AURORA 37.5% 700 мл",
+        "quantity": null,
+        "price": 8.99,
+        "oldPrice": 10.49,
+        "category": "Vodka",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/43665/vodka-aurora-37-5--700-ml-image_5f9b595730fc0_600x600.jpeg?1604016488"
+      },
+      {
+        "name": "Водка ХЛЕБНИЙ ДАР класик 40 % 700 мл",
+        "quantity": null,
+        "price": 9.99,
+        "oldPrice": 11.99,
+        "category": "Vodka",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44125/vodka-hlebnij-dar-klasik-40---700-ml-image_5f9b56991388c_600x600.jpeg?1604015786"
+      },
+      {
+        "name": "Водка ХЛЕБНИЙ ДАР Пшенична 40 % 700 мл",
+        "quantity": null,
+        "price": 9.99,
+        "oldPrice": 11.99,
+        "category": "Vodka",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44129/vodka-hlebnij-dar-psenicna-40---700-ml-image_5f9b56b776da9_600x600.jpeg?1604015817"
+      },
+      {
+        "name": "Уиски OLD SMUGGLER 40% 700ml",
+        "quantity": null,
+        "price": 15.99,
+        "oldPrice": 17.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44357/uiski-old-smuggler-40--700ml-image_5f9b54db0a387_600x600.jpeg?1604015340"
+      },
+      {
+        "name": "Джин GORDONS 37.5% 700 мл",
+        "quantity": null,
+        "price": 17.49,
+        "oldPrice": 19.99,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39213/dzin-gordons-37-5--700-ml-image_5ea2c784335be_600x600.png?1587731283"
+      },
+      {
+        "name": "Уиски JOHNNIE WALKER red label 40% 700 мл",
+        "quantity": null,
+        "price": 17.79,
+        "oldPrice": 25.49,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/41585/uiski-johnnie-walker-red-label-40--700-ml-image_5f0ef776f13d1_600x600.png?1594819636"
+      },
+      {
+        "name": "Ракия БУРГАСКА гроздова 40% 1.5 л",
+        "quantity": null,
+        "price": 18.99,
+        "oldPrice": 20.99,
+        "category": "Rakia",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/41630/rakia-burgaska-grozdova-40--1-5-l-image_5f1ecb0bb5cf6_600x600.png?1595857535"
+      },
+      {
+        "name": "Пастис RICARD 45% 700 мл",
+        "quantity": null,
+        "price": 19.99,
+        "oldPrice": 23.99,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39617/pastis-ricard-45--700-ml-image_5ea2cfb6a4a42_600x600.png?1587732109"
+      },
+      {
+        "name": "Уиски TULLAMORE DEW 40% 700 мл",
+        "quantity": null,
+        "price": 20.99,
+        "oldPrice": 28.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39218/uiski-tullamore-dew-40--700-ml-image_5ea2c7cedf20a_600x600.png?1587731286"
+      },
+      {
+        "name": "Ликьор BAILEYS 17% 700 мл",
+        "quantity": null,
+        "price": 20.99,
+        "oldPrice": 27.69,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39355/likor-baileys-17--700-ml-image_5ea2cbba8d21e_600x600.png?1587731901"
+      },
+      {
+        "name": "Водка РУССКИЙ СТАНДАРТ Голд 700мл",
+        "quantity": null,
+        "price": 20.99,
+        "oldPrice": 23.99,
+        "category": "Vodka",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/43656/vodka-russkij-standart-gold-700ml-image_5f9b56f663d4a_600x600.jpeg?1604015883"
+      },
+      {
+        "name": "Уиски KILBEGGAN 40% 700ml",
+        "quantity": null,
+        "price": 20.99,
+        "oldPrice": 23.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44360/uiski-kilbeggan-40--700ml-image_5f9b57cca1dc5_600x600.jpeg?1604016094"
+      },
+      {
+        "name": "Уиски GRANTS 40% 1 л",
+        "quantity": null,
+        "price": 24.99,
+        "oldPrice": 31.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39427/uiski-grants-40--1-l-image_5ea2cc9869350_600x600.png?1587731954"
+      },
+      {
+        "name": "Уиски JACK DANIEL'S 40% 700 мл",
+        "quantity": null,
+        "price": 30.99,
+        "oldPrice": 42.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39415/uiski-jack-daniels-40--700-ml-image_5ea2cc7db64e2_600x600.png?1587731946"
+      },
+      {
+        "name": "Уиски BUSHMILLS Black Bush 40% 700 мл",
+        "quantity": null,
+        "price": 31.99,
+        "oldPrice": 37.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39614/uiski-bushmills-black-bush-40--700-ml-image_5ea2cfa7401c8_600x600.png?1587732107"
+      },
+      {
+        "name": "Уиски JOHNNIE WALKER Black 40% 700 мл",
+        "quantity": null,
+        "price": 36.99,
+        "oldPrice": 48.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39349/uiski-johnnie-walker-black-40--700-ml-image_5ea2cba696afc_600x600.png?1587731896"
+      },
+      {
+        "name": "Уиски BUSHMILLS 10 годишно 40% 700 мл",
+        "quantity": null,
+        "price": 37.99,
+        "oldPrice": 46.99,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39365/uiski-bushmills-10-godisno-40--700-ml-image_5ea2cbe8017e3_600x600.png?1587731910"
+      },
+      {
+        "name": "Уиски BALLANTINES 12 годишно 700 мл",
+        "quantity": null,
+        "price": 39.99,
+        "oldPrice": 45.89,
+        "category": "Whiskey",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39329/uiski-ballantines-12-godisno-700-ml-image_5ea2cab88cc1d_600x600.png?1587731391"
+      },
+      {
+        "name": "Коняк COURVOISIER VS 40% 700 мл",
+        "quantity": null,
+        "price": 42.99,
+        "oldPrice": 47.99,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/41611/konak-courvoisier-vs-40--700-ml-image_5f0ef99a28666_600x600.png?1594819861"
+      },
+      {
+        "name": "Водка SAVOY 37.5% 200мл",
+        "quantity": null,
+        "price": 2.99,
+        "oldPrice": null,
+        "category": "Vodka",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44155/vodka-savoy-37-5--200ml-image_5f9b5525b75b8_600x600.jpeg?1604015415"
+      },
+      {
+        "name": "Мента KARNOBAT 200мл",
+        "quantity": null,
+        "price": 3.09,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44212/menta-karnobat-200ml-image_5f9b5939ac52a_600x600.jpeg?1604016458"
+      }
+    ]
+  },
+  {
+    "supermarket": "Fantastico",
+    "updatedAt": "2021-03-24T11:00:51.355+00:00",
+    "products": [
+      {
+        "name": "Бира SCHOFFERHOFER пшенична бутилка",
+        "quantity": "500 мл",
+        "price": 1.99,
+        "oldPrice": 2.89,
+        "category": "Beer",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Водка ТЪРГОВИЩЕ",
+        "quantity": "700 мл",
+        "price": 8.49,
+        "oldPrice": 10.99,
+        "category": "Vodka",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Бира ЗАГОРКА кен",
+        "quantity": "500 мл",
+        "price": 0.79,
+        "oldPrice": 1.25,
+        "category": "Beer",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Бира ZATECKY HUS кен",
+        "quantity": "500 мл",
+        "price": 0.99,
+        "oldPrice": 1.65,
+        "category": "Beer",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Спиртна напитка ГРОЗДЕН Мускатова",
+        "quantity": "700 мл",
+        "price": 7.29,
+        "oldPrice": 9.99,
+        "category": "Rakia",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Уиски JIM BEAM Classic",
+        "quantity": "700 мл",
+        "price": 16.99,
+        "oldPrice": 24.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Шотландско уиски GRANT‘S Triple Wood; Ale Cask; Rum Cask",
+        "quantity": "700 мл",
+        "price": 16.99,
+        "oldPrice": 24.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Водка ЦАРСКАЯ оригинальная",
+        "quantity": "700 мл",
+        "price": 13.99,
+        "oldPrice": 19.99,
+        "category": "Vodka",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Бренди METAXA 5 звезди кутия",
+        "quantity": "700 мл",
+        "price": 16.99,
+        "oldPrice": 25.99,
+        "category": "Other",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Шотландско уиски SINGLETON",
+        "quantity": "12 г, 700 мл",
+        "price": 42.99,
+        "oldPrice": 55.99,
+        "category": "Whiskey",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино Шардоне; Каберне Совиньон DOMAINE BOYAR",
+        "quantity": "bag-in-box, 3 л",
+        "price": 13.99,
+        "oldPrice": 19.99,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино Совиньон Блан DUSKY SOUNDS",
+        "quantity": "750 мл",
+        "price": 12.99,
+        "oldPrice": 17.99,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино Мавруд; Мерло и Каберне совиньон ПРЕСЛАВ",
+        "quantity": "750 мл",
+        "price": 8.49,
+        "oldPrice": 10.99,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Напитка на винена основа FRUTINO различни видове",
+        "quantity": "750 мл",
+        "price": 5.99,
+        "oldPrice": 8.29,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Напитка на винена основа MONCIGALE Fruits and Wine различни видове",
+        "quantity": "750 мл",
+        "price": 5.59,
+        "oldPrice": 7.99,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино ANGEL различни видове",
+        "quantity": "750 мл",
+        "price": 7.99,
+        "oldPrice": 11.49,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино DOMAINE BOYAR Тракийска Низина",
+        "quantity": "750 мл",
+        "price": 5.59,
+        "oldPrice": 7.49,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино Каберне и Мавруд АСЕНОВГРАД Пенливо вино ARGEO Просеко произход Италия",
+        "quantity": "bag-in-box 3 л 750 мл",
+        "price": 12.99,
+        "oldPrice": 18.99,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Вино QUANTUM различни видове",
+        "quantity": "750 мл",
+        "price": 6.19,
+        "oldPrice": 9.49,
+        "category": "Wine",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Водка LITHUANIAN Original",
+        "quantity": "700 мл",
+        "price": 7.99,
+        "oldPrice": 10.99,
+        "category": "Vodka",
+        "picUrl": "http://www.foo69.bar"
+      },
+      {
+        "name": "Анасонова Напитка",
+        "quantity": null,
+        "price": 39.99,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
+      },
+      {
+        "name": "ПЕЩЕРА Мастика",
+        "quantity": null,
+        "price": 39.99,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
+      }
+    ]
+  }
+]

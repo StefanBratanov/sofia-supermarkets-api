@@ -44,8 +44,8 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
             )
         }
 
-        every { alcoholController.alcohol(any(), null) } returns objectMapper.readValue(alcohols)
-        every { alcoholController.alcohol(any(), listOf("beer")) } returns objectMapper.readValue(beer)
+        every { alcoholController.alcohol(any(), null, true) } returns objectMapper.readValue(alcohols)
+        every { alcoholController.alcohol(any(), listOf("beer"), true) } returns objectMapper.readValue(beer)
         every { supermarketController.supermarkets() } returns supermarketStaticData
 
         mockMvc.perform(MockMvcRequestBuilders.get("/products/flat/alcohol").accept(MediaType.APPLICATION_JSON))
