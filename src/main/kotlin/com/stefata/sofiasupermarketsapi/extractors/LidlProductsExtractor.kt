@@ -39,8 +39,8 @@ class LidlProductsExtractor(
                 val newPrice = it.select(".pricebox__price")?.text()
                 val quantity = it.select(".pricebox__basic-quantity")?.text()
 
-                var picUrl = it.select(".picture").select("source[data-srcset]").first()
-                    ?.attr("data-srcset")?.split(",")
+                var picUrl = it.select(".picture").select("source[data-srcset]").eachAttr("data-srcset")
+                    ?.firstOrNull { srcSet -> srcSet.contains("/sm/") }?.split(",")
                     ?.map { picUrl -> picUrl.trim() }
                     ?.firstOrNull { picUrl ->
                         urlValidator.isValid(picUrl)

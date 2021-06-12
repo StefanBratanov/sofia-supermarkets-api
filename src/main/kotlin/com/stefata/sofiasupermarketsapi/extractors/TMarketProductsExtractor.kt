@@ -41,7 +41,7 @@ class TMarketProductsExtractor : UrlProductsExtractor {
 
             val picUrl = it.select("._product-image img")?.attr("data-src")?.takeUnless { purl ->
                 Strings.isBlank(purl)
-            }
+            }?.replace("600x600.", "300x300.")
 
             val nameAndQuantity = separateNameAndQuantity(productName)
 
