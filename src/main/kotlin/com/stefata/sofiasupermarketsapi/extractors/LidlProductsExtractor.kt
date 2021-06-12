@@ -11,6 +11,8 @@ import org.apache.commons.validator.routines.UrlValidator
 import org.apache.logging.log4j.util.Strings.isNotBlank
 import org.springframework.stereotype.Component
 import java.net.URL
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 @Log
@@ -32,6 +34,18 @@ class LidlProductsExtractor(
                 isNotBlank(it.attr("data-price"))
             }
             .map {
+                val endDate = it.selectFirst(".ribbon__text")?.text()?.trim()?.let { dateSpan ->
+                    "\\d+.\\d+.".toRegex().findAll(dateSpan).lastOrNull()
+                }?.let { date ->
+                    val match = date.groupValues[0]
+                    try {
+                        LocalDate.parse(match.plus(LocalDate.now().year), DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+                    } catch (ex: Exception) {
+                        log.error("Error while parsing $date", ex)
+                        null
+                    }
+                }
+
                 val name = it.select(".product__title").text()
                 val oldPrice = it.select(".pricebox__recommended-retail-price")?.textNodes()?.takeIf { tn ->
                     tn.isNotEmpty()
@@ -56,7 +70,8 @@ class LidlProductsExtractor(
                     oldPrice = normalizePrice(oldPrice),
                     quantity = StringUtils.normalizeSpace(quantity),
                     picUrl = picUrl,
-                    category = category
+                    category = category,
+                    validUntil = endDate
                 )
 
             }

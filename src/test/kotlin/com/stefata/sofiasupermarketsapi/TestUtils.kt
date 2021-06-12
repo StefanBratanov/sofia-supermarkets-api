@@ -1,5 +1,8 @@
 package com.stefata.sofiasupermarketsapi
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.SerializationFeature
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.stefata.sofiasupermarketsapi.model.Product
 import kotlin.random.Random
 
@@ -17,4 +20,9 @@ fun getProduct(name: String, price: Double): Product {
         price = price,
         oldPrice = null
     )
+}
+
+fun testObjectMapper(): ObjectMapper {
+    return ObjectMapper().registerModule(JavaTimeModule())
+        .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
 }

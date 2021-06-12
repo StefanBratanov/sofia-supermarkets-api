@@ -10,6 +10,8 @@ import org.apache.commons.lang3.StringUtils
 import org.apache.commons.validator.routines.UrlValidator
 import org.springframework.stereotype.Component
 import java.net.URL
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.text.RegexOption.IGNORE_CASE
 
@@ -26,6 +28,18 @@ class KauflandProductsExtractor(
         val document = getHtmlDocument(url)
 
         val category = document.select(".a-icon-tile-headline__container .a-headline")?.text()
+
+        val endDate = document.selectFirst(".a-icon-tile-headline__subheadline h2")?.text()?.let {
+            "\\d+.\\d+.\\d+".toRegex().findAll(it).lastOrNull()
+        }?.let {
+            val match = it.groupValues[0]
+            try {
+                LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+            } catch (ex: Exception) {
+                log.error("Error while parsing $match", ex)
+                null
+            }
+        }
 
         return document.select(".o-overview-list__list-item").mapNotNull {
             val subtitle = it.select(".m-offer-tile__subtitle").text()
@@ -55,7 +69,8 @@ class KauflandProductsExtractor(
                 price = normalizePrice(price),
                 oldPrice = normalizePrice(oldPrice),
                 category = category,
-                picUrl = picUrl
+                picUrl = picUrl,
+                validUntil = endDate
             )
         }
     }

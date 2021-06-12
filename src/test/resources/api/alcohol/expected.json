@@ -9,7 +9,8 @@
         "price": 7.49,
         "oldPrice": null,
         "category": "Other",
-        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/21979/xs/21979_03.jpg"
+        "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/21979/xs/21979_03.jpg",
+        "validUntil" : "2021-05-06"
       },
       {
         "name": "Узо",

@@ -2,9 +2,9 @@ package com.stefata.sofiasupermarketsapi.extractors
 
 import assertk.assertThat
 import assertk.assertions.isNotEmpty
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefata.sofiasupermarketsapi.getUri
 import com.stefata.sofiasupermarketsapi.readResource
+import com.stefata.sofiasupermarketsapi.testObjectMapper
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.skyscreamer.jsonassert.JSONAssert
@@ -13,7 +13,7 @@ import java.net.URL
 
 internal class TMarketProductsExtractorTest {
 
-    private val objectMapper = ObjectMapper()
+    private val objectMapper = testObjectMapper()
 
     private val underTest = TMarketProductsExtractor()
 

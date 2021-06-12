@@ -5,7 +5,8 @@
     "price": 7.99,
     "oldPrice": 10.99,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Ирландско уиски BUSHMILLS",
@@ -13,7 +14,8 @@
     "price": 21.49,
     "oldPrice": 29.99,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Бърбън уиски JIM BEAM",
@@ -21,7 +23,8 @@
     "price": 21.99,
     "oldPrice": 32.99,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Сливова ракия ТРОЯНСКА",
@@ -29,7 +32,8 @@
     "price": 10.99,
     "oldPrice": 14.99,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Бира КАМЕНИЦА",
@@ -37,7 +41,8 @@
     "price": 0.79,
     "oldPrice": 1.25,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Вино Шардоне; Мерло LOVICO Вино ПОМОРИЕ РАКОВИНА различни видове",
@@ -45,7 +50,8 @@
     "price": 4.79,
     "oldPrice": 6.49,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Вино ZAGAREUS Tiara различни видове",
@@ -53,7 +59,8 @@
     "price": 6.99,
     "oldPrice": 9.99,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Бяло вино VILLA ANTINORI произход Италия",
@@ -61,7 +68,8 @@
     "price": 17.99,
     "oldPrice": 25.99,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Вино TERRA TANGRA различни видове",
@@ -69,7 +77,8 @@
     "price": 9.99,
     "oldPrice": 12.99,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Бира ШУМЕНСКО",
@@ -77,7 +86,8 @@
     "price": 1.39,
     "oldPrice": 1.79,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Бира HEINEKEN бутилка*, *с включен",
@@ -85,7 +95,8 @@
     "price": 1.39,
     "oldPrice": 2.09,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   },
   {
     "name": "Бира MADONNA различни видове бутилка,",
@@ -93,6 +104,7 @@
     "price": 1.69,
     "oldPrice": 2.29,
     "category": null,
-    "picUrl": null
+    "picUrl": null,
+    "validUntil": null
   }
 ]

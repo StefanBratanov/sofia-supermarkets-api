@@ -5,7 +5,8 @@
     "price": 7.49,
     "oldPrice": 8.49,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/44007/likor-dama-17--500ml-image_5ff47c679173d_300x300.jpeg?1609871461"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/44007/likor-dama-17--500ml-image_5ff47c679173d_300x300.jpeg?1609871461",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Водка BARSKA 37.5%",
@@ -13,7 +14,8 @@
     "price": 7.99,
     "oldPrice": 9.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/44028/vodka-barska-37-5--700ml-image_5f4cbb96245e1_300x300.jpeg?1598864970"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/44028/vodka-barska-37-5--700ml-image_5f4cbb96245e1_300x300.jpeg?1598864970",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Водка AURORA 37.5%",
@@ -21,7 +23,8 @@
     "price": 8.99,
     "oldPrice": 10.49,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/43665/vodka-aurora-37-5--700-ml-image_5f9b595730fc0_300x300.jpeg?1604016488"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/43665/vodka-aurora-37-5--700-ml-image_5f9b595730fc0_300x300.jpeg?1604016488",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Узо ZORBAS 40%",
@@ -29,7 +32,8 @@
     "price": 9.49,
     "oldPrice": 11.19,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/41574/uzo-zorbas-40--700-ml-image_5f2811b414c71_300x300.png?1596461527"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/41574/uzo-zorbas-40--700-ml-image_5f2811b414c71_300x300.png?1596461527",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Водка ХЛЕБНИЙ ДАР класик 40 %",
@@ -37,7 +41,8 @@
     "price": 9.99,
     "oldPrice": 11.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/44125/vodka-hlebnij-dar-klasik-40---700-ml-image_5f9b56991388c_300x300.jpeg?1604015786"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/44125/vodka-hlebnij-dar-klasik-40---700-ml-image_5f9b56991388c_300x300.jpeg?1604015786",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Водка ХЛЕБНИЙ ДАР Пшенична 40 %",
@@ -45,7 +50,8 @@
     "price": 9.99,
     "oldPrice": 11.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/44129/vodka-hlebnij-dar-psenicna-40---700-ml-image_5f9b56b776da9_300x300.jpeg?1604015817"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/44129/vodka-hlebnij-dar-psenicna-40---700-ml-image_5f9b56b776da9_300x300.jpeg?1604015817",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Ракия КАРНОБАТСКА гроздова 40%",
@@ -53,7 +59,8 @@
     "price": 10.99,
     "oldPrice": 14.29,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39579/rakia-karnobatska-grozdova-40--1-l-image_5ea2cf03499f9_300x300.png?1587732078"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39579/rakia-karnobatska-grozdova-40--1-l-image_5ea2cf03499f9_300x300.png?1587732078",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Уиски BALLANTINES 40%",
@@ -61,7 +68,8 @@
     "price": 10.99,
     "oldPrice": 15.69,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/43488/uiski-ballantines-40--500ml-image_5f9b53fba4460_300x300.jpeg?1604015116"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/43488/uiski-ballantines-40--500ml-image_5f9b53fba4460_300x300.jpeg?1604015116",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Водка ЗЕЛЕНАЯ МАРКА Традиционна",
@@ -69,7 +77,8 @@
     "price": 11.99,
     "oldPrice": 16.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39432/vodka-zelenaa-marka-tradicionna-700-ml-image_5ea2ccade5936_300x300.png?1587731958"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39432/vodka-zelenaa-marka-tradicionna-700-ml-image_5ea2ccade5936_300x300.png?1587731958",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Водка ЗЕЛЕНАЯ МАРКА Кедрова",
@@ -77,7 +86,8 @@
     "price": 11.99,
     "oldPrice": 16.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39437/vodka-zelenaa-marka-kedrova-700-ml-image_5ea2ccbab70b9_300x300.png?1587731962"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39437/vodka-zelenaa-marka-kedrova-700-ml-image_5ea2ccbab70b9_300x300.png?1587731962",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Вермут MARTINI Extra Dry 18%",
@@ -85,7 +95,8 @@
     "price": 15.99,
     "oldPrice": 20.89,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39257/vermut-martini-extra-dry-18--1-l-image_5ea2c8f78d033_300x300.jpeg?1587731326"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39257/vermut-martini-extra-dry-18--1-l-image_5ea2c8f78d033_300x300.jpeg?1587731326",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Вермут MARTINI Bianco 15%",
@@ -93,7 +104,8 @@
     "price": 15.99,
     "oldPrice": 21.49,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39261/vermut-martini-bianco-15--1-l-image_5ea2c90ac4231_300x300.png?1587731331"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39261/vermut-martini-bianco-15--1-l-image_5ea2c90ac4231_300x300.png?1587731331",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Уиски OLD SMUGGLER 40%",
@@ -101,7 +113,8 @@
     "price": 15.99,
     "oldPrice": 17.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/44357/uiski-old-smuggler-40--700ml-image_5f9b54db0a387_300x300.jpeg?1604015340"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/44357/uiski-old-smuggler-40--700ml-image_5f9b54db0a387_300x300.jpeg?1604015340",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Джин GORDONS 37.5%",
@@ -109,7 +122,8 @@
     "price": 17.49,
     "oldPrice": 19.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39213/dzin-gordons-37-5--700-ml-image_5ea2c784335be_300x300.png?1587731283"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39213/dzin-gordons-37-5--700-ml-image_5ea2c784335be_300x300.png?1587731283",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Бренди METAXA 5* 38%",
@@ -117,7 +131,8 @@
     "price": 17.99,
     "oldPrice": 22.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39387/brendi-metaxa-5-38--700-ml-image_5ea2cc1a0dc5f_300x300.png?1587731927"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39387/brendi-metaxa-5-38--700-ml-image_5ea2cc1a0dc5f_300x300.png?1587731927",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Ракия БУРГАСКА гроздова 40%",
@@ -125,7 +140,8 @@
     "price": 18.99,
     "oldPrice": 20.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/41630/rakia-burgaska-grozdova-40--1-5-l-image_5f1ecb0bb5cf6_300x300.png?1595857535"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/41630/rakia-burgaska-grozdova-40--1-5-l-image_5f1ecb0bb5cf6_300x300.png?1595857535",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Пастис RICARD 45%",
@@ -133,7 +149,8 @@
     "price": 19.99,
     "oldPrice": 23.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39617/pastis-ricard-45--700-ml-image_5ea2cfb6a4a42_300x300.png?1587732109"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39617/pastis-ricard-45--700-ml-image_5ea2cfb6a4a42_300x300.png?1587732109",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Водка РУССКИЙ СТАНДАРТ Голд",
@@ -141,7 +158,8 @@
     "price": 20.99,
     "oldPrice": 23.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/43656/vodka-russkij-standart-gold-700ml-image_5f9b56f663d4a_300x300.jpeg?1604015883"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/43656/vodka-russkij-standart-gold-700ml-image_5f9b56f663d4a_300x300.jpeg?1604015883",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Уиски KILBEGGAN 40%",
@@ -149,7 +167,8 @@
     "price": 20.99,
     "oldPrice": 23.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/44360/uiski-kilbeggan-40--700ml-image_5f9b57cca1dc5_300x300.jpeg?1604016094"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/44360/uiski-kilbeggan-40--700ml-image_5f9b57cca1dc5_300x300.jpeg?1604016094",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Бърбън JIM BEAM 40%",
@@ -157,7 +176,8 @@
     "price": 21.89,
     "oldPrice": 31.89,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39412/barban-jim-beam-40--1-l-image_5ea2cc7344355_300x300.png?1587731942"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39412/barban-jim-beam-40--1-l-image_5ea2cc7344355_300x300.png?1587731942",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Уиски JAMESON 40%",
@@ -165,7 +185,8 @@
     "price": 21.99,
     "oldPrice": 28.69,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39358/uiski-jameson-40--700-ml-image_5ea2cbd05fc37_300x300.png?1587731903"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39358/uiski-jameson-40--700-ml-image_5ea2cbd05fc37_300x300.png?1587731903",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Уиски GRANTS 40%",
@@ -173,7 +194,8 @@
     "price": 24.99,
     "oldPrice": 31.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39427/uiski-grants-40--1-l-image_5ea2cc9869350_300x300.png?1587731954"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39427/uiski-grants-40--1-l-image_5ea2cc9869350_300x300.png?1587731954",
+    "validUntil": "2021-03-31"
   },
   {
     "name": "Уиски BUSHMILLS 40%",
@@ -181,7 +203,8 @@
     "price": 27.99,
     "oldPrice": 38.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/41601/uiski-bushmills-40--1-l-image_5f281208d15f5_300x300.png?1596461612"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/41601/uiski-bushmills-40--1-l-image_5f281208d15f5_300x300.png?1596461612",
+    "validUntil": "2021-03-22"
   },
   {
     "name": "Уиски BUSHMILLS Black Bush 40%",
@@ -189,6 +212,7 @@
     "price": 31.99,
     "oldPrice": 37.99,
     "category": "Високоалкохолни напитки",
-    "picUrl": "https://cdncloudcart.com/16398/products/images/39614/uiski-bushmills-black-bush-40--700-ml-image_5ea2cfa7401c8_300x300.png?1587732107"
+    "picUrl": "https://cdncloudcart.com/16398/products/images/39614/uiski-bushmills-black-bush-40--700-ml-image_5ea2cfa7401c8_300x300.png?1587732107",
+    "validUntil": "2021-03-31"
   }
 ]

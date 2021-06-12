@@ -1,11 +1,16 @@
 package com.stefata.sofiasupermarketsapi.api
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize
+import com.fasterxml.jackson.databind.annotation.JsonSerialize
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import io.swagger.annotations.ApiParam
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
+import java.time.LocalDate
 import java.util.Objects.isNull
 import kotlin.math.absoluteValue
 
@@ -43,7 +48,8 @@ class FlatProductController(
                     oldPrice = product.oldPrice,
                     discount = getDiscount(product.price, product.oldPrice),
                     category = product.category,
-                    picUrl = product.picUrl
+                    picUrl = product.picUrl,
+                    validUntil = product.validUntil
                 )
             }!!.toList()
         }
@@ -52,7 +58,10 @@ class FlatProductController(
     data class FlatProduct(
         val supermarket: String?, val logo: String?, val name: String, val quantity: String?,
         val price: Double?, val oldPrice: Double?, val discount: Int?,
-        val category: String?, val picUrl: String?
+        val category: String?, val picUrl: String?,
+        @JsonDeserialize(using = LocalDateDeserializer::class)
+        @JsonSerialize(using = LocalDateSerializer::class)
+        val validUntil: LocalDate? = null
     )
 
     fun getDiscount(price: Double?, oldPrice: Double?): Int? {

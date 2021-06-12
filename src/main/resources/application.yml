@@ -55,3 +55,6 @@ spring:
     url: "jdbc:postgresql://queenie.db.elephantsql.com:5432/nwshtxej"
     username: ${DB_USERNAME:}
     password: ${DB_PASSWORD:}
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false

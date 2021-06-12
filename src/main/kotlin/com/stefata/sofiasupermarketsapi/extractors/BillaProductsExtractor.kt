@@ -9,6 +9,8 @@ import com.stefata.sofiasupermarketsapi.model.Product
 import org.apache.commons.lang3.StringUtils.normalizeSpace
 import org.springframework.stereotype.Component
 import java.net.URL
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.text.RegexOption.IGNORE_CASE
 
@@ -33,12 +35,26 @@ class BillaProductsExtractor : UrlProductsExtractor {
 
         log.info("Processing Billa URL: {}", url.toString())
 
-        return getHtmlDocument(url).select(".productSection > .product").map {
+        val htmlDoc = getHtmlDocument(url)
+
+        val endDate = htmlDoc.selectFirst(".dateSpan")?.text()?.let {
+            "\\d+.\\d+.\\d+".toRegex().findAll(it).lastOrNull()
+        }?.let {
+            val match = it.groupValues[0]
+            try {
+                LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+            } catch (ex: Exception) {
+                log.error("Error while parsing $match", ex)
+                null
+            }
+        }
+
+        return htmlDoc.select(".productSection > .product").map {
             val productName = it.select(".actualProduct").text()
             val oldPrice = it.select(".price").first()?.text()
             val price = it.select(".price").last()?.text()
 
-            Product(name = productName, price = price?.toDouble(), oldPrice = oldPrice?.toDouble())
+            Product(name = productName, price = price?.toDouble(), oldPrice = oldPrice?.toDouble(), validUntil = endDate)
         }.filter {
             Objects.nonNull(it.price)
         }.map {

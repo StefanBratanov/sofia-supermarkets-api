@@ -19,6 +19,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.io.TempDir
 import java.nio.file.Files
 import java.nio.file.Path
+import java.time.LocalDate
 import java.util.*
 
 @ExtendWith(MockKExtension::class)
@@ -37,15 +38,17 @@ internal class FantasticoFlowTest {
     lateinit var underTest: FantasticoFlow
 
     @Test
-    fun `runs flow for billa`(@TempDir tempDir: Path) {
+    fun `runs flow for fantastico`(@TempDir tempDir: Path) {
 
         val randomFile = tempDir.resolve(UUID.randomUUID().toString())
         randomFile.toFile().createNewFile()
 
-        val foo = getProduct("foo")
-        val bar = getProduct("bar")
+        val validUntil = LocalDate.of(2021, 5, 6)
 
-        every { fantasticoBrochureDownloader.download() } returns randomFile
+        val foo = getProduct("foo").copy(validUntil = validUntil)
+        val bar = getProduct("bar").copy(validUntil = validUntil)
+
+        every { fantasticoBrochureDownloader.download() } returns Pair(randomFile, validUntil)
         every { pdfProductsExtractor.extract(any()) } returns listOf(foo, bar)
         every { productStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
