@@ -1771,6 +1771,22 @@
         "oldPrice": null,
         "category": null,
         "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
+      },
+      {
+        "name": "Чаши за бира MYKONOS комплект",
+        "quantity": "310 мл 6 бр",
+        "price": 8.99,
+        "oldPrice": 12.99,
+        "category": null,
+        "picUrl": "http://res.cloudinary.com/dhf90uh66/image/upload/v1623448610/alcohol/cz0juw9x3gdcos2szlwj.jpg"
+      },
+      {
+        "name": "Чаши за вино BOHEMIA Royal Gastro Royal Martina",
+        "quantity": "390 мл/480 мл; 350 мл/450 мл 6 бр комплект",
+        "price": 18.89,
+        "oldPrice": 26.99,
+        "category": null,
+        "picUrl": "http://res.cloudinary.com/dhf90uh66/image/upload/v1623448694/alcohol/hf2raggjhgc29rajgcvw.webp"
       }
     ]
   }
