@@ -42,6 +42,9 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 
         every { imageSearch.search(any()) } returns "http://www.foo69.bar"
         every { cdnUploader.upload(any(), "http://www.foo69.bar") } returns "http://www.foo.bar"
+        every { cdnUploader.upload("Вино DOMAINE BOYAR Тракийска Низина 750 мл", "http://www.foo69.bar") } throws
+                IllegalStateException("oopsy")
+
         every { productStoreController.products(any()) } returns objectMapper.readValue(inputJson)
 
         mockMvc.perform(MockMvcRequestBuilders.get("/products/alcohol").accept(MediaType.APPLICATION_JSON))

@@ -1,6 +1,8 @@
 package com.stefata.sofiasupermarketsapi.api
 
 import com.stefata.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.*
+import com.stefata.sofiasupermarketsapi.common.Log
+import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.interfaces.CdnUploader
 import com.stefata.sofiasupermarketsapi.interfaces.ImageSearch
 import com.stefata.sofiasupermarketsapi.model.Product
@@ -18,6 +20,7 @@ import java.util.Objects.isNull
 import java.util.Objects.nonNull
 import kotlin.text.RegexOption.IGNORE_CASE
 
+@Log
 @Api(tags = ["Product"], description = "All operations for supermarket products")
 @RestController
 class AlcoholController(
@@ -134,8 +137,13 @@ class AlcoholController(
                     val productKey = "${product.name} ${product.quantity}"
                     val picUrl = imageSearch.search(productKey)
                     if (useCdn && nonNull(picUrl)) {
-                        val cdnUrl = cdnUploader.upload(productKey, picUrl!!)
-                        product.copy(picUrl = cdnUrl)
+                        try {
+                            val cdnUrl = cdnUploader.upload(productKey, picUrl!!)
+                            product.copy(picUrl = cdnUrl)
+                        } catch (ex: Exception) {
+                            log.error("Error while uploading to CDN. Will fallback to Google search result", ex)
+                            product.copy(picUrl = picUrl)
+                        }
                     } else {
                         product.copy(picUrl = picUrl)
                     }
