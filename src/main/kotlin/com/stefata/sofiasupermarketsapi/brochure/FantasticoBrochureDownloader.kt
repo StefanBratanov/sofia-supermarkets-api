@@ -26,9 +26,10 @@ class FantasticoBrochureDownloader(
         val htmlDoc = getHtmlDocument(url)
 
         val validUntil = htmlDoc.selectFirst("div.brochure-container p.paragraph")?.text()?.trim()?.let {
-            "\\d+.\\d+.\\d+\$".toRegex().find(it)
+            "\\d+.\\d+\\.(\\d+)?\$".toRegex().find(it)
         }?.let {
-            val match = it.groupValues[0]
+            var match = it.groupValues[0]
+            match = match.replace("\\.$".toRegex(),".${LocalDate.now().year}")
             try {
                 LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
             } catch (ex: Exception) {
