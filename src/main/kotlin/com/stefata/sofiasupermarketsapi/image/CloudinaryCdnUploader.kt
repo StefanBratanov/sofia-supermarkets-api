@@ -22,7 +22,7 @@ class CloudinaryCdnUploader(
 
         if (searchResult.isNotEmpty()) {
             log.info("Found a result for {} in CDN", key)
-            return searchResult.first()["url"] as String
+            return searchResult.first()["secure_url"] as String
         }
 
         log.info("Uploading image for {} to CDN", key)
@@ -35,7 +35,7 @@ class CloudinaryCdnUploader(
                     .responsiveWidth(true)
                     .height(200)
             )
-        )["url"] as String
+        )["secure_url"] as String
     }
 
 }
