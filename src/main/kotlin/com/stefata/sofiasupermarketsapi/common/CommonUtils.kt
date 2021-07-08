@@ -45,3 +45,7 @@ fun checkIfUrlHasAcceptableHttpResponse(url: String): Boolean {
 fun removeDuplicateSubstrings(input: String?): String? {
     return input?.split("\\s+".toRegex())?.distinct()?.joinToString(" ");
 }
+
+fun <T> concatenate(vararg lists: List<T>): List<T> {
+    return listOf(*lists).flatten()
+}
