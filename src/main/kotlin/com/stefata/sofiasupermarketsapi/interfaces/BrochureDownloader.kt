@@ -5,6 +5,8 @@ import java.time.LocalDate
 
 interface BrochureDownloader {
 
-    fun download(): Pair<Path, LocalDate?>
+    fun download(): List<Brochure>
+
+    data class Brochure(val path: Path, val validUntil: LocalDate?)
 
 }

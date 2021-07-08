@@ -18,11 +18,12 @@ internal class FantasticoBrochureDownloaderTest {
         underTest = FantasticoBrochureDownloader(URL("https://www.fantastico.bg/special-offers"))
         val result = underTest.download()
 
-        assertThat(result.first.toFile()).exists()
-        assertThat(result.first.fileName.toString()).endsWith(".pdf")
-        assertThat(result.second).isNotNull()
-
-        Files.delete(result.first)
+        result.forEach {
+            assertThat(it.path.toFile()).exists()
+            assertThat(it.path.fileName.toString()).endsWith(".pdf")
+            assertThat(it.validUntil).isNotNull()
+            Files.delete(it.path)
+        }
 
     }
 }

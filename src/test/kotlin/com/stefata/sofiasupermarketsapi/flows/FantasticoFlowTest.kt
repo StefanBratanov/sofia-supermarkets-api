@@ -5,6 +5,7 @@ import assertk.assertions.isEqualTo
 import assertk.assertions.isFalse
 import com.stefata.sofiasupermarketsapi.brochure.FantasticoBrochureDownloader
 import com.stefata.sofiasupermarketsapi.getProduct
+import com.stefata.sofiasupermarketsapi.interfaces.BrochureDownloader
 import com.stefata.sofiasupermarketsapi.interfaces.PdfProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.model.Supermarket
@@ -42,14 +43,30 @@ internal class FantasticoFlowTest {
 
         val randomFile = tempDir.resolve(UUID.randomUUID().toString())
         randomFile.toFile().createNewFile()
+        val randomFile2 = tempDir.resolve(UUID.randomUUID().toString())
+        randomFile2.toFile().createNewFile()
 
         val validUntil = LocalDate.of(2021, 5, 6)
 
         val foo = getProduct("foo").copy(validUntil = validUntil)
-        val bar = getProduct("bar").copy(validUntil = validUntil)
+        val bar = getProduct("bar").copy(validUntil = validUntil.plusDays(1))
 
-        every { fantasticoBrochureDownloader.download() } returns Pair(randomFile, validUntil)
-        every { pdfProductsExtractor.extract(any()) } returns listOf(foo, bar)
+        val brochure = BrochureDownloader.Brochure(
+            randomFile,
+            validUntil
+        )
+
+        val brochure2 = BrochureDownloader.Brochure(
+            randomFile2,
+            validUntil.plusDays(1)
+        )
+
+        every { fantasticoBrochureDownloader.download() } returns listOf(
+            brochure,brochure2
+        )
+        every { pdfProductsExtractor.extract(randomFile) } returns listOf(foo)
+        every { pdfProductsExtractor.extract(randomFile2) } returns listOf(bar)
+
         every { productStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
         underTest.runSafely()
@@ -65,6 +82,7 @@ internal class FantasticoFlowTest {
         }
 
         assertThat(Files.exists(randomFile)).isFalse()
+        assertThat(Files.exists(randomFile2)).isFalse()
     }
 
     @Test

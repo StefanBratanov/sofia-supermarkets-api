@@ -21,13 +21,18 @@ class FantasticoFlow(
 ) : SupermarketFlow {
 
     override fun run() {
-        val brochure = fantasticoBrochureDownloader.download()
-        val products = pdfProductsExtractor.extract(brochure.first).map {
-            it.copy(validUntil = brochure.second)
-        }
+        val brochures = fantasticoBrochureDownloader.download()
+
+        val products = brochures.map {
+            pdfProductsExtractor.extract(it.path).map { product ->
+                product.copy(validUntil = it.validUntil)
+            }
+        }.flatten()
 
         //clean-up
-        Files.delete(brochure.first)
+        brochures.forEach {
+            Files.delete(it.path)
+        }
 
         log.info("Retrieved ${products.size} products")
         log.info("Saving ${getSupermarket().title} products")
