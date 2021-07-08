@@ -193,6 +193,14 @@
     "updatedAt": "2021-03-24T11:00:42.095+00:00",
     "products": [
       {
+        "name": "Botter Бяло вино Sauvignon Trevenezie IGT",
+        "quantity": "0,75 л",
+        "price": 6.99,
+        "oldPrice": 10.99,
+        "category": "Wine",
+        "picUrl": "https://webassets.kaufland.com/images/PPIM/KMO/BG2708_00088180_P.jpg?MYRAVRESIZE=322"
+      },
+      {
         "name": "Mezzek Червено, бяло вино или розе",
         "quantity": "2 л BIB",
         "price": 11.99,

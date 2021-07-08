@@ -101,7 +101,9 @@ class AlcoholController(
                 }
                 KAUFLAND.title -> {
                     val filteredProducts = it.products?.filter { product ->
-                        product.category?.contains(kauflandDrinksCategoryRegex) == true
+                        product.category?.contains(kauflandDrinksCategoryRegex) == true ||
+                                //products in additional pages have blank category
+                                product.category?.isBlank() == true
                     }?.mapNotNull { product ->
                         alcoholProductOrNull(product)
                     }
