@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Бира LEDENIKA Светло",
+    "quantity": "PET, 2 л",
+    "price": 1.69,
+    "oldPrice": 2.29,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира HEINEKEN бутилка",
+    "quantity": "кен, 500 мл",
+    "price": 1.39,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира GROLSCH произход Холандия",
+    "quantity": "кен, 500 мл",
+    "price": 1.99,
+    "oldPrice": 2.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Комплект бира ШУМЕНСКО кен",
+    "quantity": "5+1 бр х 500 мл",
+    "price": 4.49,
+    "oldPrice": 6.25,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Сурови ядки микс DETELINA Fitness витал; с червена боровинки",
+    "quantity": "200 г",
+    "price": 5.29,
+    "oldPrice": 7.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Гризини TITINI различни видове",
+    "quantity": "100 г",
+    "price": 1.89,
+    "oldPrice": 2.69,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Снакс POM-BAR различни вкусове",
+    "quantity": "40 г",
+    "price": 0.79,
+    "oldPrice": 1.25,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Царевичен чипс DORITOS различни вкусове",
+    "quantity": "100 г",
+    "price": 1.49,
+    "oldPrice": 2.19,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Брускети MARETTI различни",
+    "quantity": "вкусове 140 г",
+    "price": 1.39,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Печено кашу насипно",
+    "quantity": null,
+    "price": 18.99,
+    "oldPrice": 24.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ядки ROIS Premium микс",
+    "quantity": "печени150 г; бадем суров 140 г",
+    "price": 3.99,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка BARSKA",
+    "quantity": "700 мл",
+    "price": 7.99,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Мастика КАРНОБАТ",
+    "quantity": "700 мл",
+    "price": 7.69,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино TELISH",
+    "quantity": "750 мл",
+    "price": 6.99,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Джин SAVOY Pink",
+    "quantity": "700 мл",
+    "price": 8.49,
+    "oldPrice": 11.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино BOLGARE различни видове",
+    "quantity": "750 мл",
+    "price": 4.49,
+    "oldPrice": 5.89,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Гроздова ракия ПЕЩЕРСКА",
+    "quantity": "700 мл",
+    "price": 8.29,
+    "oldPrice": 11.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ирландско уиски TULLAMORE DEW",
+    "quantity": "1 л",
+    "price": 27.99,
+    "oldPrice": 38.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино PENTAGRAM различни видове",
+    "quantity": "750 мл",
+    "price": 6.99,
+    "oldPrice": 9.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Мерло; Шардоне ТЪРГОВИЩЕ",
+    "quantity": "bag-in-box 3 л",
+    "price": 10.99,
+    "oldPrice": 13.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Джин SAVOY",
+    "quantity": "700 мл",
+    "price": 6.99,
+    "oldPrice": 9.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски 100 PIPERS",
+    "quantity": "700 мл",
+    "price": 11.99,
+    "oldPrice": 18.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  }
+]

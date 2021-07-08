@@ -3,6 +3,7 @@ package com.stefata.sofiasupermarketsapi.extractors
 import com.stefata.sofiasupermarketsapi.common.Log
 import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.common.normalizePrice
+import com.stefata.sofiasupermarketsapi.common.removeDuplicateSubstrings
 import com.stefata.sofiasupermarketsapi.interfaces.PdfProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
 import com.stefata.sofiasupermarketsapi.pdf.PdfPageProductsExtractor
@@ -27,6 +28,14 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         "си запазва правото на промяна".toRegex(RegexOption.IGNORE_CASE),
         "(Промоцията|акцията) е валидна".toRegex(RegexOption.IGNORE_CASE),
         "за магазините.*цени".toRegex(RegexOption.IGNORE_CASE)
+    )
+
+    private val regexesToRemove = listOf(
+        "\\*\\s*с включен".toRegex(RegexOption.IGNORE_CASE),
+        "амбалаж 0,\\d+лв".toRegex(RegexOption.IGNORE_CASE),
+        "\\*+".toRegex(RegexOption.IGNORE_CASE),
+        ",\\s*\$".toRegex(RegexOption.IGNORE_CASE),
+        "➥+".toRegex(RegexOption.IGNORE_CASE)
     )
 
     private val productSectionResolver: Map<ProductSection, (String) -> Boolean> = mapOf(
@@ -65,6 +74,10 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                     sectionAndText.second.text.toString()
                 }.takeUnless { text ->
                     Strings.isBlank(text)
+                }.let { text ->
+                    regexesToRemove.fold(text) { q, toRemove -> q?.replace(toRemove, "") }
+                }.let { text ->
+                    removeDuplicateSubstrings(text)
                 }
 
                 Product(
@@ -90,6 +103,8 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
             it.second.font?.name?.contains("myriad", ignoreCase = true) == true
         }.joinToString(" ") {
             it.second.text.toString()
+        }.let {
+            regexesToRemove.fold(it) { name, toRemove -> name.replace(toRemove, "") }
         }
     }
 

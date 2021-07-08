@@ -90,8 +90,8 @@
     "validUntil": null
   },
   {
-    "name": "Бира HEINEKEN бутилка*, *с включен",
-    "quantity": "кен, 500 мл 500 мл амбалаж 0,20лв",
+    "name": "Бира HEINEKEN бутилка",
+    "quantity": "кен, 500 мл",
     "price": 1.39,
     "oldPrice": 2.09,
     "category": null,
@@ -99,7 +99,7 @@
     "validUntil": null
   },
   {
-    "name": "Бира MADONNA различни видове бутилка,",
+    "name": "Бира MADONNA различни видове бутилка",
     "quantity": "500 мл",
     "price": 1.69,
     "oldPrice": 2.29,

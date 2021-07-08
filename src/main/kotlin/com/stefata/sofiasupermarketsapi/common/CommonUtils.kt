@@ -41,3 +41,7 @@ fun checkIfUrlHasAcceptableHttpResponse(url: String): Boolean {
         false
     }
 }
+
+fun removeDuplicateSubstrings(input: String?): String? {
+    return input?.split("\\s+".toRegex())?.distinct()?.joinToString(" ");
+}
