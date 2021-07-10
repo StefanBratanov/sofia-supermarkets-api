@@ -126,8 +126,8 @@
     "validUntil": "2021-03-24"
   },
   {
-    "name": "Тоалетно блокче Domestos WC Power 5 3 X",
-    "quantity": "55 г",
+    "name": "Тоалетно блокче Domestos WC Power 5",
+    "quantity": "3 X 55 г",
     "price": 3.99,
     "oldPrice": 6.99,
     "category": null,
@@ -1170,8 +1170,8 @@
     "validUntil": "2021-03-24"
   },
   {
-    "name": "Разтворима напитка Jacobs 3 в 1 Х 18 г",
-    "quantity": "10 бр.",
+    "name": "Разтворима напитка Jacobs 3 в 1",
+    "quantity": "10 бр. Х 18 г",
     "price": 2.29,
     "oldPrice": 3.49,
     "category": null,
@@ -1296,8 +1296,8 @@
     "validUntil": "2021-03-24"
   },
   {
-    "name": "Газирана напитка Coca Cola 2 x",
-    "quantity": "1,5 л",
+    "name": "Газирана напитка Coca Cola",
+    "quantity": "2 x 1,5 л",
     "price": 2.85,
     "oldPrice": 3.75,
     "category": null,
@@ -1615,6 +1615,33 @@
     "quantity": "0,5 л",
     "price": 1.19,
     "oldPrice": 1.69,
+    "category": null,
+    "picUrl": null,
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Шуменско кен",
+    "quantity": "5 + 1 бр. х 0,5 л",
+    "price": 4.99,
+    "oldPrice": 5.95,
+    "category": null,
+    "picUrl": null,
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Staropramen",
+    "quantity": "6 бр. х 0,5 л",
+    "price": 6.99,
+    "oldPrice": 8.45,
+    "category": null,
+    "picUrl": null,
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Heineken Мултипак",
+    "quantity": "4 х 0,5 л",
+    "price": 5.29,
+    "oldPrice": 5.67,
     "category": null,
     "picUrl": null,
     "validUntil": "2021-03-24"

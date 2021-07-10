@@ -20,10 +20,17 @@ fun getHtmlDocument(url: URL): Document {
     return Jsoup.parse(url, 60000)
 }
 
-private val quantityRegex = "(\\d*(,|\\.|))?\\d+\\s*(кг|бр|л|мл|г|м|ml|g|kg|l)\\.?(?!оди)".toRegex(IGNORE_CASE)
+private val quantityRegexes = listOf(
+    "(\\d+\\s*\\+\\s*)?\\d+\\s*(бр(.)?)?\\s*[хx]\\s*[\\d,]+\\s*(кг|бр|л|мл|г|м|ml|g|kg|l)"
+        .toRegex(IGNORE_CASE),
+    "(\\d*(,|\\.|))?\\d+\\s*(кг|бр|л|мл|г|м|ml|g|kg|l)\\.?(?!оди)".toRegex(IGNORE_CASE)
+)
 
 fun separateNameAndQuantity(name: String): Pair<String?, String?> {
-    val matchResult = quantityRegex.find(name)
+    val matchResult = quantityRegexes.mapNotNull {
+        it.find(name)
+    }.firstOrNull()
+
     if (isNull(matchResult)) {
         return Pair(name, null)
     }
