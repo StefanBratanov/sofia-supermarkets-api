@@ -4,6 +4,7 @@ import assertk.assertThat
 import assertk.assertions.isEqualTo
 import com.stefata.sofiasupermarketsapi.getProduct
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
+import com.stefata.sofiasupermarketsapi.links.BillaSublinksScraper
 import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.model.Supermarket
 import com.stefata.sofiasupermarketsapi.repository.ProductStoreRepository
@@ -11,6 +12,7 @@ import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
+import io.mockk.mockkClass
 import io.mockk.verify
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -20,7 +22,7 @@ import java.net.URL
 internal class BillaFlowTest {
 
     @MockK
-    lateinit var url: URL
+    lateinit var billaSublinksScraper: BillaSublinksScraper
 
     @MockK
     lateinit var urlProductsExtractor: UrlProductsExtractor
@@ -35,15 +37,24 @@ internal class BillaFlowTest {
     fun `runs flow for billa`() {
 
         val hello = getProduct("hello")
+        val world = getProduct("world")
 
-        every { urlProductsExtractor.extract(url) } returns listOf(hello)
+        val url1 = mockkClass(URL::class)
+        val url2 = mockkClass(URL::class)
+
+        every { billaSublinksScraper.getSublinks() } returns listOf(url1, url2)
+
+        every { urlProductsExtractor.extract(url1) } returns listOf(hello)
+        every { urlProductsExtractor.extract(url2) } returns listOf(world)
+
         every { productStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
         underTest.runSafely()
 
-        verify { urlProductsExtractor.extract(url) }
+        verify { urlProductsExtractor.extract(url1) }
+        verify { urlProductsExtractor.extract(url2) }
 
-        val expectedToSave = ProductStore(supermarket = "Billa", products = listOf(hello))
+        val expectedToSave = ProductStore(supermarket = "Billa", products = listOf(hello, world))
         verify {
             productStoreRepository.saveIfProductsNotEmpty(match {
                 it.supermarket == expectedToSave.supermarket &&

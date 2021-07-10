@@ -36,7 +36,15 @@ fun checkIfUrlHasAcceptableHttpResponse(url: String): Boolean {
     val connection = URL(url).openConnection() as HttpURLConnection
     connection.requestMethod = "HEAD"
     return try {
-        connection.responseCode != HttpURLConnection.HTTP_NOT_FOUND
+        connection.instanceFollowRedirects = false
+        val responseCode = connection.responseCode
+        if (responseCode != HttpURLConnection.HTTP_MOVED_TEMP) {
+            return responseCode != HttpURLConnection.HTTP_NOT_FOUND
+        }
+        return connection.getHeaderField("Location")?.let {
+            !it.endsWith("suspendedpage.cgi") &&
+                    checkIfUrlHasAcceptableHttpResponse(it)
+        } == true
     } catch (e: Exception) {
         false
     }

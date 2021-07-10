@@ -7,6 +7,7 @@ import com.stefata.sofiasupermarketsapi.common.separateNameAndQuantity
 import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
 import org.apache.commons.lang3.StringUtils.normalizeSpace
+import org.apache.commons.lang3.math.NumberUtils
 import org.springframework.stereotype.Component
 import java.net.URL
 import java.time.LocalDate
@@ -28,6 +29,7 @@ class BillaProductsExtractor : UrlProductsExtractor {
         "([;-]\\s*)?цена на амбалаж\\s?(-)? .*\$".toRegex(IGNORE_CASE),
         "Произход\\s*-\\s*България".toRegex(IGNORE_CASE),
         "Сега в Billa".toRegex(IGNORE_CASE),
+        "до\\s+\\d+\\s+бр.+клиент".toRegex(IGNORE_CASE),
         "\\*+".toRegex(IGNORE_CASE)
     )
 
@@ -49,20 +51,30 @@ class BillaProductsExtractor : UrlProductsExtractor {
             }
         }
 
-        return htmlDoc.select(".productSection > .product").map {
-            val productName = it.select(".actualProduct").text()
-            val oldPrice = it.select(".price").first()?.text()
-            val price = it.select(".price").last()?.text()
+        return htmlDoc.select(".productSection > .product")
+            .filter {
+                it.select(".price").first()?.text()?.let { pr ->
+                    NumberUtils.isCreatable(pr)
+                } == true
+            }.map {
+                val productName = it.select(".actualProduct").text()
+                val oldPrice = it.select(".price").first()?.text()
+                val price = it.select(".price").last()?.text()
 
-            Product(name = productName, price = price?.toDouble(), oldPrice = oldPrice?.toDouble(), validUntil = endDate)
-        }.filter {
-            Objects.nonNull(it.price)
-        }.map {
-            val normalizedName =
-                regexesToIgnoreBilla.fold(it.name) { name, toRemove -> name.replace(toRemove, "") }
-            val nameAndQuantity = separateNameAndQuantity(normalizedName)
-            it.copy(name = normalizeSpace(nameAndQuantity.first), quantity = normalizeSpace(nameAndQuantity.second))
-        }
+                Product(
+                    name = productName,
+                    price = price?.toDouble(),
+                    oldPrice = oldPrice?.toDouble(),
+                    validUntil = endDate
+                )
+            }.filter {
+                Objects.nonNull(it.price)
+            }.map {
+                val normalizedName =
+                    regexesToIgnoreBilla.fold(it.name) { name, toRemove -> name.replace(toRemove, "") }
+                val nameAndQuantity = separateNameAndQuantity(normalizedName)
+                it.copy(name = normalizeSpace(nameAndQuantity.first), quantity = normalizeSpace(nameAndQuantity.second))
+            }
     }
 
 

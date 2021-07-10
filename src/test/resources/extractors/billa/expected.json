@@ -1609,5 +1609,14 @@
     "category": null,
     "picUrl": null,
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Carlsberg кен",
+    "quantity": "0,5 л",
+    "price": 1.19,
+    "oldPrice": 1.69,
+    "category": null,
+    "picUrl": null,
+    "validUntil": "2021-03-24"
   }
 ]
