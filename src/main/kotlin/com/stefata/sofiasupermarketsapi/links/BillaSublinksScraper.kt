@@ -22,7 +22,8 @@ class BillaSublinksScraper(
         return getHtmlDocument(url).select(".buttons div.button")
             .filter {
                 val category = it.selectFirst("div.buttonText")?.text()
-                category?.contains("billa".toRegex(IGNORE_CASE)) == false
+                category?.contains("billa".toRegex(IGNORE_CASE)) == false &&
+                        !category.contains("филиал".toRegex(IGNORE_CASE))
             }
             .map {
                 val href = it.selectFirst("a").attr("href")

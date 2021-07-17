@@ -51,7 +51,7 @@ class FlatProductController(
                     picUrl = product.picUrl,
                     validUntil = product.validUntil
                 )
-            }!!.toList()
+            }!!.distinct().toList()
         }
     }
 

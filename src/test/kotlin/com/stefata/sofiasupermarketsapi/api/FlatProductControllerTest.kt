@@ -53,6 +53,11 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
 
+        mockMvc.perform(MockMvcRequestBuilders.get("/products/flat/alcohol").accept(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.status().isOk)
+            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
+
         mockMvc.perform(
             MockMvcRequestBuilders.get("/products/flat/alcohol?category=beer")
                 .accept(MediaType.APPLICATION_JSON)
@@ -60,6 +65,14 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.content().json(expectedBeer, false))
+
+        val alcohols2 = readResource("/api/alcohol/expected-with-duplicates.json")
+        every { alcoholController.alcohol(any(), null, true) } returns objectMapper.readValue(alcohols2)
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/products/flat/alcohol").accept(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.status().isOk)
+            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
 
     }
 }
