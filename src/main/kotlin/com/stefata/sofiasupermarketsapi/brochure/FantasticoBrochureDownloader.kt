@@ -23,13 +23,24 @@ class FantasticoBrochureDownloader(
     @Value("\${fantastico.url}") private val url: URL
 ) : BrochureDownloader {
 
+    private val yearPattern = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+
     override fun download(): List<Brochure> {
         val htmlDoc = getHtmlDocument(url)
 
-        return htmlDoc.select("div.brochure-container.first div.hold-options").map {
-
-            val validUntil = extractValidUntil(it.selectFirst("p.paragraph"))
-            log.info("Fantastico brochure is vaild until $validUntil")
+        return htmlDoc.select("div.brochure-container.first div.hold-options").filter {
+            val dateRange = extractDateRange(it.selectFirst("p.paragraph"))
+            val isInvalid = dateRange?.first?.isAfter(LocalDate.now()) == true
+            if (isInvalid) {
+                log.info(
+                    "Fantastico brochure is invalid because it starts from {}",
+                    dateRange?.first
+                )
+            }
+            !isInvalid
+        }.map {
+            val dateRange = extractDateRange(it.selectFirst("p.paragraph"))
+            log.info("Fantastico brochure is vaild until ${dateRange?.second}")
 
             val iFrameUrl = it.attr("data-brochure")
 
@@ -49,23 +60,29 @@ class FantasticoBrochureDownloader(
             log.info("Downloading {}", downloadUrl)
             FileUtils.copyURLToFile(downloadUrl, downloadPath.toFile())
 
-            Brochure(downloadPath, validUntil)
+            Brochure(downloadPath, dateRange?.second)
 
         }
     }
 
-    private fun extractValidUntil(element: Element?): LocalDate? {
+    private fun extractDateRange(element: Element?): Pair<LocalDate?, LocalDate?>? {
         return element?.text()?.trim()?.let {
-            "\\d+.\\d+\\.(\\d+)?\$".toRegex().find(it)
+            "(\\d+.\\d+(\\.\\d+)?)-(\\d+.\\d+\\.(\\d+)?)\$".toRegex().find(it)
         }?.let {
-            var match = it.groupValues[0]
-            match = match.replace("\\.$".toRegex(), ".${LocalDate.now().year}")
             try {
-                LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+                val start = addYearIfApplicable(it.groupValues[1])
+                val end = addYearIfApplicable(it.groupValues[3])
+                val startDate = LocalDate.parse(start, yearPattern)
+                val endDate = LocalDate.parse(end, yearPattern)
+                Pair(startDate, endDate)
             } catch (ex: Exception) {
-                log.error("Error while parsing $match", ex)
-                null
+                log.error("Error while parsing dates from: ${it.groupValues[0]}", ex)
+                Pair(null, null)
             }
         }
+    }
+
+    private fun addYearIfApplicable(input: String): String {
+        return input.replace("(\\.|(?<=\\.\\d{2}))\$".toRegex(), ".${LocalDate.now().year}")
     }
 }
