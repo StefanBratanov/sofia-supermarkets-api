@@ -31,14 +31,16 @@ class AlcoholController(
 
     private val bira = "Бира"
     private val vino = "Вино"
+    private val cider = "Сайдер"
 
-    private val tMarketCategoryRegexes = listOf(bira, vino, "(?<!без)алкохолни").map {
+    private val tMarketCategoryRegexes = listOf(bira, vino, "(?<!без)алкохолни", cider).map {
         it.toRegex(IGNORE_CASE)
     }
 
     private val tMarketCategoryResolver = mapOf(
         Beer to bira,
-        Wine to vino
+        Wine to vino,
+        Other to cider
     ).mapValues { it.value.toRegex(IGNORE_CASE) }
 
     private val kauflandDrinksCategoryRegex = "Алкохол".toRegex(IGNORE_CASE)
@@ -56,7 +58,7 @@ class AlcoholController(
         Other to listOf(
             "(?<!\\sс\\s)узо", "\\s+мента", "мента\\s+",
             "ликьор", "^ром\\s+", "\\s+ром\\s+", "\\s+ром\$", "текила", "бренди", "коняк", "абсент",
-            "(?<!вър)джин(?!джи)", "Пастис", "анасон.*напитк", "мастика"
+            "(?<!вър)джин(?!джи)", "Пастис", "анасон.*напитк", "мастика", "сайдер", "somersby"
         )
     ).mapValues {
         it.value.map { regex ->

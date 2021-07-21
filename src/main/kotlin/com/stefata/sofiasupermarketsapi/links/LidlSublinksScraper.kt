@@ -28,6 +28,8 @@ class LidlSublinksScraper(
                     .flatMap { elem ->
                         val liNavigationItem = elem.parent().parent()
                         liNavigationItem.select("a[data-controller=navigation/link/burgernavigation]")
+                    }.filter { elem ->
+                        elem.text()?.contains("lidl plus".toRegex(RegexOption.IGNORE_CASE)) == false
                     }.map { elem ->
                         elem.attr("href")
                     }

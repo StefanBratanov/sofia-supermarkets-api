@@ -294,6 +294,14 @@
         "oldPrice": 2.59,
         "category": "Beer",
         "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02300144_P.jpg/150x/tileImage1.jpg"
+      },
+      {
+        "name": "Somersby Сайдер различни видове",
+        "quantity": "0,33 л",
+        "price": 1.19,
+        "oldPrice": 1.59,
+        "category": "Other",
+        "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02303361_P.jpg/150x/tileImage1.jpg"
       }
     ]
   },
@@ -484,6 +492,70 @@
         "oldPrice": null,
         "category": "Beer",
         "picUrl": "https://cdncloudcart.com/16398/products/images/44334/bira-sumensko-butilka-500ml-image_5f4ce39e54c0d_600x600.png?1598874554"
+      },
+      {
+        "name": "Сайдер КРАДЕЦЪТ НА ЯБЪЛКИ вишна кен 500мл",
+        "quantity": null,
+        "price": 1.49,
+        "oldPrice": 1.69,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44140/sajder-kradecat-na-abalki-visna-ken-500ml-image_5f4cecb64d35f_600x600.png?1598876877"
+      },
+      {
+        "name": "Сайдер SOMERSBY ябълка 330 мл",
+        "quantity": null,
+        "price": 1.59,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39743/sajder-somersby-abalka-330-ml-image_5ea2d233559ec_600x600.png?1587732221"
+      },
+      {
+        "name": "Сайдер SOMERSBY круша 330 мл",
+        "quantity": null,
+        "price": 1.59,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39746/sajder-somersby-krusa-330-ml-image_5ea2d24272ed5_600x600.png?1587732226"
+      },
+      {
+        "name": "Сайдер SOMERSBY Blueberry 330 мл",
+        "quantity": null,
+        "price": 1.59,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/39880/sajder-somersby-blueberry-330-ml-image_5ea2d4a50a8e9_600x600.png?1587732329"
+      },
+      {
+        "name": "Сайдер SOMERSBY манго, лайм 330мл",
+        "quantity": null,
+        "price": 1.59,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44345/sajder-somersby-mango-lajm-330ml-image_5f4cbc724503d_600x600.png?1598865148"
+      },
+      {
+        "name": "Сайдер SOMERSBY ябълка кен 500 мл",
+        "quantity": null,
+        "price": 1.95,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/41707/sajder-somersby-abalka-ken-500-ml-image_5efde88cd5730_600x600.jpeg?1593698540"
+      },
+      {
+        "name": "Сайдер SOMERSBY Blueberry кен 500 мл",
+        "quantity": null,
+        "price": 1.95,
+        "oldPrice": null,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/41708/sajder-somersby-blueberry-ken-500-ml-image_5efde88ee6a25_600x600.jpeg?1593698541"
+      },
+      {
+        "name": "Сайдер КРАДЕЦЪТ НА ЯБЪЛКИ ябълка кен 500мл",
+        "quantity": null,
+        "price": 1.49,
+        "oldPrice": 1.69,
+        "category": "Other",
+        "picUrl": "https://cdncloudcart.com/16398/products/images/44138/sajder-kradecat-na-abalki-abalka-ken-500ml-image_5f4cecf714af8_600x600.png?1598876944"
       },
       {
         "name": "Вино TCHERGA* червена 750 мл",
