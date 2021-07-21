@@ -7,6 +7,8 @@ import com.stefata.sofiasupermarketsapi.readResource
 import com.stefata.sofiasupermarketsapi.testObjectMapper
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 import org.skyscreamer.jsonassert.JSONAssert
 import org.skyscreamer.jsonassert.JSONCompareMode.NON_EXTENSIBLE
 import java.nio.file.Paths
@@ -17,41 +19,24 @@ internal class FantasticoProductsExtractorTest {
 
     private val underTest = FantasticoProductsExtractor()
 
-    @Test
-    fun `test extracting products`() {
+    @ParameterizedTest
+    @CsvSource(
+        "fantastico_test.pdf,expected.json",
+        "fantastico_test_2.pdf,expected_2.json",
+        "fantastico_test_3.pdf,expected_3.json",
+        "fantastico_test_4.pdf,expected_4.json",
+        "fantastico_test_5.pdf,expected_5.json"
+    )
+    fun `test extracting products`(inputFile: String, expectedFile: String) {
 
-        val testPdf = getPath("/extractors/fantastico/fantastico_test.pdf")
-
-        val products = underTest.extract(testPdf)
-
-        val actualJson = objectMapper.writeValueAsString(products)
-        val expectedJson = readResource("/extractors/fantastico/expected.json")
-
-        JSONAssert.assertEquals(expectedJson, actualJson, NON_EXTENSIBLE)
-    }
-
-    @Test
-    fun `test extracting products 2`() {
-
-        val testPdf = getPath("/extractors/fantastico/fantastico_test_2.pdf")
+        val testPdf = getPath("/extractors/fantastico/${inputFile}")
 
         val products = underTest.extract(testPdf)
 
         val actualJson = objectMapper.writeValueAsString(products)
-        val expectedJson = readResource("/extractors/fantastico/expected_2.json")
 
-        JSONAssert.assertEquals(expectedJson, actualJson, NON_EXTENSIBLE)
-    }
-
-    @Test
-    fun `test extracting products 3`() {
-
-        val testPdf = getPath("/extractors/fantastico/fantastico_test_3.pdf")
-
-        val products = underTest.extract(testPdf)
-
-        val actualJson = objectMapper.writeValueAsString(products)
-        val expectedJson = readResource("/extractors/fantastico/expected_3.json")
+        println(actualJson)
+        val expectedJson = readResource("/extractors/fantastico/${expectedFile}")
 
         JSONAssert.assertEquals(expectedJson, actualJson, NON_EXTENSIBLE)
     }

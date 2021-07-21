@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Вино FOUR FRIENDS различни видове",
+    "quantity": "750 мл",
+    "price": 6.49,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино ТЪРГОВИЩЕ Шардоне; Мускат",
+    "quantity": "750 мл",
+    "price": 4.99,
+    "oldPrice": 6.79,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино VIA VINERA Вионие и Шардоне; Сира и Каберне Фран",
+    "quantity": "750 мл",
+    "price": 9.99,
+    "oldPrice": 14.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира АРИАНА Радлер лимон Бира АРИАНА светло Бяло вино PREGIO произход Италия",
+    "quantity": "PET, 1,2 л 2 750 мл",
+    "price": 7.99,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Напитка на винена основа MONCIGALE Fruits and Wine различни видове",
+    "quantity": "750 мл",
+    "price": 6.49,
+    "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Комплект бира TSAR бутилка",
+    "quantity": "6 бр х 250 мл",
+    "price": 3.49,
+    "oldPrice": 4.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Узо PLOMARI",
+    "quantity": "1 л",
+    "price": 19.49,
+    "oldPrice": 26.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски BRAVE HEART",
+    "quantity": "700 мл",
+    "price": 9.99,
+    "oldPrice": 16.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ракия КАРНОБАТСКА ГРОЗДОВА",
+    "quantity": "700 мл",
+    "price": 7.99,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира SAN MIGUEL Especial произход Испания",
+    "quantity": "бутилка, 330 мл",
+    "price": 1.29,
+    "oldPrice": 1.69,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ирландско уиски BUSHMILLS Black Bush",
+    "quantity": "700 мл",
+    "price": 29.99,
+    "oldPrice": 38.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка FINLANDIA",
+    "quantity": "700 мл",
+    "price": 15.99,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Джин 6 SENSE Японско уиски TENJAKU",
+    "quantity": "700 мл",
+    "price": 32.99,
+    "oldPrice": 53.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  }
+]

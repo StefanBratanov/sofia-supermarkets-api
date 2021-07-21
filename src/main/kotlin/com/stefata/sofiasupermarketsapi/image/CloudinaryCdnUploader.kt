@@ -33,7 +33,7 @@ class CloudinaryCdnUploader(
                 "folder" to "alcohol",
                 "transformation" to EagerTransformation()
                     .responsiveWidth(true)
-                    .height(200)
+                    .height(160)
             )
         )["secure_url"] as String
     }

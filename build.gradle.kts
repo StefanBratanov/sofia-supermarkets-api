@@ -63,6 +63,7 @@ dependencies {
     implementation("me.xdrop:fuzzywuzzy:1.3.1")
     implementation("com.cloudinary:cloudinary-http44:1.29.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.4.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.23.1")
     testImplementation("io.mockk:mockk:1.11.0")

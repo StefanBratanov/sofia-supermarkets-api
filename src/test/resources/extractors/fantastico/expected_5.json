@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Бира КАМЕНИЦА",
+    "quantity": "PET, 2 л",
+    "price": 1.89,
+    "oldPrice": 2.69,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира АРИАНА светло",
+    "quantity": "кен, 500 мл",
+    "price": 0.79,
+    "oldPrice": 1.19,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Узо TSANTALI",
+    "quantity": "700 мл",
+    "price": 11.99,
+    "oldPrice": 16.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ракия ТРОЯНСКА СЛИВОВА отлежала",
+    "quantity": "700 мл",
+    "price": 11.79,
+    "oldPrice": 17.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Джин BEEFEATER Dry",
+    "quantity": "700 мл",
+    "price": 16.99,
+    "oldPrice": 22.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски SINGLETON",
+    "quantity": "12 г, 700 мл",
+    "price": 42.99,
+    "oldPrice": 55.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка FLIRT",
+    "quantity": "700 мл",
+    "price": 7.79,
+    "oldPrice": 10.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка РУССКИЙ СТАНДАРТ Classic; Gold",
+    "quantity": "700 мл",
+    "price": 14.99,
+    "oldPrice": 20.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски GRANT‘S Triple Wood; Ale Cask; Rum Cask",
+    "quantity": "700 мл",
+    "price": 16.99,
+    "oldPrice": 23.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Коктейл LE COQ различни видове",
+    "quantity": "бутилка, 330 мл",
+    "price": 2.29,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Совиньон Блан; Каберне Совиньон ANDES произход Чили",
+    "quantity": "750 мл Ф44 гр. Банкя, кв. Изгрев, ул. Стефан Стамболов №138",
+    "price": 5.99,
+    "oldPrice": 8.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино SANTA HELENA Совиньон Блан; Карменер произход Чили",
+    "quantity": "750 мл",
+    "price": 7.99,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Шардоне; Каберне Совиньон DOMAINE BOYAR",
+    "quantity": "bag-in-box, 3 л",
+    "price": 13.99,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  }
+]
