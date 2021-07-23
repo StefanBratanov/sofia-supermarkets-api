@@ -2,6 +2,7 @@ package com.stefata.sofiasupermarketsapi.common
 
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import org.springframework.http.HttpStatus
 import java.net.HttpURLConnection
 import java.net.URL
 import java.nio.charset.StandardCharsets
@@ -46,7 +47,8 @@ fun checkIfUrlHasAcceptableHttpResponse(url: String): Boolean {
         connection.instanceFollowRedirects = false
         val responseCode = connection.responseCode
         if (responseCode != HttpURLConnection.HTTP_MOVED_TEMP) {
-            return responseCode != HttpURLConnection.HTTP_NOT_FOUND
+            val httpStatus = HttpStatus.valueOf(responseCode)
+            return httpStatus.is2xxSuccessful || httpStatus.is3xxRedirection
         }
         return connection.getHeaderField("Location")?.let {
             !it.endsWith("suspendedpage.cgi") &&
