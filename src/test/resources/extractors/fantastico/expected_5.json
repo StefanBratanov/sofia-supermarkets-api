@@ -91,9 +91,27 @@
   },
   {
     "name": "Вино Совиньон Блан; Каберне Совиньон ANDES произход Чили",
-    "quantity": "750 мл Ф44 гр. Банкя, кв. Изгрев, ул. Стефан Стамболов №138",
+    "quantity": "750 мл",
     "price": 5.99,
     "oldPrice": 8.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино ANGEL различни видове",
+    "quantity": "750 мл",
+    "price": 7.99,
+    "oldPrice": 11.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино CYCLE различни видове",
+    "quantity": "750 мл",
+    "price": 6.99,
+    "oldPrice": 9.49,
     "category": null,
     "picUrl": null,
     "validUntil": null

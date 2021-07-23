@@ -27,7 +27,19 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         "Продуктите се продават в количества".toRegex(RegexOption.IGNORE_CASE),
         "си запазва правото на промяна".toRegex(RegexOption.IGNORE_CASE),
         "(Промоцията|акцията) е валидна".toRegex(RegexOption.IGNORE_CASE),
-        "за магазините.*цени".toRegex(RegexOption.IGNORE_CASE)
+        "за магазините.*цени".toRegex(RegexOption.IGNORE_CASE),
+        "Купи бира с марка".toRegex(RegexOption.IGNORE_CASE),
+        ".*Легенда Цени.*".toRegex(RegexOption.IGNORE_CASE),
+        ".*Уважаеми клиенти.*".toRegex(RegexOption.IGNORE_CASE),
+        ".*наличността на промоциите.*".toRegex(RegexOption.IGNORE_CASE),
+        ".*(ЧЕРВЕНА|СИНЯ|ЗЕЛЕНА) ЦЕНА.*".toRegex(RegexOption.IGNORE_CASE),
+        "(.*\\s+)?Ф\\d+\\s+.*".toRegex(RegexOption.IGNORE_CASE),
+        ".*Работно време.*".toRegex(RegexOption.IGNORE_CASE),
+        ".*Във всички обекти на верига Фантастико.*".toRegex(RegexOption.IGNORE_CASE)
+    )
+
+    private val fontsToIgnore = listOf(
+        "Azuki".toRegex(RegexOption.IGNORE_CASE)
     )
 
     private val regexesToRemove = listOf(
@@ -56,7 +68,13 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
             it.text?.contains("лв|") == true
         }
         val pageProductsExtractor =
-            PdfPageProductsExtractor(pdfDoc, regexesToIgnore, initialCenterPredicate, productSectionResolver)
+            PdfPageProductsExtractor(
+                pdfDoc,
+                regexesToIgnore,
+                fontsToIgnore,
+                initialCenterPredicate,
+                productSectionResolver
+            )
 
         val products = generateSequence(1, { it + 1 }).take(pdfDoc.numberOfPages).flatMap { pageNumber ->
             log.info("Processing page {}/{}", pageNumber, pdfDoc.numberOfPages)

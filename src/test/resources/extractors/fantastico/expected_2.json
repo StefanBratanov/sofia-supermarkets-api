@@ -45,8 +45,8 @@
     "validUntil": null
   },
   {
-    "name": "Вино Шардоне; Мерло LOVICO Вино ПОМОРИЕ РАКОВИНА различни видове",
-    "quantity": "bag-in-box, 3 л 750 мл",
+    "name": "Вино ПОМОРИЕ РАКОВИНА различни видове",
+    "quantity": "750 мл",
     "price": 4.79,
     "oldPrice": 6.49,
     "category": null,
@@ -58,6 +58,15 @@
     "quantity": "750 мл",
     "price": 6.99,
     "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Шардоне; Мерло LOVICO",
+    "quantity": "bag-in-box, 3 л",
+    "price": 9.99,
+    "oldPrice": 12.99,
     "category": null,
     "picUrl": null,
     "validUntil": null

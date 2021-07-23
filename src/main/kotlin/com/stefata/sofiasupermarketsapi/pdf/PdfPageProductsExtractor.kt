@@ -9,6 +9,7 @@ import java.util.function.Predicate
 class PdfPageProductsExtractor(
     private val pdfDoc: PDDocument,
     private val regexesToIgnore: List<Regex>,
+    private val fontsToIgnore: List<Regex>,
     private val initialCenterPredicate: Predicate<TextWithCoordinates>,
     private val productSectionResolver: Map<ProductSection, (String) -> Boolean>
 ) {
@@ -32,10 +33,16 @@ class PdfPageProductsExtractor(
             return emptyList()
         }
 
+        val filteredStrippedTexts = pdfTextStripper.strippedTexts.filter {
+            fontsToIgnore.none { rgx ->
+                it.font?.name?.contains(rgx) == true
+            }
+        }.toMutableList()
+
         val kMeansPlus = KMeansWithInitialCenters(
             initialCenters.size, 100, ManhattanDistance(), initialCenters
         )
-        val clusteredTexts = kMeansPlus.cluster(pdfTextStripper.strippedTexts).map {
+        val clusteredTexts = kMeansPlus.cluster(filteredStrippedTexts).map {
             it.points
         }
 

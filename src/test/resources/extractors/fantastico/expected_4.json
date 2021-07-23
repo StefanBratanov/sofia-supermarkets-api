@@ -90,6 +90,15 @@
     "validUntil": null
   },
   {
+    "name": "Джин 6 SENSE",
+    "quantity": "700 мл",
+    "price": 6.99,
+    "oldPrice": 9.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
     "name": "Ирландско уиски BUSHMILLS Black Bush",
     "quantity": "700 мл",
     "price": 29.99,
@@ -108,7 +117,7 @@
     "validUntil": null
   },
   {
-    "name": "Джин 6 SENSE Японско уиски TENJAKU",
+    "name": "Японско уиски TENJAKU",
     "quantity": "700 мл",
     "price": 32.99,
     "oldPrice": 53.99,
