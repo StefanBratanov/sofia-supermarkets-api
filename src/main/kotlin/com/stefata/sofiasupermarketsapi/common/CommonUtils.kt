@@ -48,7 +48,7 @@ fun checkIfUrlHasAcceptableHttpResponse(url: String): Boolean {
         val responseCode = connection.responseCode
         if (responseCode != HttpURLConnection.HTTP_MOVED_TEMP) {
             val httpStatus = HttpStatus.valueOf(responseCode)
-            return httpStatus.is2xxSuccessful || httpStatus.is3xxRedirection
+            return !httpStatus.isError
         }
         return connection.getHeaderField("Location")?.let {
             !it.endsWith("suspendedpage.cgi") &&

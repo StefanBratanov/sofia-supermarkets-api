@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Студен чай NESTEA различни видове",
+    "quantity": "1.5 л",
+    "price": 1.89,
+    "oldPrice": 2.79,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Комплект мляно кафе LAVAZZA Qualita Rosa",
+    "quantity": "вакуум 2бр х 250 г",
+    "price": 10.79,
+    "oldPrice": 13.89,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Слънчогледово олио КАЛИАКРА Първа преса",
+    "quantity": "1 л",
+    "price": 3.19,
+    "oldPrice": 3.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шоколад МЛЕЧЕН различни видове",
+    "quantity": "80 г",
+    "price": 0.89,
+    "oldPrice": 1.29,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Хляб Добруджа СИМИД нарязан",
+    "quantity": "830 г",
+    "price": 1.25,
+    "oldPrice": 1.59,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира CORONA Extra бутилка",
+    "quantity": "355 мл",
+    "price": 1.79,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Айрян ВЕРЕЯ",
+    "quantity": "950 мл;",
+    "price": 1.69,
+    "oldPrice": 2.09,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Студен чай Oshee Black tea Праскова; Ърл Грей и лимон",
+    "quantity": "500 мл",
+    "price": 1.09,
+    "oldPrice": 1.39,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Сок FRESHKO различни видове студено",
+    "quantity": "пресован 1 л PET",
+    "price": 2.99,
+    "oldPrice": 4.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Негазирана напитка QUEENS лимонада PET",
+    "quantity": "различни видове 400 мл",
+    "price": 0.99,
+    "oldPrice": 1.39,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Напитка ДАНОН ЗА ПИЕНЕ различни видове",
+    "quantity": "290 г",
+    "price": 1.15,
+    "oldPrice": 1.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Айрян ВЕРЕЯ",
+    "quantity": "480 мл",
+    "price": 0.99,
+    "oldPrice": 1.25,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Студен чай NESTEA различни видове",
+    "quantity": "1.5 л",
+    "price": 1.89,
+    "oldPrice": 2.79,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  }
+]

@@ -35,19 +35,25 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         ".*(ЧЕРВЕНА|СИНЯ|ЗЕЛЕНА) ЦЕНА.*".toRegex(RegexOption.IGNORE_CASE),
         "(.*\\s+)?Ф\\d+\\s+.*".toRegex(RegexOption.IGNORE_CASE),
         ".*Работно време.*".toRegex(RegexOption.IGNORE_CASE),
-        ".*Във всички обекти на верига Фантастико.*".toRegex(RegexOption.IGNORE_CASE)
+        ".*Във всички обекти на верига Фантастико.*".toRegex(RegexOption.IGNORE_CASE),
+        "Според потребителската класация".toRegex(RegexOption.IGNORE_CASE)
     )
 
     private val fontsToIgnore = listOf(
-        "Azuki".toRegex(RegexOption.IGNORE_CASE)
+        "Azuki".toRegex(RegexOption.IGNORE_CASE),
+        "BiraBG".toRegex(RegexOption.IGNORE_CASE),
+        "Balder".toRegex(RegexOption.IGNORE_CASE),
+        "Tungsten".toRegex(RegexOption.IGNORE_CASE)
     )
 
     private val regexesToRemove = listOf(
+        "стр\\.\\s*\\d+(-\\d+)?".toRegex(RegexOption.IGNORE_CASE),
         "\\*\\s*с включен".toRegex(RegexOption.IGNORE_CASE),
         "амбалаж 0,\\d+лв".toRegex(RegexOption.IGNORE_CASE),
         "\\*+".toRegex(RegexOption.IGNORE_CASE),
         ",\\s*\$".toRegex(RegexOption.IGNORE_CASE),
-        "➥+".toRegex(RegexOption.IGNORE_CASE)
+        "➥+".toRegex(RegexOption.IGNORE_CASE),
+        "количествата са лимитирани".toRegex(RegexOption.IGNORE_CASE)
     )
 
     private val productSectionResolver: Map<ProductSection, (String) -> Boolean> = mapOf(
