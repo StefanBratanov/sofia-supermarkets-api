@@ -27,8 +27,8 @@
     "validUntil": null
   },
   {
-    "name": "Бира АРИАНА Радлер лимон Бира АРИАНА светло Бяло вино PREGIO произход Италия",
-    "quantity": "PET, 1,2 л 2 750 мл",
+    "name": "Бяло вино PREGIO произход Италия",
+    "quantity": "750 мл",
     "price": 7.99,
     "oldPrice": 9.99,
     "category": null,
@@ -40,6 +40,60 @@
     "quantity": "750 мл",
     "price": 6.49,
     "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира ЗАГОРКА Специално кен",
+    "quantity": "500 мл",
+    "price": 0.79,
+    "oldPrice": 1.25,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира АРИАНА Радлер лимон",
+    "quantity": "PET, 1,2 л",
+    "price": 1.49,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира АРИАНА Радлер лимон",
+    "quantity": "кен, 500 мл",
+    "price": 0.89,
+    "oldPrice": 1.39,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира АРИАНА Радлер 0,0 % различни видове",
+    "quantity": "кен, 330 мл",
+    "price": 0.85,
+    "oldPrice": 1.09,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира АРИАНА светло",
+    "quantity": "PET, 2 л",
+    "price": 1.79,
+    "oldPrice": 2.69,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира HEINEKEN класик",
+    "quantity": "бутилка, 330 мл",
+    "price": 1.49,
+    "oldPrice": 1.89,
     "category": null,
     "picUrl": null,
     "validUntil": null

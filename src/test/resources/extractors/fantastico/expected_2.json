@@ -45,6 +45,69 @@
     "validUntil": null
   },
   {
+    "name": "Бира STELLA ARTOIS",
+    "quantity": "стъкло, 500 мл",
+    "price": 1.49,
+    "oldPrice": 1.89,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира STAROPRAMEN",
+    "quantity": "PET, 1 л",
+    "price": 1.59,
+    "oldPrice": 2.05,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира КАМЕНИЦА",
+    "quantity": "стъкло, 500 мл",
+    "price": 0.99,
+    "oldPrice": 1.49,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира КАМЕНИЦА",
+    "quantity": "PET, 2 л",
+    "price": 1.89,
+    "oldPrice": 2.59,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира КАМЕНИЦА",
+    "quantity": "PET, 1 л",
+    "price": 1.49,
+    "oldPrice": 1.89,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски VAT 69",
+    "quantity": "700 мл",
+    "price": 10.99,
+    "oldPrice": 16.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка SMIRNOFF",
+    "quantity": "1 л",
+    "price": 16.99,
+    "oldPrice": 24.99,
+    "category": null,
+    "picUrl": null,
+    "validUntil": null
+  },
+  {
     "name": "Вино ПОМОРИЕ РАКОВИНА различни видове",
     "quantity": "750 мл",
     "price": 4.79,
