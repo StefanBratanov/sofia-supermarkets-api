@@ -25,7 +25,7 @@ class FantasticoFlow(
 
         val products = brochures.map {
             pdfProductsExtractor.extract(it.path).map { product ->
-                product.copy(validUntil = it.validUntil)
+                product.copy(validFrom = it.validFrom, validUntil = it.validUntil)
             }
         }.flatten()
 

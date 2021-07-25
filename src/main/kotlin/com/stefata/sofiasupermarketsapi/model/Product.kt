@@ -15,5 +15,8 @@ data class Product(
     val picUrl: String? = null,
     @JsonDeserialize(using = LocalDateDeserializer::class)
     @JsonSerialize(using = LocalDateSerializer::class)
+    val validFrom: LocalDate? = null,
+    @JsonDeserialize(using = LocalDateDeserializer::class)
+    @JsonSerialize(using = LocalDateSerializer::class)
     val validUntil: LocalDate? = null
 )

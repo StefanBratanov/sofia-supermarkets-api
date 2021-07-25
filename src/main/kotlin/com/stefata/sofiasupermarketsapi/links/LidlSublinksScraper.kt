@@ -24,7 +24,7 @@ class LidlSublinksScraper(
                 getHtmlDocument(sublink)
             }.flatMap {
                 it.select("li.navigation__item > a[data-controller=navigation/main/featured]")
-                    .select("a[data-controller=navigation/main/featured] > span:contains(актуални)")
+                    .select("a[data-controller=navigation/main/featured]")
                     .flatMap { elem ->
                         val liNavigationItem = elem.parent().parent()
                         liNavigationItem.select("a[data-controller=navigation/link/burgernavigation]")

@@ -12,6 +12,10 @@ internal class LidlSublinksScraperTest {
         val underTest = LidlSublinksScraper(URL("https://www.lidl.bg"))
         val result = underTest.getSublinks()
 
+        result.forEach {
+            println(it)
+        }
+
         assertThat(result).isNotEmpty()
     }
 }

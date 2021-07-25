@@ -7,6 +7,6 @@ interface BrochureDownloader {
 
     fun download(): List<Brochure>
 
-    data class Brochure(val path: Path, val validUntil: LocalDate?)
+    data class Brochure(val path: Path, val validFrom: LocalDate?, val validUntil: LocalDate?)
 
 }

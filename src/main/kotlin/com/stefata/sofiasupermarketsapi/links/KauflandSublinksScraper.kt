@@ -30,7 +30,8 @@ class KauflandSublinksScraper(
 
         val additional = htmlDoc.selectFirst("div[role=menu]")
             .select("a[role=menuitem]")
-            .drop(2)
+            //skip aktualni
+            .drop(1)
             .filter {
                 !it.text().contains("групи продукти")
             }.map {

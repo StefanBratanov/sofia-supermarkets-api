@@ -49,6 +49,7 @@ class FlatProductController(
                     discount = getDiscount(product.price, product.oldPrice),
                     category = product.category,
                     picUrl = product.picUrl,
+                    validFrom = product.validFrom,
                     validUntil = product.validUntil
                 )
             }!!.distinct().toList()
@@ -59,6 +60,9 @@ class FlatProductController(
         val supermarket: String?, val logo: String?, val name: String, val quantity: String?,
         val price: Double?, val oldPrice: Double?, val discount: Int?,
         val category: String?, val picUrl: String?,
+        @JsonDeserialize(using = LocalDateDeserializer::class)
+        @JsonSerialize(using = LocalDateSerializer::class)
+        val validFrom: LocalDate? = null,
         @JsonDeserialize(using = LocalDateDeserializer::class)
         @JsonSerialize(using = LocalDateSerializer::class)
         val validUntil: LocalDate? = null

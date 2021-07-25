@@ -34,15 +34,15 @@ class LidlProductsExtractor(
                 isNotBlank(it.attr("data-price"))
             }
             .map {
-                val endDate = it.selectFirst(".ribbon__text")?.text()?.trim()?.let { dateSpan ->
-                    "\\d+.\\d+.".toRegex().findAll(dateSpan).lastOrNull()
-                }?.let { date ->
-                    val match = date.groupValues[0]
-                    try {
-                        LocalDate.parse(match.plus(LocalDate.now().year), DateTimeFormatter.ofPattern("dd.MM.yyyy"))
-                    } catch (ex: Exception) {
-                        log.error("Error while parsing $date", ex)
-                        null
+                val dateRange = it.selectFirst(".ribbon__text")?.text()?.trim()?.let { dateSpan ->
+                    "\\d+.\\d+.".toRegex().findAll(dateSpan).map { date ->
+                        val match = date.groupValues[0]
+                        try {
+                            LocalDate.parse(match.plus(LocalDate.now().year), DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+                        } catch (ex: Exception) {
+                            log.error("Error while parsing $date", ex)
+                            null
+                        }
                     }
                 }
 
@@ -71,7 +71,8 @@ class LidlProductsExtractor(
                     quantity = StringUtils.normalizeSpace(quantity),
                     picUrl = picUrl,
                     category = category,
-                    validUntil = endDate
+                    validFrom = dateRange?.elementAtOrNull(0),
+                    validUntil = dateRange?.elementAtOrNull(1)
                 )
 
             }

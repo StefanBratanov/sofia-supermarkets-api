@@ -23,21 +23,29 @@ class KauflandProductsExtractor(
 
     override fun extract(url: URL): List<Product> {
 
-        log.info("Processing Kaufland URL: {}", url.toString())
+        val document = try {
+            getHtmlDocument(url)
+        } catch (ex: Exception) {
+            log.info(
+                "There was an exception fetching products from {}. " +
+                        "Will return 0 products for that url.", url
+            )
+            return emptyList()
+        }
 
-        val document = getHtmlDocument(url)
+        log.info("Processing Kaufland URL: {}", url.toString())
 
         val category = document.select(".a-icon-tile-headline__container .a-headline")?.text()
 
-        val endDate = document.selectFirst(".a-icon-tile-headline__subheadline h2")?.text()?.let {
-            "\\d+.\\d+.\\d+".toRegex().findAll(it).lastOrNull()
-        }?.let {
-            val match = it.groupValues[0]
-            try {
-                LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
-            } catch (ex: Exception) {
-                log.error("Error while parsing $match", ex)
-                null
+        val dateRange = document.selectFirst(".a-icon-tile-headline__subheadline h2")?.text()?.let {
+            "\\d+.\\d+.\\d+".toRegex().findAll(it).map { mr ->
+                val match = mr.groupValues[0]
+                try {
+                    LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+                } catch (ex: Exception) {
+                    log.error("Error while parsing $match", ex)
+                    null
+                }
             }
         }
 
@@ -70,7 +78,8 @@ class KauflandProductsExtractor(
                 oldPrice = normalizePrice(oldPrice),
                 category = category,
                 picUrl = picUrl,
-                validUntil = endDate
+                validFrom = dateRange?.elementAtOrNull(0),
+                validUntil = dateRange?.elementAtOrNull(1)
             )
         }
     }

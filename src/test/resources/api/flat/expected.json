@@ -9,6 +9,7 @@
     "discount": null,
     "category": "Other",
     "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/21979/xs/21979_03.jpg",
+    "validFrom": null,
     "validUntil": "2021-05-06"
   },
   {
@@ -392,7 +393,7 @@
     "quantity": "0,33 л",
     "price": 1.19,
     "oldPrice": 1.59,
-    "discount" : 25,
+    "discount": 25,
     "category": "Other",
     "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02303361_P.jpg/150x/tileImage1.jpg"
   },

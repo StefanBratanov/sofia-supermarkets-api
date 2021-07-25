@@ -28,19 +28,12 @@ class FantasticoBrochureDownloader(
     override fun download(): List<Brochure> {
         val htmlDoc = getHtmlDocument(url)
 
-        return htmlDoc.select("div.brochure-container.first div.hold-options").filter {
+        return htmlDoc.select("div.brochure-container.first div.hold-options").map {
             val dateRange = extractDateRange(it.selectFirst("p.paragraph"))
-            val isInvalid = dateRange?.first?.isAfter(LocalDate.now()) == true
-            if (isInvalid) {
-                log.info(
-                    "Fantastico brochure is invalid because it starts from {}",
-                    dateRange?.first
-                )
-            }
-            !isInvalid
-        }.map {
-            val dateRange = extractDateRange(it.selectFirst("p.paragraph"))
-            log.info("Fantastico brochure is vaild until ${dateRange?.second}")
+            log.info(
+                "Fantastico brochure is vaild " +
+                        "from ${dateRange?.first} until ${dateRange?.second}"
+            )
 
             val iFrameUrl = it.attr("data-brochure")
 
@@ -60,7 +53,7 @@ class FantasticoBrochureDownloader(
             log.info("Downloading {}", downloadUrl)
             FileUtils.copyURLToFile(downloadUrl, downloadPath.toFile())
 
-            Brochure(downloadPath, dateRange?.second)
+            Brochure(downloadPath, dateRange?.first, dateRange?.second)
 
         }
     }

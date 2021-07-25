@@ -21,6 +21,7 @@ internal class FantasticoBrochureDownloaderTest {
         result.forEach {
             assertThat(it.path.toFile()).exists()
             assertThat(it.path.fileName.toString()).endsWith(".pdf")
+            assertThat(it.validFrom).isNotNull()
             assertThat(it.validUntil).isNotNull()
             Files.delete(it.path)
         }

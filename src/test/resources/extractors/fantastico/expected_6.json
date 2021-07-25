@@ -6,6 +6,7 @@
     "oldPrice": 2.79,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -15,6 +16,7 @@
     "oldPrice": 13.89,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -24,6 +26,7 @@
     "oldPrice": 3.99,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -33,6 +36,7 @@
     "oldPrice": 1.29,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -42,6 +46,7 @@
     "oldPrice": 1.59,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -51,6 +56,7 @@
     "oldPrice": 2.99,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -60,6 +66,7 @@
     "oldPrice": 2.09,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -69,6 +76,7 @@
     "oldPrice": 1.39,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -78,6 +86,7 @@
     "oldPrice": 4.99,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -87,6 +96,7 @@
     "oldPrice": 1.39,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -96,6 +106,7 @@
     "oldPrice": 1.49,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -105,6 +116,7 @@
     "oldPrice": 1.25,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   },
   {
@@ -114,6 +126,7 @@
     "oldPrice": 2.79,
     "category": null,
     "picUrl": null,
+    "validFrom": null,
     "validUntil": null
   }
 ]

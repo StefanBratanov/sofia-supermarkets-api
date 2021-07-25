@@ -39,15 +39,15 @@ class BillaProductsExtractor : UrlProductsExtractor {
 
         val htmlDoc = getHtmlDocument(url)
 
-        val endDate = htmlDoc.selectFirst(".dateSpan")?.text()?.let {
-            "\\d+.\\d+.\\d+".toRegex().findAll(it).lastOrNull()
-        }?.let {
-            val match = it.groupValues[0]
-            try {
-                LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
-            } catch (ex: Exception) {
-                log.error("Error while parsing $match", ex)
-                null
+        val dateRange = htmlDoc.selectFirst(".dateSpan")?.text()?.let {
+            "\\d+.\\d+.\\d+".toRegex().findAll(it).map { mr ->
+                val match = mr.groupValues[0]
+                try {
+                    LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+                } catch (ex: Exception) {
+                    log.error("Error while parsing $match", ex)
+                    null
+                }
             }
         }
 
@@ -65,7 +65,8 @@ class BillaProductsExtractor : UrlProductsExtractor {
                     name = productName,
                     price = price?.toDouble(),
                     oldPrice = oldPrice?.toDouble(),
-                    validUntil = endDate
+                    validFrom = dateRange?.elementAtOrNull(0),
+                    validUntil = dateRange?.elementAtOrNull(1)
                 )
             }.filter {
                 Objects.nonNull(it.price)
@@ -73,7 +74,10 @@ class BillaProductsExtractor : UrlProductsExtractor {
                 val normalizedName =
                     regexesToIgnoreBilla.fold(it.name) { name, toRemove -> name.replace(toRemove, "") }
                 val nameAndQuantity = separateNameAndQuantity(normalizedName)
-                it.copy(name = normalizeSpace(nameAndQuantity.first), quantity = normalizeSpace(nameAndQuantity.second))
+                it.copy(
+                    name = normalizeSpace(nameAndQuantity.first),
+                    quantity = normalizeSpace(nameAndQuantity.second)
+                )
             }
     }
 

@@ -46,23 +46,32 @@ internal class FantasticoFlowTest {
         val randomFile2 = tempDir.resolve(UUID.randomUUID().toString())
         randomFile2.toFile().createNewFile()
 
+        val validFrom = LocalDate.of(2021, 5, 1)
         val validUntil = LocalDate.of(2021, 5, 6)
 
-        val foo = getProduct("foo").copy(validUntil = validUntil)
-        val bar = getProduct("bar").copy(validUntil = validUntil.plusDays(1))
+        val foo = getProduct("foo").copy(
+            validFrom = validFrom,
+            validUntil = validUntil
+        )
+        val bar = getProduct("bar").copy(
+            validFrom = validFrom.plusDays(1),
+            validUntil = validUntil.plusDays(1)
+        )
 
         val brochure = BrochureDownloader.Brochure(
             randomFile,
+            validFrom,
             validUntil
         )
 
         val brochure2 = BrochureDownloader.Brochure(
             randomFile2,
+            validFrom.plusDays(1),
             validUntil.plusDays(1)
         )
 
         every { fantasticoBrochureDownloader.download() } returns listOf(
-            brochure,brochure2
+            brochure, brochure2
         )
         every { pdfProductsExtractor.extract(randomFile) } returns listOf(foo)
         every { pdfProductsExtractor.extract(randomFile2) } returns listOf(bar)
