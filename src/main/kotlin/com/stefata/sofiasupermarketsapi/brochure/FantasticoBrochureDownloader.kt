@@ -15,7 +15,7 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets.UTF_8
 import java.nio.file.Files
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import java.time.format.DateTimeFormatter.ofPattern
 
 @Log
 @Component
@@ -23,7 +23,7 @@ class FantasticoBrochureDownloader(
     @Value("\${fantastico.url}") private val url: URL
 ) : BrochureDownloader {
 
-    private val yearPattern = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+    private val yearPattern = ofPattern("dd.MM.yyyy")
 
     override fun download(): List<Brochure> {
         val htmlDoc = getHtmlDocument(url)
@@ -37,8 +37,16 @@ class FantasticoBrochureDownloader(
 
             val iFrameUrl = it.attr("data-brochure")
 
-            val downloadHref = getHtmlDocument(URL(iFrameUrl)).selectFirst("a#brochure__controls__download")
-                .attr("href")
+            val downloadHref = if (iFrameUrl.isEmpty()) {
+                val dataId = it.attr("data-id")
+                "${URL(url, "/")}attachments/Brochure/${dataId}/brochure/" +
+                        "${dateRange?.first?.format(ofPattern("dd-MM"))}-" +
+                        "${dateRange?.second?.format(ofPattern("dd-MM-YYYY"))}.pdf"
+            } else {
+                getHtmlDocument(URL(iFrameUrl)).selectFirst("a#brochure__controls__download")
+                    .attr("href")
+            }
+
             val filenameMinusPath = FilenameUtils.getName(downloadHref)
             val encodedHref =
                 downloadHref.replace(filenameMinusPath, URLEncoder.encode(filenameMinusPath, UTF_8.name()))
