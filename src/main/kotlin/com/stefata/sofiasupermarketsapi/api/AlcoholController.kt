@@ -66,7 +66,7 @@ class AlcoholController(
         }
     }
 
-    private val ignoreContains = listOf("бонбони", "шоколад", "чаши за\\s+").map {
+    private val ignoreContains = listOf("бонбони", "шоколад", "чаши за\\s+", "халба").map {
         it.toRegex(IGNORE_CASE)
     }
 

@@ -1389,6 +1389,14 @@
     "updatedAt": "2021-03-24T11:00:51.355+00:00",
     "products": [
       {
+        "name": "Халба за бира",
+        "quantity": "300 мл 1 бр",
+        "price": 3.69,
+        "oldPrice": 5.29,
+        "category": null,
+        "picUrl": null
+      },
+      {
         "name": "Мляно кафе LAVAZZA Crema e Gusto",
         "quantity": "вакуум, 250 г",
         "price": 4.79,
