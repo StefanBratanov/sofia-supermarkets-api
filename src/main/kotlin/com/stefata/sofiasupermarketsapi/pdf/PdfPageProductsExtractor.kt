@@ -14,7 +14,7 @@ import kotlin.math.absoluteValue
 class PdfPageProductsExtractor(
     private val pdfDoc: PDDocument,
     private val regexesToIgnore: List<Regex>,
-    private val fontsToIgnore: List<Regex>,
+    private val fontsToKeep: List<Regex>,
     private val initialCenterPredicate: Predicate<TextWithCoordinates>,
     private val productSectionResolver: Map<ProductSection, (String) -> Boolean>
 ) {
@@ -39,7 +39,7 @@ class PdfPageProductsExtractor(
         }
 
         val filteredStrippedTexts = pdfTextStripper.strippedTexts.filter {
-            fontsToIgnore.none { rgx ->
+            fontsToKeep.any { rgx ->
                 it.font?.name?.contains(rgx) == true
             }
         }.toMutableList()

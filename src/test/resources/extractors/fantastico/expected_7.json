@@ -1,0 +1,272 @@
+[
+  {
+    "name": "Бира BRITOS",
+    "quantity": "PET, 2 л",
+    "price": 1.79,
+    "oldPrice": 2.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира АРИАНА светло",
+    "quantity": "PET, 1,2 л",
+    "price": 1.39,
+    "oldPrice": 1.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Сайдер SOMERSBY различни видове",
+    "quantity": "330 мл",
+    "price": 1.19,
+    "oldPrice": 1.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира LEDENIKA светло",
+    "quantity": "PET, 600 мл",
+    "price": 0.59,
+    "oldPrice": 0.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира STELLA ARTOIS Бира ЯК ПУСТИНЯК светло",
+    "quantity": "кен, 500 мл бутилка,",
+    "price": 1.29,
+    "oldPrice": 1.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира ЗАГОРКА специално",
+    "quantity": "кен, 500 мл",
+    "price": 0.79,
+    "oldPrice": 1.25,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира KRUSOVICE Imperial произход Чехия",
+    "quantity": "кен, 500 мл",
+    "price": 1.59,
+    "oldPrice": 2.15,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино CRAFTSMANS CREEK различни видове",
+    "quantity": "750 мл",
+    "price": 4.49,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Узо ZORBAS",
+    "quantity": "700 мл",
+    "price": 8.49,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Узо JIVAERI",
+    "quantity": "700 мл",
+    "price": 11.99,
+    "oldPrice": 15.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино LAVA различни видове",
+    "quantity": "750 мл",
+    "price": 7.99,
+    "oldPrice": 10.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски CLAYMORE",
+    "quantity": "700 мл",
+    "price": 9.99,
+    "oldPrice": 17.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино ТЪРГОВИЩЕ Шардоне; Мускат",
+    "quantity": "750 мл",
+    "price": 4.99,
+    "oldPrice": 6.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски JOHNNIE WALKER Black Label",
+    "quantity": "700 мл",
+    "price": 37.99,
+    "oldPrice": 49.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Гроздова ракия КАЙЛЪШКА",
+    "quantity": "700 мл",
+    "price": 9.49,
+    "oldPrice": 12.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка БЕЛЕНЬКАЯ Золотая; Люкс",
+    "quantity": "700 мл",
+    "price": 11.99,
+    "oldPrice": 15.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бърбън FOUR ROSES",
+    "quantity": "700 мл",
+    "price": 17.99,
+    "oldPrice": 25.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино ВИЛА ЛЮБИМЕЦ бяло; червено ове",
+    "quantity": "2 вида, 3 л",
+    "price": 8.99,
+    "oldPrice": 12.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Пино Гриджо/ Пино Гриджо & Розе CANTI произход Италия",
+    "quantity": "750 мл",
+    "price": 8.99,
+    "oldPrice": 11.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Трапезна вода СЕРДИКА",
+    "quantity": "1,5 л",
+    "price": 0.49,
+    "oldPrice": 0.65,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Негазирана напитка CAPPY",
+    "quantity": "1,25 л",
+    "price": 1.89,
+    "oldPrice": 2.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Lemonade различни видове",
+    "quantity": "400 мл PET, ; 1,25 л",
+    "price": 1.09,
+    "oldPrice": 1.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Газирана напитка PEPSI/ MIRINDA различни видове",
+    "quantity": "2 л",
+    "price": 1.49,
+    "oldPrice": 2.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Изворна/ Минерална вода",
+    "quantity": "DEVIN 5 л",
+    "price": 1.49,
+    "oldPrice": 2.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Сок Ябълка СЕМЕЛЕ студено пресован bag-in-box",
+    "quantity": "от 1л. с марка 3 л",
+    "price": 4.79,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Плодова напитка STRIKE различни видове",
+    "quantity": "2 л",
+    "price": 1.89,
+    "oldPrice": 2.89,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Студен чай LIPTON различни видове",
+    "quantity": "1,5 л",
+    "price": 1.89,
+    "oldPrice": 2.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  }
+]

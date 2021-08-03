@@ -20,6 +20,8 @@ import java.nio.file.Path
 @Component("Fantastico")
 class FantasticoProductsExtractor : PdfProductsExtractor {
 
+    private val myriadProRegex = "myriadpro".toRegex(RegexOption.IGNORE_CASE)
+
     private val regexesToIgnore = listOf(
         "www\\.fantastico\\.bg".toRegex(RegexOption.IGNORE_CASE),
         "ОФЕРТА ЗА ПЕРИОДА".toRegex(RegexOption.IGNORE_CASE),
@@ -39,11 +41,9 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         "Според потребителската класация".toRegex(RegexOption.IGNORE_CASE)
     )
 
-    private val fontsToIgnore = listOf(
-        "Azuki".toRegex(RegexOption.IGNORE_CASE),
-        "BiraBG".toRegex(RegexOption.IGNORE_CASE),
-        "Balder".toRegex(RegexOption.IGNORE_CASE),
-        "Tungsten".toRegex(RegexOption.IGNORE_CASE)
+    private val fontsToKeep = listOf(
+        myriadProRegex,
+        "officinasans".toRegex(RegexOption.IGNORE_CASE)
     )
 
     private val regexesToRemove = listOf(
@@ -77,7 +77,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
             PdfPageProductsExtractor(
                 pdfDoc,
                 regexesToIgnore,
-                fontsToIgnore,
+                fontsToKeep,
                 initialCenterPredicate,
                 productSectionResolver
             )
@@ -124,7 +124,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         return cluster.filter {
             it.first == NAME
         }.filter {
-            it.second.font?.name?.contains("myriad", ignoreCase = true) == true
+            it.second.font?.name?.contains(myriadProRegex) == true
         }.joinToString(" ") {
             it.second.text.toString()
         }.let {
