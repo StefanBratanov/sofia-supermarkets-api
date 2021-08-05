@@ -5,9 +5,15 @@ import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefata.sofiasupermarketsapi.interfaces.BrochureDownloader
 import com.stefata.sofiasupermarketsapi.interfaces.BrochureDownloader.Brochure
+import io.github.bonigarcia.wdm.WebDriverManager
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.FilenameUtils
 import org.jsoup.nodes.Element
+import org.openqa.selenium.Dimension
+import org.openqa.selenium.phantomjs.PhantomJSDriver
+import org.openqa.selenium.remote.CapabilityType.SUPPORTS_JAVASCRIPT
+import org.openqa.selenium.remote.DesiredCapabilities
+import org.openqa.selenium.remote.RemoteWebDriver
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import java.net.URL
@@ -16,6 +22,7 @@ import java.nio.charset.StandardCharsets.UTF_8
 import java.nio.file.Files
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter.ofPattern
+import java.util.concurrent.TimeUnit
 
 @Log
 @Component
@@ -23,12 +30,26 @@ class FantasticoBrochureDownloader(
     @Value("\${fantastico.url}") private val url: URL
 ) : BrochureDownloader {
 
+    companion object {
+        var capabilities: DesiredCapabilities
+
+        init {
+            WebDriverManager.phantomjs().setup()
+            capabilities = DesiredCapabilities()
+            capabilities.setCapability(SUPPORTS_JAVASCRIPT, true)
+        }
+    }
+
     private val yearPattern = ofPattern("dd.MM.yyyy")
 
     override fun download(): List<Brochure> {
         val htmlDoc = getHtmlDocument(url)
 
-        return htmlDoc.select("div.brochure-container.first div.hold-options").map {
+        val driver = PhantomJSDriver(capabilities)
+        driver.manage().window().size = Dimension(1920,1200)
+        driver.get(url.toExternalForm())
+
+        val brochures = htmlDoc.select("div.brochure-container.first div.hold-options").map {
             val dateRange = extractDateRange(it.selectFirst("p.paragraph"))
             log.info(
                 "Fantastico brochure is vaild " +
@@ -39,9 +60,8 @@ class FantasticoBrochureDownloader(
 
             val downloadHref = if (iFrameUrl.isEmpty()) {
                 val dataId = it.attr("data-id")
-                "${URL(url, "/")}attachments/Brochure/${dataId}/brochure/" +
-                        "${dateRange?.first?.format(ofPattern("dd-MM"))}-" +
-                        "${dateRange?.second?.format(ofPattern("dd-MM-YYYY"))}.pdf"
+                clickBrochure(dataId, driver, 3)
+                driver.findElementByCssSelector("div.brochure-container.first a[title='Сваляне']").getAttribute("href")
             } else {
                 getHtmlDocument(URL(iFrameUrl)).selectFirst("a#brochure__controls__download")
                     .attr("href")
@@ -64,6 +84,10 @@ class FantasticoBrochureDownloader(
             Brochure(downloadPath, dateRange?.first, dateRange?.second)
 
         }
+
+        driver.quit()
+
+        return brochures
     }
 
     private fun extractDateRange(element: Element?): Pair<LocalDate?, LocalDate?>? {
@@ -85,5 +109,21 @@ class FantasticoBrochureDownloader(
 
     private fun addYearIfApplicable(input: String): String {
         return input.replace("(\\.|(?<=\\.\\d{2}))\$".toRegex(), ".${LocalDate.now().year}")
+    }
+
+    private fun clickBrochure(dataId: String, driver: RemoteWebDriver, retries: Int) {
+        log.info("Trying to click brochure with data-id: $dataId")
+        try {
+            TimeUnit.SECONDS.sleep(5)
+            driver.findElementByCssSelector("div.hold-options[data-id='${dataId}']").click()
+        } catch (ex: Exception) {
+            if (retries == 0) {
+                throw IllegalStateException(
+                    "Maximum number of retries has been reached to click a brochure", ex
+                )
+            }
+            clickBrochure(dataId, driver, retries - 1)
+        }
+
     }
 }
