@@ -58,7 +58,8 @@ class AlcoholController(
         Other to listOf(
             "(?<!\\sс\\s)узо", "\\s+мента", "мента\\s+",
             "ликьор", "^ром\\s+", "\\s+ром\\s+", "\\s+ром\$", "текила", "бренди", "коняк", "абсент",
-            "(?<!вър)джин(?!джи)", "Пастис", "анасон.*напитк", "мастика", "сайдер", "somersby"
+            "(?<!вър)джин(?!джи)", "Пастис", "анасон.*напитк", "мастика", "сайдер", "somersby",
+            "вермут", "martini", "мартини"
         )
     ).mapValues {
         it.value.map { regex ->
@@ -94,7 +95,7 @@ class AlcoholController(
                             product.name.contains(entry.value)
                         }?.key
                         if (isNull(maybeCategory)) {
-                            alcoholProductOrNull(product)
+                            alcoholProductOrNull(product, defaultCategory = Other)
                         } else {
                             product.copy(category = maybeCategory?.name)
                         }
@@ -160,14 +161,16 @@ class AlcoholController(
 
     }
 
-    private fun alcoholProductOrNull(product: Product): Product? {
+    private fun alcoholProductOrNull(product: Product, defaultCategory: AlcoholCategory? = null): Product? {
         val maybeCategory = alcoholCategoryResolvers.entries.firstOrNull { categoryResolver ->
             categoryResolver.value.any { regex ->
                 product.name.contains(regex)
             }
         }?.key
         return if (isNull(maybeCategory)) {
-            null
+            defaultCategory?.let {
+                product.copy(category = it.name)
+            }
         } else {
             product.copy(category = maybeCategory?.name)
         }
