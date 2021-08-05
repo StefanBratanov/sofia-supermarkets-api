@@ -114,8 +114,11 @@ class FantasticoBrochureDownloader(
     private fun clickBrochure(dataId: String, driver: RemoteWebDriver, retries: Int) {
         log.info("Trying to click brochure with data-id: $dataId")
         try {
+            //wait for website to load
             TimeUnit.SECONDS.sleep(5)
             driver.findElementByCssSelector("div.hold-options[data-id='${dataId}']").click()
+            //sleep a bit after clicking
+            TimeUnit.SECONDS.sleep(2)
         } catch (ex: Exception) {
             if (retries == 0) {
                 throw IllegalStateException(
