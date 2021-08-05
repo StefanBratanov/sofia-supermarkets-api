@@ -20,7 +20,7 @@ jobs:
         java-version: 15
 
     - name: Install fontconfig
-      run: apt-get install fontconfig
+      run: sudo apt-get install fontconfig
 
     - name: Build with Gradle
       run: gradle build

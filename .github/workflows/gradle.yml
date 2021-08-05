@@ -23,7 +23,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Install fontconfig
-      run: apt-get install fontconfig
+      run: sudo apt-get install fontconfig
     - name: Build with Gradle
       run: ./gradlew build jacocoTestReport
     - name: Codecov
