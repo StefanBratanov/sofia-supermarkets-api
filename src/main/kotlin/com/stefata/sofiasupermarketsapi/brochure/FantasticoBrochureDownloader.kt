@@ -9,11 +9,13 @@ import io.github.bonigarcia.wdm.WebDriverManager
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.FilenameUtils
 import org.jsoup.nodes.Element
+import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.phantomjs.PhantomJSDriver
 import org.openqa.selenium.remote.CapabilityType.SUPPORTS_JAVASCRIPT
 import org.openqa.selenium.remote.DesiredCapabilities
-import org.openqa.selenium.remote.RemoteWebDriver
+import org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable
+import org.openqa.selenium.support.ui.WebDriverWait
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import java.net.URL
@@ -46,8 +48,9 @@ class FantasticoBrochureDownloader(
         val htmlDoc = getHtmlDocument(url)
 
         val driver = PhantomJSDriver(capabilities)
-        driver.manage().window().size = Dimension(1920,1200)
+        driver.manage().window().size = Dimension(1920, 1200)
         driver.get(url.toExternalForm())
+        val waitDriver = WebDriverWait(driver, 10)
 
         val brochures = htmlDoc.select("div.brochure-container.first div.hold-options").map {
             val dateRange = extractDateRange(it.selectFirst("p.paragraph"))
@@ -60,8 +63,9 @@ class FantasticoBrochureDownloader(
 
             val downloadHref = if (iFrameUrl.isEmpty()) {
                 val dataId = it.attr("data-id")
-                clickBrochure(dataId, driver, 3)
-                driver.findElementByCssSelector("div.brochure-container.first a[title='Сваляне']").getAttribute("href")
+                clickBrochure(dataId, waitDriver)
+                val downloadSelector = By.cssSelector("div.brochure-container.first a[title='Сваляне']")
+                driver.findElement(downloadSelector).getAttribute("href")
             } else {
                 getHtmlDocument(URL(iFrameUrl)).selectFirst("a#brochure__controls__download")
                     .attr("href")
@@ -111,22 +115,11 @@ class FantasticoBrochureDownloader(
         return input.replace("(\\.|(?<=\\.\\d{2}))\$".toRegex(), ".${LocalDate.now().year}")
     }
 
-    private fun clickBrochure(dataId: String, driver: RemoteWebDriver, retries: Int) {
+    private fun clickBrochure(dataId: String, waitDriver: WebDriverWait) {
         log.info("Trying to click brochure with data-id: $dataId")
-        try {
-            //wait for website to load
-            TimeUnit.SECONDS.sleep(5)
-            driver.findElementByCssSelector("div.hold-options[data-id='${dataId}']").click()
-            //sleep a bit after clicking
-            TimeUnit.SECONDS.sleep(2)
-        } catch (ex: Exception) {
-            if (retries == 0) {
-                throw IllegalStateException(
-                    "Maximum number of retries has been reached to click a brochure", ex
-                )
-            }
-            clickBrochure(dataId, driver, retries - 1)
-        }
-
+        val cssSelector = By.cssSelector("div.hold-options[data-id='${dataId}']")
+        waitDriver.until(elementToBeClickable(cssSelector)).click()
+        //sleep a bit after clicking
+        TimeUnit.SECONDS.sleep(2)
     }
 }
