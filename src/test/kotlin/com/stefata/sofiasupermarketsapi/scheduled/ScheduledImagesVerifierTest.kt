@@ -4,6 +4,8 @@ import assertk.assertThat
 import assertk.assertions.containsOnly
 import com.ninjasquad.springmockk.MockkBean
 import com.stefata.sofiasupermarketsapi.image.GoogleImageSearch
+import com.stefata.sofiasupermarketsapi.model.ProductImage
+import com.stefata.sofiasupermarketsapi.repository.ProductImageRepository
 import io.mockk.every
 import io.mockk.verify
 import org.junit.jupiter.api.Test
@@ -15,6 +17,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.junit.jupiter.SpringExtension
+import java.util.*
 
 @ExtendWith(SpringExtension::class)
 @ContextConfiguration(
@@ -34,6 +37,9 @@ internal class ScheduledImagesVerifierTest {
     @MockkBean
     lateinit var googleImageSearch: GoogleImageSearch
 
+    @MockkBean
+    lateinit var productImageRepository: ProductImageRepository
+
     @Autowired
     lateinit var underTest: ScheduledImagesVerifier
 
@@ -43,11 +49,13 @@ internal class ScheduledImagesVerifierTest {
     @Test
     fun `test verifying images`() {
         val cache = cacheManager.getCache("productImages")?.nativeCache as MutableMap<String, String>
-        cache["test"] = "https://p1.akcdn.net/full/652773636.bira-astika-ken-0-5-l.jpg"
+        val invalidUrl = "https://p1.akcdn.net/full/652773636.bira-astika-ken-0-5-l.jpg"
+        cache["test"] = invalidUrl
         cache["another test"] = "https://bbc.co.uk"
 
         every { googleImageSearch.search("test", false) } returns "https://www.telegraph.co.uk/"
-
+        every { productImageRepository.findById("test") } returns Optional.of(ProductImage("test", invalidUrl))
+        every { productImageRepository.save(any()) } returnsArgument 0
         underTest.verifyImages()
         underTest.verifyImages()
 
@@ -58,6 +66,10 @@ internal class ScheduledImagesVerifierTest {
 
         verify(exactly = 1) {
             googleImageSearch.search("test", false)
+        }
+
+        verify(exactly = 1) {
+            productImageRepository.save(ProductImage("test", "https://www.telegraph.co.uk/"))
         }
 
 

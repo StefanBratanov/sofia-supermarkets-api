@@ -34,4 +34,21 @@ class ProductImageRepositoryTest {
         assertThat(missing.isPresent).isFalse()
 
     }
+
+    @Test
+    fun `updating product`() {
+        val toSave = ProductImage("foo", "http://test.com")
+
+        underTest.save(toSave)
+
+        underTest.findById("foo").ifPresent {
+            it.url = "http://test69.com"
+            underTest.save(it)
+        }
+
+        val updated = underTest.findById("foo")
+
+        assertThat(updated.isPresent).isTrue()
+        assertThat(updated.get()).isEqualTo(toSave.copy(url = "http://test69.com"))
+    }
 }

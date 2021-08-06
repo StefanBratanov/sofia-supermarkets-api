@@ -4,6 +4,7 @@ import com.stefata.sofiasupermarketsapi.common.Log
 import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.common.checkIfUrlHasAcceptableHttpResponse
 import com.stefata.sofiasupermarketsapi.image.GoogleImageSearch
+import com.stefata.sofiasupermarketsapi.repository.ProductImageRepository
 import org.springframework.cache.CacheManager
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component
@@ -12,7 +13,8 @@ import org.springframework.stereotype.Component
 @Component
 class ScheduledImagesVerifier(
     val googleImageSearch: GoogleImageSearch,
-    val cacheManager: CacheManager
+    val cacheManager: CacheManager,
+    val productImageRepository: ProductImageRepository,
 ) {
 
     @Scheduled(cron = "\${image.verifier.cron}")
@@ -25,9 +27,21 @@ class ScheduledImagesVerifier(
             !checkIfUrlHasAcceptableHttpResponse(it)
         }?.forEach {
             googleImageSearch.search(it.key, false)?.let { imageUrl ->
-                log.info("Changing cached image of {} from {} to {}", it.key, it.value, imageUrl)
+                log.info(
+                    "Changing cached image for {} from {} to {}",
+                    it.key, it.value, imageUrl
+                )
                 productImagesCache[it.key] = imageUrl
+                productImageRepository.findById(it.key).ifPresent { dbRow ->
+                    log.info(
+                        "Changing database image for {} from {} to {}",
+                        it.key, dbRow.url, imageUrl
+                    )
+                    dbRow.url = imageUrl
+                    productImageRepository.save(dbRow)
+                }
             }
+
         }
 
     }
