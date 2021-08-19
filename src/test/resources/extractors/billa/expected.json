@@ -1828,5 +1828,15 @@
     "picUrl": null,
     "validFrom": "2021-03-18",
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Узо 12 + чаша",
+    "quantity": "0,7 л",
+    "price": 14.69,
+    "oldPrice": 18.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
   }
 ]
