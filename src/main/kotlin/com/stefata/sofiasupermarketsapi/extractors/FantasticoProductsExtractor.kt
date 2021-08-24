@@ -21,6 +21,7 @@ import java.nio.file.Path
 class FantasticoProductsExtractor : PdfProductsExtractor {
 
     private val myriadProRegex = "myriadpro".toRegex(RegexOption.IGNORE_CASE)
+    private val officinaSansRegex = "officinasans".toRegex(RegexOption.IGNORE_CASE)
 
     private val regexesToIgnore = listOf(
         "www\\.fantastico\\.bg".toRegex(RegexOption.IGNORE_CASE),
@@ -43,26 +44,27 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
 
     private val fontsToKeep = listOf(
         myriadProRegex,
-        "officinasans".toRegex(RegexOption.IGNORE_CASE)
+        officinaSansRegex
     )
 
     private val regexesToRemove = listOf(
         "стр\\.\\s*\\d+(-\\d+)?".toRegex(RegexOption.IGNORE_CASE),
         "\\*\\s*с включен".toRegex(RegexOption.IGNORE_CASE),
-        "амбалаж 0,\\d+лв".toRegex(RegexOption.IGNORE_CASE),
+        "амбалаж 0(,|\\.)\\d+\\s*лв".toRegex(RegexOption.IGNORE_CASE),
         "\\*+".toRegex(RegexOption.IGNORE_CASE),
         ",\\s*\$".toRegex(RegexOption.IGNORE_CASE),
         "➥+".toRegex(RegexOption.IGNORE_CASE),
         "количествата са лимитирани".toRegex(RegexOption.IGNORE_CASE)
     )
 
-    private val productSectionResolver: Map<ProductSection, (String) -> Boolean> = mapOf(
-        OLD_PRICE to { text -> text.matches("\\d{1,2}\\.\\d{2}".toRegex()) },
-        NEW_PRICE to { text -> text.matches("\\d{3,4}".toRegex()) },
-        DISCOUNT to { text -> text.matches("-?\\d{1,2}%".toRegex()) },
-        CURRENCY to { text -> text.contains("лв|") },
-        QUANTITY to { text -> text.contains("\\d+\\s*(мл|г|л|бр|см)".toRegex(RegexOption.IGNORE_CASE)) },
-        NAME to { true }
+    private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean> = mapOf(
+        OLD_PRICE to { twc -> twc.text!!.matches("\\d{1,2}\\.\\d{2}".toRegex()) },
+        NEW_PRICE to { twc -> twc.text!!.matches("\\d{3,4}(\\*?)".toRegex()) },
+        DISCOUNT to { twc -> twc.text!!.matches("-?\\d{1,2}%".toRegex()) },
+        CURRENCY to { twc -> twc.text!!.contains("лв|") },
+        QUANTITY to { twc -> twc.text!!.contains("\\d+\\s*(мл|г|л|бр|см)".toRegex(RegexOption.IGNORE_CASE)) },
+        NAME to { twc -> twc.font?.name?.contains(myriadProRegex) == true },
+        UNKNOWN to { true }
     )
 
     override fun extract(pdf: Path): List<Product> {

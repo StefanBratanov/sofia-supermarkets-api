@@ -28,6 +28,7 @@ internal class FantasticoProductsExtractorTest {
         "fantastico_test_5.pdf,expected_5.json",
         "fantastico_test_6.pdf,expected_6.json",
         "fantastico_test_7.pdf,expected_7.json",
+        "fantastico_test_8.pdf,expected_8.json",
     )
     fun `test extracting products`(inputFile: String, expectedFile: String) {
 

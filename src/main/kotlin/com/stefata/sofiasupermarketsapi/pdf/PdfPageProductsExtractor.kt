@@ -4,6 +4,7 @@ import com.stefata.sofiasupermarketsapi.common.Log
 import com.stefata.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefata.sofiasupermarketsapi.common.concatenate
 import com.stefata.sofiasupermarketsapi.ml.KMeansWithInitialCenters
+import com.stefata.sofiasupermarketsapi.pdf.ProductSection.UNKNOWN
 import org.apache.commons.math3.ml.clustering.CentroidCluster
 import org.apache.commons.math3.ml.distance.ManhattanDistance
 import org.apache.pdfbox.pdmodel.PDDocument
@@ -16,7 +17,7 @@ class PdfPageProductsExtractor(
     private val regexesToIgnore: List<Regex>,
     private val fontsToKeep: List<Regex>,
     private val initialCenterPredicate: Predicate<TextWithCoordinates>,
-    private val productSectionResolver: Map<ProductSection, (String) -> Boolean>
+    private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean>
 ) {
 
     fun getProductTextsWithSections(page: Int): List<List<Pair<ProductSection, TextWithCoordinates>>> {
@@ -42,6 +43,8 @@ class PdfPageProductsExtractor(
             fontsToKeep.any { rgx ->
                 it.font?.name?.contains(rgx) == true
             }
+        }.filter {
+            filterUnknownProductSection(it)
         }.toMutableList()
 
         val kMeansPlus = KMeansWithInitialCenters(
@@ -145,9 +148,11 @@ class PdfPageProductsExtractor(
         return validClusteredTexts
     }
 
+
     private fun hasNameAndNewPrice(cluster: List<Pair<ProductSection, TextWithCoordinates>>): Boolean {
         val nameCount = cluster.count {
-            it.first == ProductSection.NAME
+            //check if name and name is not a digit
+            it.first == ProductSection.NAME && it.second.text?.matches("-?\\d+(\\.\\d+)?".toRegex()) == false
         }
         val newPricesCount = cluster.count {
             it.first == ProductSection.NEW_PRICE
@@ -157,9 +162,16 @@ class PdfPageProductsExtractor(
 
     private fun addProductSection(textWithCoordinates: TextWithCoordinates): Pair<ProductSection, TextWithCoordinates> {
         val section = productSectionResolver.entries.first { (_, v) ->
-            v.invoke(textWithCoordinates.text!!)
+            v.invoke(textWithCoordinates)
         }.key
         return Pair(section, textWithCoordinates)
+    }
+
+    private fun filterUnknownProductSection(textWithCoordinates: TextWithCoordinates): Boolean {
+        val section = productSectionResolver.entries.first { (_, v) ->
+            v.invoke(textWithCoordinates)
+        }.key
+        return section != UNKNOWN
     }
 
 }

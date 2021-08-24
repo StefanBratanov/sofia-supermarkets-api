@@ -50,6 +50,16 @@
     "validUntil": null
   },
   {
+    "name": "Бира ШУМЕНСКО",
+    "quantity": "330 мл",
+    "price": 0.69,
+    "oldPrice": 1.05,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
     "name": "Бира ЗАГОРКА специално",
     "quantity": "кен, 500 мл",
     "price": 0.79,

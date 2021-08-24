@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Вино MEZZEK различни видове",
+    "quantity": "750 мл",
+    "price": 7.99,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Совиньон Блан; Малбек FINCA LAS MORAS произход Аржентина",
+    "quantity": "750 мл",
+    "price": 8.99,
+    "oldPrice": 11.89,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино TT или ORGANIC TERRA TANGRA",
+    "quantity": "750 мл",
+    "price": 7.29,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира ЗАГОРКА Специално кен",
+    "quantity": "500 мл",
+    "price": 0.79,
+    "oldPrice": 1.25,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино LOGODAJ Selection различни видове",
+    "quantity": "750 мл",
+    "price": 6.49,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира ЗАГОРКА Ретро",
+    "quantity": "бутилка, 500 мл",
+    "price": 1.09,
+    "oldPrice": 1.65,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира AMSTEL",
+    "quantity": "PET, 1 л",
+    "price": 1.39,
+    "oldPrice": 2.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира HEINEKEN класик; 0,0%",
+    "quantity": "кен, 330 мл",
+    "price": 0.99,
+    "oldPrice": 1.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира STAROBRNO",
+    "quantity": "бутилка, 500 мл",
+    "price": 1.29,
+    "oldPrice": 1.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира АРИАНА светло",
+    "quantity": "PET, 2 л",
+    "price": 1.77,
+    "oldPrice": 2.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира ШУМЕНСКО",
+    "quantity": "330 мл",
+    "price": 0.69,
+    "oldPrice": 1.05,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка STOLICHNAYA",
+    "quantity": "700 мл",
+    "price": 13.99,
+    "oldPrice": 18.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Уиски JOHNNIE WALKER RED Label",
+    "quantity": "700 мл",
+    "price": 17.99,
+    "oldPrice": 26.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира CORONA Extra бутилка",
+    "quantity": "355 мл",
+    "price": 1.79,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ирландско уиски POGUES Classic; Single Malt",
+    "quantity": "700 мл",
+    "price": 19.99,
+    "oldPrice": 29.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Узо TSANTALI",
+    "quantity": "700 мл",
+    "price": 11.99,
+    "oldPrice": 16.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Мастика ПЕЩЕРА",
+    "quantity": "700 мл",
+    "price": 7.99,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Гроздова ракия ЯМБОЛСКА",
+    "quantity": "700 мл",
+    "price": 7.99,
+    "oldPrice": 10.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  }
+]
