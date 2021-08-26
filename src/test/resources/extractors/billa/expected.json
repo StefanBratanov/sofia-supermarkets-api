@@ -1838,5 +1838,35 @@
     "picUrl": null,
     "validFrom": "2021-03-18",
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Ариана",
+    "quantity": "2 л",
+    "price": 1.77,
+    "oldPrice": 2.45,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Zatecky Hus",
+    "quantity": "1 л",
+    "price": 1.45,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Пиринско бутилка",
+    "quantity": "0,5 л",
+    "price": 0.85,
+    "oldPrice": 1.05,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
   }
 ]
