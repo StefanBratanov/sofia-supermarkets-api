@@ -8,7 +8,6 @@ import com.stefata.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefata.sofiasupermarketsapi.model.Product
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.validator.routines.UrlValidator
-import org.apache.logging.log4j.util.Strings.isNotBlank
 import org.springframework.stereotype.Component
 import java.net.URL
 import java.time.LocalDate
@@ -29,9 +28,9 @@ class LidlProductsExtractor(
 
         val category = document.select("meta[name=description]")?.attr("content")
 
-        return document.select("div[data-price],div[data-currency]")
+        return document.select("div[data-name]")
             .filter {
-                isNotBlank(it.attr("data-price"))
+                !it.select(".pricebox__price").isNullOrEmpty()
             }
             .map {
                 val dateRange = it.selectFirst(".ribbon__text")?.text()?.trim()?.let { dateSpan ->
