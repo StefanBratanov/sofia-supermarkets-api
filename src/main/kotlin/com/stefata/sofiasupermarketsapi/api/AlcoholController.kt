@@ -122,7 +122,7 @@ class AlcoholController(
             }
 
         }.map {
-            val filteredProducts = it.products?.filter { product ->
+            val filteredAndDistinctProducts = it.products?.filter { product ->
                 if (category.isNullOrEmpty()) {
                     true
                 } else {
@@ -134,8 +134,8 @@ class AlcoholController(
                 ignoreContains.none { regex ->
                     it.name.contains(regex)
                 }
-            }
-            it.copy(products = filteredProducts)
+            }?.distinctBy { pr -> pr.copy(validUntil = null, picUrl = null) }
+            it.copy(products = filteredAndDistinctProducts)
         }.map {
             val productsWithPics = it.products?.map { product ->
                 if (Strings.isBlank(product.picUrl)) {
@@ -146,7 +146,7 @@ class AlcoholController(
                             val cdnUrl = cdnUploader.upload(productKey, picUrl!!)
                             product.copy(picUrl = cdnUrl)
                         } catch (ex: Exception) {
-                            log.error("Error while uploading to CDN. Will fallback to Google search result", ex)
+                            log.error("Error while uploading to CDN. Will fallback to Google search result")
                             product.copy(picUrl = picUrl)
                         }
                     } else {

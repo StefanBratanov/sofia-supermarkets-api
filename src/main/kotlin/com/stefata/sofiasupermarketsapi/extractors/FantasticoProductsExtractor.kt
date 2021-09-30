@@ -91,9 +91,9 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                 val oldPrice = it.firstOrNull { sectionAndText ->
                     sectionAndText.first == OLD_PRICE
                 }?.second?.text
-                val newPrice = it.first { sectionAndText ->
+                val newPrice = it.firstOrNull { sectionAndText ->
                     sectionAndText.first == NEW_PRICE
-                }.second.text?.replace("^0(?=\\d+)".toRegex(), "")
+                }?.second?.text?.replace("^0(?=\\d+)".toRegex(), "")
                 val quantity = it.filter { sectionAndText ->
                     sectionAndText.first == QUANTITY
                 }.joinToString(separator = " ") { sectionAndText ->

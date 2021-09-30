@@ -10,7 +10,7 @@
         "oldPrice": null,
         "category": "Наслади се на живота по гръцки",
         "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/21979/xs/21979_03.jpg",
-        "validUntil" : "2021-05-06"
+        "validUntil": "2021-05-06"
       },
       {
         "name": "Узо",
@@ -1794,7 +1794,17 @@
         "price": 39.99,
         "oldPrice": null,
         "category": null,
-        "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg"
+        "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg",
+        "validUntil" : "2020-12-06"
+      },
+      {
+        "name": "ПЕЩЕРА Мастика",
+        "quantity": null,
+        "price": 39.99,
+        "oldPrice": null,
+        "category": null,
+        "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg",
+        "validUntil" : "2020-12-25"
       },
       {
         "name": "Чаши за бира MYKONOS комплект",

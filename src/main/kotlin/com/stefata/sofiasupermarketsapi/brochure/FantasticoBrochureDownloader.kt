@@ -78,7 +78,8 @@ class FantasticoBrochureDownloader(
 
             val tempDirectory = Files.createTempDirectory("brochures-download")
             val filename = filenameMinusPath.let { fn ->
-                if (fn.contains(".")) fn else "$fn.pdf"
+                val unixTime = System.currentTimeMillis()
+                if (fn.contains(".")) "${unixTime}_${fn}" else "${unixTime}_${fn}.pdf"
             }
 
             val downloadPath = tempDirectory.resolve(filename)
