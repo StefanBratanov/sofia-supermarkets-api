@@ -16,7 +16,7 @@ class CloudinaryCdnUploader(
 
     @Cacheable("cdnImages")
     override fun upload(key: String, url: String): String {
-        val imageKey = if (key.length >= 200) key.substring(0,200) else key
+        val imageKey = if (key.length >= 100) key.substring(0, 100) else key
         val search = cloudinary.search()
         val searchResult = search.expression("metadata.image_key=\"${imageKey}\"")
             .execute()["resources"] as List<Map<Any, Any>>

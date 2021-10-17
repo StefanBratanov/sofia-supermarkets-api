@@ -1868,5 +1868,25 @@
     "picUrl": null,
     "validFrom": "2021-03-18",
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Вино Мавруд Брестовица",
+    "quantity": "0,75 л",
+    "price": 5.29,
+    "oldPrice": 6.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Вино Мерло& Малбек Castra Rubra Classic",
+    "quantity": "0,75 л",
+    "price": 8.49,
+    "oldPrice": 10.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
   }
 ]
