@@ -134,7 +134,7 @@ class AlcoholController(
                 ignoreContains.none { regex ->
                     it.name.contains(regex)
                 }
-            }?.distinctBy { pr -> pr.copy(validUntil = null, picUrl = null) }
+            }?.distinctBy { pr -> pr.copy(validFrom = null, validUntil = null, picUrl = null) }
             it.copy(products = filteredAndDistinctProducts)
         }.map {
             val productsWithPics = it.products?.map { product ->

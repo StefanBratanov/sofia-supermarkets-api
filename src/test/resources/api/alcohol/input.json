@@ -1804,6 +1804,17 @@
         "oldPrice": null,
         "category": null,
         "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg",
+        "validFrom" : "2020-12-20",
+        "validUntil" : "2020-12-25"
+      },
+      {
+        "name": "ПЕЩЕРА Мастика",
+        "quantity": null,
+        "price": 39.99,
+        "oldPrice": null,
+        "category": null,
+        "picUrl": "https://cache1.24chasa.bg/Images/cache/629/Image_2320629_650_0.jpg",
+        "validFrom" : "2020-12-17",
         "validUntil" : "2020-12-25"
       },
       {
