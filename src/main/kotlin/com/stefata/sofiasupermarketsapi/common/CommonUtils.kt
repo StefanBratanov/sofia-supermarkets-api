@@ -11,7 +11,7 @@ import java.util.Objects.isNull
 import kotlin.text.RegexOption.IGNORE_CASE
 
 fun normalizePrice(price: String?): Double? {
-    return price?.replace("(лв|\\*).*".toRegex(), "")?.replace(',', '.')?.trim()?.toDouble()
+    return price?.replace("(лв|\\*).*".toRegex(), "")?.replace(',', '.')?.trim()?.toDoubleOrNull()
 }
 
 fun getHtmlDocument(url: URL): Document {

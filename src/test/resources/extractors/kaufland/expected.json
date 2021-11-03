@@ -138,5 +138,15 @@
     "picUrl": "https://assets.kaufland.com/4CkCWvSOUYfvOD7J1Iyg/https%3A%2F%2Fmedia.kaufland.com%2Fimages%2FPPIM%2FKMO%2FBG2708_02303412_P.jpg/322x/tileImage2.jpg",
     "validFrom": "2021-03-15",
     "validUntil": "2021-03-21"
+  },
+  {
+    "name": "",
+    "quantity": "",
+    "price": null,
+    "oldPrice": null,
+    "category": "Алкохолни и безалкохолни напитки",
+    "picUrl": "",
+    "validFrom": "2021-03-15",
+    "validUntil": "2021-03-21"
   }
 ]
