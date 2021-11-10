@@ -2,20 +2,20 @@ package com.stefata.sofiasupermarketsapi.api
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import io.swagger.annotations.Api
-import io.swagger.annotations.ApiOperation
+import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.core.io.ClassPathResource
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder
 
-@Api(tags = ["Supermarket"], description = "All operations for supermarkets")
+@Tag(name = "Supermarket", description = "All operations for supermarkets")
 @RestController
 class SupermarketController {
 
     private val objectMapper = jacksonObjectMapper()
 
-    @ApiOperation("Get information for supermarkets")
+    @Operation(summary = "Get information for supermarkets", deprecated = true)
     @GetMapping("/supermarkets")
     fun supermarkets(): List<SupermarketStaticData> {
         val baseUrl = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString()

@@ -1,12 +1,12 @@
 package com.stefata.sofiasupermarketsapi.api
 
-import io.swagger.annotations.ApiModel
-import io.swagger.annotations.ApiModelProperty
+import io.swagger.v3.oas.annotations.Parameter
+import org.springdoc.api.annotations.ParameterObject
 
-@ApiModel
+@ParameterObject
 data class ProductCriteria(
-    @ApiModelProperty(value = "Supermarkets to get the products from", position = 1)
+    @Parameter(description = "Supermarkets to get the products from")
     var supermarket: List<String>?,
-    @ApiModelProperty(value = "Show only offers", position = 2)
+    @Parameter(description = "Show only offers")
     var offers: Boolean = false
 )

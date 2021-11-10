@@ -9,9 +9,9 @@ import com.stefata.sofiasupermarketsapi.model.Product
 import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.model.Supermarket.KAUFLAND
 import com.stefata.sofiasupermarketsapi.model.Supermarket.TMARKET
-import io.swagger.annotations.Api
-import io.swagger.annotations.ApiOperation
-import io.swagger.annotations.ApiParam
+import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.Parameter
+import io.swagger.v3.oas.annotations.tags.Tag
 import org.apache.logging.log4j.util.Strings
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -21,7 +21,7 @@ import java.util.Objects.nonNull
 import kotlin.text.RegexOption.IGNORE_CASE
 
 @Log
-@Api(tags = ["Product"], description = "All operations for supermarket products")
+@Tag(name = "Product", description = "All operations for supermarket products")
 @RestController
 class AlcoholController(
     val productStoreController: ProductStoreController,
@@ -67,18 +67,20 @@ class AlcoholController(
         }
     }
 
-    private val ignoreContains = listOf("бонбони", "шоколад", "чаши за\\s+", "халба", "дезинфектант",
-        "чай\\s+","\\s+чай").map {
+    private val ignoreContains = listOf(
+        "бонбони", "шоколад", "чаши за\\s+", "халба", "дезинфектант",
+        "чай\\s+", "\\s+чай"
+    ).map {
         it.toRegex(IGNORE_CASE)
     }
 
-    @ApiOperation(value = "Get all alcohol products from supermarkets")
+    @Operation(summary = "Get all alcohol products from supermarkets")
     @GetMapping("/products/alcohol")
     fun alcohol(
         productCriteria: ProductCriteria,
-        @ApiParam(value = "Get only certain category/ies") @RequestParam(required = false)
+        @Parameter(description = "Get only certain category/ies") @RequestParam(required = false)
         category: List<String>?,
-        @ApiParam(value = "Getting the cdn url of the custom searched images")
+        @Parameter(description = "Getting the cdn url of the custom searched images")
         @RequestParam(required = false, defaultValue = "true") useCdn: Boolean
     ): List<ProductStore> {
 

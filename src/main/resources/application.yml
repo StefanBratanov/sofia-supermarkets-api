@@ -61,3 +61,8 @@ spring:
   jackson:
     serialization:
       write-dates-as-timestamps: false
+
+springdoc:
+  swagger-ui:
+    tagsSorter: alpha
+    docExpansion: none

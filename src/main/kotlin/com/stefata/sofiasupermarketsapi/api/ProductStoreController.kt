@@ -2,19 +2,19 @@ package com.stefata.sofiasupermarketsapi.api
 
 import com.stefata.sofiasupermarketsapi.model.ProductStore
 import com.stefata.sofiasupermarketsapi.repository.ProductStoreRepository
-import io.swagger.annotations.Api
-import io.swagger.annotations.ApiOperation
+import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import java.util.Objects.nonNull
 
-@Api(tags = ["Product"], description = "All operations for supermarket products")
+@Tag(name = "Product", description = "All operations for supermarket products")
 @RestController
 class ProductStoreController(
     val productStoreRepository: ProductStoreRepository
 ) {
 
-    @ApiOperation(value = "Get all products from supermarkets")
+    @Operation(summary = "Get all products from supermarkets")
     @GetMapping("/products")
     fun products(productCriteria: ProductCriteria): List<ProductStore> {
 
