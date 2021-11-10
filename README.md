@@ -41,6 +41,6 @@ The following environment variables need to be set prior to running
 * GOOGLE_API_KEY
 * CLOUDINARY_API_SECRET
 
-Navigate to <http://localhost:8080/swagger-ui/> to check the API documentation and test the endpoints
+Navigate to <http://localhost:8080/swagger-ui.html> to check the API documentation and test the endpoints
 
 ![API Documentation](images/swagger-ui.png)
