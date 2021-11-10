@@ -1832,6 +1832,16 @@
         "oldPrice": 26.99,
         "category": null,
         "picUrl": "http://res.cloudinary.com/dhf90uh66/image/upload/v1623448694/alcohol/hf2raggjhgc29rajgcvw.webp"
+      },
+      {
+        "name": "Чай БИОПРОГРАМА лайка; мента",
+        "quantity": "20 бр x1,5 г",
+        "price": 0.99,
+        "oldPrice": 1.59,
+        "category": null,
+        "picUrl": "https://res.cloudinary.com/dhf90uh66/image/upload/v1636382116/alcohol/ba7jpkkze5ubckkl2wl5.jpg",
+        "validFrom": "2021-11-11",
+        "validUntil": "2021-11-17"
       }
     ]
   }
