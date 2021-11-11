@@ -1,3 +1,4 @@
+[![License](https://img.shields.io/github/license/StefanBratanov/sofia-supermarkets-api)](https://opensource.org/licenses/Apache-2.0)
 [![build](https://github.com/StefanBratanov/sofia-supermarkets-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/StefanBratanov/sofia-supermarkets-api/actions/workflows/gradle.yml)
 [![codecov](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api/branch/master/graph/badge.svg?token=3V3THIY6AX)](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/stefanbratanov/sofia-supermarkets-api)](https://github.com/StefanBratanov/sofia-supermarkets-api/releases/latest)
@@ -9,7 +10,7 @@ An API to retrieve products information from supermarkets in Sofia.
 
 If you like my work, you can buy me a coffee.
 
-<a target="_blank" href="https://www.buymeacoffee.com/stefanbratanov"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=stefanbratanov&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff"></a>
+<a href="https://www.buymeacoffee.com/stefanbratanov"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=stefanbratanov&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff"></a>
 
 ## Supported supermarkets
 
