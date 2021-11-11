@@ -16,8 +16,8 @@ plugins {
     kotlin("plugin.jpa") version "1.4.30"
 }
 
-group = "com.stefata"
-version = "1.1.0"
+group = "com.stefanbratanov"
+version = "1.2.0"
 java.sourceCompatibility = JavaVersion.VERSION_15
 
 repositories {
@@ -33,7 +33,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/stefata/sofia-supermarkets-api")
+            url = uri("https://maven.pkg.github.com/stefanbratanov/sofia-supermarkets-api")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")

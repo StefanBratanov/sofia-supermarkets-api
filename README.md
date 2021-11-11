@@ -1,11 +1,15 @@
-[![build](https://github.com/Stefata/sofia-supermarkets-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/Stefata/sofia-supermarkets-api/actions/workflows/gradle.yml)
-[![codecov](https://codecov.io/gh/Stefata/sofia-supermarkets-api/branch/master/graph/badge.svg?token=3V3THIY6AX)](https://codecov.io/gh/Stefata/sofia-supermarkets-api)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/stefata/sofia-supermarkets-api)](https://github.com/Stefata/sofia-supermarkets-api/releases/latest)
+[![build](https://github.com/StefanBratanov/sofia-supermarkets-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/StefanBratanov/sofia-supermarkets-api/actions/workflows/gradle.yml)
+[![codecov](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api/branch/master/graph/badge.svg?token=3V3THIY6AX)](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/stefanbratanov/sofia-supermarkets-api)](https://github.com/StefanBratanov/sofia-supermarkets-api/releases/latest)
 
 # sofia-supermarkets-api
-An API to retrieve products information from supermarkets in Sofia
+An API to retrieve products information from supermarkets in Sofia.
 
 [![Swagger UI](https://validator.swagger.io/validator?url=http://sofiasupermarketsapi-1888309410.eu-west-2.elb.amazonaws.com/v3/api-docs/)](http://sofiasupermarketsapi-1888309410.eu-west-2.elb.amazonaws.com/swagger-ui.html)
+
+If you like my work, you can buy me a coffee.
+
+<a href="https://www.buymeacoffee.com/stefanbratanov"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=stefanbratanov&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff"></a>
 
 ## Supported supermarkets
 
