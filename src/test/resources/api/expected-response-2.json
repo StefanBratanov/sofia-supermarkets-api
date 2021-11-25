@@ -7,14 +7,50 @@
         "quantity": null,
         "price": 1.1,
         "oldPrice": null,
-        "picUrl": null
+        "category": null,
+        "picUrl": null,
+        "validFrom": null,
+        "validUntil": null
       },
       {
         "name": "bitcoin",
         "quantity": null,
-        "price": 1.12,
-        "oldPrice": 0.89,
-        "picUrl": null
+        "price": 0.89,
+        "oldPrice": 1.12,
+        "category": null,
+        "picUrl": null,
+        "validFrom": null,
+        "validUntil": null
+      },
+      {
+        "name": "error",
+        "quantity": null,
+        "price": 13.99,
+        "oldPrice": 1.19,
+        "category": null,
+        "picUrl": null,
+        "validFrom": null,
+        "validUntil": null
+      },
+      {
+        "name": "null",
+        "quantity": null,
+        "price": null,
+        "oldPrice": null,
+        "category": null,
+        "picUrl": null,
+        "validFrom": null,
+        "validUntil": null
+      },
+      {
+        "name": "null2",
+        "quantity": null,
+        "price": 13.99,
+        "oldPrice": null,
+        "category": null,
+        "picUrl": null,
+        "validFrom": null,
+        "validUntil": null
       }
     ]
   }

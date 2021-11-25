@@ -5,8 +5,8 @@
       {
         "name": "bitcoin",
         "quantity": null,
-        "price": 1.12,
-        "oldPrice": 0.89,
+        "price": 0.89,
+        "oldPrice": 1.12,
         "picUrl": null
       }
     ]

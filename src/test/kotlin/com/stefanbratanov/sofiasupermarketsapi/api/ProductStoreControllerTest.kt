@@ -29,10 +29,18 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @Test
     fun `test getting data for products`() {
-        val offerProduct = Product(name = "bitcoin", price = 1.12, oldPrice = 0.89)
+        val offerProduct = Product(name = "bitcoin", price = 0.89, oldPrice = 1.12)
+
+        val smallerOldPrice = Product(name = "error", price = 13.99, oldPrice = 1.19)
+
+        val nullPrices = Product(name = "null", price = null, oldPrice = null)
+        val oneNullPrice = Product(name = "null2", price = 13.99, oldPrice = null)
 
         every { productStoreRepository.findAll() } returns listOf(
-            ProductStore(supermarket = "foo", products = listOf(getProduct("hello", 1.1), offerProduct)),
+            ProductStore(
+                supermarket = "foo",
+                products = listOf(getProduct("hello", 1.1), offerProduct, smallerOldPrice, nullPrices, oneNullPrice)
+            ),
             ProductStore(supermarket = "bar", products = listOf(getProduct("world", 1.2))),
         )
 

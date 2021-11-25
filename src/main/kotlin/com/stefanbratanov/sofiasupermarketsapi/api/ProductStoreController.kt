@@ -1,5 +1,6 @@
 package com.stefanbratanov.sofiasupermarketsapi.api
 
+import com.stefanbratanov.sofiasupermarketsapi.model.Product
 import com.stefanbratanov.sofiasupermarketsapi.model.ProductStore
 import com.stefanbratanov.sofiasupermarketsapi.repository.ProductStoreRepository
 import io.swagger.v3.oas.annotations.Operation
@@ -31,11 +32,15 @@ class ProductStoreController(
         if (productCriteria.offers) {
             return productStores.map {
                 val offerProducts = it.products?.filter { product ->
-                    nonNull(product.oldPrice) && product.oldPrice?.equals(product.price) == false
+                    checkOfferPrice(product)
                 }
                 it.copy(products = offerProducts)
             }
         }
         return productStores
+    }
+
+    private fun checkOfferPrice(product: Product) : Boolean {
+        return nonNull(product.oldPrice) && nonNull(product.price) && product.oldPrice?.equals(product.price) == false && compareValues(product.price,product.oldPrice) < 0
     }
 }
