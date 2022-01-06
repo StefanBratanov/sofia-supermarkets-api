@@ -42,7 +42,7 @@ class FantasticoBrochureDownloader(
         }
     }
 
-    private val yearPattern = ofPattern("dd.MM.yyyy")
+    private val yearPattern = ofPattern("d.MM.yyyy")
 
     override fun download(): List<Brochure> {
         val htmlDoc = getHtmlDocument(url)
