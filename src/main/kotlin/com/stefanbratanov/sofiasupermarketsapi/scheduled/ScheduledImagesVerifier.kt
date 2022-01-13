@@ -21,24 +21,27 @@ class ScheduledImagesVerifier(
     fun verifyImages() {
         log.info("Scheduled to verify images")
         val productImagesCache = cacheManager.getCache("productImages")
-            ?.nativeCache as MutableMap<String, String>?
+            ?.nativeCache as MutableMap<String?, String?>?
 
         productImagesCache?.filterValues {
             !checkIfUrlHasAcceptableHttpResponse(it)
         }?.forEach {
-            googleImageSearch.search(it.key, false)?.let { imageUrl ->
-                log.info(
-                    "Changing cached image for {} from {} to {}",
-                    it.key, it.value, imageUrl
-                )
-                productImagesCache[it.key] = imageUrl
-                productImageRepository.findById(it.key).ifPresent { dbRow ->
+            it.key?.let { key ->
+                googleImageSearch.search(key, false)?.let { imageUrl ->
                     log.info(
-                        "Changing database image for {} from {} to {}",
-                        it.key, dbRow.url, imageUrl
+                        "Changing cached image for {} from {} to {}",
+                        key, it.value, imageUrl
                     )
-                    dbRow.url = imageUrl
-                    productImageRepository.save(dbRow)
+                    productImagesCache[key] = imageUrl
+                    productImageRepository.findById(key).ifPresent { dbRow ->
+                        log.info(
+                            "Changing database image for {} from {} to {}",
+                            key, dbRow.url, imageUrl
+                        )
+                        dbRow.url = imageUrl
+                        productImageRepository.save(dbRow)
+                    }
+
                 }
             }
 

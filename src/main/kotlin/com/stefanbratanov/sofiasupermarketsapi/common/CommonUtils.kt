@@ -40,10 +40,10 @@ fun separateNameAndQuantity(name: String): Pair<String?, String?> {
     return Pair(modifiedName?.replace("(за|-)\\s*\$".toRegex(IGNORE_CASE), ""), quantity)
 }
 
-fun checkIfUrlHasAcceptableHttpResponse(url: String): Boolean {
-    val connection = URL(url).openConnection() as HttpURLConnection
-    connection.requestMethod = "HEAD"
+fun checkIfUrlHasAcceptableHttpResponse(url: String?): Boolean {
     return try {
+        val connection = URL(url).openConnection() as HttpURLConnection
+        connection.requestMethod = "HEAD"
         connection.instanceFollowRedirects = false
         val responseCode = connection.responseCode
         if (responseCode != HttpURLConnection.HTTP_MOVED_TEMP) {
