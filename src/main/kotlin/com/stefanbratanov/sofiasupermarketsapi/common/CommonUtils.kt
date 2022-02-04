@@ -2,16 +2,38 @@ package com.stefanbratanov.sofiasupermarketsapi.common
 
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import java.net.HttpURLConnection
 import java.net.URL
 import java.nio.charset.StandardCharsets
 import java.nio.file.Paths
 import java.util.Objects.isNull
+import java.util.concurrent.TimeUnit
 import kotlin.text.RegexOption.IGNORE_CASE
+
+val log: Logger = LoggerFactory.getLogger("CommonUtils")
 
 fun normalizePrice(price: String?): Double? {
     return price?.replace("(лв|\\*).*".toRegex(), "")?.replace(',', '.')?.trim()?.toDoubleOrNull()
+}
+
+fun getHtmlDocumentHttpsTrustAll(url: URL): Document {
+    for (i in 1..5) {
+        try {
+            if (url.protocol == "file") {
+                return Jsoup.parse(Paths.get(url.toURI()).toFile(), StandardCharsets.UTF_8.name())
+            }
+            return Jsoup.connect(url.toExternalForm())
+                .sslSocketFactory(getTrustAllCerts()).get()
+        } catch (ex: Exception) {
+            log.info("Will retry getting {} after 5 seconds...", url)
+            TimeUnit.SECONDS.sleep(5)
+        }
+    }
+
+    throw IllegalStateException("Maximum number of retry attempts to get %s has been reached!!".formatted(url))
 }
 
 fun getHtmlDocument(url: URL): Document {

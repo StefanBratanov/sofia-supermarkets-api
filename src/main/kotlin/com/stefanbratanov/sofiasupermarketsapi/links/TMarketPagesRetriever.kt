@@ -2,7 +2,7 @@ package com.stefanbratanov.sofiasupermarketsapi.links
 
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
-import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
+import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocumentHttpsTrustAll
 import org.springframework.stereotype.Component
 import org.springframework.web.util.UriComponentsBuilder
 import java.net.URL
@@ -32,7 +32,7 @@ class TMarketPagesRetriever {
 
     private fun pageNumberIsValid(url: URL): Boolean {
         return try {
-            val document = getHtmlDocument(url)
+            val document = getHtmlDocumentHttpsTrustAll(url)
             val firstProduct = document.selectFirst("._products-list > div[data-box=product]")
             val hasProducts = !document.select("div._notification > p")
                 .text().contains("Няма продукти")

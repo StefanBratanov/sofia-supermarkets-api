@@ -97,7 +97,7 @@ class FantasticoBrochureDownloader(
 
     private fun extractDateRange(element: Element?): Pair<LocalDate?, LocalDate?>? {
         return element?.text()?.trim()?.let {
-            "(\\d+.\\d+(\\.\\d+)?)-(\\d+.\\d+\\.(\\d+)?)\$".toRegex().find(it)
+            "(\\d+.\\d+\\.?(\\.\\d+)?)\\s*-\\s*(\\d+.\\d+\\.\\d+)".toRegex().find(it)
         }?.let {
             try {
                 val start = addYearIfApplicable(it.groupValues[1])
