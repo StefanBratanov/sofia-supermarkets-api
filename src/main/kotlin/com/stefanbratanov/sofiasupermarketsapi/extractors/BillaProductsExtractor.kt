@@ -35,6 +35,10 @@ class BillaProductsExtractor : UrlProductsExtractor {
         "Специфика\\s*:.*$".toRegex(IGNORE_CASE)
     )
 
+    private val regexesToDeleteBilla = listOf(
+        "Само с Billa card".toRegex(IGNORE_CASE)
+    )
+
     override fun extract(url: URL): List<Product> {
 
         log.info("Processing Billa URL: {}", url.toString())
@@ -54,6 +58,7 @@ class BillaProductsExtractor : UrlProductsExtractor {
         }
 
         return htmlDoc.select(".productSection > .product")
+            .asSequence()
             .filter {
                 it.select(".price").first()?.text()?.let { pr ->
                     NumberUtils.isCreatable(pr)
@@ -72,6 +77,10 @@ class BillaProductsExtractor : UrlProductsExtractor {
                 )
             }.filter {
                 Objects.nonNull(it.price)
+            }.filter {
+                regexesToDeleteBilla.none {
+                        rgx -> rgx.containsMatchIn(it.name)
+                }
             }.map {
                 val normalizedName =
                     regexesToIgnoreBilla.fold(it.name) { name, toRemove -> name.replace(toRemove, "") }
@@ -81,6 +90,7 @@ class BillaProductsExtractor : UrlProductsExtractor {
                     quantity = normalizeSpace(nameAndQuantity.second)
                 )
             }
+            .toList()
     }
 
 
