@@ -36,7 +36,7 @@ class BillaProductsExtractor : UrlProductsExtractor {
     )
 
     private val regexesToDeleteBilla = listOf(
-        "Само с Billa card".toRegex(IGNORE_CASE)
+        "с (Billa|билла|била) (card|app)".toRegex(IGNORE_CASE)
     )
 
     override fun extract(url: URL): List<Product> {
