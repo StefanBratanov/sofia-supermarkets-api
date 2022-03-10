@@ -22,6 +22,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
 
     private val myriadProRegex = "myriadpro".toRegex(RegexOption.IGNORE_CASE)
     private val officinaSansRegex = "officinasans".toRegex(RegexOption.IGNORE_CASE)
+    private val bebasNeueRegex = "bebasneuecyrillic".toRegex(RegexOption.IGNORE_CASE)
 
     private val regexesToIgnore = listOf(
         "www\\.fantastico\\.bg".toRegex(RegexOption.IGNORE_CASE),
@@ -44,7 +45,8 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
 
     private val fontsToKeep = listOf(
         myriadProRegex,
-        officinaSansRegex
+        officinaSansRegex,
+        bebasNeueRegex
     )
 
     private val regexesToRemove = listOf(
@@ -59,7 +61,8 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
 
     private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean> = mapOf(
         OLD_PRICE to { twc -> twc.text!!.matches("\\d{1,2}\\.\\d{2}".toRegex()) },
-        NEW_PRICE to { twc -> twc.text!!.matches("\\d{3,4}(\\*?)".toRegex()) },
+        NEW_PRICE_LEGACY to { twc -> twc.text!!.matches("\\d{3,4}(\\*?)".toRegex()) },
+        NEW_PRICE to { twc -> twc.text!!.matches("\\d{1,2}(\\*?)".toRegex()) &&  twc.font?.name?.contains(bebasNeueRegex) == true},
         DISCOUNT to { twc -> twc.text!!.matches("-?\\d{1,2}%".toRegex()) },
         CURRENCY to { twc -> twc.text!!.contains("лв|") },
         QUANTITY to { twc -> twc.text!!.contains("\\d+\\s*(мл|г|л|бр|см)".toRegex(RegexOption.IGNORE_CASE)) },
@@ -84,7 +87,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                 productSectionResolver
             )
 
-        val products = generateSequence(1, { it + 1 }).take(pdfDoc.numberOfPages).flatMap { pageNumber ->
+        val products = generateSequence(1) { it + 1 }.take(pdfDoc.numberOfPages).flatMap { pageNumber ->
             log.info("Processing page {}/{}", pageNumber, pdfDoc.numberOfPages)
             pageProductsExtractor.getProductTextsWithSections(pageNumber).mapNotNull {
                 val name = getName(it)
@@ -92,7 +95,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                     sectionAndText.first == OLD_PRICE
                 }?.second?.text
                 val newPrice = it.firstOrNull { sectionAndText ->
-                    sectionAndText.first == NEW_PRICE
+                    sectionAndText.first == NEW_PRICE_LEGACY || sectionAndText.first == NEW_PRICE
                 }?.second?.text?.replace("^0(?=\\d+)".toRegex(), "")
                 val quantity = it.filter { sectionAndText ->
                     sectionAndText.first == QUANTITY

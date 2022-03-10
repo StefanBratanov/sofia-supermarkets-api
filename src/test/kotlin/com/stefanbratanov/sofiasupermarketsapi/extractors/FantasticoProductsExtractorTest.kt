@@ -5,7 +5,6 @@ import assertk.assertions.isNotEmpty
 import com.stefanbratanov.sofiasupermarketsapi.getPath
 import com.stefanbratanov.sofiasupermarketsapi.readResource
 import com.stefanbratanov.sofiasupermarketsapi.testObjectMapper
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
@@ -30,6 +29,8 @@ internal class FantasticoProductsExtractorTest {
         "fantastico_test_7.pdf,expected_7.json",
         "fantastico_test_8.pdf,expected_8.json",
         "fantastico_test_9.pdf,expected_9.json",
+        "fantastico_test_10.pdf,expected_10.json",
+        "fantastico_test_11.pdf,expected_11.json",
     )
     fun `test extracting products`(inputFile: String, expectedFile: String) {
 
@@ -46,7 +47,7 @@ internal class FantasticoProductsExtractorTest {
     }
 
     @Test
-    @Disabled("used for manual testing")
+    //@Disabled("used for manual testing")
     fun `test fetching from real pdf`() {
 
         val pdf = Paths.get("fantastico_2.pdf")

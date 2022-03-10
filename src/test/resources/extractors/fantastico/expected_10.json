@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Сок RAUCH Happy Day Портокал 100%",
+    "quantity": "2 л Fresh Premium 1 с",
+    "price": 5.19,
+    "oldPrice": 6.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Енергийна напитка HELL различни видове",
+    "quantity": "кен, 250 мл",
+    "price": 0.95,
+    "oldPrice": 1.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Напитка ALVERA Алое Вера original; нар",
+    "quantity": "PET 1,5 л",
+    "price": 3.49,
+    "oldPrice": null,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Минерална вода БАНКЯ; Изворна вода",
+    "quantity": "РОСА 1,5 л",
+    "price": 0.75,
+    "oldPrice": 0.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Газирана напитка COCA-COLA; FANTA; SPRITЕ различни видове",
+    "quantity": "PET 1,5 л",
+    "price": 1.69,
+    "oldPrice": 2.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "STELLA ARTOIS Мултипак",
+    "quantity": "кен, 500 мл 4 бр х",
+    "price": 5.59,
+    "oldPrice": 7.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Уиски JIM BEAM Classic",
+    "quantity": "700 мл",
+    "price": 1.49,
+    "oldPrice": 2.09,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира CORONA Екстра",
+    "quantity": "355 мл",
+    "price": 1.79,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира Шотландско уиски CLAYMORE",
+    "quantity": "700 мл",
+    "price": 9.99,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка ZYTNIA",
+    "quantity": "Extra 1 л",
+    "price": 11.99,
+    "oldPrice": 14.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Растение зюмбюл БУЛЦВЕТ",
+    "quantity": null,
+    "price": 3.99,
+    "oldPrice": null,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Растение примула БУЛЦВЕТ",
+    "quantity": null,
+    "price": 4.99,
+    "oldPrice": null,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Комплект мицеларна вода NIVEA Urban Detox",
+    "quantity": "2 бр х 400 мл",
+    "price": 9.99,
+    "oldPrice": 12.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Маска за лице NIVEA Urban Skin Detox; Cellular Filler; Q10 Plus",
+    "quantity": "1бр",
+    "price": 3.99,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино ZAGREUS Tiara различни видове",
+    "quantity": "750 мл",
+    "price": 6.99,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Букет лалета БУЛЦВЕТ",
+    "quantity": null,
+    "price": 0.99,
+    "oldPrice": null,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ликьор BAILЕYS Original",
+    "quantity": "700 мл",
+    "price": 21.99,
+    "oldPrice": 29.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино KATARZYNA Le Rose",
+    "quantity": "750 мл",
+    "price": 14.99,
+    "oldPrice": 20.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Празнична торта",
+    "quantity": "800 г",
+    "price": 15.99,
+    "oldPrice": 21.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Мляко за тяло; Лосион за тяло NIVEA различни видове",
+    "quantity": "400 мл",
+    "price": 11.49,
+    "oldPrice": 15.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Лосион за тяло Мист за коса GRACE COLE",
+    "quantity": "Душ гел 300 мл; и ръце тяло 250 мл",
+    "price": 14.99,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  }
+]

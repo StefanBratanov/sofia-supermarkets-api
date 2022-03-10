@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Чипс EL SABOR Nacho различни вкусове",
+    "quantity": "225 г",
+    "price": 2.79,
+    "oldPrice": 3.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Печени ядки ROIS",
+    "quantity": "кашу 120 - 140 г; лешници г",
+    "price": 4.29,
+    "oldPrice": 5.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Снакс STAR Mикс различни видове",
+    "quantity": "90 г",
+    "price": 0.99,
+    "oldPrice": 1.45,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира БУРГАСКО",
+    "quantity": "кен, 500 мл",
+    "price": 0.89,
+    "oldPrice": 1.25,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира ЗАГОРКА Специално",
+    "quantity": "PET, 2 л",
+    "price": 1.89,
+    "oldPrice": 2.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Чипс CHIO различни вкусове",
+    "quantity": "255 г",
+    "price": 2.89,
+    "oldPrice": 4.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Чипс CHIO Intense сметана и билки;",
+    "quantity": "морска сол 240 г;",
+    "price": 2.89,
+    "oldPrice": 4.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Сайдер SOMERSBY различни видове",
+    "quantity": "330 мл",
+    "price": 1.25,
+    "oldPrice": 1.75,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Печен шамфъстък; Сурови бадеми",
+    "quantity": "АЯ 500 г",
+    "price": 10.99,
+    "oldPrice": 15.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Крекери ELITE различни видове",
+    "quantity": "105 г",
+    "price": 1.19,
+    "oldPrice": 1.65,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Спиртна напитка ЯМБОЛСКА",
+    "quantity": "700 мл",
+    "price": 7.99,
+    "oldPrice": 11.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино BOLGARE Водка FLIRT",
+    "quantity": "700 мл",
+    "price": 7.99,
+    "oldPrice": 10.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "различни видове",
+    "quantity": "750 мл",
+    "price": 3.99,
+    "oldPrice": 5.89,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски OLD SMUGGLER",
+    "quantity": "700 мл",
+    "price": 13.99,
+    "oldPrice": 18.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка РУСКИЙ СТАНДАРТ класик; голд",
+    "quantity": "700 мл",
+    "price": 15.49,
+    "oldPrice": 21.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ирландско уиски JAMESON",
+    "quantity": "700 мл",
+    "price": 21.99,
+    "oldPrice": 30.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Мezzek KATARZYNA bag-in-box",
+    "quantity": "3 л",
+    "price": 0.99,
+    "oldPrice": 29.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Сайдер SOMERSBY различни видове Вино Каберне Совиньон и Пти Вердо; Мерло и Каберне Фран MIDALIDARE",
+    "quantity": "330 мл 750",
+    "price": 0.12,
+    "oldPrice": 17.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски JOHNNIE WALKER",
+    "quantity": "Red Label 1 л",
+    "price": 23.99,
+    "oldPrice": 35.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Совиньон Блан; Пино Ноар KIWI CUVEE произход Франция",
+    "quantity": "750 мл",
+    "price": 10.99,
+    "oldPrice": 13.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  }
+]
