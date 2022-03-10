@@ -142,7 +142,8 @@ class AlcoholController(
         }.map {
             val productsWithPics = it.products?.map { product ->
                 if (Strings.isBlank(product.picUrl)) {
-                    val productKey = "${product.name} ${product.quantity}"
+                    val quantityOrEmpty = product.quantity.orEmpty()
+                    val productKey = "${product.name} $quantityOrEmpty".trim()
                     val picUrl = imageSearch.search(productKey)
                     if (useCdn && nonNull(picUrl)) {
                         try {
