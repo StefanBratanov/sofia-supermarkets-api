@@ -32,7 +32,8 @@ class BillaProductsExtractor : UrlProductsExtractor {
         "Сега в Billa".toRegex(IGNORE_CASE),
         "до\\s+\\d+\\s+бр.+[\\p{IsCyrillic}]+ент(и)?".toRegex(IGNORE_CASE),
         "\\*+".toRegex(IGNORE_CASE),
-        "Специфика\\s*:.*$".toRegex(IGNORE_CASE)
+        "Специфика\\s*:.*$".toRegex(IGNORE_CASE),
+        "Супер цена".toRegex(IGNORE_CASE)
     )
 
     private val regexesToDeleteBilla = listOf(

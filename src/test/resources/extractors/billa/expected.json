@@ -1888,5 +1888,15 @@
     "picUrl": null,
     "validFrom": "2021-03-18",
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Шуменско кен",
+    "quantity": "0,5 л",
+    "price": 0.89,
+    "oldPrice": 1.25,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
   }
 ]
