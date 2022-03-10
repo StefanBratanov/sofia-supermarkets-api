@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize
 import com.fasterxml.jackson.databind.annotation.JsonSerialize
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer
+import com.stefanbratanov.sofiasupermarketsapi.common.Log
+import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.Parameter
 import io.swagger.v3.oas.annotations.tags.Tag
@@ -16,10 +18,13 @@ import kotlin.math.absoluteValue
 
 @Tag(name = "Product", description = "All operations for supermarket products")
 @RestController
+@Log
 class FlatProductController(
     val alcoholController: AlcoholController,
     val supermarketController: SupermarketController
 ) {
+
+    private val acceptableDiscount = 75
 
     @Operation(summary = "Get all alcohol products from supermarkets in a flat format")
     @GetMapping("/products/flat/alcohol")
@@ -52,7 +57,17 @@ class FlatProductController(
                     validFrom = product.validFrom,
                     validUntil = product.validUntil
                 )
-            }!!.distinct().toList()
+            }.orEmpty()
+                .filter { product ->
+                    val isAcceptableDiscount =
+                        product.oldPrice == null || product.discount?.let { discount -> discount < acceptableDiscount } == true
+                    if (!isAcceptableDiscount) {
+                        log.warn("{} is not an acceptable discount. Will ignore {}", product.discount, product.name)
+                    }
+                    isAcceptableDiscount
+                }
+                .distinct()
+                .toList()
         }
     }
 

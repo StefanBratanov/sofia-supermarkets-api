@@ -1,16 +1,5 @@
 [
   {
-    "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
-    "name": "Mythos Бира",
-    "quantity": "6 x 0,33 l/опаковка",
-    "price": 3.89,
-    "oldPrice": null,
-    "discount": null,
-    "category": "Beer",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog4media/bg/article/6204148/xs/6204148_0.jpg"
-  },
-  {
     "supermarket": "Billa",
     "logo": "http://billa.bg",
     "name": "Бира Загорка 0,5 л",
