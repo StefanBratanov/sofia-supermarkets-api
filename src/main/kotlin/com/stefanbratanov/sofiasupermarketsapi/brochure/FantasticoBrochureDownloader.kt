@@ -8,7 +8,6 @@ import com.stefanbratanov.sofiasupermarketsapi.interfaces.BrochureDownloader.Bro
 import io.github.bonigarcia.wdm.WebDriverManager
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.FilenameUtils
-import org.jsoup.nodes.Element
 import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.phantomjs.PhantomJSDriver
@@ -25,6 +24,7 @@ import java.nio.file.Files
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter.ofPattern
 import java.util.concurrent.TimeUnit
+import kotlin.text.RegexOption.IGNORE_CASE
 
 @Log
 @Component
@@ -44,6 +44,8 @@ class FantasticoBrochureDownloader(
 
     private val yearPattern = ofPattern("d.MM.yyyy")
 
+    private val samoZa = "Само за (?!София)".toRegex(IGNORE_CASE)
+
     override fun download(): List<Brochure> {
         val htmlDoc = getHtmlDocument(url)
 
@@ -52,8 +54,16 @@ class FantasticoBrochureDownloader(
         driver.get(url.toExternalForm())
         val waitDriver = WebDriverWait(driver, 10)
 
-        val brochures = htmlDoc.select("div.brochure-container.first div.hold-options").map {
-            val dateRange = extractDateRange(it.selectFirst("p.paragraph"))
+        val brochures = htmlDoc.select("div.brochure-container.first div.hold-options").filter {
+            val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
+            val isApplicable = nameOfBrochure?.contains(samoZa) == false
+            if (!isApplicable) {
+                log.info("Ignoring {} because it is not applicable", nameOfBrochure)
+            }
+            isApplicable
+        }.map {
+            val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
+            val dateRange = extractDateRange(nameOfBrochure)
             log.info(
                 "Fantastico brochure is vaild " +
                         "from ${dateRange?.first} until ${dateRange?.second}"
@@ -95,8 +105,8 @@ class FantasticoBrochureDownloader(
         return brochures
     }
 
-    private fun extractDateRange(element: Element?): Pair<LocalDate?, LocalDate?>? {
-        return element?.text()?.trim()?.let {
+    private fun extractDateRange(title: String?): Pair<LocalDate?, LocalDate?>? {
+        return title?.trim()?.let {
             "(\\d+.\\d+\\.?(\\.\\d+)?)\\s*-\\s*(\\d+.\\d+\\.\\d+)".toRegex().find(it)
         }?.let {
             try {
