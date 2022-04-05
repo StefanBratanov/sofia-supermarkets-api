@@ -6,7 +6,7 @@
 # sofia-supermarkets-api
 An API to retrieve products information from supermarkets in Sofia.
 
-[![Swagger UI](https://validator.swagger.io/validator?url=http://sofiasupermarketsapi-1888309410.eu-west-2.elb.amazonaws.com/v3/api-docs/)](http://sofiasupermarketsapi-1888309410.eu-west-2.elb.amazonaws.com/swagger-ui.html)
+[![Swagger UI](https://validator.swagger.io/validator?url=https://api.naoferta.net/v3/api-docs/)](https://api.naoferta.net/swagger-ui.html)
 
 If you like my work, you can buy me a coffee.
 
@@ -32,7 +32,7 @@ If you like my work, you can buy me a coffee.
 
 ## Tech Stack
 * Kotlin
-* Gradle  
+* Gradle
 * Spring Boot
 
 ## Running Locally
