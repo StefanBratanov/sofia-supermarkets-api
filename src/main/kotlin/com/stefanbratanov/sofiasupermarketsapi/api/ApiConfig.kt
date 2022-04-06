@@ -4,6 +4,8 @@ import io.swagger.v3.oas.models.OpenAPI
 import io.swagger.v3.oas.models.info.Contact
 import io.swagger.v3.oas.models.info.Info
 import io.swagger.v3.oas.models.info.License
+import io.swagger.v3.oas.models.servers.Server
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.info.BuildProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -20,8 +22,9 @@ class ApiConfig(
     }
 
     @Bean
-    fun openAPI(): OpenAPI {
+    fun openAPI(@Value("\${api.server.url}") apiServerUrl: String): OpenAPI {
         return OpenAPI()
+            .addServersItem(Server().url(apiServerUrl))
             .info(
                 Info().title("Sofia Supermarkets API Documentation")
                     .description("An API to retrieve products information from supermarkets in Sofia, Bulgaria")

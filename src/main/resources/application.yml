@@ -1,3 +1,6 @@
+api:
+  server.url: https://api.naoferta.net
+
 server:
   compression.enabled: true
 
@@ -16,10 +19,10 @@ flows.runner:
   cron: "0 0/30 * * * ?"
 
 alcohol.retriever:
-  cron: "0 0/5 * * * ?"
+  cron: "0 0/10 * * * ?"
 
 image.verifier:
-  cron: "0 0/5 * * * ?"
+  cron: "0 0/10 * * * ?"
 
 kaufland:
   base.url: https://www.kaufland.bg/aktualni-predlozheniya/ot-ponedelnik.html
