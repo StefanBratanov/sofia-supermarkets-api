@@ -26,14 +26,14 @@ class LidlProductsExtractor(
 
         val document = getHtmlDocument(url)
 
-        val category = document.select("meta[name=description]")?.attr("content")
+        val category = document.select("meta[property=og:title]")?.attr("content")
 
-        return document.select("div[data-name]")
+        return document.select("article[data-price]")
             .filter {
-                !it.select(".pricebox__price").isNullOrEmpty()
+                !it.select(".lidl-m-pricebox__price").isNullOrEmpty()
             }
             .map {
-                val dateRange = it.selectFirst(".ribbon__text")?.text()?.trim()?.let { dateSpan ->
+                val dateRange = it.selectFirst(".lidl-m-ribbon-item__text")?.text()?.trim()?.let { dateSpan ->
                     "\\d+.\\d+.".toRegex().findAll(dateSpan).map { date ->
                         val match = date.groupValues[0]
                         try {
@@ -45,14 +45,14 @@ class LidlProductsExtractor(
                     }
                 }
 
-                val name = it.select(".product__title").text()
-                val oldPrice = it.select(".pricebox__recommended-retail-price")?.textNodes()?.takeIf { tn ->
+                val name = it.attr("data-name").toString()
+                val oldPrice = it.select(".lidl-m-pricebox__discount-price")?.textNodes()?.takeIf { tn ->
                     tn.isNotEmpty()
                 }?.first()?.text()
-                val newPrice = it.select(".pricebox__price")?.text()
-                val quantity = it.select(".pricebox__basic-quantity")?.text()
+                val newPrice = it.select(".lidl-m-pricebox__price")?.text()
+                val quantity = it.select(".lidl-m-pricebox__basic-quantity")?.text()
 
-                var picUrl = it.select(".picture").select("source[data-srcset]").eachAttr("data-srcset")
+                var picUrl = it.select("picture").select("source[data-srcset]").eachAttr("data-srcset")
                     ?.firstOrNull { srcSet -> srcSet.contains("/sm/") }?.split(",")
                     ?.map { picUrl -> picUrl.trim() }
                     ?.firstOrNull { picUrl ->
@@ -60,7 +60,7 @@ class LidlProductsExtractor(
                     }
 
                 if (Objects.isNull(picUrl)) {
-                    picUrl = it.select(".picture")?.select("img")?.attr("src")
+                    picUrl = it.select("picture")?.select("img")?.attr("src")
                 }
 
                 Product(
