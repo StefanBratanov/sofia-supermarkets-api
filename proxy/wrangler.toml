@@ -1,0 +1,9 @@
+name = "sofia-supermarkets-api-proxy"
+main = "src/index.js"
+compatibility_date = "2022-07-06"
+kv_namespaces = [
+    { binding = "CACHED_API_RESPONSES", id = "5e00f05675da4c969d6e3043d2e79371", preview_id = "7b7005a52e3d4d3da1113fa9b2730b83" }
+]
+
+[vars]
+API_HOST = "https://api.naoferta.net"
