@@ -41,7 +41,8 @@ class PDFTextStripperWithCoordinates(private val regexesToIgnore: List<Regex>) :
                 }
                 val toAdd = TextWithCoordinates(
                     text = clusterText.trim(),
-                    x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble(),
+                    x = (x!!).roundToLong().toDouble(),
+                    y = (y!!).roundToLong().toDouble(),
                     font = clusterTp.firstOrNull()?.textPosition?.font
                 )
                 strippedTexts.add(toAdd)
@@ -50,7 +51,8 @@ class PDFTextStripperWithCoordinates(private val regexesToIgnore: List<Regex>) :
             val (x, y) = getAverageXAndY(textPositions)
             val toAdd = TextWithCoordinates(
                 text = text?.trim(),
-                x = (x!!).roundToLong().toDouble(), y = (y!!).roundToLong().toDouble(),
+                x = (x!!).roundToLong().toDouble(),
+                y = (y!!).roundToLong().toDouble(),
                 font = textPositions?.first()?.font
             )
             strippedTexts.add(toAdd)
@@ -72,5 +74,4 @@ class PDFTextStripperWithCoordinates(private val regexesToIgnore: List<Regex>) :
         }?.average()
         return Pair(x, y)
     }
-
 }

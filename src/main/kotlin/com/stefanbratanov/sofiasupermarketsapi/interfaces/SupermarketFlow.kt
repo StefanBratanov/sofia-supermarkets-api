@@ -20,5 +20,4 @@ interface SupermarketFlow {
     }
 
     fun getSupermarket(): Supermarket
-
 }

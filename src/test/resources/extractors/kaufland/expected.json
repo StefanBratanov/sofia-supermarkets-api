@@ -145,7 +145,7 @@
     "price": null,
     "oldPrice": null,
     "category": "Алкохолни и безалкохолни напитки",
-    "picUrl": "",
+    "picUrl": null,
     "validFrom": "2021-03-15",
     "validUntil": "2021-03-21"
   }

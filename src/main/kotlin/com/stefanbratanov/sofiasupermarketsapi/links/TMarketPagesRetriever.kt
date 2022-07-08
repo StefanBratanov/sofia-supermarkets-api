@@ -13,7 +13,7 @@ class TMarketPagesRetriever {
 
     fun retrieveAllPages(url: URL): List<URL> {
         log.info("Retrieving all pages with offers for {}", url)
-        return generateSequence(1, { it + 1 }).takeWhile {
+        return generateSequence(1) { it + 1 }.takeWhile {
             val pageUrl = getPageUrl(url, it)
             pageNumberIsValid(pageUrl)
         }.map {

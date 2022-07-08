@@ -27,14 +27,12 @@ internal class TMarketProductsExtractorTest {
         val expectedJson = readResource("/extractors/tmarket/expected.json")
 
         JSONAssert.assertEquals(expectedJson, actualJson, STRICT)
-
     }
 
     @Test
     @Disabled("used for manual testing")
     fun `test fetching from real url`() {
-
-        val tmarketUrl = URL("https://tmarketonline.bg/category/visokoalkoholni-napitki");
+        val tmarketUrl = URL("https://tmarketonline.bg/category/visokoalkoholni-napitki")
         val products = underTest.extract(tmarketUrl)
 
         assertThat(products).isNotEmpty()

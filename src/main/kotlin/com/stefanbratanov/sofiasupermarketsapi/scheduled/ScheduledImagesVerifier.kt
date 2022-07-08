@@ -14,10 +14,11 @@ import org.springframework.stereotype.Component
 class ScheduledImagesVerifier(
     val googleImageSearch: GoogleImageSearch,
     val cacheManager: CacheManager,
-    val productImageRepository: ProductImageRepository,
+    val productImageRepository: ProductImageRepository
 ) {
 
     @Scheduled(cron = "\${image.verifier.cron}")
+    @Suppress("UNCHECKED_CAST")
     fun verifyImages() {
         log.info("Scheduled to verify images")
         val productImagesCache = cacheManager.getCache("productImages")
@@ -30,23 +31,23 @@ class ScheduledImagesVerifier(
                 googleImageSearch.search(key, false)?.let { imageUrl ->
                     log.info(
                         "Changing cached image for {} from {} to {}",
-                        key, it.value, imageUrl
+                        key,
+                        it.value,
+                        imageUrl
                     )
                     productImagesCache[key] = imageUrl
                     productImageRepository.findById(key).ifPresent { dbRow ->
                         log.info(
                             "Changing database image for {} from {} to {}",
-                            key, dbRow.url, imageUrl
+                            key,
+                            dbRow.url,
+                            imageUrl
                         )
                         dbRow.url = imageUrl
                         productImageRepository.save(dbRow)
                     }
-
                 }
             }
-
         }
-
     }
-
 }

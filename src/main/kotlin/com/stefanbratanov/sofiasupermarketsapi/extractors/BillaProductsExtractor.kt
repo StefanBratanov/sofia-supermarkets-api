@@ -41,7 +41,6 @@ class BillaProductsExtractor : UrlProductsExtractor {
     )
 
     override fun extract(url: URL): List<Product> {
-
         log.info("Processing Billa URL: {}", url.toString())
 
         val htmlDoc = getHtmlDocument(url)
@@ -80,7 +79,8 @@ class BillaProductsExtractor : UrlProductsExtractor {
                 Objects.nonNull(it.price)
             }.filter {
                 regexesToDeleteBilla.none {
-                        rgx -> rgx.containsMatchIn(it.name)
+                        rgx ->
+                    rgx.containsMatchIn(it.name)
                 }
             }.map {
                 val normalizedName =
@@ -93,6 +93,4 @@ class BillaProductsExtractor : UrlProductsExtractor {
             }
             .toList()
     }
-
-
 }

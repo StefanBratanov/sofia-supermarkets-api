@@ -12,12 +12,14 @@ internal class CloudinaryCdnUploaderTest {
     @Test
     @Disabled("too lazy to mock this")
     fun `test uploading image to cdn`() {
-
         val cloudinary = Cloudinary(
             ObjectUtils.asMap(
-                "cloud_name", "",
-                "api_key", "",
-                "api_secret", ""
+                "cloud_name",
+                "",
+                "api_key",
+                "",
+                "api_secret",
+                ""
             )
         )
 
@@ -27,6 +29,5 @@ internal class CloudinaryCdnUploaderTest {
             underTest.upload("test", "http://margo2013.com/image/cache/margo/Vino/04181-600x315.jpg")
 
         print(cdnUrl)
-
     }
 }

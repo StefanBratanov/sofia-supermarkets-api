@@ -48,7 +48,6 @@ class GoogleImageSearch(
     }
 
     fun search(query: String, useDatabase: Boolean): String? {
-
         val maybeProductImage = if (useDatabase) {
             productImageRepository.findById(query)
         } else {
@@ -80,8 +79,11 @@ class GoogleImageSearch(
 
         val response = try {
             restTemplate.exchange(
-                "$googleSearchUrl&q={query}", HttpMethod.GET, null,
-                SearchResult::class.java, query
+                "$googleSearchUrl&q={query}",
+                HttpMethod.GET,
+                null,
+                SearchResult::class.java,
+                query
             )
         } catch (httpEx: HttpStatusCodeException) {
             log.error("Error querying google custom search", httpEx)
@@ -94,7 +96,7 @@ class GoogleImageSearch(
         }
 
         val imageLink = response.body!!.items?.sortedByDescending {
-            if (isNull(it.title)) 0 else FuzzySearch.ratio(query.toLowerCase(), it.title!!.toLowerCase())
+            if (isNull(it.title)) 0 else FuzzySearch.ratio(query.lowercase(), it.title!!.lowercase())
         }?.firstOrNull {
             val sizeIsGood = it.image.width >= minWidth && it.image.height >= minHeight
             sizeIsGood && it.fileFormat?.equals("image/", ignoreCase = true) == false
@@ -135,5 +137,4 @@ class GoogleImageSearch(
     data class ResultItem(val title: String?, val link: String?, val fileFormat: String?, val image: Image)
 
     data class Image(val height: Double, val width: Double)
-
 }

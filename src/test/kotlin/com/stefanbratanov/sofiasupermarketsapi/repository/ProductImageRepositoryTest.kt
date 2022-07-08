@@ -19,7 +19,6 @@ class ProductImageRepositoryTest {
 
     @Test
     fun `test saving and retrieving data`() {
-
         val toSave = ProductImage("foo", "http://test.com")
         val toSave2 = ProductImage("bar", "http://test.com")
 
@@ -32,7 +31,6 @@ class ProductImageRepositoryTest {
         assertThat(retrieved.isPresent).isTrue()
         assertThat(retrieved.get()).isEqualTo(toSave)
         assertThat(missing.isPresent).isFalse()
-
     }
 
     @Test

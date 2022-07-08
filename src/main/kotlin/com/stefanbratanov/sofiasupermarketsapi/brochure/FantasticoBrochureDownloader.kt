@@ -21,6 +21,7 @@ import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets.UTF_8
 import java.nio.file.Files
+import java.time.Duration
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter.ofPattern
 import java.util.concurrent.TimeUnit
@@ -52,53 +53,57 @@ class FantasticoBrochureDownloader(
         val driver = PhantomJSDriver(capabilities)
         driver.manage().window().size = Dimension(1920, 1200)
         driver.get(url.toExternalForm())
-        val waitDriver = WebDriverWait(driver, 10)
+        val waitDriver = WebDriverWait(driver, Duration.ofSeconds(10))
 
-        val brochures = htmlDoc.select("div.brochure-container.first div.hold-options").filter {
-            val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
-            val isApplicable = nameOfBrochure?.contains(samoZa) == false
-            if (!isApplicable) {
-                log.info("Ignoring {} because it is not applicable", nameOfBrochure)
-            }
-            isApplicable
-        }.map {
-            val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
-            val dateRange = extractDateRange(nameOfBrochure)
-            log.info(
-                "Fantastico brochure is vaild " +
+        val brochures =
+            htmlDoc.select("div.brochure-container.first div.hold-options").filter {
+                val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
+                val isApplicable = nameOfBrochure?.contains(samoZa) == false
+                if (!isApplicable) {
+                    log.info("Ignoring {} because it is not applicable", nameOfBrochure)
+                }
+                isApplicable
+            }.map {
+                val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
+                val dateRange = extractDateRange(nameOfBrochure)
+                log.info(
+                    "Fantastico brochure is vaild " +
                         "from ${dateRange?.first} until ${dateRange?.second}"
-            )
+                )
 
-            val iFrameUrl = it.attr("data-brochure")
+                val iFrameUrl = it.attr("data-brochure")
 
-            val downloadHref = if (iFrameUrl.isEmpty()) {
-                val dataId = it.attr("data-id")
-                clickBrochure(dataId, waitDriver)
-                val downloadSelector = By.cssSelector("div.brochure-container.first a[title='Сваляне']")
-                driver.findElement(downloadSelector).getAttribute("href")
-            } else {
-                getHtmlDocument(URL(iFrameUrl)).selectFirst("a#brochure__controls__download")
-                    .attr("href")
+                val downloadHref = if (iFrameUrl.isEmpty()) {
+                    val dataId = it.attr("data-id")
+                    clickBrochure(dataId, waitDriver)
+                    val downloadSelector =
+                        By.cssSelector("div.brochure-container.first a[title='Сваляне']")
+                    driver.findElement(downloadSelector).getAttribute("href")
+                } else {
+                    getHtmlDocument(URL(iFrameUrl)).selectFirst("a#brochure__controls__download")
+                        ?.attr("href")!!
+                }
+
+                val filenameMinusPath = FilenameUtils.getName(downloadHref)
+                val encodedHref =
+                    downloadHref.replace(
+                        filenameMinusPath,
+                        URLEncoder.encode(filenameMinusPath, UTF_8.name())
+                    )
+                val downloadUrl = URL(encodedHref)
+
+                val tempDirectory = Files.createTempDirectory("brochures-download")
+                val filename = filenameMinusPath.let { fn ->
+                    val unixTime = System.currentTimeMillis()
+                    if (fn.contains(".")) "${unixTime}_$fn" else "${unixTime}_$fn.pdf"
+                }
+
+                val downloadPath = tempDirectory.resolve(filename)
+                log.info("Downloading {}", downloadUrl)
+                FileUtils.copyURLToFile(downloadUrl, downloadPath.toFile())
+
+                Brochure(downloadPath, dateRange?.first, dateRange?.second)
             }
-
-            val filenameMinusPath = FilenameUtils.getName(downloadHref)
-            val encodedHref =
-                downloadHref.replace(filenameMinusPath, URLEncoder.encode(filenameMinusPath, UTF_8.name()))
-            val downloadUrl = URL(encodedHref)
-
-            val tempDirectory = Files.createTempDirectory("brochures-download")
-            val filename = filenameMinusPath.let { fn ->
-                val unixTime = System.currentTimeMillis()
-                if (fn.contains(".")) "${unixTime}_${fn}" else "${unixTime}_${fn}.pdf"
-            }
-
-            val downloadPath = tempDirectory.resolve(filename)
-            log.info("Downloading {}", downloadUrl)
-            FileUtils.copyURLToFile(downloadUrl, downloadPath.toFile())
-
-            Brochure(downloadPath, dateRange?.first, dateRange?.second)
-
-        }
 
         driver.quit()
 
@@ -123,14 +128,17 @@ class FantasticoBrochureDownloader(
     }
 
     private fun addYearIfApplicable(input: String): String {
-        return input.replace("(\\.|(?<=\\.\\d{2}))\$".toRegex(), ".${LocalDate.now().year}")
+        return input.replace(
+            "(\\.|(?<=\\.\\d{2}))\$".toRegex(),
+            ".${LocalDate.now().year}"
+        )
     }
 
     private fun clickBrochure(dataId: String, waitDriver: WebDriverWait) {
         log.info("Trying to click brochure with data-id: $dataId")
-        val cssSelector = By.cssSelector("div.hold-options[data-id='${dataId}']")
+        val cssSelector = By.cssSelector("div.hold-options[data-id='$dataId']")
         waitDriver.until(elementToBeClickable(cssSelector)).click()
-        //sleep a bit after clicking
+        // sleep a bit after clicking
         TimeUnit.SECONDS.sleep(2)
     }
 }

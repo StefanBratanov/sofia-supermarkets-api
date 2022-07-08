@@ -30,9 +30,11 @@ class ApiConfig(
                     .description("An API to retrieve products information from supermarkets in Sofia, Bulgaria")
                     .version(buildProperties.version)
                     .contact(Contact().email("stefan.bratanov93@gmail.com"))
-                    .license(License().name("Apache 2.0").url("http://www.apache.org/licenses/LICENSE-2.0"))
+                    .license(
+                        License().name("Apache 2.0")
+                            .url("http://www.apache.org/licenses/LICENSE-2.0")
+                    )
                     .termsOfService("urn:tos")
             )
     }
-
 }

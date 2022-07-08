@@ -1,5 +1,6 @@
 package com.stefanbratanov.sofiasupermarketsapi.common
 
+import com.stefanbratanov.sofiasupermarketsapi.common.SocketFactory.Companion.getTrustAllCerts
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.slf4j.Logger
@@ -16,14 +17,18 @@ import kotlin.text.RegexOption.IGNORE_CASE
 val log: Logger = LoggerFactory.getLogger("CommonUtils")
 
 fun normalizePrice(price: String?): Double? {
-    return price?.replace("(лв|\\*).*".toRegex(), "")?.replace(',', '.')?.trim()?.toDoubleOrNull()
+    return price?.replace("(лв|\\*).*".toRegex(), "")?.replace(',', '.')?.trim()
+        ?.toDoubleOrNull()
 }
 
 fun getHtmlDocumentHttpsTrustAll(url: URL): Document {
     for (i in 1..5) {
         try {
             if (url.protocol == "file") {
-                return Jsoup.parse(Paths.get(url.toURI()).toFile(), StandardCharsets.UTF_8.name())
+                return Jsoup.parse(
+                    Paths.get(url.toURI()).toFile(),
+                    StandardCharsets.UTF_8.name()
+                )
             }
             return Jsoup.connect(url.toExternalForm())
                 .sslSocketFactory(getTrustAllCerts()).get()
@@ -33,7 +38,12 @@ fun getHtmlDocumentHttpsTrustAll(url: URL): Document {
         }
     }
 
-    throw IllegalStateException("Maximum number of retry attempts to get %s has been reached!!".formatted(url))
+    throw IllegalStateException(
+        String.format(
+            "Maximum number of retry attempts to get %s has been reached!!",
+            url
+        )
+    )
 }
 
 fun getHtmlDocument(url: URL): Document {
@@ -74,7 +84,7 @@ fun checkIfUrlHasAcceptableHttpResponse(url: String?): Boolean {
         }
         return connection.getHeaderField("Location")?.let {
             !it.endsWith("suspendedpage.cgi") &&
-                    checkIfUrlHasAcceptableHttpResponse(it)
+                checkIfUrlHasAcceptableHttpResponse(it)
         } == true
     } catch (e: Exception) {
         false
@@ -82,7 +92,7 @@ fun checkIfUrlHasAcceptableHttpResponse(url: String?): Boolean {
 }
 
 fun removeDuplicateSubstrings(input: String?): String? {
-    return input?.split("\\s+".toRegex())?.distinct()?.joinToString(" ");
+    return input?.split("\\s+".toRegex())?.distinct()?.joinToString(" ")
 }
 
 fun <T> concatenate(vararg lists: List<T>): List<T> {

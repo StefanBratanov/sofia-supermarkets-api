@@ -29,7 +29,6 @@ class KauflandFlow(
 
         val toSave = ProductStore(supermarket = getSupermarket().title, products = products)
         productStoreRepository.saveIfProductsNotEmpty(toSave)
-
     }
 
     override fun getSupermarket(): Supermarket {

@@ -14,7 +14,6 @@ internal class FantasticoBrochureDownloaderTest {
 
     @Test
     fun `downloads real brochure`() {
-
         underTest = FantasticoBrochureDownloader(URL("https://www.fantastico.bg/special-offers"))
         val result = underTest.download()
 
@@ -25,6 +24,5 @@ internal class FantasticoBrochureDownloaderTest {
             assertThat(it.validUntil).isNotNull()
             Files.delete(it.path)
         }
-
     }
 }

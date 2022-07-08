@@ -31,18 +31,17 @@ internal class FantasticoProductsExtractorTest {
         "fantastico_test_8.pdf,expected_8.json",
         "fantastico_test_9.pdf,expected_9.json",
         "fantastico_test_10.pdf,expected_10.json",
-        "fantastico_test_11.pdf,expected_11.json",
+        "fantastico_test_11.pdf,expected_11.json"
     )
     fun `test extracting products`(inputFile: String, expectedFile: String) {
-
-        val testPdf = getPath("/extractors/fantastico/${inputFile}")
+        val testPdf = getPath("/extractors/fantastico/$inputFile")
 
         val products = underTest.extract(testPdf)
 
         val actualJson = objectMapper.writeValueAsString(products)
 
         println(actualJson)
-        val expectedJson = readResource("/extractors/fantastico/${expectedFile}")
+        val expectedJson = readResource("/extractors/fantastico/$expectedFile")
 
         JSONAssert.assertEquals(expectedJson, actualJson, NON_EXTENSIBLE)
     }
@@ -50,7 +49,6 @@ internal class FantasticoProductsExtractorTest {
     @Test
     @Disabled("used for manual testing")
     fun `test fetching from real pdf`() {
-
         val pdf = Paths.get("fantastico_2.pdf")
         val products = underTest.extract(pdf)
 

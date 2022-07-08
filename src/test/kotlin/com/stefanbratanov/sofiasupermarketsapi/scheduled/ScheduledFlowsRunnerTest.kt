@@ -1,7 +1,12 @@
 package com.stefanbratanov.sofiasupermarketsapi.scheduled
 
 import com.ninjasquad.springmockk.MockkBean
-import com.stefanbratanov.sofiasupermarketsapi.flows.*
+import com.stefanbratanov.sofiasupermarketsapi.flows.BillaFlow
+import com.stefanbratanov.sofiasupermarketsapi.flows.FantasticoFlow
+import com.stefanbratanov.sofiasupermarketsapi.flows.FlowsConfig
+import com.stefanbratanov.sofiasupermarketsapi.flows.KauflandFlow
+import com.stefanbratanov.sofiasupermarketsapi.flows.LidlFlow
+import com.stefanbratanov.sofiasupermarketsapi.flows.TMarketFlow
 import io.mockk.justRun
 import io.mockk.verifyAll
 import org.junit.jupiter.api.Test
@@ -34,7 +39,6 @@ internal class ScheduledFlowsRunnerTest {
 
     @Test
     fun `test running flows`() {
-
         justRun { billaFlow.runSafely() }
         justRun { kauflandFlow.runSafely() }
         justRun { lidlFlow.runSafely() }
@@ -50,7 +54,5 @@ internal class ScheduledFlowsRunnerTest {
             fantasticoFlow.runSafely()
             tMarketFlow.runSafely()
         }
-
     }
-
 }

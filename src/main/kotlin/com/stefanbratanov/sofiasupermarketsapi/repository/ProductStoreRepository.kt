@@ -11,7 +11,6 @@ import java.util.Objects.isNull
 @Repository
 interface ProductStoreRepository : KeyValueRepository<ProductStore, String> {
 
-    @JvmDefault
     fun saveIfProductsNotEmpty(entity: ProductStore): ProductStore {
         val toSave = entity.takeUnless {
             it.products.isNullOrEmpty()
@@ -22,5 +21,4 @@ interface ProductStoreRepository : KeyValueRepository<ProductStore, String> {
         }
         return save(entity)
     }
-
 }

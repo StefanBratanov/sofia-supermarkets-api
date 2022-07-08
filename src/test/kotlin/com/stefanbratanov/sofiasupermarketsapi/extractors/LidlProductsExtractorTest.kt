@@ -27,14 +27,12 @@ internal class LidlProductsExtractorTest {
         val expectedJson = readResource("/extractors/lidl/expected.json")
 
         JSONAssert.assertEquals(expectedJson, actualJson, JSONCompareMode.STRICT)
-
     }
 
     @Test
     @Disabled("used for manual testing")
     fun `test fetching from real url`() {
-
-        val lidlUrl = URL("https://www.lidl.bg/bg/c/niska-cena-visoko-kachestvo/c1847/w1");
+        val lidlUrl = URL("https://www.lidl.bg/bg/c/niska-cena-visoko-kachestvo/c1847/w1")
         val products = underTest.extract(lidlUrl)
 
         assertThat(products).isNotEmpty()

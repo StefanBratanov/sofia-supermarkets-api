@@ -41,7 +41,7 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
                 supermarket = "foo",
                 products = listOf(getProduct("hello", 1.1), offerProduct, smallerOldPrice, nullPrices, oneNullPrice)
             ),
-            ProductStore(supermarket = "bar", products = listOf(getProduct("world", 1.2))),
+            ProductStore(supermarket = "bar", products = listOf(getProduct("world", 1.2)))
         )
 
         val expectedJson = readResource("/api/expected-response.json")
@@ -72,7 +72,5 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(status().isOk)
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(content().json(expectedJsonOffers))
-
     }
-
 }

@@ -15,6 +15,7 @@ class CloudinaryCdnUploader(
 ) : CdnUploader {
 
     @Cacheable("cdnImages")
+    @Suppress("UNCHECKED_CAST")
     override fun upload(key: String, url: String): String {
         val imageKey = if (key.length >= 100) key.substring(0, 100) else key
         val search = cloudinary.search()
@@ -29,8 +30,9 @@ class CloudinaryCdnUploader(
         log.info("Uploading image for {} to CDN", key)
 
         return cloudinary.uploader().upload(
-            url, mapOf(
-                "metadata" to "image_key=${imageKey}",
+            url,
+            mapOf(
+                "metadata" to "image_key=$imageKey",
                 "folder" to "alcohol",
                 "transformation" to EagerTransformation()
                     .responsiveWidth(true)
@@ -38,5 +40,4 @@ class CloudinaryCdnUploader(
             )
         )["secure_url"] as String
     }
-
 }

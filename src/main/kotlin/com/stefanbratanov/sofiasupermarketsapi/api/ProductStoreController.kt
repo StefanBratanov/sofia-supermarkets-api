@@ -18,7 +18,6 @@ class ProductStoreController(
     @Operation(summary = "Get all products from supermarkets")
     @GetMapping("/products")
     fun products(productCriteria: ProductCriteria): List<ProductStore> {
-
         val productStores = if (productCriteria.supermarket.isNullOrEmpty()) {
             productStoreRepository.findAll().toList()
         } else {
@@ -40,7 +39,9 @@ class ProductStoreController(
         return productStores
     }
 
-    private fun checkOfferPrice(product: Product) : Boolean {
-        return nonNull(product.oldPrice) && nonNull(product.price) && product.oldPrice?.equals(product.price) == false && compareValues(product.price,product.oldPrice) < 0
+    private fun checkOfferPrice(product: Product): Boolean {
+        return nonNull(product.oldPrice) && nonNull(product.price) && product.oldPrice?.equals(
+            product.price
+        ) == false && compareValues(product.price, product.oldPrice) < 0
     }
 }

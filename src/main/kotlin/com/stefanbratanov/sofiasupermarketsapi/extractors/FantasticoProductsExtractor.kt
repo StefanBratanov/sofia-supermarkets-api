@@ -8,7 +8,14 @@ import com.stefanbratanov.sofiasupermarketsapi.interfaces.PdfProductsExtractor
 import com.stefanbratanov.sofiasupermarketsapi.model.Product
 import com.stefanbratanov.sofiasupermarketsapi.pdf.PdfPageProductsExtractor
 import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.*
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.CURRENCY
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.DISCOUNT
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NAME
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NEW_PRICE
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NEW_PRICE_LEGACY
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.OLD_PRICE
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.QUANTITY
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.UNKNOWN
 import com.stefanbratanov.sofiasupermarketsapi.pdf.TextWithCoordinates
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.lang3.StringUtils.normalizeSpace
@@ -59,19 +66,29 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         "количествата са лимитирани".toRegex(RegexOption.IGNORE_CASE)
     )
 
-    private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean> = mapOf(
-        OLD_PRICE to { twc -> twc.text!!.matches("\\d{1,2}\\.\\d{2}".toRegex()) },
-        NEW_PRICE_LEGACY to { twc -> twc.text!!.matches("\\d{3,4}(\\*?)".toRegex()) },
-        NEW_PRICE to { twc -> twc.text!!.matches("\\d{1,2}(\\*?)".toRegex()) &&  twc.font?.name?.contains(bebasNeueRegex) == true},
-        DISCOUNT to { twc -> twc.text!!.matches("-?\\d{1,2}%".toRegex()) },
-        CURRENCY to { twc -> twc.text!!.contains("лв|") },
-        QUANTITY to { twc -> twc.text!!.contains("\\d+\\s*(мл|г|л|бр|см)".toRegex(RegexOption.IGNORE_CASE)) },
-        NAME to { twc -> twc.font?.name?.contains(myriadProRegex) == true },
-        UNKNOWN to { true }
-    )
+    private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean> =
+        mapOf(
+            OLD_PRICE to { twc -> twc.text!!.matches("\\d{1,2}\\.\\d{2}".toRegex()) },
+            NEW_PRICE_LEGACY to { twc -> twc.text!!.matches("\\d{3,4}(\\*?)".toRegex()) },
+            NEW_PRICE to { twc ->
+                twc.text!!.matches("\\d{1,2}(\\*?)".toRegex()) && twc.font?.name?.contains(
+                    bebasNeueRegex
+                ) == true
+            },
+            DISCOUNT to { twc -> twc.text!!.matches("-?\\d{1,2}%".toRegex()) },
+            CURRENCY to { twc -> twc.text!!.contains("лв|") },
+            QUANTITY to { twc ->
+                twc.text!!.contains(
+                    "\\d+\\s*(мл|г|л|бр|см)".toRegex(
+                        RegexOption.IGNORE_CASE
+                    )
+                )
+            },
+            NAME to { twc -> twc.font?.name?.contains(myriadProRegex) == true },
+            UNKNOWN to { true }
+        )
 
     override fun extract(pdf: Path): List<Product> {
-
         log.info("Processing Fantastico PDF: {}", pdf.fileName)
 
         val pdfDoc = getPDocument(pdf)
@@ -87,38 +104,44 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                 productSectionResolver
             )
 
-        val products = generateSequence(1) { it + 1 }.take(pdfDoc.numberOfPages).flatMap { pageNumber ->
-            log.info("Processing page {}/{}", pageNumber, pdfDoc.numberOfPages)
-            pageProductsExtractor.getProductTextsWithSections(pageNumber).mapNotNull {
-                val name = getName(it)
-                val oldPrice = it.firstOrNull { sectionAndText ->
-                    sectionAndText.first == OLD_PRICE
-                }?.second?.text
-                val newPrice = it.firstOrNull { sectionAndText ->
-                    sectionAndText.first == NEW_PRICE_LEGACY || sectionAndText.first == NEW_PRICE
-                }?.second?.text?.replace("^0(?=\\d+)".toRegex(), "")
-                val quantity = it.filter { sectionAndText ->
-                    sectionAndText.first == QUANTITY
-                }.joinToString(separator = " ") { sectionAndText ->
-                    sectionAndText.second.text.toString()
-                }.takeUnless { text ->
-                    Strings.isBlank(text)
-                }.let { text ->
-                    regexesToRemove.fold(text) { q, toRemove -> q?.replace(toRemove, "") }
-                }.let { text ->
-                    removeDuplicateSubstrings(text)
-                }
+        val products = generateSequence(1) { it + 1 }.take(pdfDoc.numberOfPages)
+            .flatMap { pageNumber ->
+                log.info("Processing page {}/{}", pageNumber, pdfDoc.numberOfPages)
+                pageProductsExtractor.getProductTextsWithSections(pageNumber).mapNotNull {
+                    val name = getName(it)
+                    val oldPrice = it.firstOrNull { sectionAndText ->
+                        sectionAndText.first == OLD_PRICE
+                    }?.second?.text
+                    val newPrice = it.firstOrNull { sectionAndText ->
+                        sectionAndText.first == NEW_PRICE_LEGACY || sectionAndText.first == NEW_PRICE
+                    }?.second?.text?.replace("^0(?=\\d+)".toRegex(), "")
+                    val quantity = it.filter { sectionAndText ->
+                        sectionAndText.first == QUANTITY
+                    }.joinToString(separator = " ") { sectionAndText ->
+                        sectionAndText.second.text.toString()
+                    }.takeUnless { text ->
+                        Strings.isBlank(text)
+                    }.let { text ->
+                        regexesToRemove.fold(text) { q, toRemove ->
+                            q?.replace(
+                                toRemove,
+                                ""
+                            )
+                        }
+                    }.let { text ->
+                        removeDuplicateSubstrings(text)
+                    }
 
-                Product(
-                    name = normalizeSpace(name),
-                    price = normalizePrice(newPrice)?.div(100),
-                    oldPrice = normalizePrice(oldPrice),
-                    quantity = normalizeSpace(quantity)
-                ).takeIf {
-                    StringUtils.isNotBlank(name)
+                    Product(
+                        name = normalizeSpace(name),
+                        price = normalizePrice(newPrice)?.div(100),
+                        oldPrice = normalizePrice(oldPrice),
+                        quantity = normalizeSpace(quantity)
+                    ).takeIf {
+                        StringUtils.isNotBlank(name)
+                    }
                 }
-            }
-        }.toList()
+            }.toList()
 
         pdfDoc.close()
 
@@ -136,5 +159,4 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
             regexesToRemove.fold(it) { name, toRemove -> name.replace(toRemove, "") }
         }
     }
-
 }

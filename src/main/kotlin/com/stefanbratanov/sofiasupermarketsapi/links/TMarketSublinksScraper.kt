@@ -21,12 +21,14 @@ class TMarketSublinksScraper(
     override fun getSublinks(): List<URL> {
         log.info("Scraping {} for sublinks", baseUrl)
 
-        return getHtmlDocumentHttpsTrustAll(baseUrl).select("li._navigation-dropdown-list-item").first {
-            it.selectFirst("span._figure-stack-label")?.text()?.contains("НАПИТКИ") == true
-        }
+        return getHtmlDocumentHttpsTrustAll(baseUrl).select("li._navigation-dropdown-list-item")
+            .first {
+                it.selectFirst("span._figure-stack-label")?.text()
+                    ?.contains("НАПИТКИ") == true
+            }
             .select("._navigation-dropdown-list-item > a")
             .filter {
-                !it.parent().classNames().contains("item-collapse")
+                it.parent()?.classNames()?.contains("item-collapse") == false
             }
             .map {
                 it.attr("href")

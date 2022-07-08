@@ -17,9 +17,12 @@ class ImageConfig {
     ): Cloudinary {
         return Cloudinary(
             ObjectUtils.asMap(
-                "cloud_name", cloudName,
-                "api_key", apiKey,
-                "api_secret", apiSecret
+                "cloud_name",
+                cloudName,
+                "api_key",
+                apiKey,
+                "api_secret",
+                apiSecret
             )
         )
     }

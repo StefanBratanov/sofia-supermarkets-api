@@ -27,5 +27,4 @@ class Main(
     override fun run(vararg args: String?) {
         scheduledFlowsRunner.runFlows()
     }
-
 }

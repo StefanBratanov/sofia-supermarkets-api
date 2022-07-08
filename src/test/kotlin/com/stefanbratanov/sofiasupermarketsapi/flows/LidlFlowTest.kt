@@ -35,7 +35,6 @@ internal class LidlFlowTest {
 
     @Test
     fun `runs flow for Lidl`() {
-
         val url1 = URL("http://stefan.com")
         val url2 = URL("http://aivaras.com")
         val url3 = URL("http://bogdan.com")
@@ -63,10 +62,12 @@ internal class LidlFlowTest {
 
         val expectedToSave = ProductStore(supermarket = "Lidl", products = listOf(hello, world, foo, bar))
         verify {
-            productStoreRepository.saveIfProductsNotEmpty(match {
-                it.supermarket == expectedToSave.supermarket &&
+            productStoreRepository.saveIfProductsNotEmpty(
+                match {
+                    it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
-            })
+                }
+            )
         }
     }
 

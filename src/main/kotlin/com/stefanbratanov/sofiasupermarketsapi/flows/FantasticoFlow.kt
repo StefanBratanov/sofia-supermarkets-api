@@ -29,7 +29,7 @@ class FantasticoFlow(
             }
         }.flatten()
 
-        //clean-up
+        // clean-up
         brochures.forEach {
             Files.delete(it.path)
         }

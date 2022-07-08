@@ -36,14 +36,13 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @Test
     fun `test getting alcohol products`() {
-
         val inputJson = readResource("/api/alcohol/input.json")
         val expectedJson = readResource("/api/alcohol/expected.json")
 
         every { imageSearch.search(any()) } returns "http://www.foo69.bar"
         every { cdnUploader.upload(any(), "http://www.foo69.bar") } returns "http://www.foo.bar"
         every { cdnUploader.upload("Вино DOMAINE BOYAR Тракийска Низина 750 мл", "http://www.foo69.bar") } throws
-                IllegalStateException("oopsy")
+            IllegalStateException("oopsy")
 
         every { productStoreController.products(any()) } returns objectMapper.readValue(inputJson)
 
@@ -81,6 +80,5 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.content().json(beerAndWhiskey, false))
-
     }
 }

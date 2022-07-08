@@ -4,7 +4,12 @@ import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefanbratanov.sofiasupermarketsapi.common.concatenate
 import com.stefanbratanov.sofiasupermarketsapi.ml.KMeansWithInitialCenters
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.*
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NAME
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NEW_PRICE
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NEW_PRICE_LEGACY
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.OLD_PRICE
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.UNKNOWN
+import com.stefanbratanov.sofiasupermarketsapi.pdf.VerticalProductExtractor.Companion.getVerticalProducts
 import org.apache.commons.math3.ml.clustering.CentroidCluster
 import org.apache.commons.math3.ml.distance.ManhattanDistance
 import org.apache.pdfbox.pdmodel.PDDocument
@@ -29,7 +34,7 @@ class PdfPageProductsExtractor(
         pdfTextStripper.startPage = page
         pdfTextStripper.endPage = page
 
-        //don't need the output of this operation
+        // don't need the output of this operation
         pdfTextStripper.getText(pdfDoc)
 
         val initialCenters = pdfTextStripper.strippedTexts.filter {
@@ -51,7 +56,10 @@ class PdfPageProductsExtractor(
         }.toMutableList()
 
         val kMeansPlus = KMeansWithInitialCenters(
-            initialCenters.size, 100, ManhattanDistance(), initialCenters
+            initialCenters.size,
+            100,
+            ManhattanDistance(),
+            initialCenters
         )
         val clusteredTexts = kMeansPlus.cluster(filteredStrippedTexts).map {
             it.points
@@ -72,11 +80,11 @@ class PdfPageProductsExtractor(
                 val newPrice = newPriceAndMaybeOldPriceToReplace.first
                 val toCopyFrom = newPrices[0].second
                 val newPairNewPrice = Pair(NEW_PRICE, toCopyFrom.copy(text = newPrice))
-                //remove previous NEW_PRICE_NEW and replace with a complete one
+                // remove previous NEW_PRICE_NEW and replace with a complete one
                 val sectionsWithOneNewPrice = withSections.filter { twc ->
                     twc.first != NEW_PRICE
                 }.toMutableList().plus(newPairNewPrice)
-                //replacing OLD_PRICE if required
+                // replacing OLD_PRICE if required
                 val maybeOldPriceToReplace = newPriceAndMaybeOldPriceToReplace.second
                 if (maybeOldPriceToReplace == null) {
                     sectionsWithOneNewPrice
@@ -90,12 +98,12 @@ class PdfPageProductsExtractor(
             }
         }
 
-        //each product should have NAME and NEW_PRICE at least
+        // each product should have NAME and NEW_PRICE at least
         val validClusteredTexts = clusteredTextsWithSections.filter { cluster ->
             hasNameAndNewPrice(cluster)
         }
 
-        //centers which were not matched
+        // centers which were not matched
         val noMatchedCenters = initialCenters.filter {
             val centerText = it.center as TextWithCoordinates
             validClusteredTexts.flatten().none { pair ->
@@ -103,7 +111,7 @@ class PdfPageProductsExtractor(
             }
         }
 
-        //START -> logic for vertical products case
+        // START -> logic for vertical products case
         val horizontalCentersEntry = noMatchedCenters.groupBy {
             it.center.point[1]
         }.entries.maxByOrNull { it.value.size }
@@ -118,7 +126,7 @@ class PdfPageProductsExtractor(
             it !in horizontalCenters
         }.filter {
             horizontalCentersEntry != null && it.y != null &&
-                    it.y.minus(horizontalCentersEntry.key).absoluteValue < 30
+                it.y.minus(horizontalCentersEntry.key).absoluteValue < 30
         }
 
         horizontalCenters.addAll(additionalCenters)
@@ -156,7 +164,10 @@ class PdfPageProductsExtractor(
                     it !in allTextsSoFar
                 }.toMutableList()
                 val kMeansPlus2 = KMeansWithInitialCenters(
-                    stillNotMatchedCenters.size, 100, ManhattanDistance(), stillNotMatchedCenters
+                    stillNotMatchedCenters.size,
+                    100,
+                    ManhattanDistance(),
+                    stillNotMatchedCenters
                 )
                 val moreClusteredTexts = kMeansPlus2.cluster(leftTexts).map {
                     it.points
@@ -173,15 +184,14 @@ class PdfPageProductsExtractor(
 
             return augmentedClusteredTexts
         }
-        //END -> logic for vertical products case
+        // END -> logic for vertical products case
 
         return validClusteredTexts
     }
 
-
     private fun hasNameAndNewPrice(cluster: List<Pair<ProductSection, TextWithCoordinates>>): Boolean {
         val nameCount = cluster.count {
-            //check if name and name is not a digit
+            // check if name and name is not a digit
             it.first == NAME && it.second.text?.matches("-?\\d+(\\.\\d+)?".toRegex()) == false
         }
         val newPricesCount = cluster.count {
@@ -210,14 +220,21 @@ class PdfPageProductsExtractor(
     ): Pair<String, TextWithCoordinates?> {
         val sizeOfNewPrices = newPrices.size
         if (sizeOfNewPrices == 2) {
-            return Pair(newPrices.joinToString(separator = "") {
-                it.second.text.orEmpty().trim()
-            }, null)
+            return Pair(
+                newPrices.joinToString(separator = "") {
+                    it.second.text.orEmpty().trim()
+                },
+                null
+            )
         }
         if (sizeOfNewPrices % 2 == 0) {
-            //first name coordinates
+            // first name coordinates
             val nameCoordinates = getNameCoordinates(clusterWithSections)
-            val closestOldPrice = findClosestSections(OLD_PRICE, nameCoordinates, clusterWithSections).firstOrNull()
+            val closestOldPrice = findClosestSections(
+                OLD_PRICE,
+                nameCoordinates,
+                clusterWithSections
+            ).firstOrNull()
             return Pair(
                 findClosestSections(
                     NEW_PRICE,
@@ -226,7 +243,8 @@ class PdfPageProductsExtractor(
                     2
                 ).joinToString(separator = "") {
                     it.text.orEmpty().trim()
-                }, closestOldPrice
+                },
+                closestOldPrice
             )
         }
         return Pair(combineTwoCloseToEachOtherPrices(newPrices), null)

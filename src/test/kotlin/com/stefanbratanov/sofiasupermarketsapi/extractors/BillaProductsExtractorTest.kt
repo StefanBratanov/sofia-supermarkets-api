@@ -28,17 +28,14 @@ internal class BillaProductsExtractorTest {
         val expectedJson = readResource("/extractors/billa/expected.json")
 
         JSONAssert.assertEquals(expectedJson, actualJson, JSONCompareMode.STRICT)
-
     }
 
     @Test
     @Disabled("used for manual testing")
     fun `test fetching from real url`() {
-
         val billaUrl = URL("https://ssbbilla.site/weekly")
         val products = underTest.extract(billaUrl)
 
         assertThat(products).isNotEmpty()
     }
-
 }

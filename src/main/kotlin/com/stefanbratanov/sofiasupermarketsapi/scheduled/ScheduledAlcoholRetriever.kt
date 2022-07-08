@@ -17,6 +17,6 @@ class ScheduledAlcoholRetriever(
     fun retrieveAlcohol() {
         log.info("Scheduled to retrieve alcohol products")
         val productCriteria = ProductCriteria(null, false)
-        alcoholController.alcohol(productCriteria, null,true)
+        alcoholController.alcohol(productCriteria, null, true)
     }
 }

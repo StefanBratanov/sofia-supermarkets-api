@@ -4,19 +4,24 @@ import com.stefanbratanov.sofiasupermarketsapi.pdf.TextWithCoordinates
 import org.apache.commons.math3.exception.ConvergenceException
 import org.apache.commons.math3.exception.NumberIsTooSmallException
 import org.apache.commons.math3.exception.util.LocalizedFormats
-import org.apache.commons.math3.ml.clustering.*
+import org.apache.commons.math3.ml.clustering.CentroidCluster
+import org.apache.commons.math3.ml.clustering.Cluster
+import org.apache.commons.math3.ml.clustering.Clusterable
+import org.apache.commons.math3.ml.clustering.DoublePoint
+import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer
 import org.apache.commons.math3.ml.distance.DistanceMeasure
 import org.apache.commons.math3.random.JDKRandomGenerator
 import org.apache.commons.math3.stat.descriptive.moment.Variance
 import org.apache.commons.math3.util.MathUtils
-import java.util.*
 
 /** copied from
  * @see org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer
  * only difference is that we can define our own initial centers
  */
 class KMeansWithInitialCenters(
-    k: Int, maxIterations: Int, measure: DistanceMeasure,
+    k: Int,
+    maxIterations: Int,
+    measure: DistanceMeasure,
     private var initialCenters: List<CentroidCluster<TextWithCoordinates>>
 ) : KMeansPlusPlusClusterer<TextWithCoordinates>(k, maxIterations, measure) {
 
@@ -100,7 +105,6 @@ class KMeansWithInitialCenters(
         var selected: Cluster<TextWithCoordinates>? = null
         for (cluster in clusters) {
             if (cluster.points.isNotEmpty()) {
-
                 // compute the distance variance of the current cluster
                 val center = cluster.center
                 val stat = Variance()
@@ -143,7 +147,10 @@ class KMeansWithInitialCenters(
         return minCluster
     }
 
-    private fun centroidOf(points: Collection<TextWithCoordinates>, dimension: Int): Clusterable {
+    private fun centroidOf(
+        points: Collection<TextWithCoordinates>,
+        dimension: Int
+    ): Clusterable {
         val centroid = DoubleArray(dimension)
         for (p in points) {
             val point: DoubleArray = p.point

@@ -20,11 +20,15 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 15
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+
     - name: Install fontconfig
       run: sudo apt-get install fontconfig
+
     - name: Build with Gradle
-      run: ./gradlew build jacocoTestReport
+      run: ./gradlew spotlessCheck build jacocoTestReport
+
     - name: Codecov
       uses: codecov/codecov-action@v1

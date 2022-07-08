@@ -35,7 +35,6 @@ internal class BillaFlowTest {
 
     @Test
     fun `runs flow for billa`() {
-
         val hello = getProduct("hello")
         val world = getProduct("world")
 
@@ -56,10 +55,12 @@ internal class BillaFlowTest {
 
         val expectedToSave = ProductStore(supermarket = "Billa", products = listOf(hello, world))
         verify {
-            productStoreRepository.saveIfProductsNotEmpty(match {
-                it.supermarket == expectedToSave.supermarket &&
+            productStoreRepository.saveIfProductsNotEmpty(
+                match {
+                    it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
-            })
+                }
+            )
         }
     }
 
@@ -67,5 +68,4 @@ internal class BillaFlowTest {
     fun `gets correct supermarket name`() {
         assertThat(underTest.getSupermarket()).isEqualTo(Supermarket.BILLA)
     }
-
 }

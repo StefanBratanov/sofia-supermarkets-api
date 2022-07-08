@@ -36,7 +36,6 @@ internal class GoogleImageSearchTest {
 
     @Test
     fun `calls google search api`() {
-
         val searchResponseJson = readResource("/image/google-search-response.json")
 
         mockServerClient.`when`(
@@ -68,7 +67,7 @@ internal class GoogleImageSearchTest {
             ProductImage("foo", "bar.com")
         )
 
-        //return does not matter since not used
+        // return does not matter since not used
         every { productImageRepository.save(any()) } returns ProductImage("foo", "bar")
 
         val expectedImage = ProductImage(
@@ -88,7 +87,5 @@ internal class GoogleImageSearchTest {
         verify(exactly = 1) {
             productImageRepository.save(expectedImage)
         }
-
     }
-
 }

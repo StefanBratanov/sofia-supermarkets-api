@@ -32,7 +32,6 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @Test
     fun `test getting alcohol products`() {
-
         val alcohols = readResource("/api/alcohol/expected.json")
         val beer = readResource("/api/alcohol/only-beer.json")
         val expectedJson = readResource("/api/flat/expected.json")
@@ -40,7 +39,9 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
 
         val supermarketStaticData = Supermarket.values().map {
             SupermarketController.SupermarketStaticData(
-                it.title, "http://www.test.bg", "http://${it.title.toLowerCase()}.bg"
+                it.title,
+                "http://www.test.bg",
+                "http://${it.title.lowercase()}.bg"
             )
         }
 
@@ -73,6 +74,5 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
-
     }
 }

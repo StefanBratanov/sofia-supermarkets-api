@@ -35,7 +35,6 @@ internal class TMarketFlowTest {
 
     @Test
     fun `runs flow for TMarket`() {
-
         val url1 = URL("http://stefan.com")
         val url2 = URL("http://aivaras.com")
         val url3 = URL("http://bogdan.com")
@@ -63,10 +62,12 @@ internal class TMarketFlowTest {
 
         val expectedToSave = ProductStore(supermarket = "T-Market", products = listOf(hello, world, foo, bar))
         verify {
-            productStoreRepository.saveIfProductsNotEmpty(match {
-                it.supermarket == expectedToSave.supermarket &&
+            productStoreRepository.saveIfProductsNotEmpty(
+                match {
+                    it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
-            })
+                }
+            )
         }
     }
 

@@ -22,53 +22,57 @@ class KauflandProductsExtractor(
 ) : UrlProductsExtractor {
 
     override fun extract(url: URL): List<Product> {
-
         val document = try {
             getHtmlDocument(url)
         } catch (ex: Exception) {
             log.info(
                 "There was an exception fetching products from {}. " +
-                        "Will return 0 products for that url.", url
+                    "Will return 0 products for that url.",
+                url
             )
             return emptyList()
         }
 
         log.info("Processing Kaufland URL: {}", url.toString())
 
-        val category = document.select(".a-icon-tile-headline__container .a-headline")?.text()
+        val category = document.select(".a-icon-tile-headline__container .a-headline")
+            .text()
 
-        val dateRange = document.selectFirst(".a-icon-tile-headline__subheadline h2")?.text()?.let {
-            "\\d+.\\d+.\\d+".toRegex().findAll(it).map { mr ->
-                val match = mr.groupValues[0]
-                try {
-                    LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
-                } catch (ex: Exception) {
-                    log.error("Error while parsing $match", ex)
-                    null
+        val dateRange =
+            document.selectFirst(".a-icon-tile-headline__subheadline h2")?.text()?.let {
+                "\\d+.\\d+.\\d+".toRegex().findAll(it).map { mr ->
+                    val match = mr.groupValues[0]
+                    try {
+                        LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
+                    } catch (ex: Exception) {
+                        log.error("Error while parsing $match", ex)
+                        null
+                    }
                 }
             }
-        }
 
         return document.select(".o-overview-list__list-item").mapNotNull {
             val subtitle = it.select(".m-offer-tile__subtitle").text()
             val title = it.select(".m-offer-tile__title").text()
             val quantity = it.select(".m-offer-tile__quantity").text()
 
-            val oldPrice = it.select(".a-pricetag__old-price")?.text().takeUnless { text ->
-                text?.contains("само".toRegex(IGNORE_CASE)) == true
-            }
-            val price = it.select(".a-pricetag__price")?.text()
+            val oldPrice =
+                it.select(".a-pricetag__old-price").text().takeUnless { text ->
+                    text.contains("само".toRegex(IGNORE_CASE))
+                }
+            val price = it.select(".a-pricetag__price").text()
 
-            val picUrls = it.select(".m-offer-tile__image img")?.attr("data-srcset")
-                ?.split(",")?.map { urls -> urls.trim() }
+            val picUrls = it.select(".m-offer-tile__image img").attr("data-srcset")
+                .split(",").map { urls -> urls.trim() }
 
-            var picUrl = picUrls?.getOrNull(1)
+            var picUrl = picUrls.getOrNull(1)
                 ?.split("\\s+".toRegex())?.first { picUrl ->
                     urlValidator.isValid(picUrl)
                 }
 
             if (Objects.isNull(picUrl)) {
-                picUrl = it.select(".m-offer-tile__image img")?.attr("data-src")
+                picUrl = it.select(".m-offer-tile__image img").attr("data-src")
+                    .ifEmpty { null }
             }
 
             Product(

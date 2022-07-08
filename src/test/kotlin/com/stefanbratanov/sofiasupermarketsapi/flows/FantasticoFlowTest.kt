@@ -40,7 +40,6 @@ internal class FantasticoFlowTest {
 
     @Test
     fun `runs flow for fantastico`(@TempDir tempDir: Path) {
-
         val randomFile = tempDir.resolve(UUID.randomUUID().toString())
         randomFile.toFile().createNewFile()
         val randomFile2 = tempDir.resolve(UUID.randomUUID().toString())
@@ -71,7 +70,8 @@ internal class FantasticoFlowTest {
         )
 
         every { fantasticoBrochureDownloader.download() } returns listOf(
-            brochure, brochure2
+            brochure,
+            brochure2
         )
         every { pdfProductsExtractor.extract(randomFile) } returns listOf(foo)
         every { pdfProductsExtractor.extract(randomFile2) } returns listOf(bar)
@@ -84,10 +84,12 @@ internal class FantasticoFlowTest {
 
         val expectedToSave = ProductStore(supermarket = "Fantastico", products = listOf(foo, bar))
         verify {
-            productStoreRepository.saveIfProductsNotEmpty(match {
-                it.supermarket == expectedToSave.supermarket &&
+            productStoreRepository.saveIfProductsNotEmpty(
+                match {
+                    it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
-            })
+                }
+            )
         }
 
         assertThat(Files.exists(randomFile)).isFalse()

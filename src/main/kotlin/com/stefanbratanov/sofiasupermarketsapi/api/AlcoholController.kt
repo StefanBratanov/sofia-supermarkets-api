@@ -1,6 +1,11 @@
 package com.stefanbratanov.sofiasupermarketsapi.api
 
-import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.*
+import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Beer
+import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Other
+import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Rakia
+import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Vodka
+import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Whiskey
+import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Wine
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.CdnUploader
@@ -33,9 +38,10 @@ class AlcoholController(
     private val vino = "Вино"
     private val cider = "Сайдер"
 
-    private val tMarketCategoryRegexes = listOf(bira, vino, "(?<!без)алкохолни", cider).map {
-        it.toRegex(IGNORE_CASE)
-    }
+    private val tMarketCategoryRegexes =
+        listOf(bira, vino, "(?<!без)алкохолни", cider).map {
+            it.toRegex(IGNORE_CASE)
+        }
 
     private val tMarketCategoryResolver = mapOf(
         Beer to bira,
@@ -48,18 +54,45 @@ class AlcoholController(
     private val alcoholCategoryResolvers = mapOf(
         Beer to listOf("бира", "beer", "^пиво\\s+", "\\s+пиво\\s+", "\\s+пиво\$"),
         Wine to listOf(
-            "вино", "^пино\\s+", "\\s+пино\\s+", "\\s+пино\$", "каберне", "мерло",
-            "шардоне", "^бордо\\s+", "\\s+бордо\\s+", "\\s+бордо\$", "^розе\\s+", "\\s+розе\\s+", "\\s+розе\$",
+            "вино",
+            "^пино\\s+",
+            "\\s+пино\\s+",
+            "\\s+пино\$",
+            "каберне",
+            "мерло",
+            "шардоне",
+            "^бордо\\s+",
+            "\\s+бордо\\s+",
+            "\\s+бордо\$",
+            "^розе\\s+",
+            "\\s+розе\\s+",
+            "\\s+розе\$",
             "винена\\s+основа"
         ),
         Rakia to listOf("(?<!т)ракия", "спиртна"),
         Vodka to listOf("водка", "vodka"),
         Whiskey to listOf("уиски", "whiskey", "jack\\s+daniels", "bushmills", "бърбън"),
         Other to listOf(
-            "(?<!\\sс\\s)узо", "\\s+мента", "мента\\s+",
-            "ликьор", "^ром\\s+", "\\s+ром\\s+", "\\s+ром\$", "текила", "бренди", "коняк", "абсент",
-            "(?<!вър)джин(?!джи)", "Пастис", "анасон.*напитк", "мастика", "сайдер", "somersby",
-            "вермут", "martini", "мартини"
+            "(?<!\\sс\\s)узо",
+            "\\s+мента",
+            "мента\\s+",
+            "ликьор",
+            "^ром\\s+",
+            "\\s+ром\\s+",
+            "\\s+ром\$",
+            "текила",
+            "бренди",
+            "коняк",
+            "абсент",
+            "(?<!вър)джин(?!джи)",
+            "Пастис",
+            "анасон.*напитк",
+            "мастика",
+            "сайдер",
+            "somersby",
+            "вермут",
+            "martini",
+            "мартини"
         )
     ).mapValues {
         it.value.map { regex ->
@@ -68,8 +101,14 @@ class AlcoholController(
     }
 
     private val ignoreContains = listOf(
-        "бонбони", "шоколад", "чаши за\\s+", "халба", "дезинфектант",
-        "чай\\s+", "\\s+чай","абсорбира"
+        "бонбони",
+        "шоколад",
+        "чаши за\\s+",
+        "халба",
+        "дезинфектант",
+        "чай\\s+",
+        "\\s+чай",
+        "абсорбира"
     ).map {
         it.toRegex(IGNORE_CASE)
     }
@@ -81,11 +120,10 @@ class AlcoholController(
         @Parameter(description = "Get only certain category/ies") @RequestParam(required = false)
         category: List<String>?,
         @Parameter(description = "Getting the cdn url of the custom searched images")
-        @RequestParam(required = false, defaultValue = "true") useCdn: Boolean
+        @RequestParam(required = false, defaultValue = "true")
+        useCdn: Boolean
     ): List<ProductStore> {
-
         return productStoreController.products(productCriteria).map {
-
             when (it.supermarket) {
                 TMARKET.title -> {
                     val filteredProducts = it.products?.filter { product ->
@@ -94,9 +132,10 @@ class AlcoholController(
                         }
                     }
                     val categorizedProducts = filteredProducts?.mapNotNull { product ->
-                        val maybeCategory = tMarketCategoryResolver.entries.firstOrNull { entry ->
-                            product.name.contains(entry.value)
-                        }?.key
+                        val maybeCategory =
+                            tMarketCategoryResolver.entries.firstOrNull { entry ->
+                                product.name.contains(entry.value)
+                            }?.key
                         if (isNull(maybeCategory)) {
                             alcoholProductOrNull(product, defaultCategory = Other)
                         } else {
@@ -108,8 +147,8 @@ class AlcoholController(
                 KAUFLAND.title -> {
                     val filteredProducts = it.products?.filter { product ->
                         product.category?.contains(kauflandDrinksCategoryRegex) == true ||
-                                //products in additional pages have blank category
-                                product.category?.isBlank() == true
+                            // products in additional pages have blank category
+                            product.category?.isBlank() == true
                     }?.mapNotNull { product ->
                         alcoholProductOrNull(product)
                     }
@@ -123,7 +162,6 @@ class AlcoholController(
                     it.copy(products = filteredProducts)
                 }
             }
-
         }.map {
             val filteredAndDistinctProducts = it.products?.filter { product ->
                 if (category.isNullOrEmpty()) {
@@ -137,7 +175,13 @@ class AlcoholController(
                 ignoreContains.none { regex ->
                     it.name.contains(regex)
                 }
-            }?.distinctBy { pr -> pr.copy(validFrom = null, validUntil = null, picUrl = null) }
+            }?.distinctBy { pr ->
+                pr.copy(
+                    validFrom = null,
+                    validUntil = null,
+                    picUrl = null
+                )
+            }
             it.copy(products = filteredAndDistinctProducts)
         }.map {
             val productsWithPics = it.products?.map { product ->
@@ -162,15 +206,18 @@ class AlcoholController(
             }
             it.copy(products = productsWithPics)
         }
-
     }
 
-    private fun alcoholProductOrNull(product: Product, defaultCategory: AlcoholCategory? = null): Product? {
-        val maybeCategory = alcoholCategoryResolvers.entries.firstOrNull { categoryResolver ->
-            categoryResolver.value.any { regex ->
-                product.name.contains(regex)
-            }
-        }?.key
+    private fun alcoholProductOrNull(
+        product: Product,
+        defaultCategory: AlcoholCategory? = null
+    ): Product? {
+        val maybeCategory =
+            alcoholCategoryResolvers.entries.firstOrNull { categoryResolver ->
+                categoryResolver.value.any { regex ->
+                    product.name.contains(regex)
+                }
+            }?.key
         return if (isNull(maybeCategory)) {
             defaultCategory?.let {
                 product.copy(category = it.name)

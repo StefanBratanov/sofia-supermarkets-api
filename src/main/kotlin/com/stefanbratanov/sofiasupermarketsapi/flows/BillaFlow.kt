@@ -20,7 +20,6 @@ class BillaFlow(
 ) : SupermarketFlow {
 
     override fun run() {
-
         val products = billaSublinksScraper.getSublinks().flatMap {
             urlProductsExtractor.extract(it)
         }

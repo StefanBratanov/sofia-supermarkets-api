@@ -21,8 +21,10 @@ import java.util.*
 
 @ExtendWith(SpringExtension::class)
 @ContextConfiguration(
-    classes = [ScheduledImagesVerifier::class,
-        ScheduledImagesVerifierTest.TestCacheConfig::class]
+    classes = [
+        ScheduledImagesVerifier::class,
+        ScheduledImagesVerifierTest.TestCacheConfig::class
+    ]
 )
 internal class ScheduledImagesVerifierTest {
 
@@ -47,14 +49,26 @@ internal class ScheduledImagesVerifierTest {
     lateinit var cacheManager: CacheManager
 
     @Test
+    @Suppress("UNCHECKED_CAST")
     fun `test verifying images`() {
-        val cache = cacheManager.getCache("productImages")?.nativeCache as MutableMap<String, String>
+        val cache =
+            cacheManager.getCache("productImages")?.nativeCache as MutableMap<String, String>
         val invalidUrl = "https://p1.akcdn.net/full/652773636.bira-astika-ken-0-5-l.jpg"
         cache["test"] = invalidUrl
         cache["another test"] = "https://bbc.co.uk"
 
-        every { googleImageSearch.search("test", false) } returns "https://www.telegraph.co.uk/"
-        every { productImageRepository.findById("test") } returns Optional.of(ProductImage("test", invalidUrl))
+        every {
+            googleImageSearch.search(
+                "test",
+                false
+            )
+        } returns "https://www.telegraph.co.uk/"
+        every { productImageRepository.findById("test") } returns Optional.of(
+            ProductImage(
+                "test",
+                invalidUrl
+            )
+        )
         every { productImageRepository.save(any()) } returnsArgument 0
         underTest.verifyImages()
         underTest.verifyImages()
@@ -69,9 +83,12 @@ internal class ScheduledImagesVerifierTest {
         }
 
         verify(exactly = 1) {
-            productImageRepository.save(ProductImage("test", "https://www.telegraph.co.uk/"))
+            productImageRepository.save(
+                ProductImage(
+                    "test",
+                    "https://www.telegraph.co.uk/"
+                )
+            )
         }
-
-
     }
 }

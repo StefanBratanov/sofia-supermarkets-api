@@ -16,21 +16,22 @@ class KauflandSublinksScraper(
 ) : SublinksScraper {
 
     override fun getSublinks(): List<URL> {
-
         log.info("Scraping {} for sublinks", baseUrl)
 
         val htmlDoc = getHtmlDocument(baseUrl)
 
-        val otPonedelnik = htmlDoc.select("a[title='Разгледай всички предложения в тази категория']")
-            .map {
-                it.attr("href")
-            }.map {
-                URL(it)
-            }
+        val otPonedelnik =
+            htmlDoc.select("a[title='Разгледай всички предложения в тази категория']")
+                .map {
+                    it.attr("href")
+                }.map {
+                    URL(it)
+                }
 
         val additional = htmlDoc.selectFirst("div[role=menu]")
-            .select("a[role=menuitem]")
-            //skip aktualni
+            ?.select("a[role=menuitem]")
+            .orEmpty()
+            // skip aktualni
             .drop(1)
             .filter {
                 !it.text().contains("групи продукти")
@@ -40,6 +41,5 @@ class KauflandSublinksScraper(
             }
 
         return concatenate(otPonedelnik, additional)
-
     }
 }
