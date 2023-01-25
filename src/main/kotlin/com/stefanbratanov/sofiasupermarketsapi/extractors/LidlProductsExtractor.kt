@@ -60,13 +60,14 @@ class LidlProductsExtractor(
                 var picUrl = it.select("picture").select("source[data-srcset]")
                     .eachAttr("data-srcset")
                     .firstOrNull { srcSet -> srcSet.contains("/sm/") }?.split(",")
-                    ?.map { picUrl -> picUrl.trim() }
-                    ?.firstOrNull { picUrl ->
+                    ?.map { picUrl ->
+                        picUrl.replace(Regex("\\dx\\s*\$"), "").trim()
+                    }?.firstOrNull { picUrl ->
                         urlValidator.isValid(picUrl)
                     }
 
                 if (Objects.isNull(picUrl)) {
-                    picUrl = it.select("picture").select("img").attr("src")
+                    picUrl = it.select("picture").select("source").attr("srcset")
                 }
 
                 Product(

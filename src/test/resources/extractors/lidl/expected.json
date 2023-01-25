@@ -1,292 +1,62 @@
 [
   {
-    "name": "Червени чушки Пикильо",
-    "quantity": "220 g/опаковка",
-    "price": 0.99,
-    "oldPrice": 1.99,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/150776/xs/150776_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
+    "name": "Шварцвалдска шунка",
+    "quantity": "2 х 100 g/опаковка",
+    "price": 3.79,
+    "oldPrice": 7.58,
+    "category": "Двойно повече на същата цена",
+    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/10707/third/sm/10707_55.jpg",
+    "validFrom": "2023-01-23",
+    "validUntil": "2023-01-29"
   },
   {
-    "name": "Свинско контрафиле",
-    "quantity": "за kg",
-    "price": 7.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7204677/xs/7204677_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
+    "name": "Пастет с риба тон",
+    "quantity": "2 х 95 g/опаковка",
+    "price": 2.49,
+    "oldPrice": 4.98,
+    "category": "Двойно повече на същата цена",
+    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7303088/third/sm/7303088_88.jpg",
+    "validFrom": "2023-01-23",
+    "validUntil": "2023-01-29"
   },
   {
-    "name": "Хляб с картофено пюре и лук",
-    "quantity": "400 g/бр.",
-    "price": 1.29,
-    "oldPrice": 1.99,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7202061/xs/7202061_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
+    "name": "Бърбън кола",
+    "quantity": "2 х 0,33 l/опаковка",
+    "price": 2.69,
+    "oldPrice": 5.38,
+    "category": "Двойно повече на същата цена",
+    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/161674/third/sm/161674_88.jpg",
+    "validFrom": "2023-01-23",
+    "validUntil": "2023-01-29"
   },
   {
-    "name": "Амбарица по манастирски XXL",
-    "quantity": "500 g/опаковка",
-    "price": 9.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7201924/xs/7201924_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
+    "name": "Шунка Pikok Pure",
+    "quantity": "2 х 180 g/опаковка",
+    "price": 5.99,
+    "oldPrice": 11.98,
+    "category": "Двойно повече на същата цена",
+    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7202363/third/sm/7202363_0.jpg",
+    "validFrom": "2023-01-23",
+    "validUntil": "2023-01-29"
   },
   {
-    "name": "Tchibo Family Мляно кафе",
-    "quantity": "250 g/опаковка",
-    "price": 3.19,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/6069/xs/6069_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Лаврак",
-    "quantity": "за kg",
-    "price": 14.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7200510/xs/7200510_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Мини кебапчета от ирландско говеждо",
-    "quantity": "560 g/опаковка",
-    "price": 6.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7205855/xs/7205855_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Месо за готвене от младо телешко",
-    "quantity": "400 g/опаковка",
-    "price": 6.29,
-    "oldPrice": 8.99,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7200762/xs/7200762_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Пица със салам",
-    "quantity": "125 g/бр.",
-    "price": 1.11,
-    "oldPrice": 1.69,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/95533/xs/95533_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Закуска с шоколад",
-    "quantity": "70 g/бр.",
-    "price": 0.55,
-    "oldPrice": 0.79,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/57732/xs/57732_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Сладкиш с лешници",
-    "quantity": "220 g/опаковка",
-    "price": 3.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/152810/xs/152810_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Пресни яйца",
-    "quantity": "6 бр./опаковка",
-    "price": 1.89,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/6805352/xs/6805352_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Саяна Краве сирене БДС",
-    "quantity": "400 g/опаковка",
-    "price": 4.89,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7204357/xs/7204357_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Саяна Кашкавал от краве мляко",
-    "quantity": "1,2 kg/опаковка",
-    "price": 15.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7202822/xs/7202822_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Кефир",
-    "quantity": "1 kg/опаковка",
+    "name": "Тесто за пица",
+    "quantity": "2 х 400 g/опаковка",
     "price": 1.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/5500484/xs/5500484_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
+    "oldPrice": 3.98,
+    "category": "Двойно повече на същата цена",
+    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/999230403/third/sm/999230403_0.jpg",
+    "validFrom": "2023-01-23",
+    "validUntil": "2023-01-29"
   },
   {
-    "name": "Салата с булгур",
-    "quantity": "200 или 250 g/опаковка",
+    "name": "Grivas Чипс от царевица",
+    "quantity": "2 х 100 g/опаковка",
     "price": 2.19,
-    "oldPrice": 2.99,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/119137/xs/119137_02.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Йогурт по гръцка рецепта",
-    "quantity": "1 kg/опаковка",
-    "price": 3.65,
-    "oldPrice": 4.99,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/36282/xs/36282_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Taste it! Шоколадово суфле",
-    "quantity": "180 g/опаковка",
-    "price": 3.69,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7206112/xs/7206112_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Микс от шоколадчета",
-    "quantity": "200 g/опаковка",
-    "price": 4.29,
-    "oldPrice": 5.99,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/30977/xs/30977_02.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "AGI Наполеон",
-    "quantity": "90 g/опаковка",
-    "price": 0.95,
-    "oldPrice": 1.19,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/999221905/xs/999221905_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Мини сладоледи на клечка",
-    "quantity": "12 х 50 g/опаковка",
-    "price": 5.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/27551/xs/27551_02.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Боровинки",
-    "quantity": "500 g/опаковка",
-    "price": 5.49,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/29029/xs/29029_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Малиджано",
-    "quantity": "550 g/опаковка",
-    "price": 4.29,
-    "oldPrice": 6.49,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/6903074/xs/6903074_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Кaro Русенско варено",
-    "quantity": "300 g/опаковка",
-    "price": 1.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7202732/xs/7202732_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Риба тон",
-    "quantity": "4 х 185 g/опаковка",
-    "price": 9.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/138479/xs/138479_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Мedix universal Универсален почистващ препарат",
-    "quantity": "1,5 l/опаковка",
-    "price": 3.19,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/999221906/xs/999221906_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "William Peel Скоч уиски",
-    "quantity": "0,7 l/опаковка",
-    "price": 11.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/999221907/xs/999221907_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Хемлок Каберене Совиньон",
-    "quantity": "0,75 l/опаковка",
-    "price": 5.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/999221908/xs/999221908_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
-  },
-  {
-    "name": "Сладкиш с лешници",
-    "quantity": "220 g/опаковка",
-    "price": 3.99,
-    "oldPrice": null,
-    "category": "ниска ЦЕНА, високо КАЧЕСТВО. Промоции на фокус",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/152810/xs/152810_0.jpg",
-    "validFrom": "2022-05-09",
-    "validUntil": "2022-05-15"
+    "oldPrice": 4.38,
+    "category": "Двойно повече на същата цена",
+    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/999230401/third/sm/999230401_0.jpg",
+    "validFrom": "2023-01-23",
+    "validUntil": "2023-01-29"
   }
 ]

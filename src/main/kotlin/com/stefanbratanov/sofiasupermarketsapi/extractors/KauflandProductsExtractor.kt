@@ -57,7 +57,7 @@ class KauflandProductsExtractor(
             val quantity = it.select(".m-offer-tile__quantity").text()
 
             val oldPrice =
-                it.select(".a-pricetag__old-price").text().takeUnless { text ->
+                it.select(".a-pricetag__old-price span").text().takeUnless { text ->
                     text.contains("само".toRegex(IGNORE_CASE))
                 }
             val price = it.select(".a-pricetag__price").text()
