@@ -12,42 +12,42 @@ import org.springframework.stereotype.Component
 @Log
 @Component
 class ScheduledImagesVerifier(
-    val googleImageSearch: GoogleImageSearch,
-    val cacheManager: CacheManager,
-    val productImageRepository: ProductImageRepository,
+  val googleImageSearch: GoogleImageSearch,
+  val cacheManager: CacheManager,
+  val productImageRepository: ProductImageRepository,
 ) {
 
-    @Scheduled(cron = "\${image.verifier.cron}")
-    @Suppress("UNCHECKED_CAST")
-    fun verifyImages() {
-        log.info("Scheduled to verify images")
-        val productImagesCache = cacheManager.getCache("productImages")
-            ?.nativeCache as MutableMap<String?, Any?>?
+  @Scheduled(cron = "\${image.verifier.cron}")
+  @Suppress("UNCHECKED_CAST")
+  fun verifyImages() {
+    log.info("Scheduled to verify images")
+    val productImagesCache =
+      cacheManager.getCache("productImages")?.nativeCache as MutableMap<String?, Any?>?
 
-        productImagesCache?.filterValues {
-            it is String? && !checkIfUrlHasAcceptableHttpResponse(it)
-        }?.forEach {
-            it.key?.let { key ->
-                googleImageSearch.search(key, false)?.let { imageUrl ->
-                    log.info(
-                        "Changing cached image for {} from {} to {}",
-                        key,
-                        it.value,
-                        imageUrl,
-                    )
-                    productImagesCache[key] = imageUrl
-                    productImageRepository.findById(key).ifPresent { dbRow ->
-                        log.info(
-                            "Changing database image for {} from {} to {}",
-                            key,
-                            dbRow.url,
-                            imageUrl,
-                        )
-                        dbRow.url = imageUrl
-                        productImageRepository.save(dbRow)
-                    }
-                }
+    productImagesCache
+      ?.filterValues { it is String? && !checkIfUrlHasAcceptableHttpResponse(it) }
+      ?.forEach {
+        it.key?.let { key ->
+          googleImageSearch.search(key, false)?.let { imageUrl ->
+            log.info(
+              "Changing cached image for {} from {} to {}",
+              key,
+              it.value,
+              imageUrl,
+            )
+            productImagesCache[key] = imageUrl
+            productImageRepository.findById(key).ifPresent { dbRow ->
+              log.info(
+                "Changing database image for {} from {} to {}",
+                key,
+                dbRow.url,
+                imageUrl,
+              )
+              dbRow.url = imageUrl
+              productImageRepository.save(dbRow)
             }
+          }
         }
-    }
+      }
+  }
 }

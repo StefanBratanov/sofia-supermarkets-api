@@ -14,39 +14,38 @@ import org.springframework.test.context.ActiveProfiles
 @ActiveProfiles("test")
 class ProductImageRepositoryTest {
 
-    @Autowired
-    lateinit var underTest: ProductImageRepository
+  @Autowired lateinit var underTest: ProductImageRepository
 
-    @Test
-    fun `test saving and retrieving data`() {
-        val toSave = ProductImage("foo", "http://test.com")
-        val toSave2 = ProductImage("bar", "http://test.com")
+  @Test
+  fun `test saving and retrieving data`() {
+    val toSave = ProductImage("foo", "http://test.com")
+    val toSave2 = ProductImage("bar", "http://test.com")
 
-        underTest.save(toSave)
-        underTest.save(toSave2)
+    underTest.save(toSave)
+    underTest.save(toSave2)
 
-        val retrieved = underTest.findById("foo")
-        val missing = underTest.findById("avi")
+    val retrieved = underTest.findById("foo")
+    val missing = underTest.findById("avi")
 
-        assertThat(retrieved.isPresent).isTrue()
-        assertThat(retrieved.get()).isEqualTo(toSave)
-        assertThat(missing.isPresent).isFalse()
+    assertThat(retrieved.isPresent).isTrue()
+    assertThat(retrieved.get()).isEqualTo(toSave)
+    assertThat(missing.isPresent).isFalse()
+  }
+
+  @Test
+  fun `updating product`() {
+    val toSave = ProductImage("foo", "http://test.com")
+
+    underTest.save(toSave)
+
+    underTest.findById("foo").ifPresent {
+      it.url = "http://test69.com"
+      underTest.save(it)
     }
 
-    @Test
-    fun `updating product`() {
-        val toSave = ProductImage("foo", "http://test.com")
+    val updated = underTest.findById("foo")
 
-        underTest.save(toSave)
-
-        underTest.findById("foo").ifPresent {
-            it.url = "http://test69.com"
-            underTest.save(it)
-        }
-
-        val updated = underTest.findById("foo")
-
-        assertThat(updated.isPresent).isTrue()
-        assertThat(updated.get()).isEqualTo(toSave.copy(url = "http://test69.com"))
-    }
+    assertThat(updated.isPresent).isTrue()
+    assertThat(updated.get()).isEqualTo(toSave.copy(url = "http://test69.com"))
+  }
 }

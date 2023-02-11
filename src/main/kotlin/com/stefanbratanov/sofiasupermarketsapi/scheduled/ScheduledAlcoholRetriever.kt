@@ -10,13 +10,13 @@ import org.springframework.stereotype.Controller
 @Log
 @Controller
 class ScheduledAlcoholRetriever(
-    val alcoholController: AlcoholController,
+  val alcoholController: AlcoholController,
 ) {
 
-    @Scheduled(cron = "\${alcohol.retriever.cron}")
-    fun retrieveAlcohol() {
-        log.info("Scheduled to retrieve alcohol products")
-        val productCriteria = ProductCriteria(null, false)
-        alcoholController.alcohol(productCriteria, null, true)
-    }
+  @Scheduled(cron = "\${alcohol.retriever.cron}")
+  fun retrieveAlcohol() {
+    log.info("Scheduled to retrieve alcohol products")
+    val productCriteria = ProductCriteria(null, false)
+    alcoholController.alcohol(productCriteria, null, true)
+  }
 }

@@ -5,8 +5,6 @@ import org.springdoc.core.annotations.ParameterObject
 
 @ParameterObject
 data class ProductCriteria(
-    @Parameter(description = "Supermarkets to get the products from")
-    var supermarket: List<String>?,
-    @Parameter(description = "Show only offers")
-    var offers: Boolean = false,
+  @Parameter(description = "Supermarkets to get the products from") var supermarket: List<String>?,
+  @Parameter(description = "Show only offers") var offers: Boolean = false,
 )

@@ -92,7 +92,7 @@ tasks.withType<Test> {
 
 configure<SpotlessExtension> {
     kotlin {
-        ktlint("0.48.2")
+        ktfmt("0.43").googleStyle()
     }
 }
 

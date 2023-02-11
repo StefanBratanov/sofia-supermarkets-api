@@ -5,5 +5,5 @@ import java.net.URL
 
 interface UrlProductsExtractor {
 
-    fun extract(url: URL): List<Product>
+  fun extract(url: URL): List<Product>
 }

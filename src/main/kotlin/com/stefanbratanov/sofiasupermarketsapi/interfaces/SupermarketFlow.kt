@@ -7,17 +7,17 @@ import com.stefanbratanov.sofiasupermarketsapi.model.Supermarket
 @Log
 interface SupermarketFlow {
 
-    fun run()
+  fun run()
 
-    fun runSafely() {
-        try {
-            log.info("Starting flow for ${getSupermarket().title}")
-            run()
-            log.info("Finished flow for ${getSupermarket().title}")
-        } catch (ex: Exception) {
-            log.error("Error happened while running flow for ${getSupermarket().title}", ex)
-        }
+  fun runSafely() {
+    try {
+      log.info("Starting flow for ${getSupermarket().title}")
+      run()
+      log.info("Finished flow for ${getSupermarket().title}")
+    } catch (ex: Exception) {
+      log.error("Error happened while running flow for ${getSupermarket().title}", ex)
     }
+  }
 
-    fun getSupermarket(): Supermarket
+  fun getSupermarket(): Supermarket
 }

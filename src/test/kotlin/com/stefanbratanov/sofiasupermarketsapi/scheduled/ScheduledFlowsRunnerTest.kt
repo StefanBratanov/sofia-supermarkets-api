@@ -19,40 +19,34 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 @ContextConfiguration(classes = [FlowsConfig::class, ScheduledFlowsRunner::class])
 internal class ScheduledFlowsRunnerTest {
 
-    @MockkBean
-    lateinit var billaFlow: BillaFlow
+  @MockkBean lateinit var billaFlow: BillaFlow
 
-    @MockkBean
-    lateinit var kauflandFlow: KauflandFlow
+  @MockkBean lateinit var kauflandFlow: KauflandFlow
 
-    @MockkBean
-    lateinit var lidlFlow: LidlFlow
+  @MockkBean lateinit var lidlFlow: LidlFlow
 
-    @MockkBean
-    lateinit var fantasticoFlow: FantasticoFlow
+  @MockkBean lateinit var fantasticoFlow: FantasticoFlow
 
-    @MockkBean
-    lateinit var tMarketFlow: TMarketFlow
+  @MockkBean lateinit var tMarketFlow: TMarketFlow
 
-    @Autowired
-    lateinit var underTest: ScheduledFlowsRunner
+  @Autowired lateinit var underTest: ScheduledFlowsRunner
 
-    @Test
-    fun `test running flows`() {
-        justRun { billaFlow.runSafely() }
-        justRun { kauflandFlow.runSafely() }
-        justRun { lidlFlow.runSafely() }
-        justRun { fantasticoFlow.runSafely() }
-        justRun { tMarketFlow.runSafely() }
+  @Test
+  fun `test running flows`() {
+    justRun { billaFlow.runSafely() }
+    justRun { kauflandFlow.runSafely() }
+    justRun { lidlFlow.runSafely() }
+    justRun { fantasticoFlow.runSafely() }
+    justRun { tMarketFlow.runSafely() }
 
-        underTest.runFlows()
+    underTest.runFlows()
 
-        verifyAll {
-            billaFlow.runSafely()
-            kauflandFlow.runSafely()
-            lidlFlow.runSafely()
-            fantasticoFlow.runSafely()
-            tMarketFlow.runSafely()
-        }
+    verifyAll {
+      billaFlow.runSafely()
+      kauflandFlow.runSafely()
+      lidlFlow.runSafely()
+      fantasticoFlow.runSafely()
+      tMarketFlow.runSafely()
     }
+  }
 }

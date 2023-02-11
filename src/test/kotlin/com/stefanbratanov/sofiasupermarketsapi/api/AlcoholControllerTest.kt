@@ -18,67 +18,70 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 @WebMvcTest(
-    controllers = [AlcoholController::class],
-    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
+  controllers = [AlcoholController::class],
+  excludeFilters =
+    [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
 )
 internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 
-    private val objectMapper = jacksonObjectMapper()
+  private val objectMapper = jacksonObjectMapper()
 
-    @MockkBean
-    private lateinit var productStoreController: ProductStoreController
+  @MockkBean private lateinit var productStoreController: ProductStoreController
 
-    @MockkBean
-    private lateinit var imageSearch: ImageSearch
+  @MockkBean private lateinit var imageSearch: ImageSearch
 
-    @MockkBean
-    private lateinit var cdnUploader: CdnUploader
+  @MockkBean private lateinit var cdnUploader: CdnUploader
 
-    @Test
-    fun `test getting alcohol products`() {
-        val inputJson = readResource("/api/alcohol/input.json")
-        val expectedJson = readResource("/api/alcohol/expected.json")
+  @Test
+  fun `test getting alcohol products`() {
+    val inputJson = readResource("/api/alcohol/input.json")
+    val expectedJson = readResource("/api/alcohol/expected.json")
 
-        every { imageSearch.search(any()) } returns "http://www.foo69.bar"
-        every { cdnUploader.upload(any(), "http://www.foo69.bar") } returns "http://www.foo.bar"
-        every { cdnUploader.upload("Вино DOMAINE BOYAR Тракийска Низина 750 мл", "http://www.foo69.bar") } throws
-            IllegalStateException("oopsy")
+    every { imageSearch.search(any()) } returns "http://www.foo69.bar"
+    every { cdnUploader.upload(any(), "http://www.foo69.bar") } returns "http://www.foo.bar"
+    every {
+      cdnUploader.upload("Вино DOMAINE BOYAR Тракийска Низина 750 мл", "http://www.foo69.bar")
+    } throws IllegalStateException("oopsy")
 
-        every { productStoreController.products(any()) } returns objectMapper.readValue(inputJson)
+    every { productStoreController.products(any()) } returns objectMapper.readValue(inputJson)
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/products/alcohol").accept(MediaType.APPLICATION_JSON))
-            .andExpect(MockMvcResultMatchers.status().isOk)
-            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
+    mockMvc
+      .perform(MockMvcRequestBuilders.get("/products/alcohol").accept(MediaType.APPLICATION_JSON))
+      .andExpect(MockMvcResultMatchers.status().isOk)
+      .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+      .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
 
-        val expectedCdnJson = readResource("/api/alcohol/expected-cdn.json")
+    val expectedCdnJson = readResource("/api/alcohol/expected-cdn.json")
 
-        mockMvc.perform(
-            MockMvcRequestBuilders.get("/products/alcohol?useCdn=false")
-                .accept(MediaType.APPLICATION_JSON),
-        )
-            .andExpect(MockMvcResultMatchers.status().isOk)
-            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(MockMvcResultMatchers.content().json(expectedCdnJson, false))
+    mockMvc
+      .perform(
+        MockMvcRequestBuilders.get("/products/alcohol?useCdn=false")
+          .accept(MediaType.APPLICATION_JSON),
+      )
+      .andExpect(MockMvcResultMatchers.status().isOk)
+      .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+      .andExpect(MockMvcResultMatchers.content().json(expectedCdnJson, false))
 
-        val onlyBeer = readResource("/api/alcohol/only-beer.json")
+    val onlyBeer = readResource("/api/alcohol/only-beer.json")
 
-        mockMvc.perform(
-            MockMvcRequestBuilders.get("/products/alcohol?category=beer")
-                .accept(MediaType.APPLICATION_JSON),
-        )
-            .andExpect(MockMvcResultMatchers.status().isOk)
-            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(MockMvcResultMatchers.content().json(onlyBeer, false))
+    mockMvc
+      .perform(
+        MockMvcRequestBuilders.get("/products/alcohol?category=beer")
+          .accept(MediaType.APPLICATION_JSON),
+      )
+      .andExpect(MockMvcResultMatchers.status().isOk)
+      .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+      .andExpect(MockMvcResultMatchers.content().json(onlyBeer, false))
 
-        val beerAndWhiskey = readResource("/api/alcohol/beer-and-whiskey.json")
+    val beerAndWhiskey = readResource("/api/alcohol/beer-and-whiskey.json")
 
-        mockMvc.perform(
-            MockMvcRequestBuilders.get("/products/alcohol?category=beer,whiskey")
-                .accept(MediaType.APPLICATION_JSON),
-        )
-            .andExpect(MockMvcResultMatchers.status().isOk)
-            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(MockMvcResultMatchers.content().json(beerAndWhiskey, false))
-    }
+    mockMvc
+      .perform(
+        MockMvcRequestBuilders.get("/products/alcohol?category=beer,whiskey")
+          .accept(MediaType.APPLICATION_JSON),
+      )
+      .andExpect(MockMvcResultMatchers.status().isOk)
+      .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+      .andExpect(MockMvcResultMatchers.content().json(beerAndWhiskey, false))
+  }
 }

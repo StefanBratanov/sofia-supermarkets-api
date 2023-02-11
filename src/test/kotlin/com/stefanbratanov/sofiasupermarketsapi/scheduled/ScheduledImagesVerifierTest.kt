@@ -8,6 +8,7 @@ import com.stefanbratanov.sofiasupermarketsapi.model.ProductImage
 import com.stefanbratanov.sofiasupermarketsapi.repository.ProductImageRepository
 import io.mockk.every
 import io.mockk.verify
+import java.util.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -17,78 +18,73 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.junit.jupiter.SpringExtension
-import java.util.*
 
 @ExtendWith(SpringExtension::class)
 @ContextConfiguration(
-    classes = [
-        ScheduledImagesVerifier::class,
-        ScheduledImagesVerifierTest.TestCacheConfig::class,
+  classes =
+    [
+      ScheduledImagesVerifier::class,
+      ScheduledImagesVerifierTest.TestCacheConfig::class,
     ],
 )
 internal class ScheduledImagesVerifierTest {
 
-    @Configuration
-    class TestCacheConfig {
-        @Bean
-        fun cacheManager(): CacheManager {
-            return ConcurrentMapCacheManager("productImages")
-        }
+  @Configuration
+  class TestCacheConfig {
+    @Bean
+    fun cacheManager(): CacheManager {
+      return ConcurrentMapCacheManager("productImages")
     }
+  }
 
-    @MockkBean
-    lateinit var googleImageSearch: GoogleImageSearch
+  @MockkBean lateinit var googleImageSearch: GoogleImageSearch
 
-    @MockkBean
-    lateinit var productImageRepository: ProductImageRepository
+  @MockkBean lateinit var productImageRepository: ProductImageRepository
 
-    @Autowired
-    lateinit var underTest: ScheduledImagesVerifier
+  @Autowired lateinit var underTest: ScheduledImagesVerifier
 
-    @Autowired
-    lateinit var cacheManager: CacheManager
+  @Autowired lateinit var cacheManager: CacheManager
 
-    @Test
-    @Suppress("UNCHECKED_CAST")
-    fun `test verifying images`() {
-        val cache =
-            cacheManager.getCache("productImages")?.nativeCache as MutableMap<String, String>
-        val invalidUrl = "https://p1.akcdn.net/full/652773636.bira-astika-ken-0-5-l.jpg"
-        cache["test"] = invalidUrl
-        cache["another test"] = "https://bbc.co.uk"
+  @Test
+  @Suppress("UNCHECKED_CAST")
+  fun `test verifying images`() {
+    val cache = cacheManager.getCache("productImages")?.nativeCache as MutableMap<String, String>
+    val invalidUrl = "https://p1.akcdn.net/full/652773636.bira-astika-ken-0-5-l.jpg"
+    cache["test"] = invalidUrl
+    cache["another test"] = "https://bbc.co.uk"
 
-        every {
-            googleImageSearch.search(
-                "test",
-                false,
-            )
-        } returns "https://www.telegraph.co.uk/"
-        every { productImageRepository.findById("test") } returns Optional.of(
-            ProductImage(
-                "test",
-                invalidUrl,
-            ),
-        )
-        every { productImageRepository.save(any()) } returnsArgument 0
-        underTest.verifyImages()
-        underTest.verifyImages()
+    every {
+      googleImageSearch.search(
+        "test",
+        false,
+      )
+    } returns "https://www.telegraph.co.uk/"
+    every { productImageRepository.findById("test") } returns
+      Optional.of(
+        ProductImage(
+          "test",
+          invalidUrl,
+        ),
+      )
+    every { productImageRepository.save(any()) } returnsArgument 0
+    underTest.verifyImages()
+    underTest.verifyImages()
 
-        assertThat(cache).containsOnly(
-            Pair("test", "https://www.telegraph.co.uk/"),
-            Pair("another test", "https://bbc.co.uk"),
-        )
+    assertThat(cache)
+      .containsOnly(
+        Pair("test", "https://www.telegraph.co.uk/"),
+        Pair("another test", "https://bbc.co.uk"),
+      )
 
-        verify(exactly = 1) {
-            googleImageSearch.search("test", false)
-        }
+    verify(exactly = 1) { googleImageSearch.search("test", false) }
 
-        verify(exactly = 1) {
-            productImageRepository.save(
-                ProductImage(
-                    "test",
-                    "https://www.telegraph.co.uk/",
-                ),
-            )
-        }
+    verify(exactly = 1) {
+      productImageRepository.save(
+        ProductImage(
+          "test",
+          "https://www.telegraph.co.uk/",
+        ),
+      )
     }
+  }
 }

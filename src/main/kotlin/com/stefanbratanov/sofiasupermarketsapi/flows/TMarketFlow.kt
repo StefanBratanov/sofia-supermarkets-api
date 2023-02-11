@@ -14,24 +14,22 @@ import org.springframework.stereotype.Component
 @Log
 @Component
 class TMarketFlow(
-    val tmarketSublinksScraper: TMarketSublinksScraper,
-    @Qualifier("TMarket") val urlProductsExtractor: UrlProductsExtractor,
-    val productStoreRepository: ProductStoreRepository,
+  val tmarketSublinksScraper: TMarketSublinksScraper,
+  @Qualifier("TMarket") val urlProductsExtractor: UrlProductsExtractor,
+  val productStoreRepository: ProductStoreRepository,
 ) : SupermarketFlow {
 
-    override fun run() {
-        val products = tmarketSublinksScraper.getSublinks().flatMap {
-            urlProductsExtractor.extract(it)
-        }
+  override fun run() {
+    val products = tmarketSublinksScraper.getSublinks().flatMap { urlProductsExtractor.extract(it) }
 
-        log.info("Retrieved ${products.size} products")
-        log.info("Saving ${getSupermarket().title} products")
+    log.info("Retrieved ${products.size} products")
+    log.info("Saving ${getSupermarket().title} products")
 
-        val toSave = ProductStore(supermarket = getSupermarket().title, products = products)
-        productStoreRepository.saveIfProductsNotEmpty(toSave)
-    }
+    val toSave = ProductStore(supermarket = getSupermarket().title, products = products)
+    productStoreRepository.saveIfProductsNotEmpty(toSave)
+  }
 
-    override fun getSupermarket(): Supermarket {
-        return Supermarket.TMARKET
-    }
+  override fun getSupermarket(): Supermarket {
+    return Supermarket.TMARKET
+  }
 }

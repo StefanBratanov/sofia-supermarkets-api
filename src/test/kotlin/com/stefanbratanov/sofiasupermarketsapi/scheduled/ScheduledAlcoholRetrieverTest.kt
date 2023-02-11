@@ -13,21 +13,17 @@ import org.junit.jupiter.api.extension.ExtendWith
 @ExtendWith(MockKExtension::class)
 internal class ScheduledAlcoholRetrieverTest {
 
-    @MockK
-    lateinit var alcoholController: AlcoholController
+  @MockK lateinit var alcoholController: AlcoholController
 
-    @InjectMockKs
-    lateinit var scheduledAlcoholRetriever: ScheduledAlcoholRetriever
+  @InjectMockKs lateinit var scheduledAlcoholRetriever: ScheduledAlcoholRetriever
 
-    @Test
-    fun `retrieves alcohol`() {
-        every { alcoholController.alcohol(any(), any(), any()) } returns emptyList()
+  @Test
+  fun `retrieves alcohol`() {
+    every { alcoholController.alcohol(any(), any(), any()) } returns emptyList()
 
-        scheduledAlcoholRetriever.retrieveAlcohol()
+    scheduledAlcoholRetriever.retrieveAlcohol()
 
-        val productCriteria = ProductCriteria(null, false)
-        verify {
-            alcoholController.alcohol(productCriteria, null, true)
-        }
-    }
+    val productCriteria = ProductCriteria(null, false)
+    verify { alcoholController.alcohol(productCriteria, null, true) }
+  }
 }

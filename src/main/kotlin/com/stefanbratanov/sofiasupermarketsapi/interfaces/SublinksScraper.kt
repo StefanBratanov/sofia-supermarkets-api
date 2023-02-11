@@ -4,5 +4,5 @@ import java.net.URL
 
 interface SublinksScraper {
 
-    fun getSublinks(): List<URL>
+  fun getSublinks(): List<URL>
 }

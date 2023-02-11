@@ -15,42 +15,41 @@ import org.springframework.data.map.repository.config.EnableMapRepositories
 @SpringBootTest(classes = [ProductStoreRepository::class])
 class ProductStoreRepositoryTest {
 
-    @Autowired
-    lateinit var underTest: ProductStoreRepository
+  @Autowired lateinit var underTest: ProductStoreRepository
 
-    @Test
-    fun `test saving and retrieving data`() {
-        val foo = getProduct("foo")
-        val bar = getProduct("bar")
+  @Test
+  fun `test saving and retrieving data`() {
+    val foo = getProduct("foo")
+    val bar = getProduct("bar")
 
-        val myStoreEntry = ProductStore(supermarket = "myStore", products = listOf(foo, bar))
+    val myStoreEntry = ProductStore(supermarket = "myStore", products = listOf(foo, bar))
 
-        underTest.saveIfProductsNotEmpty(myStoreEntry)
+    underTest.saveIfProductsNotEmpty(myStoreEntry)
 
-        var savedStoreEntry = underTest.findById("myStore")
-        assertThat(savedStoreEntry.isPresent).isTrue()
-        assertThat(savedStoreEntry.get()).isEqualTo(myStoreEntry)
+    var savedStoreEntry = underTest.findById("myStore")
+    assertThat(savedStoreEntry.isPresent).isTrue()
+    assertThat(savedStoreEntry.get()).isEqualTo(myStoreEntry)
 
-        assertThat(underTest.findAll().toList()).hasSize(1)
+    assertThat(underTest.findAll().toList()).hasSize(1)
 
-        val emptyStoreEntry = ProductStore(supermarket = "myStore", products = emptyList())
+    val emptyStoreEntry = ProductStore(supermarket = "myStore", products = emptyList())
 
-        underTest.saveIfProductsNotEmpty(emptyStoreEntry)
+    underTest.saveIfProductsNotEmpty(emptyStoreEntry)
 
-        savedStoreEntry = underTest.findById("myStore")
-        assertThat(savedStoreEntry.isPresent).isTrue()
-        assertThat(savedStoreEntry.get()).isEqualTo(myStoreEntry)
+    savedStoreEntry = underTest.findById("myStore")
+    assertThat(savedStoreEntry.isPresent).isTrue()
+    assertThat(savedStoreEntry.get()).isEqualTo(myStoreEntry)
 
-        assertThat(underTest.findAll().toList()).hasSize(1)
+    assertThat(underTest.findAll().toList()).hasSize(1)
 
-        val anotherStoryEntry = ProductStore(supermarket = "anotherStore", products = listOf(foo, bar))
+    val anotherStoryEntry = ProductStore(supermarket = "anotherStore", products = listOf(foo, bar))
 
-        underTest.saveIfProductsNotEmpty(anotherStoryEntry)
+    underTest.saveIfProductsNotEmpty(anotherStoryEntry)
 
-        val savedStoreEntry1 = underTest.findById("anotherStore")
-        assertThat(savedStoreEntry1.isPresent).isTrue()
-        assertThat(savedStoreEntry1.get()).isEqualTo(anotherStoryEntry)
+    val savedStoreEntry1 = underTest.findById("anotherStore")
+    assertThat(savedStoreEntry1.isPresent).isTrue()
+    assertThat(savedStoreEntry1.get()).isEqualTo(anotherStoryEntry)
 
-        assertThat(underTest.findAll().toList()).hasSize(2)
-    }
+    assertThat(underTest.findAll().toList()).hasSize(2)
+  }
 }

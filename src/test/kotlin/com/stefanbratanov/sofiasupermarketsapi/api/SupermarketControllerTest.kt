@@ -12,18 +12,20 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 @WebMvcTest(
-    controllers = [SupermarketController::class],
-    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
+  controllers = [SupermarketController::class],
+  excludeFilters =
+    [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
 )
 internal class SupermarketControllerTest(@Autowired val mockMvc: MockMvc) {
 
-    @Test
-    fun `test getting data for supermarkets`() {
-        val expectedJson = readResource("/api/expected-supermarkets.json")
+  @Test
+  fun `test getting data for supermarkets`() {
+    val expectedJson = readResource("/api/expected-supermarkets.json")
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/supermarkets").accept(MediaType.APPLICATION_JSON))
-            .andExpect(MockMvcResultMatchers.status().isOk)
-            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
-    }
+    mockMvc
+      .perform(MockMvcRequestBuilders.get("/supermarkets").accept(MediaType.APPLICATION_JSON))
+      .andExpect(MockMvcResultMatchers.status().isOk)
+      .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+      .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
+  }
 }

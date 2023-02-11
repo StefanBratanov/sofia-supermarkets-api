@@ -16,15 +16,15 @@ import org.springframework.stereotype.Component
 class SofiaSupermarketsApiApplication
 
 fun main(args: Array<String>) {
-    runApplication<SofiaSupermarketsApiApplication>(*args)
+  runApplication<SofiaSupermarketsApiApplication>(*args)
 }
 
 @Component
 class Main(
-    val scheduledFlowsRunner: ScheduledFlowsRunner,
+  val scheduledFlowsRunner: ScheduledFlowsRunner,
 ) : CommandLineRunner {
 
-    override fun run(vararg args: String?) {
-        scheduledFlowsRunner.runFlows()
-    }
+  override fun run(vararg args: String?) {
+    scheduledFlowsRunner.runFlows()
+  }
 }

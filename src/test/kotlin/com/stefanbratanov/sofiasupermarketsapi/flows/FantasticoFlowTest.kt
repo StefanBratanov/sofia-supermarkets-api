@@ -15,89 +15,91 @@ import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
 import io.mockk.verify
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
-import org.junit.jupiter.api.io.TempDir
 import java.nio.file.Files
 import java.nio.file.Path
 import java.time.LocalDate
 import java.util.*
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+import org.junit.jupiter.api.io.TempDir
 
 @ExtendWith(MockKExtension::class)
 internal class FantasticoFlowTest {
 
-    @MockK
-    lateinit var fantasticoBrochureDownloader: FantasticoBrochureDownloader
+  @MockK lateinit var fantasticoBrochureDownloader: FantasticoBrochureDownloader
 
-    @MockK
-    lateinit var pdfProductsExtractor: PdfProductsExtractor
+  @MockK lateinit var pdfProductsExtractor: PdfProductsExtractor
 
-    @MockK
-    lateinit var productStoreRepository: ProductStoreRepository
+  @MockK lateinit var productStoreRepository: ProductStoreRepository
 
-    @InjectMockKs
-    lateinit var underTest: FantasticoFlow
+  @InjectMockKs lateinit var underTest: FantasticoFlow
 
-    @Test
-    fun `runs flow for fantastico`(@TempDir tempDir: Path) {
-        val randomFile = tempDir.resolve(UUID.randomUUID().toString())
-        randomFile.toFile().createNewFile()
-        val randomFile2 = tempDir.resolve(UUID.randomUUID().toString())
-        randomFile2.toFile().createNewFile()
+  @Test
+  fun `runs flow for fantastico`(@TempDir tempDir: Path) {
+    val randomFile = tempDir.resolve(UUID.randomUUID().toString())
+    randomFile.toFile().createNewFile()
+    val randomFile2 = tempDir.resolve(UUID.randomUUID().toString())
+    randomFile2.toFile().createNewFile()
 
-        val validFrom = LocalDate.of(2021, 5, 1)
-        val validUntil = LocalDate.of(2021, 5, 6)
+    val validFrom = LocalDate.of(2021, 5, 1)
+    val validUntil = LocalDate.of(2021, 5, 6)
 
-        val foo = getProduct("foo").copy(
-            validFrom = validFrom,
-            validUntil = validUntil,
+    val foo =
+      getProduct("foo")
+        .copy(
+          validFrom = validFrom,
+          validUntil = validUntil,
         )
-        val bar = getProduct("bar").copy(
-            validFrom = validFrom.plusDays(1),
-            validUntil = validUntil.plusDays(1),
-        )
-
-        val brochure = BrochureDownloader.Brochure(
-            randomFile,
-            validFrom,
-            validUntil,
+    val bar =
+      getProduct("bar")
+        .copy(
+          validFrom = validFrom.plusDays(1),
+          validUntil = validUntil.plusDays(1),
         )
 
-        val brochure2 = BrochureDownloader.Brochure(
-            randomFile2,
-            validFrom.plusDays(1),
-            validUntil.plusDays(1),
-        )
+    val brochure =
+      BrochureDownloader.Brochure(
+        randomFile,
+        validFrom,
+        validUntil,
+      )
 
-        every { fantasticoBrochureDownloader.download() } returns listOf(
-            brochure,
-            brochure2,
-        )
-        every { pdfProductsExtractor.extract(randomFile) } returns listOf(foo)
-        every { pdfProductsExtractor.extract(randomFile2) } returns listOf(bar)
+    val brochure2 =
+      BrochureDownloader.Brochure(
+        randomFile2,
+        validFrom.plusDays(1),
+        validUntil.plusDays(1),
+      )
 
-        every { productStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
+    every { fantasticoBrochureDownloader.download() } returns
+      listOf(
+        brochure,
+        brochure2,
+      )
+    every { pdfProductsExtractor.extract(randomFile) } returns listOf(foo)
+    every { pdfProductsExtractor.extract(randomFile2) } returns listOf(bar)
 
-        underTest.runSafely()
+    every { productStoreRepository.saveIfProductsNotEmpty(any()) } returnsArgument 0
 
-        verify { pdfProductsExtractor.extract(any()) }
+    underTest.runSafely()
 
-        val expectedToSave = ProductStore(supermarket = "Fantastico", products = listOf(foo, bar))
-        verify {
-            productStoreRepository.saveIfProductsNotEmpty(
-                match {
-                    it.supermarket == expectedToSave.supermarket &&
-                        it.products == expectedToSave.products
-                },
-            )
-        }
+    verify { pdfProductsExtractor.extract(any()) }
 
-        assertThat(Files.exists(randomFile)).isFalse()
-        assertThat(Files.exists(randomFile2)).isFalse()
+    val expectedToSave = ProductStore(supermarket = "Fantastico", products = listOf(foo, bar))
+    verify {
+      productStoreRepository.saveIfProductsNotEmpty(
+        match {
+          it.supermarket == expectedToSave.supermarket && it.products == expectedToSave.products
+        },
+      )
     }
 
-    @Test
-    fun `gets correct supermarket name`() {
-        assertThat(underTest.getSupermarket()).isEqualTo(Supermarket.FANTASTICO)
-    }
+    assertThat(Files.exists(randomFile)).isFalse()
+    assertThat(Files.exists(randomFile2)).isFalse()
+  }
+
+  @Test
+  fun `gets correct supermarket name`() {
+    assertThat(underTest.getSupermarket()).isEqualTo(Supermarket.FANTASTICO)
+  }
 }

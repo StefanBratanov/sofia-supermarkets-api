@@ -13,28 +13,24 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder
 @RestController
 class SupermarketController {
 
-    private val objectMapper = jacksonObjectMapper()
+  private val objectMapper = jacksonObjectMapper()
 
-    @Operation(summary = "Get information for supermarkets", deprecated = true)
-    @GetMapping("/supermarkets")
-    fun supermarkets(): List<SupermarketStaticData> {
-        val baseUrl =
-            ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString()
-        val resource = ClassPathResource("/static-data/supermarkets.json")
+  @Operation(summary = "Get information for supermarkets", deprecated = true)
+  @GetMapping("/supermarkets")
+  fun supermarkets(): List<SupermarketStaticData> {
+    val baseUrl = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString()
+    val resource = ClassPathResource("/static-data/supermarkets.json")
 
-        return resource.inputStream.use { inputStream ->
-            val staticData: List<SupermarketStaticData> =
-                objectMapper.readValue(inputStream)
+    return resource.inputStream.use { inputStream ->
+      val staticData: List<SupermarketStaticData> = objectMapper.readValue(inputStream)
 
-            staticData.map {
-                it.copy(logo = baseUrl + it.logo)
-            }
-        }
+      staticData.map { it.copy(logo = baseUrl + it.logo) }
     }
+  }
 
-    data class SupermarketStaticData(
-        val name: String,
-        val website: String,
-        val logo: String,
-    )
+  data class SupermarketStaticData(
+    val name: String,
+    val website: String,
+    val logo: String,
+  )
 }
