@@ -17,7 +17,7 @@ import java.nio.file.Files
 class FantasticoFlow(
     val fantasticoBrochureDownloader: FantasticoBrochureDownloader,
     @Qualifier("Fantastico") val pdfProductsExtractor: PdfProductsExtractor,
-    val productStoreRepository: ProductStoreRepository
+    val productStoreRepository: ProductStoreRepository,
 ) : SupermarketFlow {
 
     override fun run() {

@@ -37,7 +37,7 @@ class TMarketProductsExtractor : UrlProductsExtractor {
                         try {
                             LocalDateTime.parse(
                                 date,
-                                DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")
+                                DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"),
                             ).toLocalDate()
                         } catch (ex: Exception) {
                             log.error("Error while parsing $date", ex)
@@ -71,7 +71,7 @@ class TMarketProductsExtractor : UrlProductsExtractor {
                         oldPrice = normalizePrice(oldPrice?.text()),
                         category = category,
                         picUrl = picUrl,
-                        validUntil = endDate
+                        validUntil = endDate,
                     )
                 }
             }

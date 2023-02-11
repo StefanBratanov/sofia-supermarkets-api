@@ -11,7 +11,7 @@ import java.net.URL
 @Log
 @Component
 class LidlSublinksScraper(
-    @Value("\${lidl.base.url}") private val baseUrl: URL
+    @Value("\${lidl.base.url}") private val baseUrl: URL,
 ) : SublinksScraper {
 
     override fun getSublinks(): List<URL> {

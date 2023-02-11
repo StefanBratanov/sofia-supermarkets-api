@@ -16,7 +16,7 @@ class FlowsConfig(
     val kauflandFlow: KauflandFlow,
     val lidlFlow: LidlFlow,
     val fantasticoFlow: FantasticoFlow,
-    val tMarketFlow: TMarketFlow
+    val tMarketFlow: TMarketFlow,
 ) {
 
     @Bean
@@ -26,7 +26,7 @@ class FlowsConfig(
             KAUFLAND to kauflandFlow,
             LIDL to lidlFlow,
             FANTASTICO to fantasticoFlow,
-            TMARKET to tMarketFlow
+            TMARKET to tMarketFlow,
         )
     }
 }

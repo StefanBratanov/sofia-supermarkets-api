@@ -13,7 +13,7 @@ class ImageConfig {
     fun cloudinary(
         @Value("\${cloudinary.cloud.name}") cloudName: String,
         @Value("\${cloudinary.api.key}") apiKey: String,
-        @Value("\${cloudinary.api.secret}") apiSecret: String
+        @Value("\${cloudinary.api.secret}") apiSecret: String,
     ): Cloudinary {
         return Cloudinary(
             ObjectUtils.asMap(
@@ -22,8 +22,8 @@ class ImageConfig {
                 "api_key",
                 apiKey,
                 "api_secret",
-                apiSecret
-            )
+                apiSecret,
+            ),
         )
     }
 }

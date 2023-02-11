@@ -43,8 +43,8 @@ internal class LidlProductsExtractorTest {
             CustomComparator(
                 JSONCompareMode.STRICT,
                 Customization("[*].validFrom", customization),
-                Customization("[*].validUntil", customization)
-            )
+                Customization("[*].validUntil", customization),
+            ),
         )
     }
 

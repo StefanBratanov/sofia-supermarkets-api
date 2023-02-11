@@ -10,7 +10,7 @@ class VerticalProductExtractor {
     companion object {
         fun getVerticalProducts(
             centers: List<TextWithCoordinates>,
-            texts: List<Pair<ProductSection, TextWithCoordinates>>
+            texts: List<Pair<ProductSection, TextWithCoordinates>>,
         ): List<List<Pair<ProductSection, TextWithCoordinates>>> {
             return centers.map { center ->
                 val titleTexts = texts.filter {

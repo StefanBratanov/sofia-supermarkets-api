@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component
 class KauflandFlow(
     val kauflandSublinksScraper: KauflandSublinksScraper,
     @Qualifier("Kaufland") val urlProductsExtractor: UrlProductsExtractor,
-    val productStoreRepository: ProductStoreRepository
+    val productStoreRepository: ProductStoreRepository,
 ) : SupermarketFlow {
 
     override fun run() {

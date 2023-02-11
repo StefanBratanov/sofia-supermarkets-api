@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component
 class TMarketFlow(
     val tmarketSublinksScraper: TMarketSublinksScraper,
     @Qualifier("TMarket") val urlProductsExtractor: UrlProductsExtractor,
-    val productStoreRepository: ProductStoreRepository
+    val productStoreRepository: ProductStoreRepository,
 ) : SupermarketFlow {
 
     override fun run() {

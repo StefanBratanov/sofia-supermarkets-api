@@ -12,7 +12,7 @@ import kotlin.text.RegexOption.IGNORE_CASE
 @Log
 @Component
 class BillaSublinksScraper(
-    @Value("\${billa.url}") private val url: URL
+    @Value("\${billa.url}") private val url: URL,
 ) : SublinksScraper {
 
     override fun getSublinks(): List<URL> {

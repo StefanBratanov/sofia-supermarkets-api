@@ -18,5 +18,5 @@ data class Product(
     val validFrom: LocalDate? = null,
     @JsonDeserialize(using = LocalDateDeserializer::class)
     @JsonSerialize(using = LocalDateSerializer::class)
-    val validUntil: LocalDate? = null
+    val validUntil: LocalDate? = null,
 )

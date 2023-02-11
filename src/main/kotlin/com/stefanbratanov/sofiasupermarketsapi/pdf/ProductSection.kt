@@ -8,5 +8,5 @@ enum class ProductSection {
     NEW_PRICE,
     DISCOUNT,
     CURRENCY,
-    UNKNOWN
+    UNKNOWN,
 }

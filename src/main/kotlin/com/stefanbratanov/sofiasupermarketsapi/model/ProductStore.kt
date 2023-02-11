@@ -8,5 +8,5 @@ import java.util.*
 data class ProductStore(
     @Id val supermarket: String,
     val updatedAt: Date? = Date(),
-    val products: List<Product>? = emptyList()
+    val products: List<Product>? = emptyList(),
 )

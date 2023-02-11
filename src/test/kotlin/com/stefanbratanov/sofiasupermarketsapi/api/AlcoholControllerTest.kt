@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 @WebMvcTest(
     controllers = [AlcoholController::class],
-    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])]
+    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
 )
 internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 
@@ -55,7 +55,7 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 
         mockMvc.perform(
             MockMvcRequestBuilders.get("/products/alcohol?useCdn=false")
-                .accept(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON),
         )
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
@@ -65,7 +65,7 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 
         mockMvc.perform(
             MockMvcRequestBuilders.get("/products/alcohol?category=beer")
-                .accept(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON),
         )
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
@@ -75,7 +75,7 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 
         mockMvc.perform(
             MockMvcRequestBuilders.get("/products/alcohol?category=beer,whiskey")
-                .accept(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON),
         )
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))

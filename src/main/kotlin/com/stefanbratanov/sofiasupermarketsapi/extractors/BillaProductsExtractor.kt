@@ -33,11 +33,11 @@ class BillaProductsExtractor : UrlProductsExtractor {
         "до\\s+\\d+\\s+бр.+[\\p{IsCyrillic}]+ент(и)?".toRegex(IGNORE_CASE),
         "\\*+".toRegex(IGNORE_CASE),
         "Специфика\\s*:.*$".toRegex(IGNORE_CASE),
-        "Супер цена".toRegex(IGNORE_CASE)
+        "Супер цена".toRegex(IGNORE_CASE),
     )
 
     private val regexesToDeleteBilla = listOf(
-        "с (Billa|билла|била) (card|app)".toRegex(IGNORE_CASE)
+        "с (Billa|билла|била) (card|app)".toRegex(IGNORE_CASE),
     )
 
     override fun extract(url: URL): List<Product> {
@@ -73,7 +73,7 @@ class BillaProductsExtractor : UrlProductsExtractor {
                     price = price?.toDouble(),
                     oldPrice = oldPrice?.toDouble(),
                     validFrom = dateRange?.elementAtOrNull(0),
-                    validUntil = dateRange?.elementAtOrNull(1)
+                    validUntil = dateRange?.elementAtOrNull(1),
                 )
             }.filter {
                 Objects.nonNull(it.price)
@@ -88,7 +88,7 @@ class BillaProductsExtractor : UrlProductsExtractor {
                 val nameAndQuantity = separateNameAndQuantity(normalizedName)
                 it.copy(
                     name = normalizeSpace(nameAndQuantity.first),
-                    quantity = normalizeSpace(nameAndQuantity.second)
+                    quantity = normalizeSpace(nameAndQuantity.second),
                 )
             }
             .toList()

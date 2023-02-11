@@ -43,7 +43,7 @@ class PDFTextStripperWithCoordinates(private val regexesToIgnore: List<Regex>) :
                     text = clusterText.trim(),
                     x = (x!!).roundToLong().toDouble(),
                     y = (y!!).roundToLong().toDouble(),
-                    font = clusterTp.firstOrNull()?.textPosition?.font
+                    font = clusterTp.firstOrNull()?.textPosition?.font,
                 )
                 strippedTexts.add(toAdd)
             }
@@ -53,7 +53,7 @@ class PDFTextStripperWithCoordinates(private val regexesToIgnore: List<Regex>) :
                 text = text?.trim(),
                 x = (x!!).roundToLong().toDouble(),
                 y = (y!!).roundToLong().toDouble(),
-                font = textPositions?.first()?.font
+                font = textPositions?.first()?.font,
             )
             strippedTexts.add(toAdd)
         }

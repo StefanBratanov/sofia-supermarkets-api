@@ -17,7 +17,7 @@ import java.util.*
 @Log
 @Component("Lidl")
 class LidlProductsExtractor(
-    private val urlValidator: UrlValidator = UrlValidator()
+    private val urlValidator: UrlValidator = UrlValidator(),
 ) : UrlProductsExtractor {
 
     override fun extract(url: URL): List<Product> {
@@ -40,7 +40,7 @@ class LidlProductsExtractor(
                                 try {
                                     LocalDate.parse(
                                         match.plus(LocalDate.now().year),
-                                        DateTimeFormatter.ofPattern("dd.MM.yyyy")
+                                        DateTimeFormatter.ofPattern("dd.MM.yyyy"),
                                     )
                                 } catch (ex: Exception) {
                                     log.error("Error while parsing $date", ex)
@@ -78,7 +78,7 @@ class LidlProductsExtractor(
                     picUrl = picUrl,
                     category = category,
                     validFrom = dateRange?.elementAtOrNull(0),
-                    validUntil = dateRange?.elementAtOrNull(1)
+                    validUntil = dateRange?.elementAtOrNull(1),
                 )
             }
     }

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component
 @Log
 @Component
 class ScheduledFlowsRunner(
-    val flows: Map<Supermarket, SupermarketFlow>
+    val flows: Map<Supermarket, SupermarketFlow>,
 ) {
 
     @Scheduled(cron = "\${flows.runner.cron}")

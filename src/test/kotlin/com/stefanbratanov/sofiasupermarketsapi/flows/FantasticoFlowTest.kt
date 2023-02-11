@@ -50,28 +50,28 @@ internal class FantasticoFlowTest {
 
         val foo = getProduct("foo").copy(
             validFrom = validFrom,
-            validUntil = validUntil
+            validUntil = validUntil,
         )
         val bar = getProduct("bar").copy(
             validFrom = validFrom.plusDays(1),
-            validUntil = validUntil.plusDays(1)
+            validUntil = validUntil.plusDays(1),
         )
 
         val brochure = BrochureDownloader.Brochure(
             randomFile,
             validFrom,
-            validUntil
+            validUntil,
         )
 
         val brochure2 = BrochureDownloader.Brochure(
             randomFile2,
             validFrom.plusDays(1),
-            validUntil.plusDays(1)
+            validUntil.plusDays(1),
         )
 
         every { fantasticoBrochureDownloader.download() } returns listOf(
             brochure,
-            brochure2
+            brochure2,
         )
         every { pdfProductsExtractor.extract(randomFile) } returns listOf(foo)
         every { pdfProductsExtractor.extract(randomFile2) } returns listOf(bar)
@@ -88,7 +88,7 @@ internal class FantasticoFlowTest {
                 match {
                     it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
-                }
+                },
             )
         }
 

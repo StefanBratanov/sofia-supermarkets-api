@@ -66,7 +66,7 @@ internal class TMarketFlowTest {
                 match {
                     it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
-                }
+                },
             )
         }
     }

@@ -18,7 +18,7 @@ import kotlin.text.RegexOption.IGNORE_CASE
 @Log
 @Component("Kaufland")
 class KauflandProductsExtractor(
-    private val urlValidator: UrlValidator = UrlValidator()
+    private val urlValidator: UrlValidator = UrlValidator(),
 ) : UrlProductsExtractor {
 
     override fun extract(url: URL): List<Product> {
@@ -28,7 +28,7 @@ class KauflandProductsExtractor(
             log.info(
                 "There was an exception fetching products from {}. " +
                     "Will return 0 products for that url.",
-                url
+                url,
             )
             return emptyList()
         }
@@ -83,7 +83,7 @@ class KauflandProductsExtractor(
                 category = category,
                 picUrl = picUrl,
                 validFrom = dateRange?.elementAtOrNull(0),
-                validUntil = dateRange?.elementAtOrNull(1)
+                validUntil = dateRange?.elementAtOrNull(1),
             )
         }
     }

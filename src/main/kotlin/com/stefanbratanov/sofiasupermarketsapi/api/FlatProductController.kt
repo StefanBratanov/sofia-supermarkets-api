@@ -21,7 +21,7 @@ import kotlin.math.absoluteValue
 @Log
 class FlatProductController(
     val alcoholController: AlcoholController,
-    val supermarketController: SupermarketController
+    val supermarketController: SupermarketController,
 ) {
 
     private val acceptableDiscount = 75
@@ -30,11 +30,12 @@ class FlatProductController(
     @GetMapping("/products/flat/alcohol")
     fun alcoholFlat(
         productCriteria: ProductCriteria,
-        @Parameter(description = "Get only certain category/ies") @RequestParam(required = false)
+        @Parameter(description = "Get only certain category/ies")
+        @RequestParam(required = false)
         category: List<String>?,
         @Parameter(description = "Getting the cdn url of the custom searched images")
         @RequestParam(required = false, defaultValue = "true")
-        useCdn: Boolean
+        useCdn: Boolean,
     ): List<FlatProduct> {
         val alcoholProductStore =
             alcoholController.alcohol(productCriteria, category, useCdn)
@@ -57,7 +58,7 @@ class FlatProductController(
                     category = product.category,
                     picUrl = product.picUrl,
                     validFrom = product.validFrom,
-                    validUntil = product.validUntil
+                    validUntil = product.validUntil,
                 )
             }.orEmpty()
                 .filter { product ->
@@ -67,7 +68,7 @@ class FlatProductController(
                         log.warn(
                             "{} is not an acceptable discount. Will ignore {}",
                             product.discount,
-                            product.name
+                            product.name,
                         )
                     }
                     isAcceptableDiscount
@@ -92,7 +93,7 @@ class FlatProductController(
         val validFrom: LocalDate? = null,
         @JsonDeserialize(using = LocalDateDeserializer::class)
         @JsonSerialize(using = LocalDateSerializer::class)
-        val validUntil: LocalDate? = null
+        val validUntil: LocalDate? = null,
     )
 
     fun getDiscount(price: Double?, oldPrice: Double?): Int? {

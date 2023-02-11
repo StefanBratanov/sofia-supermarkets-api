@@ -42,29 +42,29 @@ internal class GoogleImageSearchTest {
             request()
                 .withPath("/search")
                 .withQueryStringParameter(
-                    Parameter.param("q", "JAMESON Ирландско уиски 0,7 л")
-                )
+                    Parameter.param("q", "JAMESON Ирландско уиски 0,7 л"),
+                ),
         ).respond(
             response()
                 .withStatusCode(200)
                 .withContentType(MediaType.APPLICATION_JSON_UTF_8)
-                .withBody(searchResponseJson)
+                .withBody(searchResponseJson),
         )
 
         mockServerClient.`when`(
             request()
                 .withPath("/search")
                 .withQueryStringParameter(
-                    Parameter.param("q", "fail")
-                )
+                    Parameter.param("q", "fail"),
+                ),
         ).respond(
             response()
-                .withStatusCode(400)
+                .withStatusCode(400),
         )
 
         every { productImageRepository.findById(any()) } returns Optional.empty()
         every { productImageRepository.findById("foo") } returns Optional.of(
-            ProductImage("foo", "bar.com")
+            ProductImage("foo", "bar.com"),
         )
 
         // return does not matter since not used
@@ -72,7 +72,7 @@ internal class GoogleImageSearchTest {
 
         val expectedImage = ProductImage(
             "JAMESON Ирландско уиски 0,7 л",
-            "https://cdncloudcart.com/16474/products/images/2518/jameson-black-barrel-s-dve-casi-700ml-image_5fbd72066e05c_800x800.jpeg?1606251032"
+            "https://cdncloudcart.com/16474/products/images/2518/jameson-black-barrel-s-dve-casi-700ml-image_5fbd72066e05c_800x800.jpeg?1606251032",
         )
 
         val result = underTest.search(expectedImage.product)

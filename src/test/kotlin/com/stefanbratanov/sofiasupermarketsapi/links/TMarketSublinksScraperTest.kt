@@ -13,7 +13,7 @@ internal class TMarketSublinksScraperTest {
     fun `scrapes real tmarket website`() {
         val underTest = TMarketSublinksScraper(
             URL("https://tmarketonline.bg/"),
-            TMarketPagesRetriever()
+            TMarketPagesRetriever(),
         )
         val result = underTest.getSublinks()
 

@@ -12,7 +12,7 @@ import java.util.Objects.nonNull
 @Tag(name = "Product", description = "All operations for supermarket products")
 @RestController
 class ProductStoreController(
-    val productStoreRepository: ProductStoreRepository
+    val productStoreRepository: ProductStoreRepository,
 ) {
 
     @Operation(summary = "Get all products from supermarkets")
@@ -41,7 +41,7 @@ class ProductStoreController(
 
     private fun checkOfferPrice(product: Product): Boolean {
         return nonNull(product.oldPrice) && nonNull(product.price) && product.oldPrice?.equals(
-            product.price
+            product.price,
         ) == false && compareValues(product.price, product.oldPrice) < 0
     }
 }

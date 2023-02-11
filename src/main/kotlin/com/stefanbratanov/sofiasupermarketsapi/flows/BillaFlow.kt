@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component
 class BillaFlow(
     val billaSublinksScraper: BillaSublinksScraper,
     @Qualifier("Billa") val urlProductsExtractor: UrlProductsExtractor,
-    val productStoreRepository: ProductStoreRepository
+    val productStoreRepository: ProductStoreRepository,
 ) : SupermarketFlow {
 
     override fun run() {

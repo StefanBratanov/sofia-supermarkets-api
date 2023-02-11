@@ -66,7 +66,7 @@ internal class LidlFlowTest {
                 match {
                     it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
-                }
+                },
             )
         }
     }

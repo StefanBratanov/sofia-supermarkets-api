@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
 @Configuration
 class ApiConfig(
-    val buildProperties: BuildProperties
+    val buildProperties: BuildProperties,
 ) : WebMvcConfigurer {
 
     override fun addCorsMappings(registry: CorsRegistry) {
@@ -32,9 +32,9 @@ class ApiConfig(
                     .contact(Contact().email("stefan.bratanov93@gmail.com"))
                     .license(
                         License().name("Apache 2.0")
-                            .url("http://www.apache.org/licenses/LICENSE-2.0")
+                            .url("http://www.apache.org/licenses/LICENSE-2.0"),
                     )
-                    .termsOfService("urn:tos")
+                    .termsOfService("urn:tos"),
             )
     }
 }

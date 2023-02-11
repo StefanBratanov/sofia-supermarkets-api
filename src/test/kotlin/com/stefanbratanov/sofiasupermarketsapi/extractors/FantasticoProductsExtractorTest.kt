@@ -31,7 +31,7 @@ internal class FantasticoProductsExtractorTest {
         "fantastico_test_8.pdf,expected_8.json",
         "fantastico_test_9.pdf,expected_9.json",
         "fantastico_test_10.pdf,expected_10.json",
-        "fantastico_test_11.pdf,expected_11.json"
+        "fantastico_test_11.pdf,expected_11.json",
     )
     fun `test extracting products`(inputFile: String, expectedFile: String) {
         val testPdf = getPath("/extractors/fantastico/$inputFile")

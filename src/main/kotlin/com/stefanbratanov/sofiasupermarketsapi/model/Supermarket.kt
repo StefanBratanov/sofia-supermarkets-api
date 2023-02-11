@@ -5,5 +5,5 @@ enum class Supermarket(val title: String) {
     FANTASTICO("Fantastico"),
     KAUFLAND("Kaufland"),
     LIDL("Lidl"),
-    TMARKET("T-Market")
+    TMARKET("T-Market"),
 }

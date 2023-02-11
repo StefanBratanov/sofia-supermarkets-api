@@ -59,7 +59,7 @@ internal class BillaFlowTest {
                 match {
                     it.supermarket == expectedToSave.supermarket &&
                         it.products == expectedToSave.products
-                }
+                },
             )
         }
     }

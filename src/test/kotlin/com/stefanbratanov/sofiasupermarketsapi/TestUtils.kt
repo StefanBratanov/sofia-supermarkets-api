@@ -10,7 +10,7 @@ fun getProduct(name: String): Product {
     return Product(
         name = name,
         price = Random.nextDouble(),
-        oldPrice = null
+        oldPrice = null,
     )
 }
 
@@ -18,7 +18,7 @@ fun getProduct(name: String, price: Double): Product {
     return Product(
         name = name,
         price = price,
-        oldPrice = null
+        oldPrice = null,
     )
 }
 

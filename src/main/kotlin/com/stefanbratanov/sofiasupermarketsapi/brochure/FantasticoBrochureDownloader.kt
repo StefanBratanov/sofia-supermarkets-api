@@ -30,7 +30,7 @@ import kotlin.text.RegexOption.IGNORE_CASE
 @Log
 @Component
 class FantasticoBrochureDownloader(
-    @Value("\${fantastico.url}") private val url: URL
+    @Value("\${fantastico.url}") private val url: URL,
 ) : BrochureDownloader {
 
     companion object {
@@ -68,7 +68,7 @@ class FantasticoBrochureDownloader(
                 val dateRange = extractDateRange(nameOfBrochure)
                 log.info(
                     "Fantastico brochure is vaild " +
-                        "from ${dateRange?.first} until ${dateRange?.second}"
+                        "from ${dateRange?.first} until ${dateRange?.second}",
                 )
 
                 val iFrameUrl = it.attr("data-brochure")
@@ -88,7 +88,7 @@ class FantasticoBrochureDownloader(
                 val encodedHref =
                     downloadHref.replace(
                         filenameMinusPath,
-                        URLEncoder.encode(filenameMinusPath, UTF_8.name())
+                        URLEncoder.encode(filenameMinusPath, UTF_8.name()),
                     )
                 val downloadUrl = URL(encodedHref)
 
@@ -130,7 +130,7 @@ class FantasticoBrochureDownloader(
     private fun addYearIfApplicable(input: String): String {
         return input.replace(
             "(\\.|(?<=\\.\\d{2}))\$".toRegex(),
-            ".${LocalDate.now().year}"
+            ".${LocalDate.now().year}",
         )
     }
 

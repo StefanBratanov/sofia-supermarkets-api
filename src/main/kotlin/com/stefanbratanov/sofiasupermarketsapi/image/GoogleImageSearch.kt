@@ -31,7 +31,7 @@ class GoogleImageSearch(
     @Value("\${google.custom.search.url}") private val googleSearchUrl: String,
     private val productImageRepository: ProductImageRepository,
     private val restTemplate: RestTemplate = RestTemplate(),
-    private val urlValidator: UrlValidator = UrlValidator()
+    private val urlValidator: UrlValidator = UrlValidator(),
 ) : ImageSearch {
 
     private val minWidth: Double = 200.0
@@ -83,7 +83,7 @@ class GoogleImageSearch(
                 HttpMethod.GET,
                 null,
                 SearchResult::class.java,
-                query
+                query,
             )
         } catch (httpEx: HttpStatusCodeException) {
             log.error("Error querying google custom search", httpEx)

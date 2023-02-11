@@ -23,8 +23,8 @@ import java.util.*
 @ContextConfiguration(
     classes = [
         ScheduledImagesVerifier::class,
-        ScheduledImagesVerifierTest.TestCacheConfig::class
-    ]
+        ScheduledImagesVerifierTest.TestCacheConfig::class,
+    ],
 )
 internal class ScheduledImagesVerifierTest {
 
@@ -60,14 +60,14 @@ internal class ScheduledImagesVerifierTest {
         every {
             googleImageSearch.search(
                 "test",
-                false
+                false,
             )
         } returns "https://www.telegraph.co.uk/"
         every { productImageRepository.findById("test") } returns Optional.of(
             ProductImage(
                 "test",
-                invalidUrl
-            )
+                invalidUrl,
+            ),
         )
         every { productImageRepository.save(any()) } returnsArgument 0
         underTest.verifyImages()
@@ -75,7 +75,7 @@ internal class ScheduledImagesVerifierTest {
 
         assertThat(cache).containsOnly(
             Pair("test", "https://www.telegraph.co.uk/"),
-            Pair("another test", "https://bbc.co.uk")
+            Pair("another test", "https://bbc.co.uk"),
         )
 
         verify(exactly = 1) {
@@ -86,8 +86,8 @@ internal class ScheduledImagesVerifierTest {
             productImageRepository.save(
                 ProductImage(
                     "test",
-                    "https://www.telegraph.co.uk/"
-                )
+                    "https://www.telegraph.co.uk/",
+                ),
             )
         }
     }

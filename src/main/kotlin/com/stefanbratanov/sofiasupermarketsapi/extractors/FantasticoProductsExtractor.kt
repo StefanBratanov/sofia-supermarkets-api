@@ -47,13 +47,13 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         "(.*\\s+)?Ф\\d+\\s+.*".toRegex(RegexOption.IGNORE_CASE),
         ".*Работно време.*".toRegex(RegexOption.IGNORE_CASE),
         ".*Във всички обекти на верига Фантастико.*".toRegex(RegexOption.IGNORE_CASE),
-        "Според потребителската класация".toRegex(RegexOption.IGNORE_CASE)
+        "Според потребителската класация".toRegex(RegexOption.IGNORE_CASE),
     )
 
     private val fontsToKeep = listOf(
         myriadProRegex,
         officinaSansRegex,
-        bebasNeueRegex
+        bebasNeueRegex,
     )
 
     private val regexesToRemove = listOf(
@@ -63,7 +63,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
         "\\*+".toRegex(RegexOption.IGNORE_CASE),
         ",\\s*\$".toRegex(RegexOption.IGNORE_CASE),
         "➥+".toRegex(RegexOption.IGNORE_CASE),
-        "количествата са лимитирани".toRegex(RegexOption.IGNORE_CASE)
+        "количествата са лимитирани".toRegex(RegexOption.IGNORE_CASE),
     )
 
     private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean> =
@@ -72,7 +72,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
             NEW_PRICE_LEGACY to { twc -> twc.text!!.matches("\\d{3,4}(\\*?)".toRegex()) },
             NEW_PRICE to { twc ->
                 twc.text!!.matches("\\d{1,2}(\\*?)".toRegex()) && twc.font?.name?.contains(
-                    bebasNeueRegex
+                    bebasNeueRegex,
                 ) == true
             },
             DISCOUNT to { twc -> twc.text!!.matches("-?\\d{1,2}%".toRegex()) },
@@ -80,12 +80,12 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
             QUANTITY to { twc ->
                 twc.text!!.contains(
                     "\\d+\\s*(мл|г|л|бр|см)".toRegex(
-                        RegexOption.IGNORE_CASE
-                    )
+                        RegexOption.IGNORE_CASE,
+                    ),
                 )
             },
             NAME to { twc -> twc.font?.name?.contains(myriadProRegex) == true },
-            UNKNOWN to { true }
+            UNKNOWN to { true },
         )
 
     override fun extract(pdf: Path): List<Product> {
@@ -101,7 +101,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                 regexesToIgnore,
                 fontsToKeep,
                 initialCenterPredicate,
-                productSectionResolver
+                productSectionResolver,
             )
 
         val products = generateSequence(1) { it + 1 }.take(pdfDoc.numberOfPages)
@@ -125,7 +125,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                         regexesToRemove.fold(text) { q, toRemove ->
                             q?.replace(
                                 toRemove,
-                                ""
+                                "",
                             )
                         }
                     }.let { text ->
@@ -136,7 +136,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                         name = normalizeSpace(name),
                         price = normalizePrice(newPrice)?.div(100),
                         oldPrice = normalizePrice(oldPrice),
-                        quantity = normalizeSpace(quantity)
+                        quantity = normalizeSpace(quantity),
                     ).takeIf {
                         StringUtils.isNotBlank(name)
                     }

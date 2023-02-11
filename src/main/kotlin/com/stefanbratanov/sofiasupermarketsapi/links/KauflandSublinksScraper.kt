@@ -12,7 +12,7 @@ import java.net.URL
 @Log
 @Component
 class KauflandSublinksScraper(
-    @Value("\${kaufland.base.url}") private val baseUrl: URL
+    @Value("\${kaufland.base.url}") private val baseUrl: URL,
 ) : SublinksScraper {
 
     override fun getSublinks(): List<URL> {

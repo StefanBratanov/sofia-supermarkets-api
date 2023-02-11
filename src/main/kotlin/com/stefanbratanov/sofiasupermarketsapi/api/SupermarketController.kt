@@ -35,6 +35,6 @@ class SupermarketController {
     data class SupermarketStaticData(
         val name: String,
         val website: String,
-        val logo: String
+        val logo: String,
     )
 }

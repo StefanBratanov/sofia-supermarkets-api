@@ -20,13 +20,13 @@ class SocketFactory {
 
                 override fun checkClientTrusted(
                     certs: Array<X509Certificate?>?,
-                    authType: String?
+                    authType: String?,
                 ) {
                 }
 
                 override fun checkServerTrusted(
                     certs: Array<X509Certificate?>?,
-                    authType: String?
+                    authType: String?,
                 ) {
                 }
             })

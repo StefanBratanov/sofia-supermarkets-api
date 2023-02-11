@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component
 class LidlFlow(
     val lidlSublinksScraper: LidlSublinksScraper,
     @Qualifier("Lidl") val urlProductsExtractor: UrlProductsExtractor,
-    val productStoreRepository: ProductStoreRepository
+    val productStoreRepository: ProductStoreRepository,
 ) : SupermarketFlow {
 
     override fun run() {

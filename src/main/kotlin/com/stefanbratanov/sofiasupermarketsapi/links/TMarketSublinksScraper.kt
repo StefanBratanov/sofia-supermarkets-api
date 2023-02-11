@@ -12,7 +12,7 @@ import java.net.URL
 @Component
 class TMarketSublinksScraper(
     @Value("\${tmarket.base.url}") private val baseUrl: URL,
-    private val tMarketPagesRetriever: TMarketPagesRetriever
+    private val tMarketPagesRetriever: TMarketPagesRetriever,
 ) : SublinksScraper {
 
     /**

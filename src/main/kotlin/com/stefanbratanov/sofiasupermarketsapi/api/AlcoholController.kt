@@ -31,7 +31,7 @@ import kotlin.text.RegexOption.IGNORE_CASE
 class AlcoholController(
     val productStoreController: ProductStoreController,
     val imageSearch: ImageSearch,
-    val cdnUploader: CdnUploader
+    val cdnUploader: CdnUploader,
 ) {
 
     private val bira = "Бира"
@@ -46,7 +46,7 @@ class AlcoholController(
     private val tMarketCategoryResolver = mapOf(
         Beer to bira,
         Wine to vino,
-        Other to cider
+        Other to cider,
     ).mapValues { it.value.toRegex(IGNORE_CASE) }
 
     private val kauflandDrinksCategoryRegex = "Алкохол".toRegex(IGNORE_CASE)
@@ -67,7 +67,7 @@ class AlcoholController(
             "^розе\\s+",
             "\\s+розе\\s+",
             "\\s+розе\$",
-            "винена\\s+основа"
+            "винена\\s+основа",
         ),
         Rakia to listOf("(?<!т)ракия", "спиртна"),
         Vodka to listOf("водка", "vodka"),
@@ -92,8 +92,8 @@ class AlcoholController(
             "somersby",
             "вермут",
             "martini",
-            "мартини"
-        )
+            "мартини",
+        ),
     ).mapValues {
         it.value.map { regex ->
             regex.toRegex(IGNORE_CASE)
@@ -108,7 +108,7 @@ class AlcoholController(
         "дезинфектант",
         "чай\\s+",
         "\\s+чай",
-        "абсорбира"
+        "абсорбира",
     ).map {
         it.toRegex(IGNORE_CASE)
     }
@@ -117,11 +117,12 @@ class AlcoholController(
     @GetMapping("/products/alcohol")
     fun alcohol(
         productCriteria: ProductCriteria,
-        @Parameter(description = "Get only certain category/ies") @RequestParam(required = false)
+        @Parameter(description = "Get only certain category/ies")
+        @RequestParam(required = false)
         category: List<String>?,
         @Parameter(description = "Getting the cdn url of the custom searched images")
         @RequestParam(required = false, defaultValue = "true")
-        useCdn: Boolean
+        useCdn: Boolean,
     ): List<ProductStore> {
         return productStoreController.products(productCriteria).map {
             when (it.supermarket) {
@@ -179,7 +180,7 @@ class AlcoholController(
                 pr.copy(
                     validFrom = null,
                     validUntil = null,
-                    picUrl = null
+                    picUrl = null,
                 )
             }
             it.copy(products = filteredAndDistinctProducts)
@@ -210,7 +211,7 @@ class AlcoholController(
 
     private fun alcoholProductOrNull(
         product: Product,
-        defaultCategory: AlcoholCategory? = null
+        defaultCategory: AlcoholCategory? = null,
     ): Product? {
         val maybeCategory =
             alcoholCategoryResolvers.entries.firstOrNull { categoryResolver ->

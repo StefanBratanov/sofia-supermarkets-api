@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
 
 @Component
 class Main(
-    val scheduledFlowsRunner: ScheduledFlowsRunner
+    val scheduledFlowsRunner: ScheduledFlowsRunner,
 ) : CommandLineRunner {
 
     override fun run(vararg args: String?) {

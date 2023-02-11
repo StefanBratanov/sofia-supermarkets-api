@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller
 @Log
 @Controller
 class ScheduledAlcoholRetriever(
-    val alcoholController: AlcoholController
+    val alcoholController: AlcoholController,
 ) {
 
     @Scheduled(cron = "\${alcohol.retriever.cron}")

@@ -25,7 +25,7 @@ internal class BillaSublinksScraperTest {
         assertThat(result).containsExactlyInAnyOrder(
             URL("https://ssbbilla.site/weekly"),
             URL("https://ssbbilla.site/sixth"),
-            URL("https://ssbbilla.site/nine")
+            URL("https://ssbbilla.site/nine"),
         )
     }
 

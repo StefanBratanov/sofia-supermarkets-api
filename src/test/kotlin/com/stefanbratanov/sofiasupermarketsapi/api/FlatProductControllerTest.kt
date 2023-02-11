@@ -18,7 +18,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 @WebMvcTest(
     controllers = [FlatProductController::class],
-    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])]
+    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
 )
 internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
 
@@ -41,7 +41,7 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
             SupermarketController.SupermarketStaticData(
                 it.title,
                 "http://www.test.bg",
-                "http://${it.title.lowercase()}.bg"
+                "http://${it.title.lowercase()}.bg",
             )
         }
 
@@ -61,7 +61,7 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
 
         mockMvc.perform(
             MockMvcRequestBuilders.get("/products/flat/alcohol?category=beer")
-                .accept(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON),
         )
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component
 class ScheduledImagesVerifier(
     val googleImageSearch: GoogleImageSearch,
     val cacheManager: CacheManager,
-    val productImageRepository: ProductImageRepository
+    val productImageRepository: ProductImageRepository,
 ) {
 
     @Scheduled(cron = "\${image.verifier.cron}")
@@ -33,7 +33,7 @@ class ScheduledImagesVerifier(
                         "Changing cached image for {} from {} to {}",
                         key,
                         it.value,
-                        imageUrl
+                        imageUrl,
                     )
                     productImagesCache[key] = imageUrl
                     productImageRepository.findById(key).ifPresent { dbRow ->
@@ -41,7 +41,7 @@ class ScheduledImagesVerifier(
                             "Changing database image for {} from {} to {}",
                             key,
                             dbRow.url,
-                            imageUrl
+                            imageUrl,
                         )
                         dbRow.url = imageUrl
                         productImageRepository.save(dbRow)

@@ -23,7 +23,7 @@ class PdfPageProductsExtractor(
     private val regexesToIgnore: List<Regex>,
     private val fontsToKeep: List<Regex>,
     private val initialCenterPredicate: Predicate<TextWithCoordinates>,
-    private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean>
+    private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean>,
 ) {
 
     private val newPricesProductSections = listOf(NEW_PRICE, NEW_PRICE_LEGACY)
@@ -59,7 +59,7 @@ class PdfPageProductsExtractor(
             initialCenters.size,
             100,
             ManhattanDistance(),
-            initialCenters
+            initialCenters,
         )
         val clusteredTexts = kMeansPlus.cluster(filteredStrippedTexts).map {
             it.points
@@ -134,11 +134,11 @@ class PdfPageProductsExtractor(
         if (horizontalCenters.size >= 3) {
             log.info(
                 "There seems to be {} products which need vertical extracting",
-                horizontalCenters.size
+                horizontalCenters.size,
             )
             val verticalProducts = getVerticalProducts(
                 horizontalCenters,
-                clusteredTextsWithSections.flatten()
+                clusteredTextsWithSections.flatten(),
             )
             val flattenedTexts = verticalProducts.flatten()
             val filteredValid = validClusteredTexts.map {
@@ -155,7 +155,7 @@ class PdfPageProductsExtractor(
             if (stillNotMatchedCenters.isNotEmpty()) {
                 log.info(
                     "There are still {} products which haven't been extracted. Will try.",
-                    stillNotMatchedCenters.size
+                    stillNotMatchedCenters.size,
                 )
                 val allTextsSoFar = augmentedClusteredTexts.flatten().map {
                     it.second
@@ -167,7 +167,7 @@ class PdfPageProductsExtractor(
                     stillNotMatchedCenters.size,
                     100,
                     ManhattanDistance(),
-                    stillNotMatchedCenters
+                    stillNotMatchedCenters,
                 )
                 val moreClusteredTexts = kMeansPlus2.cluster(leftTexts).map {
                     it.points
@@ -216,7 +216,7 @@ class PdfPageProductsExtractor(
 
     private fun extractNewPriceAndMaybeOldPriceToReplace(
         newPrices: List<Pair<ProductSection, TextWithCoordinates>>,
-        clusterWithSections: List<Pair<ProductSection, TextWithCoordinates>>
+        clusterWithSections: List<Pair<ProductSection, TextWithCoordinates>>,
     ): Pair<String, TextWithCoordinates?> {
         val sizeOfNewPrices = newPrices.size
         if (sizeOfNewPrices == 2) {
@@ -224,7 +224,7 @@ class PdfPageProductsExtractor(
                 newPrices.joinToString(separator = "") {
                     it.second.text.orEmpty().trim()
                 },
-                null
+                null,
             )
         }
         if (sizeOfNewPrices % 2 == 0) {
@@ -233,18 +233,18 @@ class PdfPageProductsExtractor(
             val closestOldPrice = findClosestSections(
                 OLD_PRICE,
                 nameCoordinates,
-                clusterWithSections
+                clusterWithSections,
             ).firstOrNull()
             return Pair(
                 findClosestSections(
                     NEW_PRICE,
                     closestOldPrice,
                     clusterWithSections,
-                    2
+                    2,
                 ).joinToString(separator = "") {
                     it.text.orEmpty().trim()
                 },
-                closestOldPrice
+                closestOldPrice,
             )
         }
         return Pair(combineTwoCloseToEachOtherPrices(newPrices), null)
@@ -268,7 +268,7 @@ class PdfPageProductsExtractor(
         sectionToFind: ProductSection,
         coordinates: TextWithCoordinates?,
         clusterWithSections: List<Pair<ProductSection, TextWithCoordinates>>,
-        toTake: Int = 1
+        toTake: Int = 1,
     ): List<TextWithCoordinates> {
         return clusterWithSections.filter {
             it.first == sectionToFind

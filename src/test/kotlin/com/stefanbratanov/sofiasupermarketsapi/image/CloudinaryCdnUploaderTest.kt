@@ -19,8 +19,8 @@ internal class CloudinaryCdnUploaderTest {
                 "api_key",
                 "",
                 "api_secret",
-                ""
-            )
+                "",
+            ),
         )
 
         underTest = CloudinaryCdnUploader(cloudinary)

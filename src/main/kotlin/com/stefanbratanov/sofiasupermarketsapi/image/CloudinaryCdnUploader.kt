@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component
 @Log
 @Component
 class CloudinaryCdnUploader(
-    private val cloudinary: Cloudinary
+    private val cloudinary: Cloudinary,
 ) : CdnUploader {
 
     @Cacheable("cdnImages")
@@ -36,8 +36,8 @@ class CloudinaryCdnUploader(
                 "folder" to "alcohol",
                 "transformation" to EagerTransformation()
                     .responsiveWidth(true)
-                    .height(160)
-            )
+                    .height(160),
+            ),
         )["secure_url"] as String
     }
 }

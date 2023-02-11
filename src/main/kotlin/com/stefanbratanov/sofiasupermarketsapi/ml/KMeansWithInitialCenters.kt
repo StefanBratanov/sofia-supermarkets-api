@@ -22,7 +22,7 @@ class KMeansWithInitialCenters(
     k: Int,
     maxIterations: Int,
     measure: DistanceMeasure,
-    private var initialCenters: List<CentroidCluster<TextWithCoordinates>>
+    private var initialCenters: List<CentroidCluster<TextWithCoordinates>>,
 ) : KMeansPlusPlusClusterer<TextWithCoordinates>(k, maxIterations, measure) {
 
     private val random = JDKRandomGenerator()
@@ -84,7 +84,7 @@ class KMeansWithInitialCenters(
     private fun assignPointsToClusters(
         clusters: List<CentroidCluster<TextWithCoordinates>>,
         points: Collection<TextWithCoordinates>,
-        assignments: IntArray
+        assignments: IntArray,
     ): Int {
         var assignedDifferently = 0
         for ((pointIndex, p) in points.withIndex()) {
@@ -133,7 +133,7 @@ class KMeansWithInitialCenters(
 
     private fun getNearestCluster(
         clusters: Collection<CentroidCluster<TextWithCoordinates>>,
-        point: TextWithCoordinates
+        point: TextWithCoordinates,
     ): Int {
         var minDistance = Double.MAX_VALUE
         var minCluster = 0
@@ -149,7 +149,7 @@ class KMeansWithInitialCenters(
 
     private fun centroidOf(
         points: Collection<TextWithCoordinates>,
-        dimension: Int
+        dimension: Int,
     ): Clusterable {
         val centroid = DoubleArray(dimension)
         for (p in points) {

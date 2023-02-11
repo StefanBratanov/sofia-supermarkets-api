@@ -20,7 +20,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 @WebMvcTest(
     controllers = [ProductStoreController::class],
-    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])]
+    excludeFilters = [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
 )
 internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
 
@@ -39,9 +39,9 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
         every { productStoreRepository.findAll() } returns listOf(
             ProductStore(
                 supermarket = "foo",
-                products = listOf(getProduct("hello", 1.1), offerProduct, smallerOldPrice, nullPrices, oneNullPrice)
+                products = listOf(getProduct("hello", 1.1), offerProduct, smallerOldPrice, nullPrices, oneNullPrice),
             ),
-            ProductStore(supermarket = "bar", products = listOf(getProduct("world", 1.2)))
+            ProductStore(supermarket = "bar", products = listOf(getProduct("world", 1.2))),
         )
 
         val expectedJson = readResource("/api/expected-response.json")
