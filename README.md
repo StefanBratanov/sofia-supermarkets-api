@@ -55,7 +55,7 @@ If you like my work, you can buy me a coffee.
 
 ## Code Style
 
-Kotlin code conventions based on [google-java-format](https://github.com/google/google-java-format) are used in this project. To reformat code, run:
+Kotlin code conventions, based on [ktfmt](https://github.com/facebook/ktfmt) and [google-java-format](https://github.com/google/google-java-format) are used in this project. To reformat code, run:
 
 ```
 ./gradlew spotlessApply
@@ -72,9 +72,11 @@ The following environment variables need to be set prior to running:
 
 * DB_USERNAME
 * DB_PASSWORD
+* GOOGLE_API_KEY
 * CLOUDINARY_API_SECRET
 
 Navigate to <http://localhost:8080/swagger-ui.html> to check the API documentation and
 test the endpoints
 
 ![API Documentation](images/swagger-ui.png)
+We
