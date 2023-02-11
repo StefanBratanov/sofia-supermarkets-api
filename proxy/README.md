@@ -2,7 +2,7 @@
 
 Tiny Cloudflare Worker which caches API responses to Cloudflare KV for 30 minutes.
 
-## Test Worker Locally
+## Test Worker locally
 `npm start`
 
 ## Deploy

@@ -21,11 +21,13 @@ If you like my work, you can buy me a coffee.
 
 - [x] Billa
 
-> Gets products information from https://ssbbilla.site/. Images are retrieved based on the first result in google image search.
+> Gets products information from https://ssbbilla.site/. Images are retrieved based on the first
+> result in google image search.
 
 - [x] Fantastico
 
-> Downloads the pdf brochures available on https://www.fantastico.bg/special-offers and parses the products information in them. Images are retrieved based on the first result in google image search.
+> Downloads the pdf brochures available on https://www.fantastico.bg/special-offers and parses the
+> products information in them. Images are retrieved based on the first result in google image search.
 
 - [x] Kaufland
 
@@ -50,6 +52,14 @@ If you like my work, you can buy me a coffee.
 * Kotlin
 * Gradle
 * Spring Boot
+
+## Code Style
+
+Kotlin code conventions based on [google-java-format](https://github.com/google/google-java-format) is used in this project. To reformat code, run:
+
+```
+./gradlew spotlessApply
+```
 
 ## Running Locally
 
