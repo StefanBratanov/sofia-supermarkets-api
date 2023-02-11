@@ -8,5 +8,5 @@ data class ProductCriteria(
     @Parameter(description = "Supermarkets to get the products from")
     var supermarket: List<String>?,
     @Parameter(description = "Show only offers")
-    var offers: Boolean = false
+    var offers: Boolean = false,
 )
