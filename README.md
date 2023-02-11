@@ -79,4 +79,3 @@ Navigate to <http://localhost:8080/swagger-ui.html> to check the API documentati
 test the endpoints
 
 ![API Documentation](images/swagger-ui.png)
-We
