@@ -27,7 +27,7 @@ class TMarketSublinksScraper(
                     ?.contains("НАПИТКИ") == true
             }
             .select("._navigation-dropdown-list-item > a")
-            .filter {
+            .filter { it ->
                 it.parent()?.classNames()?.contains("item-collapse") == false
             }
             .map {

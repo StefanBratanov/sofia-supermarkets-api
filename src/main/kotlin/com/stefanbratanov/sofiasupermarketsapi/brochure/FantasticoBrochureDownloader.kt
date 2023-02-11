@@ -56,7 +56,7 @@ class FantasticoBrochureDownloader(
         val waitDriver = WebDriverWait(driver, Duration.ofSeconds(10))
 
         val brochures =
-            htmlDoc.select("div.brochure-container.first div.hold-options").filter {
+            htmlDoc.select("div.brochure-container.first div.hold-options").filter { it ->
                 val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
                 val isApplicable = nameOfBrochure?.contains(samoZa) == false
                 if (!isApplicable) {

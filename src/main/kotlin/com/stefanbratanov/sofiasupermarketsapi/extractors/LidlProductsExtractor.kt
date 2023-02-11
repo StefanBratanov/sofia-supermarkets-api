@@ -28,7 +28,7 @@ class LidlProductsExtractor(
         val category = document.selectFirst("meta[property=og:title]")?.attr("content")
 
         return document.select("article[data-price]")
-            .filter {
+            .filter { it ->
                 !it.select(".lidl-m-pricebox__price").isEmpty()
             }
             .map {
