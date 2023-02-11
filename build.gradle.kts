@@ -20,7 +20,11 @@ plugins {
 
 group = "com.stefanbratanov"
 version = "1.4.0"
-java.sourceCompatibility = JavaVersion.VERSION_17
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
 
 jacoco {
     toolVersion = "0.8.8"
