@@ -1,6 +1,6 @@
 # sofia-supermarkets-api
 
-[![License](https://img.shields.io/github/license/StefanBratanov/sofia-supermarkets-api?logo=apache)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/github/license/StefanBratanov/sofia-supermarkets-api?logo=apache)](https://github.com/StefanBratanov/sofia-supermarkets-api/blob/master/LICENSE)
 [![build](https://github.com/StefanBratanov/sofia-supermarkets-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/StefanBratanov/sofia-supermarkets-api/actions/workflows/gradle.yml)
 [![codecov](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api/branch/master/graph/badge.svg?token=3V3THIY6AX)](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/stefanbratanov/sofia-supermarkets-api)](https://github.com/StefanBratanov/sofia-supermarkets-api/releases/latest)
@@ -63,10 +63,16 @@ Kotlin code conventions, based on [ktfmt](https://github.com/facebook/ktfmt) and
 
 ## Running Locally
 
-Install JDK 17 or above from [here](https://jdk.java.net/)
+Install JDK 17 or above from [here](https://jdk.java.net/).
 
-* **Unix** `./gradlew bootRun`
-* **Windows** `gradlew.bat bootRun`
+* **Unix** 
+```
+./gradlew bootRun
+```
+* **Windows**
+```
+gradlew.bat bootRun
+```
 
 The following environment variables need to be set prior to running:
 
