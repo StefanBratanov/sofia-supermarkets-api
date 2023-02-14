@@ -1,10 +1,7 @@
 package com.stefanbratanov.sofiasupermarketsapi.extractors
 
-import com.stefanbratanov.sofiasupermarketsapi.common.Log
+import com.stefanbratanov.sofiasupermarketsapi.common.*
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
-import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocumentHttpsTrustAll
-import com.stefanbratanov.sofiasupermarketsapi.common.normalizePrice
-import com.stefanbratanov.sofiasupermarketsapi.common.separateNameAndQuantity
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefanbratanov.sofiasupermarketsapi.model.Product
 import java.net.URL
@@ -24,7 +21,7 @@ class TMarketProductsExtractor : UrlProductsExtractor {
   override fun extract(url: URL): List<Product> {
     log.info("Processing TMarket URL: {}", url.toString())
 
-    val document = getHtmlDocumentHttpsTrustAll(url)
+    val document = getHtmlDocument(url)
 
     val category = document.selectFirst("._section-title > h1")?.text()
 

@@ -2,7 +2,7 @@ package com.stefanbratanov.sofiasupermarketsapi.links
 
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
-import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocumentHttpsTrustAll
+import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.SublinksScraper
 import java.net.URL
 import org.springframework.beans.factory.annotation.Value
@@ -19,7 +19,7 @@ class TMarketSublinksScraper(
   override fun getSublinks(): List<URL> {
     log.info("Scraping {} for sublinks", baseUrl)
 
-    return getHtmlDocumentHttpsTrustAll(baseUrl)
+    return getHtmlDocument(baseUrl)
       .select("li._navigation-dropdown-list-item")
       .first { it.selectFirst("span._figure-stack-label")?.text()?.contains("НАПИТКИ") == true }
       .select("._navigation-dropdown-list-item > a")
