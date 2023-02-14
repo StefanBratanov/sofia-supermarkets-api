@@ -62,16 +62,18 @@ class BillaProductsExtractor : UrlProductsExtractor {
         }
       }
 
+    val priceClass = ".price"
+
     return htmlDoc
       .select(".productSection > .product")
       .asSequence()
       .filter {
-        it.select(".price").first()?.text()?.let { pr -> NumberUtils.isCreatable(pr) } == true
+        it.select(priceClass).first()?.text()?.let { pr -> NumberUtils.isCreatable(pr) } == true
       }
       .map {
         val productName = it.select(".actualProduct").text()
-        val oldPrice = it.select(".price").first()?.text()
-        val price = it.select(".price").last()?.text()
+        val oldPrice = it.select(priceClass).first()?.text()
+        val price = it.select(priceClass).last()?.text()
 
         Product(
           name = productName,
