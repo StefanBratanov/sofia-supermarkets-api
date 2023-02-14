@@ -20,10 +20,7 @@ jobs:
         run: chmod +x gradlew
       - name: Install fontconfig
         run: sudo apt-get install fontconfig
-      - name: Build and analyze
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew spotlessCheck build jacocoTestReport sonar
+      - name: Build
+        run: ./gradlew spotlessCheck build jacocoTestReport
       - name: Codecov
         uses: codecov/codecov-action@v1
