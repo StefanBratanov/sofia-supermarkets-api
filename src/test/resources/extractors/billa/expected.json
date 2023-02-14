@@ -1898,5 +1898,25 @@
     "picUrl": null,
     "validFrom": "2021-03-18",
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Ирландско Уиски Jameson",
+    "quantity": "1 л",
+    "price": 32.99,
+    "oldPrice": 44.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Спиртна напитка Ямболска гроздова",
+    "quantity": "0,7 л",
+    "price": 9.49,
+    "oldPrice": 12.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
   }
 ]
