@@ -129,35 +129,10 @@ class AlcoholController(
       .map {
         when (it.supermarket) {
           TMARKET.title -> {
-            val filteredProducts =
-              it.products?.filter { product ->
-                tMarketCategoryRegexes.any { regex -> product.category?.contains(regex) == true }
-              }
-            val categorizedProducts =
-              filteredProducts?.mapNotNull { product ->
-                val maybeCategory =
-                  tMarketCategoryResolver.entries
-                    .firstOrNull { entry -> product.name.contains(entry.value) }
-                    ?.key
-                if (isNull(maybeCategory)) {
-                  alcoholProductOrNull(product, defaultCategory = Other)
-                } else {
-                  product.copy(category = maybeCategory?.name)
-                }
-              }
-            it.copy(products = categorizedProducts)
+            processTMarketProducts(it)
           }
           KAUFLAND.title -> {
-            val filteredProducts =
-              it.products
-                ?.filter { product ->
-                  product.category?.contains(kauflandDrinksCategoryRegex) == true ||
-                    // products in additional pages have blank category
-                    product.category?.isBlank() == true
-                }
-                ?.mapNotNull { product -> alcoholProductOrNull(product) }
-
-            it.copy(products = filteredProducts)
+            processKauflandProducts(it)
           }
           else -> {
             val filteredProducts =
@@ -169,6 +144,7 @@ class AlcoholController(
       .map {
         val filteredAndDistinctProducts =
           it.products
+            // filtered by category query parameter
             ?.filter { product ->
               if (category.isNullOrEmpty()) {
                 true
@@ -176,7 +152,9 @@ class AlcoholController(
                 category.any { c -> c.equals(product.category, ignoreCase = true) }
               }
             }
+            // filter regexes
             ?.filter { ignoreContains.none { regex -> it.name.contains(regex) } }
+            // remove same products
             ?.distinctBy { pr ->
               pr.copy(
                 validFrom = null,
@@ -186,30 +164,65 @@ class AlcoholController(
             }
         it.copy(products = filteredAndDistinctProducts)
       }
-      .map {
-        val productsWithPics =
-          it.products?.map { product ->
-            if (Strings.isBlank(product.picUrl)) {
-              val quantityOrEmpty = product.quantity.orEmpty()
-              val productKey = "${product.name} $quantityOrEmpty".trim()
-              val picUrl = imageSearch.search(productKey)
-              if (useCdn && nonNull(picUrl)) {
-                try {
-                  val cdnUrl = cdnUploader.upload(productKey, picUrl!!)
-                  product.copy(picUrl = cdnUrl)
-                } catch (ex: Exception) {
-                  log.error("Error while uploading to CDN. Will fallback to Google search result")
-                  product.copy(picUrl = picUrl)
-                }
-              } else {
-                product.copy(picUrl = picUrl)
-              }
-            } else {
-              product
-            }
-          }
-        it.copy(products = productsWithPics)
+      .map { addPics(it, useCdn) }
+  }
+
+  private fun processTMarketProducts(productStore: ProductStore): ProductStore {
+    val filteredProducts =
+      productStore.products?.filter { product ->
+        tMarketCategoryRegexes.any { regex -> product.category?.contains(regex) == true }
       }
+    val categorizedProducts =
+      filteredProducts?.mapNotNull { product ->
+        val maybeCategory =
+          tMarketCategoryResolver.entries
+            .firstOrNull { entry -> product.name.contains(entry.value) }
+            ?.key
+        if (isNull(maybeCategory)) {
+          alcoholProductOrNull(product, defaultCategory = Other)
+        } else {
+          product.copy(category = maybeCategory?.name)
+        }
+      }
+    return productStore.copy(products = categorizedProducts)
+  }
+
+  private fun processKauflandProducts(productStore: ProductStore): ProductStore {
+    val filteredProducts =
+      productStore.products
+        ?.filter { product ->
+          product.category?.contains(kauflandDrinksCategoryRegex) == true ||
+            // products in additional pages have blank category
+            product.category?.isBlank() == true
+        }
+        ?.mapNotNull { product -> alcoholProductOrNull(product) }
+
+    return productStore.copy(products = filteredProducts)
+  }
+
+  private fun addPics(productStore: ProductStore, useCdn: Boolean): ProductStore {
+    val productsWithPics =
+      productStore.products?.map { product ->
+        if (Strings.isBlank(product.picUrl)) {
+          val quantityOrEmpty = product.quantity.orEmpty()
+          val productKey = "${product.name} $quantityOrEmpty".trim()
+          val picUrl = imageSearch.search(productKey)
+          if (useCdn && nonNull(picUrl)) {
+            try {
+              val cdnUrl = cdnUploader.upload(productKey, picUrl!!)
+              product.copy(picUrl = cdnUrl)
+            } catch (ex: Exception) {
+              log.error("Error while uploading to CDN. Will fallback to Google search result")
+              product.copy(picUrl = picUrl)
+            }
+          } else {
+            product.copy(picUrl = picUrl)
+          }
+        } else {
+          product
+        }
+      }
+    return productStore.copy(products = productsWithPics)
   }
 
   private fun alcoholProductOrNull(
