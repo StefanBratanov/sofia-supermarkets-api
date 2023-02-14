@@ -49,6 +49,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
       ".*Работно време.*".toRegex(RegexOption.IGNORE_CASE),
       ".*Във всички обекти на верига Фантастико.*".toRegex(RegexOption.IGNORE_CASE),
       "Според потребителската класация".toRegex(RegexOption.IGNORE_CASE),
+      "ТВ „Фантастико” не носи отговорност.*".toRegex(RegexOption.IGNORE_CASE)
     )
 
   private val fontsToKeep =

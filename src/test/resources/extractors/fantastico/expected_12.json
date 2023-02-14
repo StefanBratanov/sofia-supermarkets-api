@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Вино PENTAGRAM различни видове",
+    "quantity": "750 мл",
+    "price": 8.49,
+    "oldPrice": 11.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино JOYA",
+    "quantity": "750 мл",
+    "price": 8.49,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино бяло/червено SOPHIA",
+    "quantity": "bag-in-box, 3 л",
+    "price": 7.99,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино AFRICAN WINERY Pinotage; Chenin Blanc",
+    "quantity": "750 мл",
+    "price": 6.99,
+    "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Чипс PRINGLES различни вкусове",
+    "quantity": "165 г",
+    "price": 3.99,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Пуканки за микровълнова фурна POPZ различни видове",
+    "quantity": "80 г; 90 г",
+    "price": 1.19,
+    "oldPrice": 1.55,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Печени тиквени семки ВУЙЧО ВАНЬО",
+    "quantity": "120 г",
+    "price": 2.19,
+    "oldPrice": 2.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Снакс POM-BAR различни вкусове",
+    "quantity": "50 г",
+    "price": 1.49,
+    "oldPrice": 2.65,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Чипс RUFFLES различни вкусове",
+    "quantity": "155 г",
+    "price": 2.59,
+    "oldPrice": 4.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Микс сурови ядки с червени боровинки, насипни",
+    "quantity": null,
+    "price": 19.99,
+    "oldPrice": 26.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бисквити TUC различни вкусове",
+    "quantity": "100 г",
+    "price": 1.35,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Спиртна напитка ГРОЗДЕН Мускатова",
+    "quantity": "700 мл",
+    "price": 9.49,
+    "oldPrice": 12.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира ЗАГОРКА специално; Ретро; безалкохолна",
+    "quantity": "кен, 500 мл",
+    "price": 1.09,
+    "oldPrice": null,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски JOHNNIE WALKER",
+    "quantity": "Blonde 700 мл",
+    "price": 24.99,
+    "oldPrice": 34.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски THE SINGLETON",
+    "quantity": "12 г, 700 мл",
+    "price": 51.99,
+    "oldPrice": 69.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски GLENMORANGIE",
+    "quantity": "10 г, 700 мл",
+    "price": 57.99,
+    "oldPrice": 82.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Бира КАМЕНИЦА",
+    "quantity": "PET, 2 л",
+    "price": 2.39,
+    "oldPrice": 3.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски J&B",
+    "quantity": "1 л",
+    "price": 23.99,
+    "oldPrice": 36.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Гроздова ракия СУНГУРЛАРСКА",
+    "quantity": "класик 1 л; Отлежала 700 мл",
+    "price": 13.99,
+    "oldPrice": 18.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино ENIRA Мерло",
+    "quantity": "750 мл",
+    "price": 14.99,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски JOHNNIE WALKER",
+    "quantity": "Black Label 700 мл",
+    "price": 40.99,
+    "oldPrice": 55.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка SOBIESKI Superior",
+    "quantity": "700 мл",
+    "price": 13.99,
+    "oldPrice": 17.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  }
+]
