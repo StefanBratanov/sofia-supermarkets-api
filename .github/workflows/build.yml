@@ -24,6 +24,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew spotlessCheck build jacocoTestReport sonarqube
+        run: ./gradlew spotlessCheck build jacocoTestReport sonar
       - name: Codecov
         uses: codecov/codecov-action@v1
