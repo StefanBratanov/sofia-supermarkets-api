@@ -12,6 +12,7 @@ plugins {
   id("jacoco")
   kotlin("plugin.jpa") version "1.8.10"
   id("com.diffplug.spotless") version "6.15.0"
+  id("org.sonarqube") version "3.5.0.2730"
 }
 
 group = "com.stefanbratanov"
@@ -24,6 +25,14 @@ java {
 }
 
 jacoco { toolVersion = "0.8.8" }
+
+sonarqube {
+  properties {
+    property("sonar.projectKey", "StefanBratanov_sofia-supermarkets-api")
+    property("sonar.organization", "stefanbratanov")
+    property("sonar.host.url", "https://sonarcloud.io")
+  }
+}
 
 repositories { mavenCentral() }
 

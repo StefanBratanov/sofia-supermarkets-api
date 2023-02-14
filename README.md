@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/github/license/StefanBratanov/sofia-supermarkets-api?logo=apache)](https://github.com/StefanBratanov/sofia-supermarkets-api/blob/master/LICENSE)
 [![build](https://github.com/StefanBratanov/sofia-supermarkets-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/StefanBratanov/sofia-supermarkets-api/actions/workflows/gradle.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=StefanBratanov_sofia-supermarkets-api&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=StefanBratanov_sofia-supermarkets-api)
 [![codecov](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api/branch/master/graph/badge.svg?token=3V3THIY6AX)](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/stefanbratanov/sofia-supermarkets-api)](https://github.com/StefanBratanov/sofia-supermarkets-api/releases/latest)
 
