@@ -53,14 +53,14 @@ fun getHtmlDocument(url: URL): Document {
 
 private val quantityRegexes =
   listOf(
-    "(\\d+\\s*\\+\\s*)?\\d+\\s*(бр\\.?)?\\s*[xх]\\s*[\\d,]+\\s*(кг|бр|л|[мг]л|[гмк]|\\b(ml|g|kg|l)\\b)".toRegex(
+    "(\\d+\\s*\\+\\s*)?\\d+\\s*(бр(.)?)?\\s*[хx]\\s*[\\d,]+\\s*(кг|бр|л|мл|г|м|ml|g|kg|l)".toRegex(
       IGNORE_CASE
     ),
     "(\\d+(,|\\.|))?\\d+\\s*(кг|бр|л|мл|г|м|ml|g|kg|l)\\.?(?!оди)".toRegex(IGNORE_CASE),
   )
 
 fun separateNameAndQuantity(name: String): Pair<String?, String?> {
-  val matchResult = quantityRegexes.mapNotNull { it.find(name) }.firstOrNull()
+  val matchResult = quantityRegexes.firstNotNullOfOrNull { it.find(name) }
 
   if (isNull(matchResult)) {
     return Pair(name, null)
