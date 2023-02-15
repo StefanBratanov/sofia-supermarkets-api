@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api/branch/master/graph/badge.svg?token=3V3THIY6AX)](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/stefanbratanov/sofia-supermarkets-api)](https://github.com/StefanBratanov/sofia-supermarkets-api/releases/latest)
 
-An API to retrieve products information from supermarkets in Sofia.
+An API to retrieve products information from supermarkets in Sofia, Bulgaria.
 
 [![Swagger UI](https://validator.swagger.io/validator?url=https://api.naoferta.net/v3/api-docs)](https://api.naoferta.net/swagger-ui.html)
 
