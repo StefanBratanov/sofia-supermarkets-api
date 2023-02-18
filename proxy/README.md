@@ -11,5 +11,5 @@ npm start
 ## Deploy
 
 ```
-npm deploy
+npm run deploy
 ```

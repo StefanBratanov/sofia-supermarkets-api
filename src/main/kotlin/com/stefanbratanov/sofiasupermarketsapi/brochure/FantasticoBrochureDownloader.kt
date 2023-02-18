@@ -45,7 +45,7 @@ class FantasticoBrochureDownloader(
 
   private val yearPattern = ofPattern("d.MM.yyyy")
 
-  private val regexesToIgnore =
+  private val brochureNamesToIgnore =
     listOf("Само за (?!София)".toRegex(IGNORE_CASE), "Легенда цени".toRegex(IGNORE_CASE))
 
   override fun download(): List<Brochure> {
@@ -61,7 +61,8 @@ class FantasticoBrochureDownloader(
         .select("div.brochure-container.first div.hold-options")
         .filter { it ->
           val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
-          val isApplicable = regexesToIgnore.none { rgx -> nameOfBrochure?.contains(rgx) == true }
+          val isApplicable =
+            brochureNamesToIgnore.none { rgx -> nameOfBrochure?.contains(rgx) == true }
           if (!isApplicable) {
             log.info("Ignoring {} because it is not applicable", nameOfBrochure)
           }
