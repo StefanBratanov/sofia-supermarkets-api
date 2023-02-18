@@ -4,7 +4,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript { dependencies { classpath("org.jetbrains.kotlin:kotlin-noarg:1.8.10") } }
 
 plugins {
-  id("maven-publish")
   id("org.springframework.boot") version "3.0.2"
   id("io.spring.dependency-management") version "1.1.0"
   kotlin("jvm") version "1.8.10"
