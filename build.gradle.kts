@@ -51,7 +51,7 @@ dependencies {
   implementation("com.cloudinary:cloudinary-http44:1.33.0")
   implementation("org.seleniumhq.selenium:selenium-java:4.8.0")
   implementation("com.codeborne:phantomjsdriver:1.5.0")
-  implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
+  implementation("io.github.bonigarcia:webdrivermanager:5.3.2") // no phantomjs driver in 5.x.x
   implementation("com.google.guava:guava:31.1-jre")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
