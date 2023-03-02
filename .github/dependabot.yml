@@ -8,3 +8,10 @@ updates:
       - dependency-name: "io.github.bonigarcia:webdrivermanager"
       - dependency-name: "*"
         update-types: [ "version-update:semver-patch" ]
+  - package-ecosystem: "npm"
+    directory: "/proxy
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+        update-types: [ "version-update:semver-patch" ]    
