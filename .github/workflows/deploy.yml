@@ -1,7 +1,9 @@
 name: deploy
 
 on:
-  push:
+  workflow_run:
+    workflows: [ "build" ]
+    types: [ completed ]
     branches: [ master ]
 
 jobs:
