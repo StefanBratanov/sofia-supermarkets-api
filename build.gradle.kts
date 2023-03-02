@@ -10,7 +10,7 @@ plugins {
   kotlin("plugin.spring") version "1.8.10"
   id("jacoco")
   kotlin("plugin.jpa") version "1.8.10"
-  id("com.diffplug.spotless") version "6.15.0"
+  id("com.diffplug.spotless") version "6.16.0"
 }
 
 group = "com.stefanbratanov"
