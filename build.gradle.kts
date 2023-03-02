@@ -65,6 +65,9 @@ dependencies {
 
 springBoot { buildInfo() }
 
+// dont't produce *-plain.jar
+tasks.getByName<Jar>("jar") { enabled = false }
+
 tasks.withType<KotlinCompile> {
   kotlinOptions {
     freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all-compatibility")
