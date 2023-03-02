@@ -24,4 +24,3 @@ jobs:
         run: ./gradlew spotlessCheck build jacocoTestReport
       - name: Codecov
         uses: codecov/codecov-action@v3
-
