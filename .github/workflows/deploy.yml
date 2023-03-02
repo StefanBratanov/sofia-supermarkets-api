@@ -1,6 +1,8 @@
 name: deploy
 
 on:
+  release:
+    types: [ created ]
   workflow_run:
     workflows: [ "build" ]
     types: [ completed ]

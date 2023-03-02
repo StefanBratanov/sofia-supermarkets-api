@@ -8,13 +8,25 @@ plugins {
   kotlin("plugin.jpa") version kotlinVersion
   id("org.springframework.boot") version "3.0.2"
   id("io.spring.dependency-management") version "1.1.0"
+  id("me.qoomon.git-versioning") version "6.4.1"
   id("com.diffplug.spotless") version "6.16.0"
   id("jacoco")
 }
 
 group = "com.stefanbratanov"
 
-version = "1.4.0"
+version = "develop"
+
+gitVersioning.apply {
+  refs {
+    tag("v(?<version>.*)") {
+      version = "\${ref.version}"
+    }
+    rev {
+      version = "develop"
+    }
+  }
+}
 
 java {
   sourceCompatibility = JavaVersion.VERSION_17
