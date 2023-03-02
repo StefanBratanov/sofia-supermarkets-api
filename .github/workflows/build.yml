@@ -24,3 +24,9 @@ jobs:
         run: ./gradlew spotlessCheck build jacocoTestReport
       - name: Codecov
         uses: codecov/codecov-action@v3
+      - name: Publish proxy
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          workingDirectory: "proxy"
+
