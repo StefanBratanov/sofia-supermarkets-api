@@ -9,9 +9,9 @@ updates:
       - dependency-name: "*"
         update-types: [ "version-update:semver-patch" ]
   - package-ecosystem: "npm"
-    directory: "/proxy
+    directory: "/proxy"
     schedule:
       interval: "weekly"
     ignore:
       - dependency-name: "*"
-        update-types: [ "version-update:semver-patch" ]    
+        update-types: [ "version-update:semver-patch" ]  
