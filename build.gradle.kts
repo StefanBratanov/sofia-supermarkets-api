@@ -1,16 +1,15 @@
 import com.diffplug.gradle.spotless.SpotlessExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-buildscript { dependencies { classpath("org.jetbrains.kotlin:kotlin-noarg:1.8.10") } }
-
 plugins {
+  val kotlinVersion = "1.8.10"
+  kotlin("jvm") version kotlinVersion
+  kotlin("plugin.spring") version kotlinVersion
+  kotlin("plugin.jpa") version kotlinVersion
   id("org.springframework.boot") version "3.0.2"
   id("io.spring.dependency-management") version "1.1.0"
-  kotlin("jvm") version "1.8.10"
-  kotlin("plugin.spring") version "1.8.10"
-  id("jacoco")
-  kotlin("plugin.jpa") version "1.8.10"
   id("com.diffplug.spotless") version "6.16.0"
+  id("jacoco")
 }
 
 group = "com.stefanbratanov"
