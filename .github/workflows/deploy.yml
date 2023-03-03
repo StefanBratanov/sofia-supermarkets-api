@@ -11,6 +11,7 @@ on:
 jobs:
   deploy-jar:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'release' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -46,6 +47,7 @@ jobs:
             sudo systemctl is-active sofia-supermarkets-api
   deploy-proxy:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'release' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v3
       - name: Publish worker to Cloudflare
