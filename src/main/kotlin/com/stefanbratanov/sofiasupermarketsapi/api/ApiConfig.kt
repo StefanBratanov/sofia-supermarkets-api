@@ -27,10 +27,8 @@ class ApiConfig(
       .addServersItem(Server().url(apiServerUrl))
       .info(
         Info()
-          .title("Sofia Supermarkets API Documentation")
-          .description(
-            "An API to retrieve products information from supermarkets in Sofia, Bulgaria"
-          )
+          .title("Sofia Supermarkets API Документация")
+          .description("API за извличане на информация за продукти от супермаркети в София")
           .version(buildProperties.version)
           .contact(Contact().email("stefan.bratanov93@gmail.com"))
           .license(
