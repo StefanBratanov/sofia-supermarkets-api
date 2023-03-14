@@ -6,11 +6,11 @@
 [![codecov](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api/branch/master/graph/badge.svg?token=3V3THIY6AX)](https://codecov.io/gh/StefanBratanov/sofia-supermarkets-api)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/stefanbratanov/sofia-supermarkets-api)](https://github.com/StefanBratanov/sofia-supermarkets-api/releases/latest)
 
-An API to retrieve products information from supermarkets in Sofia, Bulgaria.
+API за извличане на информация за продукти от супермаркети в София.
 
 [![Swagger UI](https://validator.swagger.io/validator?url=https://api.naoferta.net/v3/api-docs)](https://api.naoferta.net/swagger-ui.html)
 
-If you like my work, you can buy me a coffee.
+Ако харесвате работата ми, можете да ме почерпите с кафе.
 
 <a href="https://www.buymeacoffee.com/stefanbratanov"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=stefanbratanov&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff"></a>
 
@@ -22,25 +22,26 @@ If you like my work, you can buy me a coffee.
 
 - [x] Billa
 
-> Gets products information from https://ssbbilla.site/. Images are retrieved based on the first
-> result in google image search.
+> Получава информация за продукти от https://ssbbilla.site/. Изображенията се извличат въз основа на
+> първия резултат в търсенето на изображения в Google
 
 - [x] Fantastico
 
-> Downloads the pdf brochures available on https://www.fantastico.bg/special-offers and parses the
-> products information in them. Images are retrieved based on the first result in google image search.
+> Изтегля pdf брошурите от https://www.fantastico.bg/special-offers и анализира информацията за
+> продуктите в тях. Изображенията се извличат въз основа на първия резултат в търсенето на изображения
+> в Google.
 
 - [x] Kaufland
 
-> Gets products information from https://www.kaufland.bg/.
+> Получава информация за продуктите от https://www.kaufland.bg/.
 
 - [x] Lidl
 
-> Gets products information from https://www.lidl.bg/.
+> Получава информация за продуктите от https://www.lidl.bg/.
 
 - [x] T-Market
 
-> Gets products information from https://tmarketonline.bg/.
+> Получава информация за продуктите от https://tmarketonline.bg/.
 
 - [ ] METRO
 - [ ] Kam Market
@@ -56,7 +57,9 @@ If you like my work, you can buy me a coffee.
 
 ## Code Style
 
-Kotlin code conventions, based on [ktfmt](https://github.com/facebook/ktfmt) and [google-java-format](https://github.com/google/google-java-format) are used in this project. To reformat code, run:
+Kotlin code conventions, based on [ktfmt](https://github.com/facebook/ktfmt)
+and [google-java-format](https://github.com/google/google-java-format) are used in this project. To
+reformat code, run:
 
 ```
 ./gradlew spotlessApply
@@ -66,11 +69,14 @@ Kotlin code conventions, based on [ktfmt](https://github.com/facebook/ktfmt) and
 
 Install JDK 17 or above from [here](https://jdk.java.net/).
 
-* **Unix** 
+* **Unix**
+
 ```
 ./gradlew bootRun
 ```
+
 * **Windows**
+
 ```
 gradlew.bat bootRun
 ```
