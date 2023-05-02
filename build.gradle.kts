@@ -60,7 +60,7 @@ dependencies {
   implementation("org.apache.pdfbox:pdfbox:2.0.27")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
   implementation("com.cloudinary:cloudinary-http44:1.33.0")
-  implementation("org.seleniumhq.selenium:selenium-java:4.8.0")
+  implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
   implementation("com.codeborne:phantomjsdriver:1.5.0")
   implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
   implementation("com.google.guava:guava:31.1-jre")
