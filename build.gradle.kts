@@ -9,7 +9,7 @@ plugins {
   id("org.springframework.boot") version "3.0.3"
   id("io.spring.dependency-management") version "1.1.0"
   id("me.qoomon.git-versioning") version "6.4.1"
-  id("com.diffplug.spotless") version "6.18.0"
+  id("com.diffplug.spotless") version "6.19.0"
   id("jacoco")
 }
 
