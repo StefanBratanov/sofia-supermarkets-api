@@ -88,9 +88,10 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
       QUANTITY to
         { twc ->
           twc.text!!.contains(
-            "\\d+\\s*(мл|г|л|бр|см)".toRegex(
-              RegexOption.IGNORE_CASE,
-            ),
+            "\\d+\\s*(мл|г|л|бр|см)"
+              .toRegex(
+                RegexOption.IGNORE_CASE,
+              ),
           )
         },
       NAME to { twc -> twc.font?.name?.contains(myriadProRegex) == true },
