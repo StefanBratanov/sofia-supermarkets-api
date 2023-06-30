@@ -19,12 +19,8 @@ version = "develop"
 
 gitVersioning.apply {
   refs {
-    tag("v(?<version>.*)") {
-      version = "\${ref.version}"
-    }
-    rev {
-      version = "develop"
-    }
+    tag("v(?<version>.*)") { version = "\${ref.version}" }
+    rev { version = "develop" }
   }
 }
 
@@ -61,6 +57,9 @@ dependencies {
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
   implementation("com.cloudinary:cloudinary-http44:1.33.0")
   implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
+  implementation(
+    "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
+  ) // no checkExecutable method in versions > 4.8.2
   implementation("com.codeborne:phantomjsdriver:1.5.0")
   implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
   implementation("com.google.guava:guava:32.0.0-jre")
