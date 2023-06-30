@@ -6,7 +6,7 @@ plugins {
   kotlin("jvm") version kotlinVersion
   kotlin("plugin.spring") version kotlinVersion
   kotlin("plugin.jpa") version kotlinVersion
-  id("org.springframework.boot") version "3.0.3"
+  id("org.springframework.boot") version "3.1.0"
   id("io.spring.dependency-management") version "1.1.0"
   id("me.qoomon.git-versioning") version "6.4.1"
   id("com.diffplug.spotless") version "6.19.0"
@@ -19,12 +19,8 @@ version = "develop"
 
 gitVersioning.apply {
   refs {
-    tag("v(?<version>.*)") {
-      version = "\${ref.version}"
-    }
-    rev {
-      version = "develop"
-    }
+    tag("v(?<version>.*)") { version = "\${ref.version}" }
+    rev { version = "develop" }
   }
 }
 
@@ -61,6 +57,9 @@ dependencies {
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
   implementation("com.cloudinary:cloudinary-http44:1.33.0")
   implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
+  implementation(
+    "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
+  ) // no checkExecutable method in versions > 4.8.2
   implementation("com.codeborne:phantomjsdriver:1.5.0")
   implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
   implementation("com.google.guava:guava:32.0.0-jre")
