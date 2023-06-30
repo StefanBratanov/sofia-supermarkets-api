@@ -51,7 +51,7 @@ dependencies {
   implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
   implementation("commons-validator:commons-validator:1.7")
   implementation("org.apache.commons:commons-math3:3.6.1")
-  implementation("commons-io:commons-io:2.12.0")
+  implementation("commons-io:commons-io:2.13.0")
   implementation("org.jsoup:jsoup:1.16.1")
   implementation("org.apache.pdfbox:pdfbox:2.0.27")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
