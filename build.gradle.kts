@@ -62,7 +62,7 @@ dependencies {
   ) // no checkExecutable method in versions > 4.8.2
   implementation("com.codeborne:phantomjsdriver:1.5.0")
   implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
-  implementation("com.google.guava:guava:32.0.0-jre")
+  implementation("com.google.guava:guava:32.1.0-jre")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
