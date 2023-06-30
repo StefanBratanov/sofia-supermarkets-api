@@ -3,7 +3,6 @@ package com.stefanbratanov.sofiasupermarketsapi.brochure
 import assertk.assertThat
 import assertk.assertions.endsWith
 import assertk.assertions.exists
-import assertk.assertions.isNotNull
 import java.net.URL
 import java.nio.file.Files
 import org.junit.jupiter.api.Test
