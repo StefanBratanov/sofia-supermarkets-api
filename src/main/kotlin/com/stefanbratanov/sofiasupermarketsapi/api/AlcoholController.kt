@@ -110,6 +110,7 @@ class AlcoholController(
         "чай\\s+",
         "\\s+чай",
         "абсорбира",
+        "подправка"
       )
       .map { it.toRegex(IGNORE_CASE) }
 
