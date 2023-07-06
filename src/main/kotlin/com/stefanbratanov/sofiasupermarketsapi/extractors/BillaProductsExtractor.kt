@@ -24,8 +24,8 @@ class BillaProductsExtractor : UrlProductsExtractor {
       "Най.*добра.*цена.*".toRegex(IGNORE_CASE),
       "Изпечен.*всеки.*минути".toRegex(IGNORE_CASE),
       "Виж още.*".toRegex(IGNORE_CASE),
-      "Продукт(,|\\s)+означен.*със символа.*звезда".toRegex(IGNORE_CASE),
-      "Продукт(,|\\s)+маркиран.*с.*звезда".toRegex(IGNORE_CASE),
+      "(Продукт)?(,|\\s)+означен.*със символа.*звезда".toRegex(IGNORE_CASE),
+      "(Продукт)?(,|\\s)+маркиран.*с.*звезда".toRegex(IGNORE_CASE),
       "(\\*\\s*)?(\\*+)?цената не включва \\p{IsCyrillic}+алаж\\s*(\\.)?".toRegex(IGNORE_CASE),
       "(\\*\\s*)?(\\*+)?цената е без \\p{IsCyrillic}+алаж\\s*(\\.)?".toRegex(IGNORE_CASE),
       "(\\*\\s*)?(\\*+)?цена без \\p{IsCyrillic}+алаж\\s*(\\.)?".toRegex(IGNORE_CASE),
@@ -37,6 +37,10 @@ class BillaProductsExtractor : UrlProductsExtractor {
       "\\*+".toRegex(IGNORE_CASE),
       "Специфика\\s*:.*$".toRegex(IGNORE_CASE),
       "Супер цена".toRegex(IGNORE_CASE),
+      "МУЛТИ ПАК \\d+\\+\\d+".toRegex(IGNORE_CASE),
+      "Цена\\s+за\\s+\\d+\\s+бр\\.\\s*((без|с)\\s+отстъпка)?\\s+(\\d|\\.)+\\s+лв\\.".toRegex(
+        IGNORE_CASE
+      )
     )
 
   private val regexesToDeleteBilla =

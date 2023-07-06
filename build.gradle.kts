@@ -59,7 +59,7 @@ dependencies {
   implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
   implementation(
     "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
-  ) // no checkExecutable method in versions > 4.8.2
+  ) // no checkExecutable method in versions >= 4.8.2
   implementation("com.codeborne:phantomjsdriver:1.5.0")
   implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
   implementation("com.google.guava:guava:32.1.0-jre")

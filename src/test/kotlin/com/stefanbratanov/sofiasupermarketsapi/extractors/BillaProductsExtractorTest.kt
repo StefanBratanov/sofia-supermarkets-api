@@ -24,7 +24,6 @@ internal class BillaProductsExtractorTest {
     val products = underTest.extract(testHtmlUrl)
 
     val actualJson = objectMapper.writeValueAsString(products)
-    println(actualJson)
     val expectedJson = readResource("/extractors/billa/expected.json")
 
     JSONAssert.assertEquals(expectedJson, actualJson, JSONCompareMode.STRICT)

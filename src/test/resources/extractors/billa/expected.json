@@ -1918,5 +1918,25 @@
     "picUrl": null,
     "validFrom": "2021-03-18",
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Starobrno кен",
+    "quantity": "0.5л",
+    "price": 1.3,
+    "oldPrice": 2.65,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Moretti кен",
+    "quantity": "0.5л",
+    "price": 1.39,
+    "oldPrice": 2.15,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
   }
 ]
