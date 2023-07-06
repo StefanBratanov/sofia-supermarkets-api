@@ -1938,5 +1938,15 @@
     "picUrl": null,
     "validFrom": "2021-03-18",
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Уиски Claymore",
+    "quantity": "0.7л",
+    "price": 11.995,
+    "oldPrice": 23.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
   }
 ]
