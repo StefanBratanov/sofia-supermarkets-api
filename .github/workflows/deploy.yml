@@ -55,4 +55,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: "proxy"
-          command: publish
+          command: deploy
