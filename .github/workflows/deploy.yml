@@ -55,5 +55,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: "proxy"
-          preCommands: npm install
           command: deploy
