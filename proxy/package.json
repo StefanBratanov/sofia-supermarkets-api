@@ -2,11 +2,11 @@
   "name": "sofia-supermarkets-api-proxy",
   "version": "0.0.1",
   "devDependencies": {
-    "wrangler": "2.20.0"
+    "wrangler": "3.1.1"
   },
   "private": true,
   "scripts": {
     "start": "wrangler dev",
-    "deploy": "wrangler publish"
+    "deploy": "wrangler deploy"
   }
 }
