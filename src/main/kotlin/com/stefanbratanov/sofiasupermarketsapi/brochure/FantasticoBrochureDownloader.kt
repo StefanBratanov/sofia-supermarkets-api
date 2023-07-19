@@ -59,8 +59,8 @@ class FantasticoBrochureDownloader(
     val brochures =
       htmlDoc
         .select("div.brochure-container.first div.hold-options")
-        .filter { it ->
-          val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
+        .filter { element ->
+          val nameOfBrochure = element.selectFirst("p.paragraph")?.text()
           val isApplicable =
             brochureNamesToIgnore.none { rgx -> nameOfBrochure?.contains(rgx) == true }
           if (!isApplicable) {

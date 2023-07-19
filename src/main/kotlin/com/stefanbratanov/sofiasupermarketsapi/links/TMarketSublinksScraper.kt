@@ -23,7 +23,7 @@ class TMarketSublinksScraper(
       .select("li._navigation-dropdown-list-item")
       .first { it.selectFirst("span._figure-stack-label")?.text()?.contains("НАПИТКИ") == true }
       .select("._navigation-dropdown-list-item > a")
-      .filter { it -> it.parent()?.classNames()?.contains("item-collapse") == false }
+      .filter { element -> element.parent()?.classNames()?.contains("item-collapse") == false }
       .map { it.attr("href") }
       .filter { !it.contains("javascript") && it.startsWith("http") }
       .flatMap { tMarketPagesRetriever.retrieveAllPages(URL(it)) }

@@ -29,7 +29,7 @@ class LidlProductsExtractor(
 
     return document
       .select("article[data-price]")
-      .filter { it -> !it.select(".lidl-m-pricebox__price").isEmpty() }
+      .filter { element -> !element.select(".lidl-m-pricebox__price").isEmpty() }
       .map {
         val dateRange =
           it.selectFirst(".lidl-m-ribbon-item__text")?.text()?.trim()?.let { dateSpan ->
