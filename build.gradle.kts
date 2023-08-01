@@ -33,7 +33,7 @@ jacoco { toolVersion = "0.8.8" }
 
 repositories { mavenCentral() }
 
-val junitVersion = "5.9.2"
+val junitVersion = "5.10.0"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
