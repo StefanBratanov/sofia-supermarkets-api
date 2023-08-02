@@ -2,6 +2,7 @@ package com.stefanbratanov.sofiasupermarketsapi.extractors
 
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
+import com.stefanbratanov.sofiasupermarketsapi.common.UrlValidator
 import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefanbratanov.sofiasupermarketsapi.common.normalizePrice
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.UrlProductsExtractor
@@ -12,7 +13,6 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.text.RegexOption.IGNORE_CASE
 import org.apache.commons.lang3.StringUtils
-import org.apache.commons.validator.routines.UrlValidator
 import org.springframework.stereotype.Component
 
 @Log

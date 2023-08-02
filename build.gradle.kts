@@ -49,7 +49,6 @@ dependencies {
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("org.apache.commons:commons-lang3")
   implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
-  implementation("commons-validator:commons-validator:1.7")
   implementation("org.apache.commons:commons-math3:3.6.1")
   implementation("commons-io:commons-io:2.13.0")
   implementation("org.jsoup:jsoup:1.16.1")
@@ -59,7 +58,7 @@ dependencies {
   implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
   implementation(
     "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
-  ) // no checkExecutable method in versions >= 4.8.2
+  ) // no checkExecutable method in versions > 4.8.1
   implementation("com.codeborne:phantomjsdriver:1.5.0")
   implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
   implementation("com.google.guava:guava:32.1.0-jre")
