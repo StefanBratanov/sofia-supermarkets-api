@@ -2,6 +2,7 @@ package com.stefanbratanov.sofiasupermarketsapi.image
 
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
+import com.stefanbratanov.sofiasupermarketsapi.common.UrlValidator
 import com.stefanbratanov.sofiasupermarketsapi.common.checkIfUrlHasAcceptableHttpResponse
 import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.ImageSearch
@@ -14,7 +15,6 @@ import java.util.*
 import java.util.Objects.isNull
 import java.util.Objects.nonNull
 import me.xdrop.fuzzywuzzy.FuzzySearch
-import org.apache.commons.validator.routines.UrlValidator
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.cache.annotation.Cacheable
 import org.springframework.http.HttpMethod
