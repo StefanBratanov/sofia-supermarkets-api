@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Сайдер SOMERSBY различни видове",
+    "quantity": "330 мл",
+    "price": 1.49,
+    "oldPrice": 2.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино TERRA TANGRA Organic; TT различни видове",
+    "quantity": "750 мл",
+    "price": 9.99,
+    "oldPrice": null,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Совиньон Блан MISTY COVE WINES произход Нова Зелендия",
+    "quantity": "750 мл",
+    "price": 16.99,
+    "oldPrice": 22.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино CHATEAU SUNGURLARE Шардоне; Мерло",
+    "quantity": "750 Мл",
+    "price": 7.99,
+    "oldPrice": 15.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино VIA VINERA Contour Совиньон Блан и Пино Гри; Каберне Совиньон и Пино Ноар",
+    "quantity": "750 мл",
+    "price": 8.49,
+    "oldPrice": 11.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Вино Малбек; Пино Гриджо ARGENTO произход Аржентина",
+    "quantity": "750 мл",
+    "price": 10.99,
+    "oldPrice": 14.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Чипс PRINGLES различни вкусове",
+    "quantity": "165 г",
+    "price": 3.99,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ирландско уиски BUSHMILLS Cask Finish; The Original",
+    "quantity": "700 мл",
+    "price": 26.99,
+    "oldPrice": null,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски CHIVAS REGAL 12-годишно",
+    "quantity": "700 мл",
+    "price": 41.99,
+    "oldPrice": 55.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Джин BEEFEATER London Dry Gin Classic",
+    "quantity": "700 мл",
+    "price": 18.99,
+    "oldPrice": 25.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Уиски REMINGTON",
+    "quantity": "700 мл",
+    "price": 11.99,
+    "oldPrice": 23.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски GRANT‘S Triple Wood; Ale Cask; Rum Cask",
+    "quantity": "700 мл",
+    "price": 0.18,
+    "oldPrice": 25.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Узо PLOMARI",
+    "quantity": "700 мл",
+    "price": 16.49,
+    "oldPrice": 21.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка РУСКИЙ СТАНДАРТ Special Edition",
+    "quantity": "700 мл",
+    "price": 18.99,
+    "oldPrice": 23.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ракия ПЛИСКА Мускатова; Отлежала",
+    "quantity": "700 мл",
+    "price": 11.99,
+    "oldPrice": 16.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка SOBIESKI Premium",
+    "quantity": "700 мл",
+    "price": 10.99,
+    "oldPrice": 14.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Тиквени семки DETELINA",
+    "quantity": "100 г",
+    "price": 1.69,
+    "oldPrice": 2.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Чипс RUFFLES различни вкусове",
+    "quantity": "150 г",
+    "price": 2.99,
+    "oldPrice": 4.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ядки ROIS печени Premium Mix печен шамфъстък",
+    "quantity": "150 г; 140 г",
+    "price": 4.99,
+    "oldPrice": 7.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  }
+]

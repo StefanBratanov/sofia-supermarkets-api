@@ -8,14 +8,7 @@ import com.stefanbratanov.sofiasupermarketsapi.interfaces.PdfProductsExtractor
 import com.stefanbratanov.sofiasupermarketsapi.model.Product
 import com.stefanbratanov.sofiasupermarketsapi.pdf.PdfPageProductsExtractor
 import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.CURRENCY
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.DISCOUNT
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NAME
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NEW_PRICE
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.NEW_PRICE_LEGACY
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.OLD_PRICE
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.QUANTITY
-import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.UNKNOWN
+import com.stefanbratanov.sofiasupermarketsapi.pdf.ProductSection.*
 import com.stefanbratanov.sofiasupermarketsapi.pdf.TextWithCoordinates
 import java.nio.file.Path
 import org.apache.commons.lang3.StringUtils
@@ -68,6 +61,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
       ",\\s*\$".toRegex(RegexOption.IGNORE_CASE),
       "➥+".toRegex(RegexOption.IGNORE_CASE),
       "количествата са лимитирани".toRegex(RegexOption.IGNORE_CASE),
+      "предложението е валидно.*цени".toRegex(RegexOption.IGNORE_CASE)
     )
 
   private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean> =
