@@ -106,8 +106,8 @@ class FantasticoBrochureDownloader(
             }
 
           val downloadPath = tempDirectory.resolve(filename)
-          log.info("Downloading {}", downloadUrl)
-          copyURLToFile(downloadUrl, downloadPath)
+          val downloadedBytes = copyURLToFile(downloadUrl, downloadPath)
+          log.info("Downloaded {} ({} bytes)", downloadUrl, downloadedBytes)
 
           Brochure(downloadPath, dateRange?.first, dateRange?.second)
         }

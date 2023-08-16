@@ -5,8 +5,10 @@ import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
 
-fun copyURLToFile(source: URL, destination: Path) {
-  source.openStream().use { Files.copy(it, destination, StandardCopyOption.REPLACE_EXISTING) }
+fun copyURLToFile(source: URL, destination: Path): Long {
+  return source.openStream().use { inputStream ->
+    Files.copy(inputStream, destination, StandardCopyOption.REPLACE_EXISTING)
+  }
 }
 
 /** This method is based on org.apache.commons.io.FilenameUtils.getName() */
