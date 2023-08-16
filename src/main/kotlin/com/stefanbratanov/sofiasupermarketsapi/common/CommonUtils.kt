@@ -8,11 +8,7 @@ import java.util.Objects.isNull
 import kotlin.text.RegexOption.IGNORE_CASE
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
-
-val log: Logger = LoggerFactory.getLogger("CommonUtils")
 
 fun normalizePrice(price: String?): Double? {
   return price?.replace("(лв|\\*).*".toRegex(), "")?.replace(',', '.')?.trim()?.toDoubleOrNull()

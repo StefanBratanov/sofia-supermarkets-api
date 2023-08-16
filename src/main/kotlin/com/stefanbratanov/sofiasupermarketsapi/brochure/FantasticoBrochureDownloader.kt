@@ -2,7 +2,9 @@ package com.stefanbratanov.sofiasupermarketsapi.brochure
 
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
+import com.stefanbratanov.sofiasupermarketsapi.common.copyURLToFile
 import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
+import com.stefanbratanov.sofiasupermarketsapi.common.getNameMinusThePath
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.BrochureDownloader
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.BrochureDownloader.Brochure
 import io.github.bonigarcia.wdm.WebDriverManager
@@ -15,8 +17,6 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter.ofPattern
 import java.util.concurrent.TimeUnit
 import kotlin.text.RegexOption.IGNORE_CASE
-import org.apache.commons.io.FileUtils
-import org.apache.commons.io.FilenameUtils
 import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.phantomjs.PhantomJSDriver
@@ -90,7 +90,7 @@ class FantasticoBrochureDownloader(
                 ?.attr("href")!!
             }
 
-          val filenameMinusPath = FilenameUtils.getName(downloadHref)
+          val filenameMinusPath = getNameMinusThePath(downloadHref)
           val encodedHref =
             downloadHref.replace(
               filenameMinusPath,
@@ -107,7 +107,7 @@ class FantasticoBrochureDownloader(
 
           val downloadPath = tempDirectory.resolve(filename)
           log.info("Downloading {}", downloadUrl)
-          FileUtils.copyURLToFile(downloadUrl, downloadPath.toFile())
+          copyURLToFile(downloadUrl, downloadPath)
 
           Brochure(downloadPath, dateRange?.first, dateRange?.second)
         }
