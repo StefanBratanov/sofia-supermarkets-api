@@ -1,11 +1,6 @@
 package com.stefanbratanov.sofiasupermarketsapi.api
 
-import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Beer
-import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Other
-import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Rakia
-import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Vodka
-import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Whiskey
-import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.Wine
+import com.stefanbratanov.sofiasupermarketsapi.api.AlcoholController.AlcoholCategory.*
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.CdnUploader
@@ -109,7 +104,8 @@ class AlcoholController(
         "дезинфектант",
         "чай\\s+",
         "\\s+чай",
-        "абсорбира",
+        "\\p{IsCyrillic}+бира",
+        "бира\\p{IsCyrillic}+",
         "подправка",
         "cappy"
       )
