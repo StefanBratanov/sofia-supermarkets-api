@@ -18,19 +18,11 @@ class LidlSublinksScraper(
     log.info("Scraping {} for sublinks", baseUrl)
 
     return getHtmlDocument(baseUrl)
-      .select("li[data-Creative=Main Navigation] > a")
+      .select("li.AHeroStageItems__Item > a")
       .map {
         val href = it.attr("href")
-        val sublink = baseUrl.toURI().resolve(href).toURL()
-        getHtmlDocument(sublink)
-      }
-      .flatMap {
-        it
-          .select("li.nuc-m-header-sub-nav-item > a")
-          .map { elem -> elem.attr("href") }
-          .filter { href -> !href.contains("lidl-plus") }
+        baseUrl.toURI().resolve(href).toURL()
       }
       .distinct()
-      .map { baseUrl.toURI().resolve(it).toURL() }
   }
 }
