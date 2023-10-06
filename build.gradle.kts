@@ -63,7 +63,7 @@ dependencies {
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
-  testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.26.1")
+  testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.27.0")
   testImplementation("io.mockk:mockk:1.13.4")
   testImplementation("com.ninja-squad:springmockk:4.0.0")
   testImplementation("org.skyscreamer:jsonassert:1.5.1")
