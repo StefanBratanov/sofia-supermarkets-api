@@ -85,6 +85,7 @@ gradlew.bat bootRun
 
 The following environment variables need to be set prior to running:
 
+* DB_URL
 * DB_USERNAME
 * DB_PASSWORD
 * GOOGLE_API_KEY

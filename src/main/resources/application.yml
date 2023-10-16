@@ -58,7 +58,7 @@ spring:
   datasource:
     hikari:
       maximum-pool-size: 2
-    url: "jdbc:postgresql://queenie.db.elephantsql.com:5432/nwshtxej"
+    url: ${DB_URL:}
     username: ${DB_USERNAME:}
     password: ${DB_PASSWORD:}
   jackson:
