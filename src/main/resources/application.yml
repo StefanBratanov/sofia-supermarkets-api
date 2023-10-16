@@ -1,5 +1,5 @@
 api:
-  server.url: https://api.naoferta.net
+  server.url: https://sofia-supermarkets-api-proxy.stefan-bratanov.workers.dev
 
 server:
   compression.enabled: true
