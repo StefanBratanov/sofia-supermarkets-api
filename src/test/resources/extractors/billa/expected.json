@@ -1948,5 +1948,45 @@
     "picUrl": null,
     "validFrom": "2021-03-18",
     "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Tuborg кен",
+    "quantity": "0.5л",
+    "price": 1.33,
+    "oldPrice": 2.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Вино Montado",
+    "quantity": "0.75л",
+    "price": 7.99,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Уиски Johnnie Walker Red Label",
+    "quantity": "0.7л",
+    "price": 18.99,
+    "oldPrice": 28.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
+  },
+  {
+    "name": "Бира Starobrno кен",
+    "quantity": "0.5л",
+    "price": 1.225,
+    "oldPrice": 2.45,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2021-03-18",
+    "validUntil": "2021-03-24"
   }
 ]
