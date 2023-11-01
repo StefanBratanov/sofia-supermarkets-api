@@ -53,7 +53,7 @@ dependencies {
   implementation("org.jsoup:jsoup:1.16.1")
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
-  implementation("com.cloudinary:cloudinary-http45:1.34.0")
+  implementation("com.cloudinary:cloudinary-http45:1.35.0")
   implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
   implementation(
     "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
