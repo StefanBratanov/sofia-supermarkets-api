@@ -1,65 +1,5 @@
 [
   {
-    "name": "Чипс от царевица GRIVAS различни вкусове от един и същи вкус",
-    "quantity": "2 бр х 100 г",
-    "price": 2.28,
-    "oldPrice": 4.56,
-    "category": null,
-    "picUrl": null,
-    "validFrom": null,
-    "validUntil": null
-  },
-  {
-    "name": "Крекер CHIO Party Mix",
-    "quantity": "2 бр х 200 г",
-    "price": 3.98,
-    "oldPrice": 7.96,
-    "category": null,
-    "picUrl": null,
-    "validFrom": null,
-    "validUntil": null
-  },
-  {
-    "name": "Печен чипс LAY`S различни вкусове",
-    "quantity": "125 г",
-    "price": 2.59,
-    "oldPrice": 5.35,
-    "category": null,
-    "picUrl": null,
-    "validFrom": null,
-    "validUntil": null
-  },
-  {
-    "name": "Бира STELLA ARTOIS амбалаж",
-    "quantity": "500 мл 0.20 лв бутилка",
-    "price": 1.55,
-    "oldPrice": 2.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": null,
-    "validUntil": null
-  },
-  {
-    "name": "Бира CORONA Екстра",
-    "quantity": "355 мл",
-    "price": 1.89,
-    "oldPrice": 3.29,
-    "category": null,
-    "picUrl": null,
-    "validFrom": null,
-    "validUntil": null
-  },
-  {
-    "name": "Бира HEINEKEN Classic; Silver",
-    "quantity": "мултипак, кен 4 бр х 500 мл",
-    "price": 4.99,
-    "oldPrice": 7.47,
-    "category": null,
-    "picUrl": null,
-    "validFrom": null,
-    "validUntil": null
-  },
-  {
     "name": "Водка КРЕСКОВА",
     "quantity": "1 л",
     "price": 0.1,
@@ -124,6 +64,86 @@
     "quantity": "2 бр х 100 г",
     "price": 2.58,
     "oldPrice": 5.16,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Ирландско уиски TULLAMORE DEW",
+    "quantity": "1 л",
+    "price": 27.99,
+    "oldPrice": 40.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Гроздова ракия ШОПСКА",
+    "quantity": "700 мл",
+    "price": 7.49,
+    "oldPrice": 11.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски JOHN BARR Red Label",
+    "quantity": "700 мл",
+    "price": 0.14,
+    "oldPrice": 24.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Уиски DUNSTONE BLENDED",
+    "quantity": "700 мл",
+    "price": 9.59,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Водка SMIRNOFF",
+    "quantity": "700 мл",
+    "price": 15.99,
+    "oldPrice": 21.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Гроздова ракия СУНГУРЛАРСКА Отлежала",
+    "quantity": "1 л",
+    "price": 15.59,
+    "oldPrice": 25.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски JOHNNIE WALKER Black Label Sherry Finish",
+    "quantity": "700 мл",
+    "price": 39.99,
+    "oldPrice": 59.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": null,
+    "validUntil": null
+  },
+  {
+    "name": "Шотландско уиски J&B",
+    "quantity": "700 мл",
+    "price": 18.99,
+    "oldPrice": 26.99,
     "category": null,
     "picUrl": null,
     "validFrom": null,

@@ -62,7 +62,8 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
       "➥+".toRegex(RegexOption.IGNORE_CASE),
       "количествата са лимитирани".toRegex(RegexOption.IGNORE_CASE),
       "предложението е валидно(.*цени)?".toRegex(RegexOption.IGNORE_CASE),
-      "от.*до.*г\\.".toRegex(RegexOption.IGNORE_CASE)
+      "от.*до.*г\\.".toRegex(RegexOption.IGNORE_CASE),
+      "цена за периода.*г\\.".toRegex(RegexOption.IGNORE_CASE)
     )
 
   private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean> =
