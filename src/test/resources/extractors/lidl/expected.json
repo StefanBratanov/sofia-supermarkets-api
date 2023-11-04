@@ -1,62 +1,642 @@
 [
   {
-    "name": "Шварцвалдска шунка",
-    "quantity": "2 х 100 g/опаковка",
-    "price": 3.79,
-    "oldPrice": 7.58,
-    "category": "Двойно повече на същата цена",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/10707/third/sm/10707_55.jpg",
-    "validFrom": "2023-01-23",
-    "validUntil": "2023-01-29"
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/iV3VwFsL3GJ61sFsNnVzLuJObL_JWpmI6LwjbR6CvUQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS84NkVBMENFQzQ4RDlENjBGRjM3NDY5QkE/3MEY4RDhGMDM0RDcxRTY4ODc5NEU5MDE5QTU5RTE0REUxRDBBRTE0LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
   },
   {
-    "name": "Пастет с риба тон",
-    "quantity": "2 х 95 g/опаковка",
-    "price": 2.49,
-    "oldPrice": 4.98,
-    "category": "Двойно повече на същата цена",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7303088/third/sm/7303088_88.jpg",
-    "validFrom": "2023-01-23",
-    "validUntil": "2023-01-29"
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/K3yE8-l9HOFcZSljVTYXGW-447SHosNL-t3e2PdCE0I/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DRTVFQzJFRDEyNzAzNjhDNjBBOUY5MkI/0Nzk4MURFM0FGOTg1OTMxMkUzOEE1OUVCQzZBNDhBNzU3NjBFQzg1LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
   },
   {
-    "name": "Бърбън кола",
-    "quantity": "2 х 0,33 l/опаковка",
-    "price": 2.69,
-    "oldPrice": 5.38,
-    "category": "Двойно повече на същата цена",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/161674/third/sm/161674_88.jpg",
-    "validFrom": "2023-01-23",
-    "validUntil": "2023-01-29"
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/1HDR7vhQxWUT92VU6WjUQqtZDtnHlGSmQcAJzEDEOJ4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yQTk4RDcxQUVBMTlGRjlCREFGMEU0Mzk/3RDVEMjk0NTQ1NTI4M0IxQjM0NTAyM0U2REZCRjEzNzIxMUUwMjRBLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
   },
   {
-    "name": "Шунка Pikok Pure",
-    "quantity": "2 х 180 g/опаковка",
-    "price": 5.99,
-    "oldPrice": 11.98,
-    "category": "Двойно повече на същата цена",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/7202363/third/sm/7202363_0.jpg",
-    "validFrom": "2023-01-23",
-    "validUntil": "2023-01-29"
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/MbdkKi3RRfuoW6sfcZ9ziaa88-RIcBJExd2hVOSJX4Q/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS80QkNFMEMxRTFBQTRDMUZERTI4NkY1Qjd/ENTFEODkxNzg5QUE5MUUyOUEzOEQ4REI5RkZBQkU2OEZEMDE0NkQxLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
   },
   {
-    "name": "Тесто за пица",
-    "quantity": "2 х 400 g/опаковка",
-    "price": 1.99,
-    "oldPrice": 3.98,
-    "category": "Двойно повече на същата цена",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/999230403/third/sm/999230403_0.jpg",
-    "validFrom": "2023-01-23",
-    "validUntil": "2023-01-29"
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/a8gBeMQU5gvEXkKNbUU5EWWGDx1zqfwSzAWh-NTdrDI/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS82NDEwMkVGNjU2OERGNTVDNDFDREZDMDV/DRDkwMzJDNUI2Q0VBRjYxOTBGRjdDNEE2MkY0OEQ1MTcwNjlGQUQ4LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
   },
   {
-    "name": "Grivas Чипс от царевица",
-    "quantity": "2 х 100 g/опаковка",
-    "price": 2.19,
-    "oldPrice": 4.38,
-    "category": "Двойно повече на същата цена",
-    "picUrl": "https://bg.cat-ret.assets.lidl/catalog5media/bg/article/999230401/third/sm/999230401_0.jpg",
-    "validFrom": "2023-01-23",
-    "validUntil": "2023-01-29"
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/95OdJgNjnpSWTBsOw1k7M_uWSIbSRTXnZ3WXxUqdhjQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8xRTVBQjMwNTc3NEE4QzUyNEY2MEU1NDM/wOTA3MUFCNDVGNkU4N0Q4NTAwMTQxNjc2MkU0NkU1NDEzNzk0NzI4LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/ySBkLQMTRahKshS0jHulf5FrHju7C9zi9KVVh9cnRpU/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9COEM3M0M4NDNENkU5RDY4REFDQzdFNjE/4QTcwMTlGMzg2OEJCREVDNjM4NUYyMDRFODZGNDM3MjQ2OEVDQjE5LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/qUc15vH8Zcdb4nbDMyLaF6LSe1P-IVhno7wcjNHaRUw/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85NjcyM0U5RTY2MTlCN0ZDMjlEREVCMTI/xQzZENDE5ODc5MDUyRkJGOTg1NUYwM0E1RTkzQjAwN0YxQTY0QzA0LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/5t-p2E6Znap5vpMpaOz_Ws2T1zuKz22p_6Mj7l6n1KI/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS81MUI3MzVBQURCNUUxNkFENzk0NDQ0NjE/yQzQzMDg0QzIyMUVFNkZDM0IxOUU1MEVGOTA1MUUwRjNBRTFEOEMwLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/JLz3r4QolJhATpsFtwlupggoW1qp_RIWqv3hSHMG-5E/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DMEJDMkVGMURCOTU4OUI3Njc2MUQ5NTc/2NzExRUZFMzRENUIwQjNEQjgyM0Y0MjRFMTVERkE5QzA3QTUyQkRFLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/pwdKF6xhPMqpGcB7_ml3VBN3zcf5AA2eNFUKdCDJHRo/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8wMzYwNzZBMkM1NEE4RUYxRkZEMDUyOTE/zRkMwNUEzMzM2NDY2MjEwNkNDOTBBRjQzMUU0MDRDOERCOUI4Qzg3LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/nGRWRBYqYfwuOY1mQcuTMvhBhE0PJX_lHbWmQF0GgKg/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9GMEM4MDlEMERENzZFRjYwMTUzREQwMUR/CNzY5NTczQTE5NkVEQUExOUU2QThEOEY1MjVDN0VCMkU1QzEwRUZGLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/Cd39VRGodu5CJgPjJwhkLmBAx2lDmcZLDmLmP5c47Zk/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yNTdDQjA1Q0IwNzFEMDE4RUQ3QkM0QTE/4QTI0MzE5MkYxM0NCMUNGNUI0ODBFODBBMjM1Q0Y2RUYzQjAyQzU0LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/5xjkR42xpOTxTSyk4JRbueZcKlDt0Oau2WY1rh_AsM8/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS83ODA3REMzNzlCQTQzODNBRjcwRTQ3M0M/0Nzg5NDAzODMzQUQzRDNERkY1NEE2QTlGNTQ1RkMxNUM1MTEyNjNCLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/P7_8NBrB6NChrP5WSw0wWzP2_ux2NM6EdRQZuvJr3is/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85QURGODQyMjc4N0QxRUFFMEQ4ODY3NTE/2MjA5Q0ZEMDBEQjVCQzc1ODFBNTU2QkNCMDFDNDFDNkYzQ0VBOTAxLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/C5IOUeGWJ6tZ0TJ8psOKZx6pjnUw1L5tg1wNEUUx9ms/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8wOUVCQ0M3OTQzQTgzRkZBNEQxOUNEQUI/zMDUwRDgzMjRBM0VFREU1RjZENzRGMEUwRTlGNEFGNjczODNBRTQzLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/055kbJ4oGZE38ofKw8RhO-dz-eic7IdeOGtVz4D0tcA/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS83NjA3QTAwMDM4RUU3N0ZCNUIzQkM4QjE/xODBDMzFDM0Y5RjE0MkM1NTcxMTIzRThBQzlGQzY4RDUzNDNDQTUzLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/DJB33Bt1P8OF4OljVpx5934SohuICE11C7WZ6uomR1o/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DOTc3MjJDNEEwQjYzRTdDNjdGNEVFQTA/2NDI4RDg5NzcyMTRFM0E2Q0RFRUJEMDhGN0Y4NEM3Qzg2MjJFRUFELmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/IPe5JnErmhgpjCwwYu70MZ8cHqjOqdbiXXvMCy7Pqas/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85QkVCNzhGMDdERUZCRDJBRTNDRTgxQTV/COTRDMkRCNENFNjZBNkVCNzZBNDUyNjlDQUJEREEyRTkxNUNGMTQwLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/mWxFO0ZRzzVg3545m6l5tL619gThMcN7YmrqAYWcLiQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9BQzJBQkE5OURGNkNFMkJEMERCMDJDQTc/yRUQ0OTE4NEY5MjNBNTZFOEExNUM0Q0YwMkJGOUZCQkNDOUQ4OTgwLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/3Em_FUwBkhT6Q2DoA3IZIRNluZT49mrQBPEvyFUoc3w/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9FQzA5MzM0MjM4MzkwMUVDN0JENEUxNzE/wRkFERUNFMUY3QTk4QjNGOTZCRUYzQzE0N0ZCNDM5RjQxN0RFNEVBLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/RyePdWhCJenU4dg3IYCxKsWI9nPIhehmAr5P2_BWLvQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS84NkNFNEUyOEVERTJBMzZCMTY0NDBBMjJ/CQUY3MDVEQzg4M0MzMEFGMkJCNkYwMzMxODUwQTdDMDE0RTkxNjU2LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/Wt_mnaLS7cmi4ROVJ4ZCegAn1lacienGgRTWJkG_piY/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS81NEUwNUY5ODQxQkQzNTBDRkRBM0M2QTY/1MDQ0Njc1MkU2RjE5Njc2MDYxRDY2RkI4NjVEMzA0QUYyNjkxMDVCLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/B7ovlWecEp7PZ6eK0kFhMQx5RxJfvNG-j_lVXrcIlFM/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yQ0I5NDEyMzQ4Q0Y2NzEwRjY4RUVGNkE/wRDk4REMxRTEwRTYzQkUyNUU4OTdFNTZCMzI3QzlBMDc3MzVDOTgxLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/DFaz2K5JKM9ixqnT8BDGPDHnLA_TTZjYTSBodDxTw1Y/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8xMEFEMTU0OTI3NjY1NTYxNjcwMjYxMjU/zRjZBODkzNTJCNDFDQTZBNkUyRUNFOTVBQUY5NUUzNzQwNTlGQzY3LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/_KWwOtelW57C1XTt2upOEbJiqar6YNUcDsspoawKth4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9FM0RCNjU0RjdBMEJBQzlBQzU0OEQ5MDF/DOUVBMzZGN0Y5ODcxQzg4RDQ0MERFQkQwRTk4MjAwQUMwNEY3MzdBLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/t8YDWtKgOtBXDNS40CgSDt1yyU-oETfLDOiUcgeRDI0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9CNEU2OEE1NjhGQjNCRUU2NjY0NzIyNUY/xNTI5NjE0MENGMTg3M0U1NkUxQ0JGMDU2RjI1NEQyNzQ0NzlBNDc3LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/X3wX11QmUswATAgm9HEsylbVmjd7n74A9sc8PdsUwx0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS80QTYwMzFDMTE3RTg5MzdFODg2MjU4MTQ/2MEZDQkM3MTQ0N0Y3REUxMDJCRUQyMDU4NTM4QzE1QTcxMTYwNjdCLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/zngT6L47ixJpL_8kQiR8NmOjOIrLOkEaGAb7XE7mJRI/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9FOTMzNEExQkY4QzE2MkI2QTMwRDQ1QTA/zNDVEOUFFRTRFMEY4Rjg4MzFCNkM0NzI1RTZDRkE5ODIyNDEzMDA3LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/yvY-nTzzXKfPhpGi3Wuqarz7ffIZGmzgpQEZ3UZx-x8/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS80NkU4MjQzQUFDNEY4MTg5N0RDOTBERTZ/GOEIxQjI0RTU3Q0Y4QzY5RjgxM0JGQ0MzRUJFRkNBNDNGMzIyNjlFLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/zg58iQBdZcHUE6U6vgO_jsC41j8GkMVhOMF6mbCnkws/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS83QUIwM0VCNDUzRkIyQjYyQUJEODVGOTF/EOTc1RjBBRjZDQzczMEFBNThBOEZBM0Y0RjFCMjQ5RkI3NEIxMDA0LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/Nv2q680IdDz-9fhsUUcw6ngNljKfMtiIG9lAIXgNXho/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9GMTRBNkEwNjJFMzg4OTkxQTkxRDM4M0V/DMzc3ODI2NEY1NTA1RTQ2RjM5NzVBMjBDODUzQkEzNTk3NjJFNTVCLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/JbTNSTBFgIa3JehAOXImIs-iVKINpFHD-I55kdDEiMQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zNjU2QTMyRjMwOEE2Mjg2MTRGRUU5Njl/DQjEzNjE4MDdGMEQ1MDc1MEEwMkQ0QUJEOUZEN0JDRTMzQTcwNDg4LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/DoZeW9v1RWntF0N4z74jzqPTp3ZdhWATA7pm9pZePQY/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS84OTZBNEI4QjIyRkNCMjNFRjhGMERDQTl/BMjkwNjYxQjMzRkYzRUI1Mjc2OEYzNDY5OUYxMkNCMDlDODZEN0Q4LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/OnfEGcwcjG092jPn6cvOq5qeBybkDeziDVq1RyS2I9I/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9CQ0YwMEU4N0NFRkU2ODdGQkRGNUM0QTR/FRUU3Q0JENjNEQTkwQjJBMzc1RDlENjkwQjhFNDNBQkNEMjdBNUM4LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/B0hjrEP-4t7gU_Qo26Sq4ALyH-FZssDysUsp0e9RbfQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS81NjA2NEVGMkY1M0U3OUM2NDVCNjgxQkR/DNEFCNjgzNDAzNTE4RUExQjNFOTkyQTQ2OEQ5RDZCQUM4QzFERUQyLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/eB9zS8WcyodA90ZyNu3XKAm78Vln90o2MWvUWCS_kN4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS83ODZGRDI2NkYzNUEyRDg0NkRCQ0FCOTZ/ENjIyMTI2NkY5M0MwMDdFNzVDMUYzREVCQjk1RUFFQjMwMDc1MDBCLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/cKUtQGn48sNVoaA8hozZk3jLcgJurfexC6UxRL-vXME/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yRjg2QUI5RDQ3MEU1QTZCNDlCOTRENDF/BMUY4Q0IzQTZGRENDMkYxMUYxRjNGOEUxNDkwRDY1RUE3RDkzNDM2LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/6-LQkh8c4oiF_9ZT575TNJk6KoiSUqmvx05AOnfeJQU/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS80RDQ4M0RCNkI3NzRFRjg4REM5QTA0Q0Q/3N0M1NjY2RTY5MEY3MkVCQjUyNTRFODUyNTdGQjEyQjM0QTZCNjJDLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/IIiV4Mo2TwBqW4--UGt5-gv8Chl6eoojU1inwRroDfM/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8xRDYwQ0M3QTg0NEIxNUYxOTlCOURBNEU/0QUQ1QTc4RkRFMDIyQTlFM0RCNEQxM0EyODM1QzBBRUJCRkRDNEIwLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/PW_Lkr4xhrrjey9Rk_a1bb-E9xzal2KDoUo55BDYNi0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS84QTE3NEVBQ0M1NTI0N0FBMEMzQTA0QUV/BMDBDRTlCRDNDNEFFRDVBNjQwNTI3OTM2MUVCNTA5OEQ2QTUwNDQ3LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/pJn2-YE-JiHdu1wyozcI22hWdtg4oS2m4bHiYyrk5yw/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9ERTJBRjQ3MjVDMDg5M0Y4NDlGQTE0Qzk/2NUM0OTU4NzEzQkUwRjRCNkZDMDhCRkQyRkUzOEJFQjE3QTcxNkEzLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/sFGFn_fsUfYmBIyvWYP8AAxf3QacZHHhgNGfonVMf2M/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9EQ0QwQjVFMkJBRDQ4RDMwMzExMDBGRUM/wMDY1RUEzQTE0OERDRjQ2Q0E3MDM2NTZFOEFGQzBCNzZFRDRDOTlCLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/_ArvfWg8wxms7_fDFwrC1zm-hIKA9a_nJOWEW0OrfEg/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RDhEQjE2NkMyNzUxNkI5QkIyNEE3NUN/FNEU3MzgwNEUwQjE4RTM5NThFRjE2ODBFRjc4MTU2MTREODZCMzUwLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/EpCiDIj2YGc3Ksjppg7MvK-1Z5QNRmRUfvffXTcEnII/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8xNDk2NTVDOEM5NUEwNEM1NEZFRjUyQ0Q/wRUM1M0E4OTMxODgzOTI0QkU2RDQyMkMxRTZGRUY3QzU0ODc5NDk3LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/1GI1RGM_PDOmVf2rCHegIRrUm-Q2vjvlLwKU_AtfWEU/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85QjBFMEYyMkI2NDM2MENFNTAxN0JBQUU/yRTQ0MzVCQzJBQTk0MDg5NUIwNTNDQjEwMDQ3NzA1RDE5Njc2NTk5LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/Ont55RpIuGQdBVGo5lsAxN1E-O6Mv4M1wIntzys7HgE/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85MUZCRTM1RDhCN0I0RDU1Q0VGOUEwNjI/2QjA5MDMzNTYxMjAyMzBENzBDMkY3MDg3MTFCOUY3M0JCM0FDQjJCLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/Cgo96uInyTxeVfPgaPYMSumduIbqZ3sCXYpA8S3KYTU/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS82NUM2REFGNDFDMTlBOUJEQjQ0N0RBNzg/xMjdFQTFGNzJCMkVENTFFMkQ2ODJGQjk2MDBBRUZERUU0NEVGQjdCLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/WNKvP8hDzHmsocwRAigFpIt7QJXFarIvUnOuwRodUQ8/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9GMzk2M0I3NkQ1QzQ1MzdGODVFRDBGREF/CNUVDMjgzOTAzRTQxMjk2NkU5OUJFNzNFOUVFMDA2NUZDRjAzM0UzLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/ZCtvPWk3W_J-eo1eGQG7i2iUvXRtuyblxElFwnFFp8o/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zRENERTlDNTMyNEE3OTQwMzAyMDE0M0I/xQTg0MEVENTdFNjM1QzIzNEUxNjU3RjE3MzkyNDZCNzZCRUMwQzE1LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/QDGowmi-rSVPudCY08yhMUl3P1WntirLl_UpsVyr2vA/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DMkUzQ0JDQjM5QUEzMEMwMzg3QTA0Nzc/3Q0E2QTIwRDIwMzM4NkJFMkYyNTNDOTRDMTc4ODdDRDdEREIxQTY0LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/h2CrMmjnJOEtwk75cdwemtETVGnAChmIgqmKYajWyH8/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85MTUyM0EwMEM1N0JDRjU4MkQxQzJFMDF/BMjBBREQ5QjFGMjg4QjdGRjhGRTJDMDcyOUQ0NDQwNUNGQ0FBQjI2LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/5zi58jzmoVJtHvGyzx3QqcMq49lZcco9t4t5dIFtslI/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yMDM2OEE3NEMzQUM5QzI3NzI2QUM0NjZ/BOUM3NDAzRTM5RUIxODQzRDAzQjM2NzJERkMyMTI5NUIzRjBCNDVDLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/TeyTFjlt3aAvYv1jA0WUIkUpd8yTvD3-40re-dnaDO8/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9GRTIxODc0RTU1MDA0OTZEQ0FEOTA5QTI/5MzkxRUE5MDM3NEIzNEI3QUYxMjZDQ0NCRjkzMTM0OTA5Q0JDMDhELmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/rvuTzM2dpbYSHZ_6pIeNeQJX6cEQPGxs_6vaoFNxuHA/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zMzk0OUIxRjcwRkJERkM1ODIwOTRBQUI/3MzgwM0JDN0MwRjQ0ODNCOUM4MDBEN0E2OTAxMTYwRDQ4OEQ3NTI0LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/PW_Lkr4xhrrjey9Rk_a1bb-E9xzal2KDoUo55BDYNi0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS84QTE3NEVBQ0M1NTI0N0FBMEMzQTA0QUV/BMDBDRTlCRDNDNEFFRDVBNjQwNTI3OTM2MUVCNTA5OEQ2QTUwNDQ3LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/XOzLRUpvNsuE_RaWCQ_e27cZ8eeepwvb8Qzul7LvgXs/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DQkY3Qzk0QzFEOTVEMjM1QjUzOTBBM0F/CMzEwNjlDODEwMzRCOEM2RDA0RDlCQTFFNzZCMDc0OUI1ODU2MjFGLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/K-9OZmsvjZmDh0SyorOtsQH0NcE1MRwFQ-B75ecLxeA/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9GRjhGRURBOEVCRjQ2NDM3NTc4OUEyQ0R/CMTk0QkUzQjU5ODYzQTJFQkU5NzUzOEE0NjNGNDYxODAzQjJCNkExLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/6-w8jxQmhmNaH51Yp-kwCzYZFV_3m3vMB7K7BgMX1RQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9BNkIxRjhEODE4MEU4MjhENjRERjg0NUI/4QzExMzk5OTE5QkQxRDlBRDU0OURGNUJFNkJGMTkzQjUwREQxNUI4LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/g3NM5HpsO5xyC-IPEWjMQ5YQ4AOVw6R-y2yjTE3ZRKc/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zNTIzRkM5QUFDMEI4Mjc1QUQ1QTdBQUZ/EMUQ2REI1MUI3MzNGREFDNERFNTI3Q0Q0RDM4MEQ4NzcwQTdFMjcyLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/qKbEGOVbmCn7ZLsDoibFUZqZ3B48DvaLIymMKVDK9ng/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yMzBDNEMyMTI1MzZFOUEzOTczQ0NFM0V/FQTkxOUVCQTgwOTJFNDU0RDUyQzZERDgzQ0FGMTBDQkQyQUQ3RjQ3LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/qrM2aqRpgzQ1THSc8wlCsiUILvyZOqRFrrtTIrYZZu0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85MDlGRjUwQkExNDRDQzY3NzI0QkVFNTh/BODlDMjI0NzAwM0EwRENBMTdCQjc3MTZGNUJDNTlDRkFCMURFNUNFLmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/NiRi-q61ATdKgNJEf9ppfmLYALVBchUGvVyhm29t2wk/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9CMzVEOEFERkM0MDdDMDkwRDNDMkZGRTY/yRjA4MkY0QTU5RDc4NDg0RTA2QzQzODU2RjkxMEEyMkMwRjExQkY4LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
+  },
+  {
+    "name": "foo",
+    "quantity": "1 кг",
+    "price": 8.99,
+    "oldPrice": 10.99,
+    "category": "НИСКА цена, ВИСОКО качество",
+    "picUrl": "https://imgproxy-retcat.assets.schwarz/o7kEur0Tz_4Vlesb5sD6mlIETCs2pGnT3uRy2ZAAo8A/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zMTM5NDhCMThFNDFBNDA5RjZBNjlBRjE/5NEY2MzVGN0Y1MUVCNTNDQTU3QjY2QjE2MTVFQkJGOEFEOTQwQzU1LmpwZw.jpg",
+    "validFrom": "1993-07-28",
+    "validUntil": "2023-11-04"
   }
 ]
