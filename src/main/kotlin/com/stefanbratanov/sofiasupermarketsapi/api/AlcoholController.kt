@@ -210,7 +210,7 @@ class AlcoholController(
               val cdnUrl = cdnUploader.upload(productKey, picUrl!!)
               product.copy(picUrl = cdnUrl)
             } catch (ex: Exception) {
-              log.error("Error while uploading to CDN. Will fallback to Google search result")
+              log.error("Error while uploading to CDN. Will fallback to Google search result", ex)
               product.copy(picUrl = picUrl)
             }
           } else {
