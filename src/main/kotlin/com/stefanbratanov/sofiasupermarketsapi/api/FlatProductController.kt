@@ -19,10 +19,7 @@ import org.springframework.web.bind.annotation.RestController
 @Tag(name = "Product", description = "All operations for supermarket products")
 @RestController
 @Log
-class FlatProductController(
-  val alcoholController: AlcoholController,
-  val supermarketController: SupermarketController,
-) {
+class FlatProductController(val alcoholController: AlcoholController) {
 
   private val acceptableDiscount = 75
 
@@ -38,17 +35,12 @@ class FlatProductController(
     useCdn: Boolean,
   ): List<FlatProduct> {
     val alcoholProductStore = alcoholController.alcohol(productCriteria, category, useCdn)
-    val supermarkets = supermarketController.supermarkets()
 
     return alcoholProductStore.flatMap {
-      val supermarketStaticData =
-        supermarkets.firstOrNull { supermarket -> supermarket.name == it.supermarket }
-
       it.products
         ?.map { product ->
           FlatProduct(
             supermarket = it.supermarket,
-            logo = supermarketStaticData?.logo,
             name = product.name,
             quantity = product.quantity,
             price = product.price,
@@ -81,7 +73,6 @@ class FlatProductController(
 
   data class FlatProduct(
     val supermarket: String?,
-    val logo: String?,
     val name: String,
     val quantity: String?,
     val price: Double?,

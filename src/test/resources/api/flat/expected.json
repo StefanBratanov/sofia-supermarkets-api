@@ -1,7 +1,6 @@
 [
   {
     "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
     "name": "Узо",
     "quantity": "0,7 l/опаковка",
     "price": 7.49,
@@ -14,7 +13,6 @@
   },
   {
     "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
     "name": "Узо",
     "quantity": "0,7 l/опаковка",
     "price": 6.29,
@@ -25,7 +23,6 @@
   },
   {
     "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
     "name": "Johnnie Walker Уиски",
     "quantity": "0,7 l/опаковка",
     "price": 25.49,
@@ -36,7 +33,6 @@
   },
   {
     "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
     "name": "Queen Margot Шотландско уиски",
     "quantity": "0,75 l/опаковка",
     "price": 14.99,
@@ -47,7 +43,6 @@
   },
   {
     "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
     "name": "Пино Гриджо, Италия",
     "quantity": "0,75 l/опаковка",
     "price": 3.99,
@@ -58,7 +53,6 @@
   },
   {
     "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
     "name": "Cimarosa Шардоне Коломбар, Южна Африка",
     "quantity": "0,75 l/опаковка",
     "price": 4.79,
@@ -69,7 +63,6 @@
   },
   {
     "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
     "name": "Бордо бяло, Франция",
     "quantity": "0,75 l/опаковка",
     "price": 4.99,
@@ -80,7 +73,6 @@
   },
   {
     "supermarket": "Lidl",
-    "logo": "http://lidl.bg",
     "name": "Пенливо вино",
     "quantity": "3 x 0,2 l/опаковка",
     "price": 2.58,
@@ -91,7 +83,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бира Загорка 0,5 л",
     "quantity": null,
     "price": 0.79,
@@ -102,7 +93,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бира Budweiser 0,5 л",
     "quantity": null,
     "price": 1.69,
@@ -113,7 +103,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бира Warsteiner 0,5 л",
     "quantity": null,
     "price": 1.79,
@@ -124,7 +113,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бърбън Jim Beam 0,7 л",
     "quantity": null,
     "price": 16.99,
@@ -135,7 +123,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Ракия Сунгурларска отлежала 0,7 л Произход - България",
     "quantity": null,
     "price": 11.49,
@@ -146,7 +133,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Уиски Johnnie Walker Blonde 0,7 л",
     "quantity": null,
     "price": 28.99,
@@ -157,7 +143,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Водка Zubrowka Biala 0,7 л",
     "quantity": null,
     "price": 11.49,
@@ -168,7 +153,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Водка Absolut 0,7 л",
     "quantity": null,
     "price": 14.99,
@@ -179,7 +163,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Ракия Дядова Усуканица 0,7 л Произход - България",
     "quantity": null,
     "price": 10.99,
@@ -190,7 +173,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Вино Santa Helena 0,75 л Продукт означени със символа синя звезда",
     "quantity": null,
     "price": 7.99,
@@ -201,7 +183,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Вино Quantum 0,75 л",
     "quantity": null,
     "price": 6.19,
@@ -212,7 +193,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Вино Chateau Karnobat 3 л Произход - България",
     "quantity": null,
     "price": 10.69,
@@ -223,7 +203,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бира Ариана 2 л Произход - България",
     "quantity": null,
     "price": 1.79,
@@ -234,7 +213,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Botter Бяло вино Sauvignon Trevenezie IGT",
     "quantity": "0,75 л",
     "price": 6.99,
@@ -245,7 +223,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Mezzek Червено, бяло вино или розе",
     "quantity": "2 л BIB",
     "price": 11.99,
@@ -256,7 +233,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Meltemi Узо",
     "quantity": "2 л",
     "price": 22.99,
@@ -267,7 +243,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Загорка ретро Светло пиво",
     "quantity": "0,5 л",
     "price": 0.89,
@@ -278,7 +253,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Contour Червено, бяло вино или розе",
     "quantity": "0,75 л",
     "price": 5.99,
@@ -289,7 +263,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Suhindol Червено или бяло вино",
     "quantity": "3 л BiB",
     "price": 6.99,
@@ -300,7 +273,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Jameson Ирландско уиски",
     "quantity": "0,7 л",
     "price": 21.69,
@@ -311,7 +283,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Johnnie Walker Шотландско уиски",
     "quantity": "1 л",
     "price": 22.89,
@@ -322,7 +293,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Glenfiddich Шотландско уиски",
     "quantity": "0,7 л",
     "price": 43.99,
@@ -333,7 +303,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Ямболска Гроздова ракия",
     "quantity": "0,7 л",
     "price": 6.99,
@@ -344,7 +313,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Stolichnaya Водка",
     "quantity": "0,7 л",
     "price": 12.99,
@@ -355,7 +323,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Каменица Светло пиво",
     "quantity": "0,5 л кен",
     "price": 0.79,
@@ -366,7 +333,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Бургаско Светло пиво",
     "quantity": "2 л РЕТ",
     "price": 1.79,
@@ -377,7 +343,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Somersby Сайдер различни видове",
     "quantity": "0,33 л",
     "price": 1.19,
@@ -388,7 +353,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО буилка 500мл",
     "quantity": null,
     "price": 0.97,
@@ -399,7 +363,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО кен 500 мл",
     "quantity": null,
     "price": 1.01,
@@ -410,7 +373,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО АЙС кен 500мл",
     "quantity": null,
     "price": 1.09,
@@ -421,7 +383,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО кен безалкохолна 0.0% 500мл",
     "quantity": null,
     "price": 1.09,
@@ -432,7 +393,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира HEINEKEN кен 500 мл",
     "quantity": null,
     "price": 1.39,
@@ -443,7 +403,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира AMSTEL Premium 5% кен 500 мл",
     "quantity": null,
     "price": 1.52,
@@ -454,7 +413,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО 1.2л",
     "quantity": null,
     "price": 1.52,
@@ -465,7 +423,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира AMSTEL Premium 5% 1л",
     "quantity": null,
     "price": 1.77,
@@ -476,7 +433,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА 2л",
     "quantity": null,
     "price": 1.79,
@@ -487,7 +443,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира BARLEY",
     "quantity": null,
     "price": 0.75,
@@ -498,7 +453,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ШУМЕНСКО бутилка 330мл",
     "quantity": null,
     "price": 0.79,
@@ -509,7 +463,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ASTIKA кен 500мл",
     "quantity": null,
     "price": 1.05,
@@ -520,7 +473,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ARIANA Радлер Ягода, мента 0.0% 330мл",
     "quantity": null,
     "price": 1.05,
@@ -531,7 +483,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА Радлер Малина 0.0% 330мл",
     "quantity": null,
     "price": 1.09,
@@ -542,7 +493,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА Радлер Лимон 0.0% 330мл",
     "quantity": null,
     "price": 1.09,
@@ -553,7 +503,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА Радлер Портокал, Грейпфрут 0.0% 330мл",
     "quantity": null,
     "price": 1.09,
@@ -564,7 +513,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира БОЛЯРКА кен 500мл",
     "quantity": null,
     "price": 1.09,
@@ -575,7 +523,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ZAGORKA бутилка 500мл",
     "quantity": null,
     "price": 1.15,
@@ -586,7 +533,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ZAGORKA кен 500 мл",
     "quantity": null,
     "price": 1.19,
@@ -597,7 +543,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА кен 500 мл",
     "quantity": null,
     "price": 1.19,
@@ -608,7 +553,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ШУМЕНСКО 4.8% кен 500мл",
     "quantity": null,
     "price": 1.19,
@@ -619,7 +563,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира CESKA Koruna 4.1% кен 500мл",
     "quantity": null,
     "price": 1.19,
@@ -630,7 +573,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ШУМЕНСКО бутилка 500мл",
     "quantity": null,
     "price": 1.19,
@@ -641,7 +583,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Сайдер КРАДЕЦЪТ НА ЯБЪЛКИ вишна кен 500мл",
     "quantity": null,
     "price": 1.49,
@@ -651,7 +592,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Сайдер SOMERSBY ябълка 330 мл",
     "quantity": null,
     "price": 1.59,
@@ -661,7 +601,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Сайдер SOMERSBY круша 330 мл",
     "quantity": null,
     "price": 1.59,
@@ -671,7 +610,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Сайдер SOMERSBY Blueberry 330 мл",
     "quantity": null,
     "price": 1.59,
@@ -681,7 +619,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Сайдер SOMERSBY манго, лайм 330мл",
     "quantity": null,
     "price": 1.59,
@@ -691,7 +628,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Сайдер SOMERSBY ябълка кен 500 мл",
     "quantity": null,
     "price": 1.95,
@@ -701,7 +637,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Сайдер SOMERSBY Blueberry кен 500 мл",
     "quantity": null,
     "price": 1.95,
@@ -711,7 +646,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Сайдер КРАДЕЦЪТ НА ЯБЪЛКИ ябълка кен 500мл",
     "quantity": null,
     "price": 1.49,
@@ -721,7 +655,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино TCHERGA* червена 750 мл",
     "quantity": null,
     "price": 6.99,
@@ -732,7 +665,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино TCHERGA* бяло 750 мл",
     "quantity": null,
     "price": 6.99,
@@ -743,7 +675,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино TCHERGA Рoзе 750 мл",
     "quantity": null,
     "price": 6.99,
@@ -754,7 +685,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино TCHERGA Фрагмент Розе 750 мл",
     "quantity": null,
     "price": 6.99,
@@ -765,7 +695,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино QUANTUM Пино ноар & Meрло 750 мл",
     "quantity": null,
     "price": 7.99,
@@ -776,7 +705,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино QUANTUM Сира & Каберне 750 мл",
     "quantity": null,
     "price": 7.99,
@@ -787,7 +715,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино QUANTUM Траминер 750 мл",
     "quantity": null,
     "price": 7.99,
@@ -798,7 +725,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино QUANTUM Шардоне 750 мл",
     "quantity": null,
     "price": 7.99,
@@ -809,7 +735,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино QUANTUM Розе Пино ноар & Сира 750 мл",
     "quantity": null,
     "price": 7.99,
@@ -820,7 +745,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино QUANTUM Мавруд & Мерло 750 мл",
     "quantity": null,
     "price": 7.99,
@@ -831,7 +755,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино QUANTUM Pinot Grigio & Шардоне 750 мл",
     "quantity": null,
     "price": 7.99,
@@ -842,7 +765,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино TERRA MARKELLI Мерло 3 л",
     "quantity": null,
     "price": 10.49,
@@ -853,7 +775,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино TERRA MARKELLI Розе 3 л",
     "quantity": null,
     "price": 10.49,
@@ -864,7 +785,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино TERRA MARKELLI Шардоне 3 л",
     "quantity": null,
     "price": 10.49,
@@ -875,7 +795,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино MINKOV BROTHERS Червено Кюве 750 мл",
     "quantity": null,
     "price": 13.49,
@@ -886,7 +805,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино MINKOV BROTHERS Бяло Кюве 750 мл",
     "quantity": null,
     "price": 13.49,
@@ -897,7 +815,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино MINKOV BROTHERS Каберне Совиньон 750 мл",
     "quantity": null,
     "price": 13.49,
@@ -908,7 +825,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино MINKOV BROTHERS Шардоне 750 мл",
     "quantity": null,
     "price": 13.49,
@@ -919,7 +835,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино МЕХАНДЖИЙСКО бяло 11% 750мл",
     "quantity": null,
     "price": 2.29,
@@ -930,7 +845,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино МЕХАНДЖИЙСКО червено 11.5% 750мл",
     "quantity": null,
     "price": 2.29,
@@ -941,7 +855,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино ЛОВДЖИЙСКО Червено 2л",
     "quantity": null,
     "price": 3.89,
@@ -952,7 +865,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино RETSINA Маламатина бяло 500мл",
     "quantity": null,
     "price": 4.65,
@@ -963,7 +875,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино VINI DI Мускат 11.5% 750мл",
     "quantity": null,
     "price": 4.99,
@@ -974,7 +885,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вино LOVICO Шардоне 750мл",
     "quantity": null,
     "price": 4.99,
@@ -985,7 +895,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Ликьор DAMA 17% 500мл",
     "quantity": null,
     "price": 7.49,
@@ -996,7 +905,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Спиртна напитка Грозден 40% 700мл",
     "quantity": null,
     "price": 7.99,
@@ -1007,7 +915,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Водка SOBIESKI Premium 37,5% 700 мл",
     "quantity": null,
     "price": 8.99,
@@ -1018,7 +925,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Водка AURORA 37.5% 700 мл",
     "quantity": null,
     "price": 8.99,
@@ -1029,7 +935,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Водка ХЛЕБНИЙ ДАР класик 40 % 700 мл",
     "quantity": null,
     "price": 9.99,
@@ -1040,7 +945,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Водка ХЛЕБНИЙ ДАР Пшенична 40 % 700 мл",
     "quantity": null,
     "price": 9.99,
@@ -1051,7 +955,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски OLD SMUGGLER 40% 700ml",
     "quantity": null,
     "price": 15.99,
@@ -1062,7 +965,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Джин GORDONS 37.5% 700 мл",
     "quantity": null,
     "price": 17.49,
@@ -1073,7 +975,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски JOHNNIE WALKER red label 40% 700 мл",
     "quantity": null,
     "price": 17.79,
@@ -1084,7 +985,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Ракия БУРГАСКА гроздова 40% 1.5 л",
     "quantity": null,
     "price": 18.99,
@@ -1095,7 +995,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Пастис RICARD 45% 700 мл",
     "quantity": null,
     "price": 19.99,
@@ -1106,7 +1005,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски TULLAMORE DEW 40% 700 мл",
     "quantity": null,
     "price": 20.99,
@@ -1117,7 +1015,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Ликьор BAILEYS 17% 700 мл",
     "quantity": null,
     "price": 20.99,
@@ -1128,7 +1025,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Водка РУССКИЙ СТАНДАРТ Голд 700мл",
     "quantity": null,
     "price": 20.99,
@@ -1139,7 +1035,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски KILBEGGAN 40% 700ml",
     "quantity": null,
     "price": 20.99,
@@ -1150,7 +1045,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски GRANTS 40% 1 л",
     "quantity": null,
     "price": 24.99,
@@ -1161,7 +1055,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски JACK DANIEL'S 40% 700 мл",
     "quantity": null,
     "price": 30.99,
@@ -1172,7 +1065,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски BUSHMILLS Black Bush 40% 700 мл",
     "quantity": null,
     "price": 31.99,
@@ -1183,7 +1075,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски JOHNNIE WALKER Black 40% 700 мл",
     "quantity": null,
     "price": 36.99,
@@ -1194,7 +1085,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски BUSHMILLS 10 годишно 40% 700 мл",
     "quantity": null,
     "price": 37.99,
@@ -1205,7 +1095,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Уиски BALLANTINES 12 годишно 700 мл",
     "quantity": null,
     "price": 39.99,
@@ -1216,7 +1105,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Коняк COURVOISIER VS 40% 700 мл",
     "quantity": null,
     "price": 42.99,
@@ -1227,7 +1115,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Водка SAVOY 37.5% 200мл",
     "quantity": null,
     "price": 2.99,
@@ -1238,7 +1125,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Мента KARNOBAT 200мл",
     "quantity": null,
     "price": 3.09,
@@ -1249,18 +1135,16 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Вермут MARTINI Bianco 15%",
     "quantity": "1 л",
     "price": 18.89,
     "oldPrice": 21.49,
-    "discount" : 12,
+    "discount": 12,
     "category": "Other",
     "picUrl": "https://cdncloudcart.com/16398/products/images/39261/vermut-martini-bianco-15--1-l-image_5ea2c90ac4231_300x300.png?1587731331"
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Бира SCHOFFERHOFER пшенична бутилка",
     "quantity": "500 мл",
     "price": 1.99,
@@ -1271,7 +1155,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Водка ТЪРГОВИЩЕ",
     "quantity": "700 мл",
     "price": 8.49,
@@ -1282,7 +1165,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Бира ЗАГОРКА кен",
     "quantity": "500 мл",
     "price": 0.79,
@@ -1293,7 +1175,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Бира ZATECKY HUS кен",
     "quantity": "500 мл",
     "price": 0.99,
@@ -1304,7 +1185,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Спиртна напитка ГРОЗДЕН Мускатова",
     "quantity": "700 мл",
     "price": 7.29,
@@ -1315,7 +1195,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Уиски JIM BEAM Classic",
     "quantity": "700 мл",
     "price": 16.99,
@@ -1326,7 +1205,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Шотландско уиски GRANT‘S Triple Wood; Ale Cask; Rum Cask",
     "quantity": "700 мл",
     "price": 16.99,
@@ -1337,7 +1215,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Водка ЦАРСКАЯ оригинальная",
     "quantity": "700 мл",
     "price": 13.99,
@@ -1348,7 +1225,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Бренди METAXA 5 звезди кутия",
     "quantity": "700 мл",
     "price": 16.99,
@@ -1359,7 +1235,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Шотландско уиски SINGLETON",
     "quantity": "12 г, 700 мл",
     "price": 42.99,
@@ -1370,7 +1245,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Вино Шардоне; Каберне Совиньон DOMAINE BOYAR",
     "quantity": "bag-in-box, 3 л",
     "price": 13.99,
@@ -1381,7 +1255,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Вино Совиньон Блан DUSKY SOUNDS",
     "quantity": "750 мл",
     "price": 12.99,
@@ -1392,7 +1265,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Вино Мавруд; Мерло и Каберне совиньон ПРЕСЛАВ",
     "quantity": "750 мл",
     "price": 8.49,
@@ -1403,7 +1275,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Напитка на винена основа FRUTINO различни видове",
     "quantity": "750 мл",
     "price": 5.99,
@@ -1414,7 +1285,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Напитка на винена основа MONCIGALE Fruits and Wine различни видове",
     "quantity": "750 мл",
     "price": 5.59,
@@ -1425,7 +1295,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Вино ANGEL различни видове",
     "quantity": "750 мл",
     "price": 7.99,
@@ -1436,7 +1305,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Вино DOMAINE BOYAR Тракийска Низина",
     "quantity": "750 мл",
     "price": 5.59,
@@ -1447,7 +1315,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Вино Каберне и Мавруд АСЕНОВГРАД Пенливо вино ARGEO Просеко произход Италия",
     "quantity": "bag-in-box 3 л 750 мл",
     "price": 12.99,
@@ -1458,7 +1325,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Вино QUANTUM различни видове",
     "quantity": "750 мл",
     "price": 6.19,
@@ -1469,7 +1335,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Водка LITHUANIAN Original",
     "quantity": "700 мл",
     "price": 7.99,
@@ -1480,7 +1345,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Анасонова Напитка",
     "quantity": null,
     "price": 39.99,
@@ -1491,7 +1355,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "ПЕЩЕРА Мастика",
     "quantity": null,
     "price": 39.99,

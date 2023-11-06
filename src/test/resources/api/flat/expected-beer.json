@@ -1,7 +1,6 @@
 [
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бира Загорка 0,5 л",
     "quantity": null,
     "price": 0.79,
@@ -12,7 +11,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бира Budweiser 0,5 л",
     "quantity": null,
     "price": 1.69,
@@ -23,7 +21,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бира Warsteiner 0,5 л",
     "quantity": null,
     "price": 1.79,
@@ -34,7 +31,6 @@
   },
   {
     "supermarket": "Billa",
-    "logo": "http://billa.bg",
     "name": "Бира Ариана 2 л Произход - България",
     "quantity": null,
     "price": 1.79,
@@ -45,7 +41,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Загорка ретро Светло пиво",
     "quantity": "0,5 л",
     "price": 0.89,
@@ -56,7 +51,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Каменица Светло пиво",
     "quantity": "0,5 л кен",
     "price": 0.79,
@@ -67,7 +61,6 @@
   },
   {
     "supermarket": "Kaufland",
-    "logo": "http://kaufland.bg",
     "name": "Бургаско Светло пиво",
     "quantity": "2 л РЕТ",
     "price": 1.79,
@@ -78,7 +71,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО буилка 500мл",
     "quantity": null,
     "price": 0.97,
@@ -89,7 +81,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО кен 500 мл",
     "quantity": null,
     "price": 1.01,
@@ -100,7 +91,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО АЙС кен 500мл",
     "quantity": null,
     "price": 1.09,
@@ -111,7 +101,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО кен безалкохолна 0.0% 500мл",
     "quantity": null,
     "price": 1.09,
@@ -122,7 +111,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира HEINEKEN кен 500 мл",
     "quantity": null,
     "price": 1.39,
@@ -133,7 +121,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира AMSTEL Premium 5% кен 500 мл",
     "quantity": null,
     "price": 1.52,
@@ -144,7 +131,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ПИРИНСКО 1.2л",
     "quantity": null,
     "price": 1.52,
@@ -155,7 +141,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира AMSTEL Premium 5% 1л",
     "quantity": null,
     "price": 1.77,
@@ -166,7 +151,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА 2л",
     "quantity": null,
     "price": 1.79,
@@ -177,7 +161,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира BARLEY",
     "quantity": null,
     "price": 0.75,
@@ -188,7 +171,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ШУМЕНСКО бутилка 330мл",
     "quantity": null,
     "price": 0.79,
@@ -199,7 +181,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ASTIKA кен 500мл",
     "quantity": null,
     "price": 1.05,
@@ -210,7 +191,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ARIANA Радлер Ягода, мента 0.0% 330мл",
     "quantity": null,
     "price": 1.05,
@@ -221,7 +201,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА Радлер Малина 0.0% 330мл",
     "quantity": null,
     "price": 1.09,
@@ -232,7 +211,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА Радлер Лимон 0.0% 330мл",
     "quantity": null,
     "price": 1.09,
@@ -243,7 +221,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА Радлер Портокал, Грейпфрут 0.0% 330мл",
     "quantity": null,
     "price": 1.09,
@@ -254,7 +231,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира БОЛЯРКА кен 500мл",
     "quantity": null,
     "price": 1.09,
@@ -265,7 +241,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ZAGORKA бутилка 500мл",
     "quantity": null,
     "price": 1.15,
@@ -276,7 +251,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ZAGORKA кен 500 мл",
     "quantity": null,
     "price": 1.19,
@@ -287,7 +261,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира АРИАНА кен 500 мл",
     "quantity": null,
     "price": 1.19,
@@ -298,7 +271,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ШУМЕНСКО 4.8% кен 500мл",
     "quantity": null,
     "price": 1.19,
@@ -309,7 +281,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира CESKA Koruna 4.1% кен 500мл",
     "quantity": null,
     "price": 1.19,
@@ -320,7 +291,6 @@
   },
   {
     "supermarket": "T-Market",
-    "logo": "http://t-market.bg",
     "name": "Бира ШУМЕНСКО бутилка 500мл",
     "quantity": null,
     "price": 1.19,
@@ -331,7 +301,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Бира SCHOFFERHOFER пшенична бутилка",
     "quantity": "500 мл",
     "price": 1.99,
@@ -342,7 +311,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Бира ЗАГОРКА кен",
     "quantity": "500 мл",
     "price": 0.79,
@@ -353,7 +321,6 @@
   },
   {
     "supermarket": "Fantastico",
-    "logo": "http://fantastico.bg",
     "name": "Бира ZATECKY HUS кен",
     "quantity": "500 мл",
     "price": 0.99,

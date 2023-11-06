@@ -3,7 +3,6 @@ package com.stefanbratanov.sofiasupermarketsapi.api
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.ninjasquad.springmockk.MockkBean
-import com.stefanbratanov.sofiasupermarketsapi.model.Supermarket
 import com.stefanbratanov.sofiasupermarketsapi.readResource
 import io.mockk.every
 import org.junit.jupiter.api.Test
@@ -27,8 +26,6 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
 
   @MockkBean private lateinit var alcoholController: AlcoholController
 
-  @MockkBean private lateinit var supermarketController: SupermarketController
-
   @Test
   fun `test getting alcohol products`() {
     val alcohols = readResource("/api/alcohol/expected.json")
@@ -36,19 +33,9 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
     val expectedJson = readResource("/api/flat/expected.json")
     val expectedBeer = readResource("/api/flat/expected-beer.json")
 
-    val supermarketStaticData =
-      Supermarket.values().map {
-        SupermarketController.SupermarketStaticData(
-          it.title,
-          "http://www.test.bg",
-          "http://${it.title.lowercase()}.bg",
-        )
-      }
-
     every { alcoholController.alcohol(any(), null, true) } returns objectMapper.readValue(alcohols)
     every { alcoholController.alcohol(any(), listOf("beer"), true) } returns
       objectMapper.readValue(beer)
-    every { supermarketController.supermarkets() } returns supermarketStaticData
 
     mockMvc
       .perform(
