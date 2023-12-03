@@ -13,10 +13,10 @@ internal class FantasticoBrochureDownloaderTest {
 
   private lateinit var underTest: FantasticoBrochureDownloader
 
-  @Test // requires chromium-browser installed
+  @Test // requires firefox installed
   @EnabledOnOs(OS.LINUX)
   fun `downloads real brochure`() {
-    underTest = FantasticoBrochureDownloader(URL("https://www.fantastico.bg/special-offers"), "")
+    underTest = FantasticoBrochureDownloader(URL("https://www.fantastico.bg/special-offers"))
     val result = underTest.download()
 
     result.forEach {

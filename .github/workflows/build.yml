@@ -19,7 +19,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Install dependencies
-        run: sudo apt install fontconfig chromium-browser
+        run: sudo apt install fontconfig firefox
       - name: Build
         run: ./gradlew spotlessCheck build jacocoTestReport
       - name: Codecov
