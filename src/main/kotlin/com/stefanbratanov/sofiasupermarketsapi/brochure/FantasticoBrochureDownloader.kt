@@ -41,8 +41,10 @@ class FantasticoBrochureDownloader(
       options = ChromeOptions()
       options.addArguments(
         "--headless=new",
-        "--window-size=1920,1080",
+        "--disable-gpu",
+        "--window-size=1920,1200",
         "--ignore-certificate-errors",
+        "--disable-extensions",
         "--no-sandbox",
         "--disable-dev-shm-usage"
       )
