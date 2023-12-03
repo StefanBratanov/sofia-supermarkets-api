@@ -19,7 +19,6 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.text.RegexOption.IGNORE_CASE
 import org.openqa.selenium.By
-import org.openqa.selenium.Dimension
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable
@@ -40,7 +39,13 @@ class FantasticoBrochureDownloader(
     init {
       WebDriverManager.chromiumdriver().setup()
       options = ChromeOptions()
-      options.addArguments("--headless=new")
+      options.addArguments(
+        "--headless=new",
+        "--window-size=1920,1080",
+        "--ignore-certificate-errors",
+        "--no-sandbox",
+        "--disable-dev-shm-usage"
+      )
     }
   }
 
@@ -54,7 +59,6 @@ class FantasticoBrochureDownloader(
 
     chromiumBinary.takeUnless { it.isEmpty() }?.let { options.setBinary(it) }
     val driver = ChromeDriver(options)
-    driver.manage().window().size = Dimension(1920, 1200)
     driver.get(url.toExternalForm())
     val waitDriver = WebDriverWait(driver, Duration.ofSeconds(10))
 
