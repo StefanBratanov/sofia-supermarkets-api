@@ -6,7 +6,7 @@ plugins {
   kotlin("jvm") version kotlinVersion
   kotlin("plugin.spring") version kotlinVersion
   kotlin("plugin.jpa") version kotlinVersion
-  id("org.springframework.boot") version "3.1.2"
+  id("org.springframework.boot") version "3.2.0"
   id("io.spring.dependency-management") version "1.1.0"
   id("me.qoomon.git-versioning") version "6.4.1"
   id("com.diffplug.spotless") version "6.23.2"
@@ -33,6 +33,7 @@ jacoco { toolVersion = "0.8.8" }
 
 repositories { mavenCentral() }
 
+val seleniumVersion = "4.9.0"
 val junitVersion = "5.10.0"
 
 dependencies {
@@ -55,7 +56,8 @@ dependencies {
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
   implementation("com.cloudinary:cloudinary-http45:1.35.0")
-  implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
+  implementation("org.seleniumhq.selenium:selenium-java:${seleniumVersion}")
+  implementation("org.seleniumhq.selenium:selenium-http-jdk-client:${seleniumVersion}")
   implementation(
     "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
   ) // no checkExecutable method in versions > 4.8.1
