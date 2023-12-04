@@ -11,6 +11,9 @@ logging:
   level:
     org.apache.pdfbox.io.ScratchFileBuffer: WARN
 
+chromium:
+  binary: ${CHROMIUM_BINARY:}
+
 management:
   endpoints:
     web.exposure.include: "*"

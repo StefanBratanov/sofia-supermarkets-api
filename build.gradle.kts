@@ -57,11 +57,6 @@ dependencies {
   implementation("com.cloudinary:cloudinary-http45:1.35.0")
   implementation("org.seleniumhq.selenium:selenium-java:4.15.0")
   implementation("io.github.bonigarcia:webdrivermanager:5.6.2")
-  implementation(
-    "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
-  ) // no checkExecutable method in versions > 4.8.1
-  implementation("com.codeborne:phantomjsdriver:1.5.0")
-  implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")

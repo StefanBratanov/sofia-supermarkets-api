@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit
 import kotlin.text.RegexOption.IGNORE_CASE
 import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
-import org.openqa.selenium.firefox.FirefoxDriver
-import org.openqa.selenium.firefox.FirefoxOptions
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable
 import org.openqa.selenium.support.ui.WebDriverWait
 import org.springframework.beans.factory.annotation.Value
@@ -29,16 +29,25 @@ import org.springframework.stereotype.Component
 
 @Log
 @Component
-class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url: URL) :
-  BrochureDownloader {
+class FantasticoBrochureDownloader(
+  @Value("\${fantastico.url}") private val url: URL,
+  @Value("\${chromium.binary}") private val chromiumBinary: String
+) : BrochureDownloader {
 
   companion object {
-    var options: FirefoxOptions
+    var options: ChromeOptions
 
     init {
-      WebDriverManager.firefoxdriver().setup()
-      options = FirefoxOptions()
-      options.addArguments("--headless")
+      WebDriverManager.chromiumdriver().setup()
+      options = ChromeOptions()
+      options.addArguments(
+        "--headless=new",
+        "--disable-gpu",
+        "--ignore-certificate-errors",
+        "--disable-extensions",
+        "--no-sandbox",
+        "--disable-dev-shm-usage"
+      )
     }
   }
 
@@ -50,7 +59,8 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
   override fun download(): List<Brochure> {
     val htmlDoc = getHtmlDocument(url)
 
-    val driver = FirefoxDriver(options)
+    chromiumBinary.takeUnless { it.isEmpty() }?.let { options.setBinary(it) }
+    val driver = ChromeDriver(options)
     driver.manage().window().size = Dimension(1920, 1200)
     driver.get(url.toExternalForm())
     val waitDriver = WebDriverWait(driver, Duration.ofSeconds(10))

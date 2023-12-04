@@ -70,7 +70,6 @@ reformat code, run:
 ## Running Locally
 
 Install JDK 17 or above from [here](https://jdk.java.net/).
-Install Firefox (for headless browsing).
 
 * **Unix**
 
@@ -91,6 +90,7 @@ The following environment variables need to be set prior to running:
 * DB_PASSWORD
 * GOOGLE_API_KEY
 * CLOUDINARY_API_SECRET
+* CHROMIUM_BINARY (path to any Chromium-based browser binary)
 
 Navigate to <http://localhost:8080/swagger-ui.html> to check the API documentation and
 test the endpoints.
