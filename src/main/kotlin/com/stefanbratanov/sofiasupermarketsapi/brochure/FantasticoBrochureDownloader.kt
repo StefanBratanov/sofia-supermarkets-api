@@ -155,7 +155,7 @@ class FantasticoBrochureDownloader(
   private fun clickBrochure(dataId: String, waitDriver: WebDriverWait) {
     log.info("Trying to click brochure with data-id: $dataId")
     val cssSelector = By.cssSelector("div.hold-options[data-id='$dataId']")
-    waitDriver.until(ExpectedConditions.invisibilityOfElementLocated((By.className("preloader"))))
+    waitDriver.until(ExpectedConditions.invisibilityOfElementLocated(By.className("preloader")))
     waitDriver.until(elementToBeClickable(cssSelector)).click()
     // sleep a bit after clicking
     TimeUnit.SECONDS.sleep(2)
