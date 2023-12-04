@@ -22,6 +22,7 @@ import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
+import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable
 import org.openqa.selenium.support.ui.WebDriverWait
 import org.springframework.beans.factory.annotation.Value
@@ -154,6 +155,7 @@ class FantasticoBrochureDownloader(
   private fun clickBrochure(dataId: String, waitDriver: WebDriverWait) {
     log.info("Trying to click brochure with data-id: $dataId")
     val cssSelector = By.cssSelector("div.hold-options[data-id='$dataId']")
+    waitDriver.until(ExpectedConditions.invisibilityOfElementLocated((By.className("preloader"))))
     waitDriver.until(elementToBeClickable(cssSelector)).click()
     // sleep a bit after clicking
     TimeUnit.SECONDS.sleep(2)

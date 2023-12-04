@@ -90,7 +90,7 @@ The following environment variables need to be set prior to running:
 * DB_PASSWORD
 * GOOGLE_API_KEY
 * CLOUDINARY_API_SECRET
-* CHROMIUM_BINARY (path to any Chromium-based browser binary)
+* CHROMIUM_BINARY (path to any Chromium-based browser binary if not installed in a default location)
 
 Navigate to <http://localhost:8080/swagger-ui.html> to check the API documentation and
 test the endpoints.
