@@ -6,14 +6,17 @@ import assertk.assertions.exists
 import java.net.URL
 import java.nio.file.Files
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.condition.EnabledOnOs
+import org.junit.jupiter.api.condition.OS
 
 internal class FantasticoBrochureDownloaderTest {
 
   private lateinit var underTest: FantasticoBrochureDownloader
 
-  @Test
+  @Test // requires chromium-browser installed
+  @EnabledOnOs(OS.LINUX)
   fun `downloads real brochure`() {
-    underTest = FantasticoBrochureDownloader(URL("https://www.fantastico.bg/special-offers"))
+    underTest = FantasticoBrochureDownloader(URL("https://www.fantastico.bg/special-offers"), "")
     val result = underTest.download()
 
     result.forEach {
