@@ -54,7 +54,7 @@ dependencies {
   implementation("org.jsoup:jsoup:1.17.1")
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
-  implementation("com.cloudinary:cloudinary-http45:1.35.0")
+  implementation("com.cloudinary:cloudinary-http45:1.36.0")
   implementation("org.seleniumhq.selenium:selenium-java:4.15.0")
   implementation("io.github.bonigarcia:webdrivermanager:5.6.2")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
