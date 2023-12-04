@@ -33,6 +33,7 @@ jacoco { toolVersion = "0.8.8" }
 
 repositories { mavenCentral() }
 
+val seleniumVersion = "4.9.0"
 val junitVersion = "5.10.0"
 
 dependencies {
@@ -55,7 +56,8 @@ dependencies {
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
   implementation("com.cloudinary:cloudinary-http45:1.35.0")
-  implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
+  implementation("org.seleniumhq.selenium:selenium-java:${seleniumVersion}")
+  implementation("org.seleniumhq.selenium:selenium-http-jdk-client:${seleniumVersion}")
   implementation(
     "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
   ) // no checkExecutable method in versions > 4.8.1
