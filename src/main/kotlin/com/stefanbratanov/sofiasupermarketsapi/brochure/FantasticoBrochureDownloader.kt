@@ -15,14 +15,13 @@ import java.nio.file.Files
 import java.time.Duration
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter.ofPattern
-import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.text.RegexOption.IGNORE_CASE
 import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.chrome.ChromeOptions
-import org.openqa.selenium.support.ui.ExpectedConditions
+import org.openqa.selenium.phantomjs.PhantomJSDriver
+import org.openqa.selenium.remote.CapabilityType.SUPPORTS_JAVASCRIPT
+import org.openqa.selenium.remote.DesiredCapabilities
 import org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable
 import org.openqa.selenium.support.ui.WebDriverWait
 import org.springframework.beans.factory.annotation.Value
@@ -32,23 +31,15 @@ import org.springframework.stereotype.Component
 @Component
 class FantasticoBrochureDownloader(
   @Value("\${fantastico.url}") private val url: URL,
-  @Value("\${chromium.binary}") private val chromiumBinary: String
 ) : BrochureDownloader {
 
   companion object {
-    var options: ChromeOptions
+    var capabilities: DesiredCapabilities
 
     init {
-      WebDriverManager.chromiumdriver().setup()
-      options = ChromeOptions()
-      options.addArguments(
-        "--headless=new",
-        "--disable-gpu",
-        "--ignore-certificate-errors",
-        "--disable-extensions",
-        "--no-sandbox",
-        "--disable-dev-shm-usage"
-      )
+      WebDriverManager.phantomjs().setup()
+      capabilities = DesiredCapabilities()
+      capabilities.setCapability(SUPPORTS_JAVASCRIPT, true)
     }
   }
 
@@ -60,8 +51,7 @@ class FantasticoBrochureDownloader(
   override fun download(): List<Brochure> {
     val htmlDoc = getHtmlDocument(url)
 
-    chromiumBinary.takeUnless { it.isEmpty() }?.let { options.setBinary(it) }
-    val driver = ChromeDriver(options)
+    val driver = PhantomJSDriver(capabilities)
     driver.manage().window().size = Dimension(1920, 1200)
     driver.get(url.toExternalForm())
     val waitDriver = WebDriverWait(driver, Duration.ofSeconds(10))
@@ -155,7 +145,6 @@ class FantasticoBrochureDownloader(
   private fun clickBrochure(dataId: String, waitDriver: WebDriverWait) {
     log.info("Trying to click brochure with data-id: $dataId")
     val cssSelector = By.cssSelector("div.hold-options[data-id='$dataId']")
-    waitDriver.until(ExpectedConditions.invisibilityOfElementLocated(By.className("preloader")))
     waitDriver.until(elementToBeClickable(cssSelector)).click()
     // sleep a bit after clicking
     TimeUnit.SECONDS.sleep(2)

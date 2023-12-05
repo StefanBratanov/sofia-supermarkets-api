@@ -5,6 +5,8 @@ updates:
     schedule:
       interval: "monthly"
     ignore:
+      - dependency-name: "io.github.bonigarcia:webdrivermanager"
+      - dependency-name: "org.seleniumhq.selenium:*"
       - dependency-name: "*"
         update-types: [ "version-update:semver-patch" ]
   - package-ecosystem: "npm"
