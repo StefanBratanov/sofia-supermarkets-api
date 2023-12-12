@@ -6,7 +6,7 @@ plugins {
   kotlin("jvm") version kotlinVersion
   kotlin("plugin.spring") version kotlinVersion
   kotlin("plugin.jpa") version kotlinVersion
-  id("org.springframework.boot") version "3.1.2"
+  id("org.springframework.boot") version "3.2.0"
   id("io.spring.dependency-management") version "1.1.0"
   id("me.qoomon.git-versioning") version "6.4.1"
   id("com.diffplug.spotless") version "6.23.2"
@@ -33,6 +33,11 @@ jacoco { toolVersion = "0.8.8" }
 
 repositories { mavenCentral() }
 
+// version compatible with PhantomJS
+val seleniumVersion = "4.8.1"
+// https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#appendix.dependency-versions
+extra["selenium.version"] = seleniumVersion
+
 val junitVersion = "5.10.0"
 
 dependencies {
@@ -55,12 +60,9 @@ dependencies {
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
   implementation("com.cloudinary:cloudinary-http45:1.36.0")
-  implementation("org.seleniumhq.selenium:selenium-java:4.9.0")
-  implementation(
-    "org.seleniumhq.selenium:selenium-remote-driver:4.8.1"
-  ) // no checkExecutable method in versions > 4.8.1
+  implementation("org.seleniumhq.selenium:selenium-java:$seleniumVersion")
   implementation("com.codeborne:phantomjsdriver:1.5.0")
-  implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no phantomjs driver in 5.x.x
+  implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no PhantomJS driver in 5.x.x
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
