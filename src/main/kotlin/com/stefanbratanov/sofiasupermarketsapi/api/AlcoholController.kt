@@ -108,7 +108,8 @@ class AlcoholController(
         "бира\\p{IsCyrillic}+",
         "подправка",
         "cappy",
-        "препарат"
+        "препарат",
+        "диспенсър"
       )
       .map { it.toRegex(IGNORE_CASE) }
 
