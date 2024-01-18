@@ -27,9 +27,9 @@ async function handleRequest(request) {
 	const apiResponseBody = await apiResponse.text()
 
 	if (apiResponse.status == 200) {
-		// cache api responses for 30 minutes
+		// cache api responses for 1 hour
 		console.log("Saving response to KV")
-		await CACHED_API_RESPONSES.put(queryPath, apiResponseBody, { expirationTtl: 1800 })
+		await CACHED_API_RESPONSES.put(queryPath, apiResponseBody, { expirationTtl: 3600 })
 		return createJsonResponse(apiResponseBody, 200, defaultHeaders)
 	}
 	return new Response(apiResponseBody, { status: apiResponse.status, headers: defaultHeaders })
