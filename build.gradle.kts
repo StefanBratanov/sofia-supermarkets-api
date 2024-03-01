@@ -59,7 +59,7 @@ dependencies {
   implementation("org.jsoup:jsoup:1.17.1")
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
-  implementation("com.cloudinary:cloudinary-http45:1.37.0")
+  implementation("com.cloudinary:cloudinary-http45:1.38.0")
   implementation("org.seleniumhq.selenium:selenium-java:$seleniumVersion")
   implementation("com.codeborne:phantomjsdriver:1.5.0")
   implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no PhantomJS driver in 5.x.x
