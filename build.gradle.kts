@@ -38,7 +38,7 @@ val seleniumVersion = "4.8.1"
 // https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#appendix.dependency-versions
 extra["selenium.version"] = seleniumVersion
 
-val junitVersion = "5.10.0"
+val junitVersion = "5.11.0"
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
