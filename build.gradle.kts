@@ -35,10 +35,11 @@ repositories { mavenCentral() }
 
 // version compatible with PhantomJS
 val seleniumVersion = "4.8.1"
-// https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#appendix.dependency-versions
+// https://docs.spring.io/spring-boot/appendix/dependency-versions/properties.html
 extra["selenium.version"] = seleniumVersion
 
 val junitVersion = "5.11.0"
+extra["junit-jupiter.version"] = junitVersion
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
@@ -64,7 +65,6 @@ dependencies {
   implementation("com.codeborne:phantomjsdriver:1.5.0")
   implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no PhantomJS driver in 5.x.x
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
-  testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.28.0")
   testImplementation("io.mockk:mockk:1.13.4")
