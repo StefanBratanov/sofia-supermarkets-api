@@ -62,7 +62,7 @@ internal class TMarketFlowTest {
       productStoreRepository.saveIfProductsNotEmpty(
         match {
           it.supermarket == expectedToSave.supermarket && it.products == expectedToSave.products
-        },
+        }
       )
     }
   }

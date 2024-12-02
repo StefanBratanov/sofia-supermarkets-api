@@ -37,7 +37,7 @@ class VerticalProductExtractor {
 
     private fun determineCorrectTitleTexts(
       titleTexts: List<Pair<ProductSection, TextWithCoordinates>>,
-      center: TextWithCoordinates
+      center: TextWithCoordinates,
     ): List<Pair<ProductSection, TextWithCoordinates>> {
       var correctTitleTexts: List<Pair<ProductSection, TextWithCoordinates>> = mutableListOf()
       var currentY: Double? = null

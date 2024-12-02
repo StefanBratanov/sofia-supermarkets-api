@@ -153,10 +153,7 @@ class KMeansWithInitialCenters(
     return minCluster
   }
 
-  private fun centroidOf(
-    points: Collection<TextWithCoordinates>,
-    dimension: Int,
-  ): Clusterable {
+  private fun centroidOf(points: Collection<TextWithCoordinates>, dimension: Int): Clusterable {
     val centroid = DoubleArray(dimension)
     for (p in points) {
       val point: DoubleArray = p.point

@@ -16,14 +16,7 @@ class ImageConfig {
     @Value("\${cloudinary.api.secret}") apiSecret: String,
   ): Cloudinary {
     return Cloudinary(
-      ObjectUtils.asMap(
-        "cloud_name",
-        cloudName,
-        "api_key",
-        apiKey,
-        "api_secret",
-        apiSecret,
-      ),
+      ObjectUtils.asMap("cloud_name", cloudName, "api_key", apiKey, "api_secret", apiSecret)
     )
   }
 }

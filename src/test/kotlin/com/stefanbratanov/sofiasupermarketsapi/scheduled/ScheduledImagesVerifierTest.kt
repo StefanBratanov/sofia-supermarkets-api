@@ -21,11 +21,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @ExtendWith(SpringExtension::class)
 @ContextConfiguration(
-  classes =
-    [
-      ScheduledImagesVerifier::class,
-      ScheduledImagesVerifierTest.TestCacheConfig::class,
-    ],
+  classes = [ScheduledImagesVerifier::class, ScheduledImagesVerifierTest.TestCacheConfig::class]
 )
 internal class ScheduledImagesVerifierTest {
 
@@ -53,19 +49,9 @@ internal class ScheduledImagesVerifierTest {
     cache["test"] = invalidUrl
     cache["another test"] = "https://bbc.co.uk"
 
-    every {
-      googleImageSearch.search(
-        "test",
-        false,
-      )
-    } returns "https://www.telegraph.co.uk/"
+    every { googleImageSearch.search("test", false) } returns "https://www.telegraph.co.uk/"
     every { productImageRepository.findById("test") } returns
-      Optional.of(
-        ProductImage(
-          "test",
-          invalidUrl,
-        ),
-      )
+      Optional.of(ProductImage("test", invalidUrl))
     every { productImageRepository.save(any()) } returnsArgument 0
     underTest.verifyImages()
     underTest.verifyImages()
@@ -79,12 +65,7 @@ internal class ScheduledImagesVerifierTest {
     verify(exactly = 1) { googleImageSearch.search("test", false) }
 
     verify(exactly = 1) {
-      productImageRepository.save(
-        ProductImage(
-          "test",
-          "https://www.telegraph.co.uk/",
-        ),
-      )
+      productImageRepository.save(ProductImage("test", "https://www.telegraph.co.uk/"))
     }
   }
 }

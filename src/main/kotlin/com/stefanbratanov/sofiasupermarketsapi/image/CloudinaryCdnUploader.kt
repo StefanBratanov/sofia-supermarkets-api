@@ -10,9 +10,7 @@ import org.springframework.stereotype.Component
 
 @Log
 @Component
-class CloudinaryCdnUploader(
-  private val cloudinary: Cloudinary,
-) : CdnUploader {
+class CloudinaryCdnUploader(private val cloudinary: Cloudinary) : CdnUploader {
 
   @Cacheable("cdnImages")
   @Suppress("UNCHECKED_CAST")

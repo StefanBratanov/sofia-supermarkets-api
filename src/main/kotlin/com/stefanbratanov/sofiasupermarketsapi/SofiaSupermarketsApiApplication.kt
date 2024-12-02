@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
 @Component
 class Main(
   val scheduledFlowsRunner: ScheduledFlowsRunner,
-  val alcoholController: AlcoholController
+  val alcoholController: AlcoholController,
 ) : CommandLineRunner {
 
   override fun run(vararg args: String?) {

@@ -31,10 +31,7 @@ class TMarketProductsExtractor : UrlProductsExtractor {
       val endDate =
         it.selectFirst("div[data-end-date]")?.attr("data-end-date")?.let { date ->
           try {
-            LocalDateTime.parse(
-                date,
-                DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"),
-              )
+            LocalDateTime.parse(date, DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"))
               .toLocalDate()
           } catch (ex: Exception) {
             log.error("Error while parsing $date", ex)

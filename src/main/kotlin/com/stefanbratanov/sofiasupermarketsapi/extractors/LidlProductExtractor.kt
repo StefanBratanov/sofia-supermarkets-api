@@ -49,7 +49,7 @@ class LidlProductExtractor {
       category = null,
       picUrl = null,
       validFrom = dateRange?.elementAtOrNull(0),
-      validUntil = dateRange?.elementAtOrNull(1)
+      validUntil = dateRange?.elementAtOrNull(1),
     )
   }
 }

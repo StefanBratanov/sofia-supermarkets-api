@@ -17,9 +17,8 @@ import org.springframework.stereotype.Component
 
 @Log
 @Component("Kaufland")
-class KauflandProductsExtractor(
-  private val urlValidator: UrlValidator = UrlValidator(),
-) : UrlProductsExtractor {
+class KauflandProductsExtractor(private val urlValidator: UrlValidator = UrlValidator()) :
+  UrlProductsExtractor {
 
   override fun extract(url: URL): List<Product> {
     val document =

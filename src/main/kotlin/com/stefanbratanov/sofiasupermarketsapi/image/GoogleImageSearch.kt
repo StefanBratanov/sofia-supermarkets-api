@@ -152,7 +152,7 @@ class GoogleImageSearch(
     val title: String?,
     val link: String?,
     val fileFormat: String?,
-    val image: Image
+    val image: Image,
   )
 
   data class Image(val height: Double, val width: Double)

@@ -55,12 +55,7 @@ class PdfPageProductsExtractor(
         .toMutableList()
 
     val kMeansPlus =
-      KMeansWithInitialCenters(
-        initialCenters.size,
-        100,
-        ManhattanDistance(),
-        initialCenters,
-      )
+      KMeansWithInitialCenters(initialCenters.size, 100, ManhattanDistance(), initialCenters)
     val clusteredTexts = kMeansPlus.cluster(filteredStrippedTexts).map { it.points }
 
     val clusteredTextsWithSections =
@@ -133,10 +128,7 @@ class PdfPageProductsExtractor(
         horizontalCenters.size,
       )
       val verticalProducts =
-        getVerticalProducts(
-          horizontalCenters,
-          clusteredTextsWithSections.flatten(),
-        )
+        getVerticalProducts(horizontalCenters, clusteredTextsWithSections.flatten())
       val flattenedTexts = verticalProducts.flatten()
       val filteredValid = validClusteredTexts.map { it.filter { pair -> pair !in flattenedTexts } }
       val augmentedClusteredTexts = concatenate(filteredValid, verticalProducts)
@@ -207,29 +199,19 @@ class PdfPageProductsExtractor(
   ): Pair<String, TextWithCoordinates?> {
     val sizeOfNewPrices = newPrices.size
     if (sizeOfNewPrices == 2) {
-      return Pair(
-        newPrices.joinToString(separator = "") { it.second.text.orEmpty().trim() },
-        null,
-      )
+      return Pair(newPrices.joinToString(separator = "") { it.second.text.orEmpty().trim() }, null)
     }
     if (sizeOfNewPrices % 2 == 0) {
       // first name coordinates
       val nameCoordinates = getNameCoordinates(clusterWithSections)
       val closestOldPrice =
-        findClosestSections(
-            OLD_PRICE,
-            nameCoordinates,
-            clusterWithSections,
-          )
-          .firstOrNull()
+        findClosestSections(OLD_PRICE, nameCoordinates, clusterWithSections).firstOrNull()
       return Pair(
-        findClosestSections(
-            NEW_PRICE,
-            closestOldPrice,
-            clusterWithSections,
-            2,
-          )
-          .joinToString(separator = "") { it.text.orEmpty().trim() },
+        findClosestSections(NEW_PRICE, closestOldPrice, clusterWithSections, 2).joinToString(
+          separator = ""
+        ) {
+          it.text.orEmpty().trim()
+        },
         closestOldPrice,
       )
     }

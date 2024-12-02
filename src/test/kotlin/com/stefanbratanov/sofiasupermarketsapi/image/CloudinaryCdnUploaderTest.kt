@@ -13,16 +13,7 @@ internal class CloudinaryCdnUploaderTest {
   @Disabled("too lazy to mock this")
   fun `test uploading image to cdn`() {
     val cloudinary =
-      Cloudinary(
-        ObjectUtils.asMap(
-          "cloud_name",
-          "",
-          "api_key",
-          "",
-          "api_secret",
-          "",
-        ),
-      )
+      Cloudinary(ObjectUtils.asMap("cloud_name", "", "api_key", "", "api_secret", ""))
 
     underTest = CloudinaryCdnUploader(cloudinary)
 

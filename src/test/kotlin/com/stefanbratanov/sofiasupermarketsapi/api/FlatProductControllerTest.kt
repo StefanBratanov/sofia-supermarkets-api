@@ -56,7 +56,7 @@ internal class FlatProductControllerTest(@Autowired val mockMvc: MockMvc) {
     mockMvc
       .perform(
         MockMvcRequestBuilders.get("/products/flat/alcohol?category=beer")
-          .accept(MediaType.APPLICATION_JSON),
+          .accept(MediaType.APPLICATION_JSON)
       )
       .andExpect(MockMvcResultMatchers.status().isOk)
       .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))

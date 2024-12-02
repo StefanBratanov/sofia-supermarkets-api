@@ -10,9 +10,7 @@ import org.springframework.stereotype.Component
 
 @Log
 @Component
-class LidlSublinksScraper(
-  @Value("\${lidl.base.url}") private val baseUrl: URL,
-) : SublinksScraper {
+class LidlSublinksScraper(@Value("\${lidl.base.url}") private val baseUrl: URL) : SublinksScraper {
 
   override fun getSublinks(): List<URL> {
     log.info("Scraping {} for sublinks", baseUrl)
