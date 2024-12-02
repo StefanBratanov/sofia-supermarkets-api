@@ -37,12 +37,7 @@ class AlcoholController(
     listOf(bira, vino, "(?<!без)алкохолни", cider).map { it.toRegex(IGNORE_CASE) }
 
   private val tMarketCategoryResolver =
-    mapOf(
-        Beer to bira,
-        Wine to vino,
-        Other to cider,
-      )
-      .mapValues { it.value.toRegex(IGNORE_CASE) }
+    mapOf(Beer to bira, Wine to vino, Other to cider).mapValues { it.value.toRegex(IGNORE_CASE) }
 
   private val kauflandDrinksCategoryRegex = "Алкохол".toRegex(IGNORE_CASE)
 
@@ -110,7 +105,7 @@ class AlcoholController(
         "cappy",
         "препарат",
         "диспенсър",
-        "асортимента"
+        "асортимента",
       )
       .map { it.toRegex(IGNORE_CASE) }
 
@@ -156,13 +151,7 @@ class AlcoholController(
             // filter regexes
             ?.filter { ignoreContains.none { regex -> it.name.contains(regex) } }
             // remove same products
-            ?.distinctBy { pr ->
-              pr.copy(
-                validFrom = null,
-                validUntil = null,
-                picUrl = null,
-              )
-            }
+            ?.distinctBy { pr -> pr.copy(validFrom = null, validUntil = null, picUrl = null) }
         it.copy(products = filteredAndDistinctProducts)
       }
       .map { addPics(it, useCdn) }
@@ -249,6 +238,6 @@ class AlcoholController(
     Rakia,
     Vodka,
     Whiskey,
-    Other
+    Other,
   }
 }

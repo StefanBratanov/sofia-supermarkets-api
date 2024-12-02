@@ -29,20 +29,10 @@ class ScheduledImagesVerifier(
       ?.forEach {
         it.key?.let { key ->
           googleImageSearch.search(key, false)?.let { imageUrl ->
-            log.info(
-              "Changing cached image for {} from {} to {}",
-              key,
-              it.value,
-              imageUrl,
-            )
+            log.info("Changing cached image for {} from {} to {}", key, it.value, imageUrl)
             productImagesCache[key] = imageUrl
             productImageRepository.findById(key).ifPresent { dbRow ->
-              log.info(
-                "Changing database image for {} from {} to {}",
-                key,
-                dbRow.url,
-                imageUrl,
-              )
+              log.info("Changing database image for {} from {} to {}", key, dbRow.url, imageUrl)
               dbRow.url = imageUrl
               productImageRepository.save(dbRow)
             }

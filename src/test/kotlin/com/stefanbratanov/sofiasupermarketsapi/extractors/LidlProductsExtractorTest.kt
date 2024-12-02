@@ -34,7 +34,7 @@ internal class LidlProductsExtractorTest {
         category = null,
         picUrl = null,
         validFrom = LocalDate.of(1993, 7, 28),
-        validUntil = LocalDate.of(2023, 11, 4)
+        validUntil = LocalDate.of(2023, 11, 4),
       )
 
     val testHtmlUrl = getUri("/extractors/lidl/input.html").toURL()

@@ -46,7 +46,7 @@ internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
               offerProduct,
               smallerOldPrice,
               nullPrices,
-              oneNullPrice
+              oneNullPrice,
             ),
         ),
         ProductStore(supermarket = "bar", products = listOf(getProduct("world", 1.2))),

@@ -13,9 +13,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
 @Configuration
-class ApiConfig(
-  val buildProperties: BuildProperties,
-) : WebMvcConfigurer {
+class ApiConfig(val buildProperties: BuildProperties) : WebMvcConfigurer {
 
   override fun addCorsMappings(registry: CorsRegistry) {
     registry.addMapping("/**")
@@ -31,10 +29,8 @@ class ApiConfig(
           .description("API за извличане на информация за продукти от супермаркети в София")
           .version(buildProperties.version)
           .contact(Contact().email("stefan.bratanov93@gmail.com"))
-          .license(
-            License().name("Apache 2.0").url("http://www.apache.org/licenses/LICENSE-2.0"),
-          )
-          .termsOfService("urn:tos"),
+          .license(License().name("Apache 2.0").url("http://www.apache.org/licenses/LICENSE-2.0"))
+          .termsOfService("urn:tos")
       )
   }
 }

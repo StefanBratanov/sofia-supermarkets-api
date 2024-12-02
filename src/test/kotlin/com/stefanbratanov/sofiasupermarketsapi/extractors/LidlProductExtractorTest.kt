@@ -26,7 +26,7 @@ internal class LidlProductExtractorTest {
         price = 0.99,
         oldPrice = 1.99,
         category = null,
-        picUrl = null
+        picUrl = null,
       )
 
     assertThat(product)

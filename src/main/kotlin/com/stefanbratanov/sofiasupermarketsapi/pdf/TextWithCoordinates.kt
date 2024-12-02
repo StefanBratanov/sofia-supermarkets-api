@@ -7,7 +7,7 @@ data class TextWithCoordinates(
   val text: String?,
   val x: Double?,
   val y: Double?,
-  val font: PDFont?
+  val font: PDFont?,
 ) : Clusterable {
   override fun getPoint(): DoubleArray {
     return doubleArrayOf(x!!, y!!)

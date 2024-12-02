@@ -2,7 +2,7 @@ import com.diffplug.gradle.spotless.SpotlessExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-  val kotlinVersion = "2.0.0"
+  val kotlinVersion = "2.1.0"
   kotlin("jvm") version kotlinVersion
   kotlin("plugin.spring") version kotlinVersion
   kotlin("plugin.jpa") version kotlinVersion
@@ -91,6 +91,6 @@ tasks.withType<Test> {
   testLogging { showStandardStreams = true }
 }
 
-configure<SpotlessExtension> { kotlin { ktfmt().googleStyle() } }
+configure<SpotlessExtension> { kotlin { ktfmt("0.53").googleStyle() } }
 
 tasks.jacocoTestReport { reports { xml.required.set(true) } }

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component
 @Component("Lidl")
 class LidlProductsExtractor(
   @Value("\${lidl.base.url}") private val baseUrl: URL,
-  val lidlProductExtractor: LidlProductExtractor
+  val lidlProductExtractor: LidlProductExtractor,
 ) : UrlProductsExtractor {
 
   @OptIn(DelicateCoroutinesApi::class)

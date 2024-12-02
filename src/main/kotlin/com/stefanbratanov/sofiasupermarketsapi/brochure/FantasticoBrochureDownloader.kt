@@ -29,9 +29,8 @@ import org.springframework.stereotype.Component
 
 @Log
 @Component
-class FantasticoBrochureDownloader(
-  @Value("\${fantastico.url}") private val url: URL,
-) : BrochureDownloader {
+class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url: URL) :
+  BrochureDownloader {
 
   companion object {
     var capabilities: DesiredCapabilities
@@ -72,7 +71,7 @@ class FantasticoBrochureDownloader(
           val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
           val dateRange = extractDateRange(nameOfBrochure)
           log.info(
-            "Fantastico brochure is vaild " + "from ${dateRange?.first} until ${dateRange?.second}",
+            "Fantastico brochure is vaild " + "from ${dateRange?.first} until ${dateRange?.second}"
           )
 
           val iFrameUrl = it.attr("data-brochure")
@@ -136,10 +135,7 @@ class FantasticoBrochureDownloader(
   }
 
   private fun addYearIfApplicable(input: String): String {
-    return input.replace(
-      "(\\.|(?<=\\.\\d{2}))\$".toRegex(),
-      ".${LocalDate.now().year}",
-    )
+    return input.replace("(\\.|(?<=\\.\\d{2}))\$".toRegex(), ".${LocalDate.now().year}")
   }
 
   private fun clickBrochure(dataId: String, waitDriver: WebDriverWait) {

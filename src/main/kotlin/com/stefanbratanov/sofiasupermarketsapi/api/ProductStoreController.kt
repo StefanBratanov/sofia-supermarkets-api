@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @Tag(name = "Product", description = "All operations for supermarket products")
 @RestController
-class ProductStoreController(
-  val productStoreRepository: ProductStoreRepository,
-) {
+class ProductStoreController(val productStoreRepository: ProductStoreRepository) {
 
   @Operation(summary = "Get all products from supermarkets")
   @GetMapping("/products")
@@ -41,9 +39,7 @@ class ProductStoreController(
   private fun checkOfferPrice(product: Product): Boolean {
     return nonNull(product.oldPrice) &&
       nonNull(product.price) &&
-      product.oldPrice?.equals(
-        product.price,
-      ) == false &&
+      product.oldPrice?.equals(product.price) == false &&
       compareValues(product.price, product.oldPrice) < 0
   }
 }

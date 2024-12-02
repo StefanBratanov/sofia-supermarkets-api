@@ -40,34 +40,22 @@ internal class GoogleImageSearchTest {
       .`when`(
         request()
           .withPath("/search")
-          .withQueryStringParameter(
-            Parameter.param("q", "JAMESON Ирландско уиски 0,7 л"),
-          ),
+          .withQueryStringParameter(Parameter.param("q", "JAMESON Ирландско уиски 0,7 л"))
       )
       .respond(
         response()
           .withStatusCode(200)
           .withContentType(MediaType.APPLICATION_JSON_UTF_8)
-          .withBody(searchResponseJson),
+          .withBody(searchResponseJson)
       )
 
     mockServerClient
-      .`when`(
-        request()
-          .withPath("/search")
-          .withQueryStringParameter(
-            Parameter.param("q", "fail"),
-          ),
-      )
-      .respond(
-        response().withStatusCode(400),
-      )
+      .`when`(request().withPath("/search").withQueryStringParameter(Parameter.param("q", "fail")))
+      .respond(response().withStatusCode(400))
 
     every { productImageRepository.findById(any()) } returns Optional.empty()
     every { productImageRepository.findById("foo") } returns
-      Optional.of(
-        ProductImage("foo", "bar.com"),
-      )
+      Optional.of(ProductImage("foo", "bar.com"))
 
     // return does not matter since not used
     every { productImageRepository.save(any()) } returns ProductImage("foo", "bar")

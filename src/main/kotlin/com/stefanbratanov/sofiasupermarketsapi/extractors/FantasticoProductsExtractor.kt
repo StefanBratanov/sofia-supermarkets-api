@@ -42,15 +42,10 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
       ".*Работно време.*".toRegex(RegexOption.IGNORE_CASE),
       ".*Във всички обекти на верига Фантастико.*".toRegex(RegexOption.IGNORE_CASE),
       "Според потребителската класация".toRegex(RegexOption.IGNORE_CASE),
-      "ТВ „Фантастико” не носи отговорност.*".toRegex(RegexOption.IGNORE_CASE)
+      "ТВ „Фантастико” не носи отговорност.*".toRegex(RegexOption.IGNORE_CASE),
     )
 
-  private val fontsToKeep =
-    listOf(
-      myriadProRegex,
-      officinaSansRegex,
-      bebasNeueRegex,
-    )
+  private val fontsToKeep = listOf(myriadProRegex, officinaSansRegex, bebasNeueRegex)
 
   private val regexesToRemove =
     listOf(
@@ -63,7 +58,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
       "количествата са лимитирани".toRegex(RegexOption.IGNORE_CASE),
       "предложението е валидно(.*цени)?".toRegex(RegexOption.IGNORE_CASE),
       "от.*до.*г\\.".toRegex(RegexOption.IGNORE_CASE),
-      "цена за периода.*г\\.".toRegex(RegexOption.IGNORE_CASE)
+      "цена за периода.*г\\.".toRegex(RegexOption.IGNORE_CASE),
     )
 
   private val productSectionResolver: Map<ProductSection, (TextWithCoordinates) -> Boolean> =
@@ -73,22 +68,13 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
       NEW_PRICE to
         { twc ->
           twc.text!!.matches("\\d{1,2}(\\*?)".toRegex()) &&
-            twc.font
-              ?.name
-              ?.contains(
-                bebasNeueRegex,
-              ) == true
+            twc.font?.name?.contains(bebasNeueRegex) == true
         },
       DISCOUNT to { twc -> twc.text!!.matches("-?\\d{1,2}%".toRegex()) },
       CURRENCY to { twc -> twc.text!!.contains("лв|") },
       QUANTITY to
         { twc ->
-          twc.text!!.contains(
-            "\\d+\\s*(мл|г|л|бр|см)"
-              .toRegex(
-                RegexOption.IGNORE_CASE,
-              ),
-          )
+          twc.text!!.contains("\\d+\\s*(мл|г|л|бр|см)".toRegex(RegexOption.IGNORE_CASE))
         },
       NAME to { twc -> twc.font?.name?.contains(myriadProRegex) == true },
       UNKNOWN to { true },
@@ -135,12 +121,7 @@ class FantasticoProductsExtractor : PdfProductsExtractor {
                 }
                 .takeUnless { text -> Strings.isBlank(text) }
                 .let { text ->
-                  regexesToRemove.fold(text) { q, toRemove ->
-                    q?.replace(
-                      toRemove,
-                      "",
-                    )
-                  }
+                  regexesToRemove.fold(text) { q, toRemove -> q?.replace(toRemove, "") }
                 }
                 .let { text -> removeDuplicateSubstrings(text) }
 
