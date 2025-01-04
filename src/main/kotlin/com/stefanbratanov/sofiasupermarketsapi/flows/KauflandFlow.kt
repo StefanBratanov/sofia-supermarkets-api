@@ -7,10 +7,10 @@ import com.stefanbratanov.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefanbratanov.sofiasupermarketsapi.model.ProductStore
 import com.stefanbratanov.sofiasupermarketsapi.model.Supermarket
 import com.stefanbratanov.sofiasupermarketsapi.repository.ProductStoreRepository
+import java.net.URL
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
-import java.net.URL
 
 @Log
 @Component
