@@ -25,7 +25,7 @@ image.verifier:
   cron: "0 0/10 * * * ?"
 
 kaufland:
-  base.url: https://www.kaufland.bg/aktualni-predlozheniya/ot-ponedelnik.html
+  base.url: https://www.kaufland.bg/aktualni-predlozheniya/oferti.html
 
 lidl:
   base.url: https://www.lidl.bg

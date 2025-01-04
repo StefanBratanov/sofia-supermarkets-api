@@ -1,90 +1,70 @@
 package com.stefanbratanov.sofiasupermarketsapi.extractors
 
+import com.fasterxml.jackson.databind.JsonNode
+import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
-import com.stefanbratanov.sofiasupermarketsapi.common.UrlValidator
 import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefanbratanov.sofiasupermarketsapi.common.normalizePrice
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefanbratanov.sofiasupermarketsapi.model.Product
 import java.net.URL
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.*
-import kotlin.text.RegexOption.IGNORE_CASE
 import org.apache.commons.lang3.StringUtils
+import org.jsoup.nodes.Document
 import org.springframework.stereotype.Component
 
 @Log
 @Component("Kaufland")
-class KauflandProductsExtractor(private val urlValidator: UrlValidator = UrlValidator()) :
-  UrlProductsExtractor {
+class KauflandProductsExtractor(val objectMapper: ObjectMapper) : UrlProductsExtractor {
 
   override fun extract(url: URL): List<Product> {
-    val document =
-      try {
-        getHtmlDocument(url)
-      } catch (ex: Exception) {
-        log.info(
-          "There was an exception fetching products from {}. " +
-            "Will return 0 products for that url.",
-          url,
-        )
-        return emptyList()
-      }
-
     log.info("Processing Kaufland URL: {}", url.toString())
 
-    val category = document.select(".a-icon-tile-headline__container .a-headline").text()
+    val document = getHtmlDocument(url)
 
-    val dateRange =
-      document.selectFirst(".a-icon-tile-headline__subheadline h2")?.text()?.let {
-        "\\d+.\\d+.\\d+".toRegex().findAll(it).map { mr ->
-          val match = mr.groupValues[0]
-          try {
-            LocalDate.parse(match, DateTimeFormatter.ofPattern("dd.MM.yyyy"))
-          } catch (ex: Exception) {
-            log.error("Error while parsing $match", ex)
-            null
-          }
+    val offersTemplateJson = getOffersTemplateJson(document) ?: return emptyList()
+
+    val allProducts = mutableListOf<Product>()
+
+    for (cycle in offersTemplateJson.path("props").path("offerData").path("cycles")) {
+      for (category in cycle.path("categories")) {
+        val categoryName = category.get("displayName").asText()
+        val offers = category.path("offers")
+        if (offers.isArray) {
+          offers
+            .filter { it.has("title") && it.has("formattedPrice") }
+            .forEach { allProducts.add(extractProduct(categoryName, it)) }
         }
       }
-
-    return document.select(".o-overview-list__list-item").mapNotNull {
-      val subtitle = it.select(".m-offer-tile__subtitle").text()
-      val title = it.select(".m-offer-tile__title").text()
-      val quantity = it.select(".m-offer-tile__quantity").text()
-
-      val oldPrice =
-        it.select(".a-pricetag__old-price span").text().takeUnless { text ->
-          text.contains("само".toRegex(IGNORE_CASE))
-        }
-      val price = it.select(".a-pricetag__price").text()
-
-      val picUrls =
-        it.select(".m-offer-tile__image img").attr("data-srcset").split(",").map { urls ->
-          urls.trim()
-        }
-
-      var picUrl =
-        picUrls.getOrNull(1)?.split("\\s+".toRegex())?.first { picUrl ->
-          urlValidator.isValid(picUrl)
-        }
-
-      if (Objects.isNull(picUrl)) {
-        picUrl = it.select(".m-offer-tile__image img").attr("data-src").ifEmpty { null }
-      }
-
-      Product(
-        name = StringUtils.normalizeSpace("$subtitle $title"),
-        quantity = StringUtils.normalizeSpace(quantity),
-        price = normalizePrice(price),
-        oldPrice = normalizePrice(oldPrice),
-        category = category,
-        picUrl = picUrl,
-        validFrom = dateRange?.elementAtOrNull(0),
-        validUntil = dateRange?.elementAtOrNull(1),
-      )
     }
+
+    return allProducts
+  }
+
+  private fun getOffersTemplateJson(document: Document): JsonNode? {
+    val jsonRegex = """\{"component":.*$""".toRegex()
+    return document
+      .selectFirst("script:containsData(OfferTemplate)")
+      ?.data()
+      ?.let { jsonRegex.find(it) }
+      ?.value
+      ?.let { objectMapper.readTree(it) }
+  }
+
+  private fun extractProduct(categoryName: String, offer: JsonNode): Product {
+    val title = offer.get("title").asText()
+    val subtitle = offer.get("subtitle")?.asText()
+    val name = subtitle?.let { "$title $it" } ?: title
+    return Product(
+      name = StringUtils.normalizeSpace(name),
+      quantity = offer.get("unit")?.asText()?.let { StringUtils.normalizeSpace(it) },
+      price = normalizePrice(offer.get("formattedPrice").asText()),
+      oldPrice = normalizePrice(offer.get("formattedOldPrice")?.asText()),
+      category = categoryName,
+      picUrl = offer.get("listImage")?.asText(),
+      validFrom = offer.get("dateFrom")?.asText()?.let { LocalDate.parse(it) },
+      validUntil = offer.get("dateTo")?.asText()?.let { LocalDate.parse(it) },
+    )
   }
 }

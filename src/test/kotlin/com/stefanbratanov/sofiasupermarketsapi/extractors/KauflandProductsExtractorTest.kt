@@ -6,7 +6,6 @@ import com.stefanbratanov.sofiasupermarketsapi.getUri
 import com.stefanbratanov.sofiasupermarketsapi.readResource
 import com.stefanbratanov.sofiasupermarketsapi.testObjectMapper
 import java.net.URL
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.skyscreamer.jsonassert.JSONAssert
 import org.skyscreamer.jsonassert.JSONCompareMode.STRICT
@@ -15,7 +14,7 @@ internal class KauflandProductsExtractorTest {
 
   private val objectMapper = testObjectMapper()
 
-  private val underTest = KauflandProductsExtractor()
+  private val underTest = KauflandProductsExtractor(objectMapper)
 
   @Test
   fun `test extracting products`() {
@@ -30,12 +29,8 @@ internal class KauflandProductsExtractorTest {
   }
 
   @Test
-  @Disabled("used for manual testing")
   fun `test fetching from real url`() {
-    val kauflandUrl =
-      URL(
-        "https://www.kaufland.bg/aktualni-predlozheniya/ot-ponedelnik/obsht-pregled.category=08_%D0%90%D0%BB%D0%BA%D0%BE%D1%85%D0%BE%D0%BB%D0%BD%D0%B8_%D0%B8_%D0%B1%D0%B5%D0%B7%D0%B0%D0%BB%D0%BA%D0%BE%D1%85%D0%BE%D0%BB%D0%BD%D0%B8_%D0%BD%D0%B0%D0%BF%D0%B8%D1%82%D0%BA%D0%B8.html"
-      )
+    val kauflandUrl = URL("https://www.kaufland.bg/aktualni-predlozheniya/oferti.html")
     val products = underTest.extract(kauflandUrl)
 
     assertThat(products).isNotEmpty()
