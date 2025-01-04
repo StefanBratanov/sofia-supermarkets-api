@@ -21,6 +21,8 @@ jobs:
       - name: Install dependencies
         run: sudo apt install fontconfig
       - name: Build
-        run: ./gradlew spotlessCheck build jacocoTestReport
+        run: |
+          export OPENSSL_CONF=/etc/ssl
+          ./gradlew spotlessCheck build jacocoTestReport
       - name: Codecov
         uses: codecov/codecov-action@v3
