@@ -49,7 +49,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-cache")
   implementation("org.springframework.boot:spring-boot-starter-validation")
   implementation("org.postgresql:postgresql")
-  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0")
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.4")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
