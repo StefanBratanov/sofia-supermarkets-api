@@ -49,7 +49,7 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
       .perform(MockMvcRequestBuilders.get("/products/alcohol").accept(MediaType.APPLICATION_JSON))
       .andExpect(MockMvcResultMatchers.status().isOk)
       .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-      .andExpect(MockMvcResultMatchers.content().json(expectedJson, false))
+      .andExpect(MockMvcResultMatchers.content().json(expectedJson))
 
     val expectedCdnJson = readResource("/api/alcohol/expected-cdn.json")
 
@@ -60,7 +60,7 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
       )
       .andExpect(MockMvcResultMatchers.status().isOk)
       .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-      .andExpect(MockMvcResultMatchers.content().json(expectedCdnJson, false))
+      .andExpect(MockMvcResultMatchers.content().json(expectedCdnJson))
 
     val onlyBeer = readResource("/api/alcohol/only-beer.json")
 
@@ -71,7 +71,7 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
       )
       .andExpect(MockMvcResultMatchers.status().isOk)
       .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-      .andExpect(MockMvcResultMatchers.content().json(onlyBeer, false))
+      .andExpect(MockMvcResultMatchers.content().json(onlyBeer))
 
     val beerAndWhiskey = readResource("/api/alcohol/beer-and-whiskey.json")
 
@@ -82,6 +82,6 @@ internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
       )
       .andExpect(MockMvcResultMatchers.status().isOk)
       .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-      .andExpect(MockMvcResultMatchers.content().json(beerAndWhiskey, false))
+      .andExpect(MockMvcResultMatchers.content().json(beerAndWhiskey))
   }
 }
