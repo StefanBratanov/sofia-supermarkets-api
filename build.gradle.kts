@@ -67,7 +67,7 @@ dependencies {
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.28.0")
-  testImplementation("io.mockk:mockk:1.13.4")
+  testImplementation("io.mockk:mockk:1.14.2")
   testImplementation("com.ninja-squad:springmockk:4.0.0")
   testImplementation("org.skyscreamer:jsonassert:1.5.1")
   testImplementation("org.mock-server:mockserver-spring-test-listener:5.15.0")
