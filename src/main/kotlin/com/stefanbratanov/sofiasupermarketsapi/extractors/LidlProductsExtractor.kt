@@ -36,11 +36,11 @@ class LidlProductsExtractor(
           ?.let { canonicalUrl -> baseUrl.toURI().resolve(canonicalUrl).toURL() }
           ?.let { productUrl ->
             GlobalScope.async {
-              lidlProductExtractor.extract(productUrl).copy(category = category, picUrl = picUrl)
+              lidlProductExtractor.extract(productUrl)?.copy(category = category, picUrl = picUrl)
             }
           }
       }
 
-    return runBlocking { deferredProducts.awaitAll() }
+    return runBlocking { deferredProducts.awaitAll().filterNotNull() }
   }
 }

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component
 @Component
 class LidlProductExtractor {
 
-  fun extract(url: URL): Product {
+  fun extract(url: URL): Product? {
     log.debug("Processing Lidl product URL: {}", url)
 
     val document = getHtmlDocument(url)
@@ -24,6 +24,10 @@ class LidlProductExtractor {
     val quantity = document.selectFirst("div.price-footer")?.text()
     val price = document.selectFirst("div.m-price__price")?.text()
     val oldPrice = document.selectFirst("span.m-price__rrp")?.text()
+
+    if (name == null) {
+      return null
+    }
 
     val dateRange =
       document.selectFirst("span[data-v-35dadb86]")?.text()?.trim()?.let { dateSpan ->

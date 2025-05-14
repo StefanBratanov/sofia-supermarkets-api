@@ -3,6 +3,7 @@ package com.stefanbratanov.sofiasupermarketsapi.extractors
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.assertions.isEqualToIgnoringGivenProperties
+import assertk.assertions.isNotNull
 import com.stefanbratanov.sofiasupermarketsapi.getUri
 import com.stefanbratanov.sofiasupermarketsapi.model.Product
 import java.time.LocalDate
@@ -30,13 +31,14 @@ internal class LidlProductExtractorTest {
       )
 
     assertThat(product)
+      .isNotNull()
       .isEqualToIgnoringGivenProperties(expectedProduct, Product::validFrom, Product::validUntil)
 
-    assertThat(product.validFrom?.dayOfMonth).isEqualTo(30)
-    assertThat(product.validFrom?.month).isEqualTo(Month.OCTOBER)
-    assertThat(product.validFrom?.year).isEqualTo(LocalDate.now().year)
-    assertThat(product.validUntil?.dayOfMonth).isEqualTo(5)
-    assertThat(product.validUntil?.month).isEqualTo(Month.NOVEMBER)
-    assertThat(product.validUntil?.year).isEqualTo(LocalDate.now().year)
+    assertThat(product?.validFrom?.dayOfMonth).isEqualTo(30)
+    assertThat(product?.validFrom?.month).isEqualTo(Month.OCTOBER)
+    assertThat(product?.validFrom?.year).isEqualTo(LocalDate.now().year)
+    assertThat(product?.validUntil?.dayOfMonth).isEqualTo(5)
+    assertThat(product?.validUntil?.month).isEqualTo(Month.NOVEMBER)
+    assertThat(product?.validUntil?.year).isEqualTo(LocalDate.now().year)
   }
 }
