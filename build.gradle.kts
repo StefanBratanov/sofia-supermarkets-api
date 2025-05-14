@@ -71,7 +71,8 @@ dependencies {
   testImplementation("com.ninja-squad:springmockk:4.0.0")
   testImplementation("org.skyscreamer:jsonassert:1.5.1")
   testImplementation("org.mock-server:mockserver-spring-test-listener:5.15.0")
-  testRuntimeOnly("com.h2database:h2")
+  // temporary
+  implementation("com.h2database:h2")
 }
 
 springBoot { buildInfo() }
