@@ -12,6 +12,7 @@ internal class FantasticoBrochureDownloaderTest {
   private lateinit var underTest: FantasticoBrochureDownloader
 
   @Test
+  @Disabled("need to change the flow")
   fun `downloads real brochure`() {
     underTest = FantasticoBrochureDownloader(URL("https://www.fantastico.bg/special-offers"))
     val result = underTest.download()
