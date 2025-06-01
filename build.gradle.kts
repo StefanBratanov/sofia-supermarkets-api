@@ -38,7 +38,7 @@ val seleniumVersion = "4.8.1"
 // https://docs.spring.io/spring-boot/appendix/dependency-versions/properties.html
 extra["selenium.version"] = seleniumVersion
 
-val junitVersion = "5.12.0"
+val junitVersion = "5.13.0"
 extra["junit-jupiter.version"] = junitVersion
 
 dependencies {
