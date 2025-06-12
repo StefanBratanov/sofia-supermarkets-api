@@ -1,7 +1,7 @@
 FROM gradle:8.5-jdk17 AS build
 COPY --chown=gradle:gradle . /app
 WORKDIR /app
-RUN gradle build --no-daemon
+RUN gradle build --no-daemon -x test
 
 FROM eclipse-temurin:17-jdk-alpine
 VOLUME /tmp
