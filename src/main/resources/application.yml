@@ -3,6 +3,7 @@ api:
 
 server:
   compression.enabled: true
+  port: ${PORT:8080}
 
 logging:
   file:
