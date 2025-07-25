@@ -36,7 +36,11 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
     var capabilities: DesiredCapabilities
 
     init {
-      WebDriverManager.phantomjs().setup()
+      System.setProperty(
+        "wdm.phantomjsDriverMirrorUrl",
+        "https://mirrors.huaweicloud.com/phantomjs/",
+      )
+      WebDriverManager.phantomjs().useMirror().setup()
       capabilities = DesiredCapabilities()
       capabilities.setCapability(SUPPORTS_JAVASCRIPT, true)
     }

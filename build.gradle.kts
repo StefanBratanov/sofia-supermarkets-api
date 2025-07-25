@@ -29,7 +29,7 @@ java {
   targetCompatibility = JavaVersion.VERSION_17
 }
 
-jacoco { toolVersion = "0.8.8" }
+jacoco { toolVersion = "0.8.13" }
 
 repositories { mavenCentral() }
 
