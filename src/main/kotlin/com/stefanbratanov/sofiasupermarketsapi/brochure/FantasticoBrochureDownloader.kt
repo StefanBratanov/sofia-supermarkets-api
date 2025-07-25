@@ -75,7 +75,7 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
           val nameOfBrochure = it.selectFirst("p.paragraph")?.text()
           val dateRange = extractDateRange(nameOfBrochure)
           log.info(
-            "Fantastico brochure is vaild " + "from ${dateRange?.first} until ${dateRange?.second}"
+            "Fantastico brochure is valid from ${dateRange?.first} until ${dateRange?.second}"
           )
 
           val iFrameUrl = it.attr("data-brochure")
