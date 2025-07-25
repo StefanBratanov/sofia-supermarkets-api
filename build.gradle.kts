@@ -1,5 +1,7 @@
 import com.diffplug.gradle.spotless.SpotlessExtension
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 plugins {
   val kotlinVersion = "2.2.0"
@@ -80,10 +82,10 @@ springBoot { buildInfo() }
 // dont't produce *-plain.jar
 tasks.getByName<Jar>("jar") { enabled = false }
 
-tasks.withType<KotlinCompile> {
-  kotlinOptions {
+tasks.withType<KotlinJvmCompile>().configureEach {
+  compilerOptions {
     freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all-compatibility")
-    jvmTarget = "17"
+    jvmTarget.set(JvmTarget.JVM_17)
   }
 }
 
