@@ -1,1992 +1,2012 @@
 [
   {
-    "name": "Краставици Billa градини Произход - градината в селo Ръжево Конаре, село Дъбово и град Стара Загора",
+    "name": "- Familia сладолед 433",
+    "quantity": "505 г",
+    "price": 3.88,
+    "oldPrice": 7.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Лудогорско пиле Прясно пиле клас А",
     "quantity": "1 кг",
-    "price": 2.49,
-    "oldPrice": 2.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Печено кебапче От топлата витрина",
-    "quantity": "1 бр.",
-    "price": 0.39,
-    "oldPrice": 0.69,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Свински бут без кост Българска ферма",
-    "quantity": "1 кг",
-    "price": 5.79,
-    "oldPrice": 8.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Селска вита баничка От Billa пекарна Прясно и безопасно",
-    "quantity": "145 г",
-    "price": 0.69,
-    "oldPrice": 1.25,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Ариана",
-    "quantity": "2 л",
-    "price": 1.79,
-    "oldPrice": 2.45,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Ябълка Златна превъзходна Billa градини Произход - градината в град Първомай",
-    "quantity": "1 кг",
-    "price": 0.99,
-    "oldPrice": 1.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве сирене Дея Oт деликатесната витрина",
-    "quantity": "100 г",
-    "price": 0.49,
-    "oldPrice": 0.85,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Луканков салам Орехите",
-    "quantity": "230 г",
-    "price": 3.49,
-    "oldPrice": 6.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Геврек със сусам От Billa пекарна",
-    "quantity": "100 г",
-    "price": 0.39,
-    "oldPrice": 0.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Червена леща Natura",
-    "quantity": "500 г",
-    "price": 1.59,
-    "oldPrice": 2.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Маслиново масло Extra Virgin De Cecco",
-    "quantity": "1 л",
-    "price": 11.99,
-    "oldPrice": 21.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Гел за пране Perwoll Renew & Repair Color 45 пранета",
-    "quantity": "2,7 л.",
-    "price": 9.99,
-    "oldPrice": 19.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Енергийна напитка Maximal G",
-    "quantity": "0,250 мл",
-    "price": 0.49,
-    "oldPrice": 0.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Печено кашу Кронос",
-    "quantity": "70 г",
-    "price": 2.09,
-    "oldPrice": 3.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Тоалетно блокче Domestos WC Power 5",
-    "quantity": "3 X 55 г",
-    "price": 3.99,
-    "oldPrice": 6.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Кана за пречистване на вода Aquaphor Prestige А5",
-    "quantity": "2,8 л",
-    "price": 16.49,
-    "oldPrice": 32.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Калъфка за възглавница Dilios 50 x 70 см различни десени",
-    "quantity": "2 бр.",
-    "price": 4.79,
+    "price": 4.09,
     "oldPrice": 7.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Омекотител Coccolino 42 пранета",
-    "quantity": "1,05 л",
-    "price": 2.99,
-    "oldPrice": 4.99,
+    "name": "- Печено кюфте От топлата витрина Billa Ready",
+    "quantity": "1 бр.",
+    "price": 0.51,
+    "oldPrice": 0.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Мини франзела От Billa пекарна Прясно и Безопасно",
-    "quantity": "110 г",
-    "price": 0.19,
-    "oldPrice": 0.35,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пълнозърнеста пърленка От Billa пекарна Ново в Billa",
-    "quantity": "160г",
-    "price": 0.59,
-    "oldPrice": 0.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Хот дог От Billa пекарна",
+    "name": "- Milka Шоколад млечен или Oreo",
     "quantity": "100 г",
-    "price": 0.59,
-    "oldPrice": 0.85,
+    "price": 2.45,
+    "oldPrice": 4.79,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Хляб със сусам От Billa пекарна",
-    "quantity": "450 г",
-    "price": 0.89,
-    "oldPrice": 1.55,
+    "name": "- Мини пърленка От Billa пекарна Billa Ready",
+    "quantity": "50 г",
+    "price": 0.2,
+    "oldPrice": 0.39,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Закуска с топено сирене От Billa пекарна",
-    "quantity": "110 г",
-    "price": 0.69,
-    "oldPrice": 1.15,
+    "name": "- Billa градини Диня Градините в с. Къпиново",
+    "quantity": "1 кг",
+    "price": 0.51,
+    "oldPrice": 0.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Донът",
-    "quantity": "56 г",
-    "price": 0.49,
-    "oldPrice": 0.69,
+    "name": "- Загорка бира",
+    "quantity": "0,5 л",
+    "price": 0.92,
+    "oldPrice": 1.79,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Тортила питка El Sabor",
-    "quantity": "245 г",
-    "price": 2.29,
+    "name": "- Heineken бира",
+    "quantity": "0,5 л",
+    "price": 1.32,
+    "oldPrice": 2.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Ариана бира",
+    "quantity": "2 л",
+    "price": 1.53,
     "oldPrice": 2.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Хоризонт Яйца от подово отглеждани кокошки размер M в опакoвка",
+    "quantity": "10 бр.",
+    "price": 2.91,
+    "oldPrice": 5.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Киселово Краве сирене От деликатесната витрина",
+    "quantity": "1 кг",
+    "price": 7.97,
+    "oldPrice": 15.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Пилешка вешалица От топлата витрина Billa Ready",
+    "quantity": "1 бр.",
+    "price": 1.94,
+    "oldPrice": 3.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Балкан Кисело мляко 4,5%",
+    "quantity": "400 г",
+    "price": 1.12,
+    "oldPrice": 2.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Домлян Кашкавал от краве мляко За ценители",
+    "quantity": "600 г",
+    "price": 10.22,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Кашкавалка От Billa пекарна Billa Ready",
+    "quantity": "120 г",
+    "price": 0.86,
+    "oldPrice": 1.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Елит Мес Търновска оплека",
+    "quantity": "170 г",
+    "price": 2.65,
+    "oldPrice": 5.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Еко Мес Салам Бургас",
+    "quantity": "210 г",
+    "price": 3.06,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Krina Леща Екстра",
+    "quantity": "500 г",
+    "price": 1.94,
+    "oldPrice": 3.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Ная Нетунквани вафли",
+    "quantity": "350 г",
+    "price": 2.28,
+    "oldPrice": 4.45,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Престиж Суха паста",
+    "quantity": "300 г",
+    "price": 2.55,
+    "oldPrice": 4.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Passport Selection Спиртна напитка",
+    "quantity": "0,7 л",
+    "price": 11.24,
+    "oldPrice": 21.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Stella Спагети и макаронени изделия",
+    "quantity": "500 г",
+    "price": 1.53,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Lavazza Кафе на зърна Crema e Aroma",
+    "quantity": "1 кг",
+    "price": 40.9,
+    "oldPrice": 79.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Milka Бисквити Choc&Choc и Sensations 150",
+    "quantity": "156 г",
+    "price": 3.01,
+    "oldPrice": 5.89,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Beefeater Джин Pink",
+    "quantity": "0,7 л",
+    "price": 14.98,
+    "oldPrice": 29.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Велинград минерална вода",
+    "quantity": "1,5 л",
+    "price": 0.59,
+    "oldPrice": 1.15,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Орехите Салам шпеков",
+    "quantity": "230 г",
+    "price": 4.6,
+    "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Орехите Сушеница Добруджанска",
+    "quantity": "180 г",
+    "price": 5.36,
+    "oldPrice": 10.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Schofferhofer бира weiss",
+    "quantity": "0,5 л",
+    "price": 1.43,
+    "oldPrice": 2.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Нишко Пиво бира",
+    "quantity": "0,5 л",
+    "price": 1.07,
+    "oldPrice": 2.09,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Krombacher бира",
+    "quantity": "0,33 л",
+    "price": 1.27,
+    "oldPrice": 2.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Перелик Луканка",
+    "quantity": "500 г",
+    "price": 10.22,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Moretti бира мултипак",
+    "quantity": "4 х 0,5 л",
+    "price": 4.09,
+    "oldPrice": 7.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Amstel бира",
+    "quantity": "1 л",
+    "price": 1.43,
+    "oldPrice": 2.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Paulaner бира Hefe-weiss",
+    "quantity": "0,5 л",
+    "price": 1.68,
+    "oldPrice": 3.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Glarus бира Pale Ale",
+    "quantity": "0,5 л",
+    "price": 1.53,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Estrella бира",
+    "quantity": "0,5 л",
+    "price": 1.43,
+    "oldPrice": 2.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Clausthaler безалкохолна бира",
+    "quantity": "0,5 л",
+    "price": 1.35,
+    "oldPrice": 2.65,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Radebergerg бира",
+    "quantity": "0,5 л",
+    "price": 1.68,
+    "oldPrice": 3.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa градини Жива подправка Босилек Градините в с. Спатово",
+    "quantity": "1 бр.",
+    "price": 1.27,
+    "oldPrice": 2.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa градини Сладка царевица Градините в с. Ивайло, гр. Петрич, с. Милево",
+    "quantity": "1 бр.",
+    "price": 0.92,
+    "oldPrice": 1.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa градини Картофи ранни Градините в с. Ивайло, гр. Петрич, с. Милево",
+    "quantity": "1 кг",
+    "price": 1.02,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa градини Салата бейби микс Градините в с. Черньово",
+    "quantity": "150 г",
+    "price": 1.78,
+    "oldPrice": 3.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa градини Краставици Градините в с. Първомай",
+    "quantity": "1 кг",
+    "price": 2.04,
+    "oldPrice": 3.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Домати червени",
+    "quantity": "1 кг",
+    "price": 2.04,
+    "oldPrice": 3.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Гъби печурки р",
+    "quantity": "250 г",
+    "price": 1.53,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Bon Via Чери домати Рома",
+    "quantity": "250 г",
+    "price": 1.53,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Манго",
+    "quantity": "1 бр.",
+    "price": 1.53,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Авокадо Хас",
+    "quantity": "1 бр.",
+    "price": 1.02,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa градини Сладка царевица Градините в с. Ивайло, гр. Петрич, с. Милево",
+    "quantity": "1 бр.",
+    "price": 0.92,
+    "oldPrice": 1.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Billa градини Диня Градините в с. Къпиново",
+    "quantity": "1 кг",
+    "price": 0.51,
+    "oldPrice": 0.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Свинска плешка без кост",
+    "quantity": "1 кг",
+    "price": 6.64,
+    "oldPrice": 12.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Българска ферма Сурова наденица от свинско месо Стара планина",
+    "quantity": "550 г",
+    "price": 4.6,
+    "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Народен Кайма различни видове охладена",
+    "quantity": "250 г",
+    "price": 1.63,
+    "oldPrice": 3.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Grill Party Пуешки кюфтенца",
+    "quantity": "480 г",
+    "price": 4.44,
+    "oldPrice": 8.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Grill Party Телешки бургер",
+    "quantity": "300 г",
+    "price": 3.57,
+    "oldPrice": 6.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Пилешки обезкостен бут с кожа",
+    "quantity": "1 кг",
+    "price": 6.13,
+    "oldPrice": 11.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Бяла река Пъстърва вакуум",
+    "quantity": "1 кг",
+    "price": 7.66,
+    "oldPrice": 14.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Ocean Fish Сьомга филе",
+    "quantity": "200 г",
+    "price": 5.62,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Деком Кайма смес от агнешко и телешко месо",
+    "quantity": "500 г",
+    "price": 3.57,
+    "oldPrice": 6.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Salmaris Тарама хайвер от треска или пушена сьомга",
+    "quantity": "100 г",
+    "price": 1.53,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Diamir Филе риба тон",
+    "quantity": "85 г",
+    "price": 2.04,
+    "oldPrice": 3.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Тутманик От Billa пекарна Billa Ready",
+    "quantity": "200 г",
+    "price": 1.38,
+    "oldPrice": 2.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Чеснова багета От Billa пекарна Billa Ready",
+    "quantity": "165 г",
+    "price": 1.02,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Вита баница със сирене От Billa пекарна Billa Ready",
+    "quantity": "460 г",
+    "price": 3.57,
+    "oldPrice": 6.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Мелничарски хляб От Billa пекарна Billa Ready",
+    "quantity": "400 г",
+    "price": 2.02,
+    "oldPrice": 3.95,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Закуска двоен шоколад От Billa пекарна Billa Ready",
+    "quantity": "115 г",
+    "price": 0.81,
+    "oldPrice": 1.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Донът с цветна поръска Billa Ready",
+    "quantity": "56 г",
+    "price": 0.56,
+    "oldPrice": 1.09,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
     "name": "Трапезен хляб",
     "quantity": "500 г",
-    "price": 1.09,
-    "oldPrice": 1.35,
+    "price": 1.16,
+    "oldPrice": 2.27,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Моркови Billa градини Произход - градината в село Мирово",
-    "quantity": "1 кг",
-    "price": 0.69,
-    "oldPrice": 0.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Броколи Bon Via",
-    "quantity": "500 г",
-    "price": 1.59,
-    "oldPrice": 2.29,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Боровинки Bon Via",
-    "quantity": "125 г",
-    "price": 2.49,
-    "oldPrice": 3.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Къдрава салата Billa градини Произход - градината в село Първомай и град Петрич",
+    "name": "- Българска ферма Печено пилешко бутче От топлата витрина Billa Ready",
     "quantity": "1 бр.",
-    "price": 0.69,
-    "oldPrice": 1.19,
+    "price": 1.89,
+    "oldPrice": 3.69,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Репички връзка Billa градини Произход - градината в село Първомай и град Петрич",
+    "name": "Домашна луканкова наденица От топлата витрина Billa Ready",
     "quantity": "1 бр.",
-    "price": 0.79,
-    "oldPrice": 1.29,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Чери домати",
-    "quantity": "1 кг",
-    "price": 2.99,
-    "oldPrice": 3.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Портокали Произход - Гърция",
-    "quantity": "1 кг",
-    "price": 1.25,
-    "oldPrice": 1.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Спанак листа",
-    "quantity": "200 г",
-    "price": 1.79,
+    "price": 1.53,
     "oldPrice": 2.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Пилешки обезкостен бут с кожа цена",
+    "name": "Домашни картофи От топлата витрина За Billa Ready",
     "quantity": "1 кг",
-    "price": 5.45,
-    "oldPrice": 7.69,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Кайма 100% свинско месо Българска ферма цена",
-    "quantity": "1 кг",
-    "price": 6.49,
-    "oldPrice": 8.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Скумрия чистена без глава цена",
-    "quantity": "1 кг",
-    "price": 6.49,
-    "oldPrice": 8.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Телешка кайма охладена",
-    "quantity": "600 г",
-    "price": 4.99,
-    "oldPrice": 5.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Свински гърди с кост нарязани Българска ферма цена",
-    "quantity": "1кг",
-    "price": 7.99,
-    "oldPrice": 9.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Свински флейки от бут Българска ферма цена",
-    "quantity": "1кг",
-    "price": 8.49,
-    "oldPrice": 11.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Суров суджук Българска ферма",
-    "quantity": "500 г",
-    "price": 4.89,
-    "oldPrice": 5.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Картофи с копър и чесън От топлата витрина",
-    "quantity": "100 г",
-    "price": 0.45,
-    "oldPrice": 0.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пилешки бонфиленца със сусам От топлата витрина",
-    "quantity": "100 г",
-    "price": 14.9,
-    "oldPrice": 19.9,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Свински джолан без кост От топлата витрина",
-    "quantity": "100 г",
-    "price": 17.9,
-    "oldPrice": 24.9,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пиле с прясно зеле От топлата витрина",
-    "quantity": "100 г",
-    "price": 7.9,
-    "oldPrice": 12.9,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Лазаня със спанак От топлата витрина",
-    "quantity": "100 г",
-    "price": 9.9,
-    "oldPrice": 14.9,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Мусака От топлата витрина",
-    "quantity": "100 г",
-    "price": 6.9,
-    "oldPrice": 9.9,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Салам Шпеков, Бургас Орехите",
-    "quantity": "230 г",
-    "price": 3.99,
-    "oldPrice": 6.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Варено пушено свинско филе Соколово От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 0.79,
-    "oldPrice": 1.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Добруджанска луканка Орехите",
-    "quantity": "180 г",
-    "price": 5.59,
-    "oldPrice": 7.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Фует Екстра Noel",
-    "quantity": "170 г",
-    "price": 3.49,
-    "oldPrice": 4.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Шпек Сандвич Бони От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 1.39,
-    "oldPrice": 1.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Лионска наденица Кен",
-    "quantity": "390 г",
-    "price": 3.49,
-    "oldPrice": 4.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пилешки кренвирши Градус От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 0.39,
-    "oldPrice": 0.5,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Чешки колбас Billa",
-    "quantity": "700 г",
-    "price": 7.99,
-    "oldPrice": 9.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бекон, Свинска шунка слайс Кофлекс Фриго",
-    "quantity": "200 г",
-    "price": 1.99,
-    "oldPrice": 2.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Черни маслини Мамут 101 - 110 От деликатесната витрина Произход - Гърция",
-    "quantity": "100 г",
-    "price": 0.53,
-    "oldPrice": 0.89,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Руска салата Традиционна От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 0.35,
-    "oldPrice": 0.45,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Кьопоолу От деликатесната витрина Billa easy!",
-    "quantity": "100 г",
-    "price": 0.49,
-    "oldPrice": 0.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пълнени чушки с ориз От деликатесната витрина Billa easy!",
-    "quantity": "100 г",
-    "price": 0.69,
-    "oldPrice": 0.89,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Салата Морски дар От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 1.19,
-    "oldPrice": 1.89,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Филе Елена, Свинска пастърма Еко Мес От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 2.79,
-    "oldPrice": 3.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Търновска луканка Майстор Цветко От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 1.49,
-    "oldPrice": 2.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сръбска наденица Бони От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 1.15,
-    "oldPrice": 1.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Прясно мляко 3% My day",
-    "quantity": "1 л",
-    "price": 1.75,
-    "oldPrice": 2.35,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Кисело мляко Верея 4,5% 400 +",
-    "quantity": "100 г",
-    "price": 0.95,
-    "oldPrice": 1.25,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Био Uht мляко 3,5% Billa Bio",
-    "quantity": "1 л",
-    "price": 2.49,
-    "oldPrice": 3.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Заквасена сметана Meggle",
-    "quantity": "400 г",
-    "price": 2.19,
-    "oldPrice": 3.29,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве масло Deutsche Markenbutter",
-    "quantity": "125 г",
-    "price": 1.79,
-    "oldPrice": 2.69,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Продукт за разбиване Cremio",
-    "quantity": "200 мл",
-    "price": 1.59,
-    "oldPrice": 1.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сладолед Familia замразен продукт",
-    "quantity": "505 г",
-    "price": 2.99,
-    "oldPrice": 4.25,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Салата Снежанка без консерванти Веселина",
-    "quantity": "400 г",
-    "price": 3.79,
-    "oldPrice": 4.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Точени кори Златната Царица",
-    "quantity": "500 г",
-    "price": 1.69,
-    "oldPrice": 2.35,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пудинг Billa Ново в Billa замразен продукт",
-    "quantity": "150 г",
-    "price": 0.79,
-    "oldPrice": 0.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве сирене БДС Lacrima",
-    "quantity": "700 г",
-    "price": 8.69,
-    "oldPrice": 11.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве сирене Добротица",
-    "quantity": "800 г",
-    "price": 9.99,
-    "oldPrice": 11.9,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве сирене Olympus",
-    "quantity": "700 г",
-    "price": 7.99,
-    "oldPrice": 11.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве сирене Верея кутия",
-    "quantity": "400 г",
-    "price": 5.99,
-    "oldPrice": 7.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве сирене Пастир",
-    "quantity": "400 г",
-    "price": 4.99,
-    "oldPrice": 6.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве сирене Боженци",
-    "quantity": "1 кг",
-    "price": 10.99,
-    "oldPrice": 13.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Краве сирене Саяна",
-    "quantity": "400 г",
-    "price": 3.79,
-    "oldPrice": 4.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Козе сирене Саяна От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 1.09,
-    "oldPrice": 1.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Извара Billa",
-    "quantity": "400 г",
-    "price": 1.79,
-    "oldPrice": 2.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Крема сирене за мазане 21% Olympus",
-    "quantity": "200 г",
-    "price": 1.79,
-    "oldPrice": 2.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Топено сирене Веселата крава",
-    "quantity": "120 г",
-    "price": 2.09,
-    "oldPrice": 2.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Кашкавал от краве мляко Беленско От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 1.19,
-    "oldPrice": 1.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Моцарела Zott",
-    "quantity": "125 г",
-    "price": 1.89,
-    "oldPrice": 2.35,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Синьо сирене Favrskov От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 1.49,
-    "oldPrice": 1.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сирене Ементалер Mlekpol От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 1.59,
-    "oldPrice": 2.39,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сирене за сандвичи слайс Hochland",
-    "quantity": "140 г",
-    "price": 2.29,
-    "oldPrice": 3.09,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Грана падано Billa отлежало есеца 200 г",
-    "quantity": "15 м",
-    "price": 5.69,
-    "oldPrice": 6.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сурови бадеми Rois",
-    "quantity": "70 г",
-    "price": 1.99,
-    "oldPrice": 2.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Суров бразилски орех Billa",
-    "quantity": "200 г",
-    "price": 5.99,
-    "oldPrice": 7.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сушени червени боровинки Rois",
-    "quantity": "90 г",
-    "price": 1.49,
-    "oldPrice": 1.89,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сушени кайсии Rois",
-    "quantity": "150 г",
-    "price": 2.69,
-    "oldPrice": 3.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Фиксове Picantina различни видове 32",
-    "quantity": "62 г",
-    "price": 0.99,
-    "oldPrice": 1.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Боб Класик Natura",
-    "quantity": "400 г",
-    "price": 1.59,
-    "oldPrice": 2.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Крем Оле Dr. Oetker 75",
-    "quantity": "84 г",
-    "price": 0.97,
-    "oldPrice": 1.29,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Нахут Krina",
-    "quantity": "500 г",
-    "price": 1.49,
-    "oldPrice": 2.29,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Брашно тип 500 Екстра Арчар",
-    "quantity": "1 кг",
-    "price": 0.89,
-    "oldPrice": 1.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Лютеница едросмляна домашна, лютеница Закуска Хорцето",
-    "quantity": "300 г",
-    "price": 1.99,
-    "oldPrice": 2.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Скумрия котлети Русалка",
-    "quantity": "300 г",
-    "price": 1.99,
-    "oldPrice": 2.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Червени белени чушки Rizbo",
-    "quantity": "680 г",
-    "price": 2.69,
-    "oldPrice": 3.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Грах Campese",
-    "quantity": "690 г",
-    "price": 2.29,
-    "oldPrice": 3.09,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Дошен айвар Велика",
-    "quantity": "300 г",
-    "price": 3.99,
-    "oldPrice": 5.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Суджук слайс Billa + От охладено българско говеждо месо, + Майсторски подбрана комбинация от подправки",
-    "quantity": "100 г",
-    "price": 3.19,
-    "oldPrice": 3.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пушено свинско филе слайс Billa + От охладено свинско месо, + Фино опушено с букови стърготини",
-    "quantity": "150 г",
-    "price": 2.99,
-    "oldPrice": 3.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Кашкавал от краве мляко БДС Billa",
-    "quantity": "400 г",
-    "price": 6.19,
-    "oldPrice": 7.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Good morning Billa + С Bifidobacterium Lactis",
-    "quantity": "164 г",
-    "price": 0.85,
-    "oldPrice": 0.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Ориз Billa + Български от региона на Пазарджик, + С 95% цели зърна",
-    "quantity": "1 кг",
-    "price": 1.99,
-    "oldPrice": 2.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пастет Апетит Billa + №1 според запитаните българи, + Произведен в България, + Без изкуствени оцветители",
-    "quantity": "300 г",
-    "price": 1.29,
-    "oldPrice": 1.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Газирана Вода Billa + Произведена в България от Родопски извор Балдаран",
-    "quantity": "1,5 л",
-    "price": 0.59,
-    "oldPrice": 0.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Печени слънчогледови семки Billa",
-    "quantity": "200 г",
-    "price": 1.39,
-    "oldPrice": 1.69,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Желирани бонбони Nimm2",
-    "quantity": "90 г",
-    "price": 1.29,
-    "oldPrice": 1.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Карамелени, медени вафли Нелис",
-    "quantity": "192 г",
-    "price": 1.89,
-    "oldPrice": 2.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Шоколадов десерт Bounty",
-    "quantity": "57 г",
-    "price": 0.89,
-    "oldPrice": 1.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бонбони Raffaello",
-    "quantity": "230 г",
-    "price": 6.99,
-    "oldPrice": 9.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Дъвки Orbit 46 дражета",
-    "quantity": null,
-    "price": 2.99,
-    "oldPrice": 3.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Шоколад Alpine Milk Milka",
-    "quantity": "250 г",
-    "price": 4.19,
-    "oldPrice": 6.29,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Шоколад Lindt Lindor",
-    "quantity": "100 г",
-    "price": 2.99,
-    "oldPrice": 3.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Крем пита Karuzo",
-    "quantity": "62 г",
-    "price": 0.55,
-    "oldPrice": 0.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сладкиш Маркизите",
-    "quantity": "90 г",
-    "price": 0.59,
-    "oldPrice": 0.89,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Суха паста Family Sweet way",
-    "quantity": "420 г",
-    "price": 1.89,
-    "oldPrice": 2.89,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Мляно кафе Signature Dark Costa",
-    "quantity": "200 г",
-    "price": 4.99,
-    "oldPrice": 6.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Мляно турско кафе Tchibo",
-    "quantity": "100 г",
-    "price": 1.79,
-    "oldPrice": 2.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Кафе на зърна Lavazza Qualita Rossa",
-    "quantity": "1кг",
-    "price": 22.99,
-    "oldPrice": 34.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Разтворимо кафе Nescafe Gold",
-    "quantity": "200 г",
-    "price": 9.99,
-    "oldPrice": 14.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Разтворимо кафе Crema Nova Brasilia",
-    "quantity": "90 г",
-    "price": 3.49,
-    "oldPrice": 5.29,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Капсули Intenso Spetema 100",
-    "quantity": "128 г",
-    "price": 5.89,
-    "oldPrice": 7.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Мляно кафе Eduscho Wiener Extra",
-    "quantity": "250 г",
-    "price": 2.59,
-    "oldPrice": 3.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Разтворима напитка Jacobs 3 в 1",
-    "quantity": "10 бр. Х 18 г",
-    "price": 2.29,
-    "oldPrice": 3.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Чипс Chio Intense",
-    "quantity": "135 г",
-    "price": 1.69,
-    "oldPrice": 2.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Соленки с вкус на сирене Salza",
-    "quantity": "200 г",
-    "price": 1.59,
-    "oldPrice": 2.39,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бисквити Еверест",
-    "quantity": "195 г",
-    "price": 1.15,
-    "oldPrice": 1.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Снакс Lotta Peanuts",
-    "quantity": "90 г",
-    "price": 0.79,
-    "oldPrice": 0.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Вафлени пурички Sweet plus",
-    "quantity": "150 г",
-    "price": 1.59,
-    "oldPrice": 1.89,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бисквити Belvita",
-    "quantity": "225 г",
-    "price": 2.19,
-    "oldPrice": 2.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Билков чай Алпинист Биопрограма",
-    "quantity": "30 г",
-    "price": 0.79,
-    "oldPrice": 1.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Небелен сусамов тахан Дюсена",
-    "quantity": "300 г",
-    "price": 3.49,
-    "oldPrice": 4.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Пчелен мед Оберон",
-    "quantity": "700 г",
-    "price": 6.49,
-    "oldPrice": 8.69,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Оризов чипс Rice Up",
-    "quantity": "60 г",
-    "price": 1.19,
-    "oldPrice": 1.45,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Загорка",
-    "quantity": "0,5 л",
-    "price": 0.79,
-    "oldPrice": 1.25,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Студен чай Lipton",
-    "quantity": "1,5 л",
-    "price": 1.99,
-    "oldPrice": 2.75,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Budweiser",
-    "quantity": "0,5 л",
-    "price": 1.69,
-    "oldPrice": 2.09,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Газирана напитка Coca Cola",
-    "quantity": "2 x 1,5 л",
-    "price": 2.85,
-    "oldPrice": 3.75,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Енергийна напитка Monster",
-    "quantity": "0,5 л",
-    "price": 1.69,
-    "oldPrice": 1.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Минерална и изворна вода Devin",
-    "quantity": "2,5 л",
-    "price": 1.09,
-    "oldPrice": 1.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Сок 100% Портокал Pulp Pfanner",
-    "quantity": "2 л",
-    "price": 4.99,
-    "oldPrice": 6.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Warsteiner",
-    "quantity": "0,5 л",
-    "price": 1.79,
-    "oldPrice": 2.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бърбън Jim Beam",
-    "quantity": "0,7 л",
-    "price": 16.99,
-    "oldPrice": 23.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Ракия Сунгурларска отлежала",
-    "quantity": "0,7 л",
-    "price": 11.49,
-    "oldPrice": 14.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Уиски Johnnie Walker Blonde",
-    "quantity": "0,7 л",
-    "price": 28.99,
-    "oldPrice": 38.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Водка Zubrowka Biala",
-    "quantity": "0,7 л",
-    "price": 11.49,
-    "oldPrice": 13.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Водка Absolut",
-    "quantity": "0,7 л",
-    "price": 14.99,
-    "oldPrice": 20.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Ракия Дядова Усуканица",
-    "quantity": "0,7 л",
-    "price": 10.99,
-    "oldPrice": 13.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Вино Santa Helena",
-    "quantity": "0,75 л",
-    "price": 7.99,
-    "oldPrice": 9.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Вино Quantum",
-    "quantity": "0,75 л",
-    "price": 6.19,
-    "oldPrice": 8.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Вино Chateau Karnobat",
-    "quantity": "3 л",
-    "price": 10.69,
-    "oldPrice": 13.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Филтър за вода Brita Maxtra+",
-    "quantity": "2 бр.",
-    "price": 19.99,
-    "oldPrice": 29.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Тоалетна хартия Zewa Deluxe 3 пласта, в опаковка",
-    "quantity": "16 бр.",
-    "price": 9.99,
+    "price": 8.18,
     "oldPrice": 15.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Гел за пране Persil 60/54 или Капсули Persil",
-    "quantity": "33 бр.",
-    "price": 15.99,
-    "oldPrice": 25.99,
+    "name": "Спагети с четири сирена От топлата витрина За Billa Ready",
+    "quantity": "1 кг",
+    "price": 9.71,
+    "oldPrice": 18.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Кухненска ролка Emeka 3 пластова в опаковка",
-    "quantity": "2 бр.",
-    "price": 2.39,
-    "oldPrice": 3.15,
+    "name": "Миш маш От топлата витрина За Billa Ready",
+    "quantity": "1 кг",
+    "price": 10.02,
+    "oldPrice": 19.59,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Паста за зъби Lacalut Aktiv",
-    "quantity": "75 мл",
-    "price": 3.99,
-    "oldPrice": 6.29,
+    "name": "Ориз с гъби От топлата витрина За Billa Ready",
+    "quantity": "1 кг",
+    "price": 7.41,
+    "oldPrice": 14.49,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Препарат за съдове Medix Beauty Balsam различни видове",
-    "quantity": "450 мл",
-    "price": 1.29,
-    "oldPrice": 1.79,
+    "name": "Пиле с грах От топлата витрина За Billa Ready",
+    "quantity": "1 кг",
+    "price": 8.94,
+    "oldPrice": 17.49,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Шампоан против пърхот Head&Shoulders различни видове",
-    "quantity": "360 мл",
-    "price": 5.49,
+    "name": "- Еко Мес Салам pакуска",
+    "quantity": "400 г",
+    "price": 6.64,
+    "oldPrice": 12.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "КФМ Пуешко филе или шунка от бут виенска слайс",
+    "quantity": "160 г",
+    "price": 4.09,
+    "oldPrice": 7.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Мес Ко Пилешко роле",
+    "quantity": "270 г",
+    "price": 4.09,
+    "oldPrice": 7.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Народен Кренвирш пилешки XXL вакум",
+    "quantity": "560 г",
+    "price": 4.34,
     "oldPrice": 8.49,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Дамски превръзки Every Day в опаковка 1 опаковка",
-    "quantity": "18 бр.",
-    "price": 2.99,
-    "oldPrice": 4.35,
+    "name": "Народен Колбас Телешки или Камчия",
+    "quantity": "320 г",
+    "price": 2.65,
+    "oldPrice": 5.19,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Алуминиево фолио Fino",
-    "quantity": "10 м",
-    "price": 1.79,
-    "oldPrice": 2.29,
+    "name": "Мес Ко Колбас Мелник",
+    "quantity": "230 г",
+    "price": 4.6,
+    "oldPrice": 8.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Бира Ариана",
-    "quantity": "2 л",
-    "price": 1.79,
-    "oldPrice": 2.49,
+    "name": "Billa Бекон слайс",
+    "quantity": "200 г",
+    "price": 3.42,
+    "oldPrice": 6.69,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Бисквити Milka Jaffa,Lila Stix, Choco Minis 112",
-    "quantity": "150 г",
-    "price": 1.49,
-    "oldPrice": 2.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Заден джолан с кост и кожа, натурален (вакуум) цена",
-    "quantity": "1кг",
-    "price": 4.95,
-    "oldPrice": 6.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Маслини Каламата Блонд 231 - 260 От деликатесната витрина",
-    "quantity": "100 г",
-    "price": 0.55,
-    "oldPrice": 0.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Ягоди",
-    "quantity": "250 г",
-    "price": 1.99,
-    "oldPrice": 2.79,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Гъби Печурки",
-    "quantity": "1 кг",
-    "price": 3.69,
+    "name": "Billa Шунка",
+    "quantity": "300 г",
+    "price": 2.55,
     "oldPrice": 4.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Мити картофи сорт Агата Произход - Франция",
+    "name": "Billa Салам закуска слайс",
+    "quantity": "190 г",
+    "price": 2.81,
+    "oldPrice": 5.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Clever Сушеница",
+    "quantity": "280 г",
+    "price": 3.06,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Бони Сръбска наденица От деликатесната витрина",
     "quantity": "1 кг",
-    "price": 0.99,
-    "oldPrice": 1.39,
+    "price": 13.7,
+    "oldPrice": 26.79,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Яйца Нашите ферми размер L в опаковка",
-    "quantity": "10 бр.",
-    "price": 2.19,
-    "oldPrice": 2.89,
+    "name": "Leki Кренвирши От деликатесната витрина",
+    "quantity": "1 кг",
+    "price": 7.66,
+    "oldPrice": 14.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Бира Zatecky Hus",
-    "quantity": "1 л",
-    "price": 1.49,
-    "oldPrice": 1.99,
+    "name": "Деликатес Житница Пушено свинско филе От деликатесната витрина",
+    "quantity": "1 кг",
+    "price": 15.33,
+    "oldPrice": 29.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Печен суджук От топлата витрина",
-    "quantity": "1 бр.",
-    "price": 1.99,
+    "name": "Перелик Шпек сандвич От деликатесната витрина",
+    "quantity": "1 кг",
+    "price": 14.31,
+    "oldPrice": 27.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Тандем Пушена свинска рибица От деликатесната витрина",
+    "quantity": "1 кг",
+    "price": 17.89,
+    "oldPrice": 34.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Соколово Пушен свински бут От деликатесната витрина",
+    "quantity": "1 кг",
+    "price": 7.15,
+    "oldPrice": 13.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Свински шницел премиум От деликатесната витрина За Billa Ready",
+    "quantity": "1 кг",
+    "price": 1.53,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Milki Dream Кашкавал от краве мляко",
+    "quantity": "400 г",
+    "price": 5.52,
+    "oldPrice": 10.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Маджаров краве сирене ЗНП",
+    "quantity": "700 г",
+    "price": 9.2,
+    "oldPrice": 17.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Zott моцарела",
+    "quantity": "125 г",
+    "price": 1.78,
     "oldPrice": 3.49,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Шоколадови бонбони Merci",
+    "name": "Olympus Крема сирене за мазане 21%",
+    "quantity": "200 г",
+    "price": 2.3,
+    "oldPrice": 4.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Трапезица Кашкавал от краве мляко От деликатесната витрина",
+    "quantity": "1 кг",
+    "price": 9.2,
+    "oldPrice": 17.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Goldsteig Ементал слайс",
+    "quantity": "150 г",
+    "price": 2.5,
+    "oldPrice": 4.89,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Верея Чудно Прясно мляко 3,7%",
+    "quantity": "1 л",
+    "price": 1.89,
+    "oldPrice": 3.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Верея кисело мляко 2,9%",
+    "quantity": "400 г",
+    "price": 0.89,
+    "oldPrice": 1.75,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa протеинов йогурт",
+    "quantity": "500 г",
+    "price": 2.04,
+    "oldPrice": 3.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Passionata пица замразена 310",
+    "quantity": "335 г",
+    "price": 4.09,
+    "oldPrice": 7.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Milka Млечна напитка",
+    "quantity": "250 мл",
+    "price": 1.73,
+    "oldPrice": 3.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium Сладолед",
+    "quantity": "500 мл",
+    "price": 5.36,
+    "oldPrice": 10.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium Белгийски гофретизамразени",
+    "quantity": "320 г",
+    "price": 4.6,
+    "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium Торта с боровинки замразена",
+    "quantity": "200 г",
+    "price": 3.06,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium Шоколадово кексче с белгийски шоколад замразено",
+    "quantity": "2 х 90 г",
+    "price": 3.57,
+    "oldPrice": 6.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium кейк Шварцвалд замразен",
+    "quantity": "200 г",
+    "price": 3.06,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium Картофен Гратен замразен",
+    "quantity": "400 г",
+    "price": 4.6,
+    "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium Сладкиш замразен",
+    "quantity": "180 г",
+    "price": 4.09,
+    "oldPrice": 7.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium Макарони замразени",
+    "quantity": "6 х 12 г",
+    "price": 4.29,
+    "oldPrice": 8.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Alpro Напитка лешникова или бадемова",
+    "quantity": "1 л",
+    "price": 3.91,
+    "oldPrice": 7.65,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Кръстев Български ориз",
+    "quantity": "1 кг",
+    "price": 2.4,
+    "oldPrice": 4.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Piperka Кисели краставички",
+    "quantity": "680 г",
+    "price": 2.04,
+    "oldPrice": 3.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Nissin Soba нудли пакет, различни видове",
+    "quantity": "110 г",
+    "price": 1.38,
+    "oldPrice": 2.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "София Мел царевично брашно",
+    "quantity": "1 кг",
+    "price": 1.07,
+    "oldPrice": 2.09,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Krina Имало едно време Боб български",
+    "quantity": "1 кг",
+    "price": 4.06,
+    "oldPrice": 7.95,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Deroni Горчица дижонска",
+    "quantity": "200 г",
+    "price": 1.68,
+    "oldPrice": 3.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Риба тон в слънчогледово масло или собствен сос",
+    "quantity": "185 г",
+    "price": 2.81,
+    "oldPrice": 5.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Grill PartyСос барбекю, сладко кисел или Diavolo",
+    "quantity": "250 мл",
+    "price": 2.58,
+    "oldPrice": 5.05,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Детство мое Обикновени бисквити",
+    "quantity": "200 г",
+    "price": 1.12,
+    "oldPrice": 2.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Lacmi Шоколад 260",
+    "quantity": "295 г",
+    "price": 5.62,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Троя Тунквана вафла",
+    "quantity": "28 г",
+    "price": 0.25,
+    "oldPrice": 0.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Pergale Шоколадови бонбони 113",
+    "quantity": "117 г",
+    "price": 3.06,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Bounty Шоколадов десерт",
+    "quantity": "57 г",
+    "price": 1.07,
+    "oldPrice": 2.09,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Milkiss Кейк",
+    "quantity": "42 г",
+    "price": 0.61,
+    "oldPrice": 1.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Sweet Way Сладък салам",
+    "quantity": "210 г",
+    "price": 1.63,
+    "oldPrice": 3.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Premium Бисквити различни видове",
+    "quantity": "80 г",
+    "price": 3.06,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Clever Мини шоколадови барове",
+    "quantity": "500 г",
+    "price": 5.11,
+    "oldPrice": 9.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Heidi шоколадови бонбони - Ръчно изработени бонбони, в елегантна кутия, в която ще откриете цяла палитра от вкусове, които гарантирано ще допринесат за по-доброто настроение.",
+    "quantity": "180 г",
+    "price": 13.8,
+    "oldPrice": 26.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Niedereger марципан с тъмен шоколад, шамфъстък и ананас - 16 марципанови хапки, богато облечени в тъмен шоколад с различни вкусове - марципан с портокал, кафе, шамфъстък, ананас.",
+    "quantity": "200 г",
+    "price": 11.75,
+    "oldPrice": 22.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Pure трюфели пролетна серия - Неустоим вкус на трюфели с вкус на чийзкейк с малина. Елегантен дизайн на опаковката, която се отваря и приема формата на цвете.",
+    "quantity": "96 г",
+    "price": 5.62,
+    "oldPrice": 10.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Elit бонбони с шамфъстък и кадаиф - По дубайска рецепта с уникалната текстура и хрупкавина. Кремообразен пълнеж от шам фъстък и кадаиф.",
+    "quantity": "240 г",
+    "price": 17.89,
+    "oldPrice": 34.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Elit трюфели с шамфъстък и кадаиф - Изкушаващи трюфели по дубайска рецепта с уникалната текстура и хрупкавина. Кремообразен пълнеж от шам фъстък и кадаиф.",
+    "quantity": "165 г",
+    "price": 12.78,
+    "oldPrice": 24.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Pure трюфели Gold sellection - Шоколодови трюфели, направени от първокласен шоколад. Кутия с колекция от четири различни вкуса – дзабайоне, карамел, касис и чийзкейк с малина.",
+    "quantity": "135 г",
+    "price": 7.15,
+    "oldPrice": 13.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Noble бонбони - Селекция от уникални белгийски шоколадови пралини с 2 различни вкуса: Лешник, Карамел и бренди Шампанско или Мока, Лешник и Карамел.",
+    "quantity": "120 г",
+    "price": 10.22,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Bolci бонбониера асорти Moon - Ръчно изработени бонбони с нежен шоколад и ядково сърце в елегантна кутия. С богат вкус и кремообразна текстура.",
+    "quantity": "130 г",
+    "price": 10.22,
+    "oldPrice": 19.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Bolci бонбониера асорти с дървена кутия - Специално селектирани и ръчно изработени бонбони с фини пълнежи и изтънчен аромат. Създадени са по традиционна белгийска рецепта в луксозна дървена кутия.",
+    "quantity": "130 г",
+    "price": 15.33,
+    "oldPrice": 29.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Niedereger марципанови сърца - 9 бонбона от чист фин марципан, богато облечен в тъмен шоколад, с формата на сърце.",
+    "quantity": "125 г",
+    "price": 8.94,
+    "oldPrice": 17.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Aberlour Уиски 14YO Single Malt - Произход: Шотландия. Аромат: Сладка ванилия и узрели череши. Вкус: Меки и нежни нотки на касис, сладко от боровинки и наситен сладък кремообразно карамелен завършек. Постигнат е идеалният баланс - богат и пикантен, но изтънчен и елегантен. Отлежалост: 14 години",
+    "quantity": "0,7 л",
+    "price": 58.75,
+    "oldPrice": 114.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Tullibardine Уиски 15YO Single Malt - Произход: Шотландия. Аромат: Деликатен и тревист, нотки на желирани плодове и ванилов сладолед. Вкус: Прясно изпечен скоун с ягодов конфитюр и сметана, захаросани ядки и нежна пикантност. Завършек: Загряващ и пикантен. Отлежалост: 15 години",
+    "quantity": "0,7 л",
+    "price": 56.19,
+    "oldPrice": 109.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "The Deacon Уиски - Произход: Шотландия. Аромат: Фламбиран портокал, сладки бисквити и дървесен дим. Вкус: Леко пикантен с подправки, сочен портокал и остър торф. Завършек: Сладък и опушен, мек и дълъг финал",
+    "quantity": "0,7 л",
+    "price": 34.21,
+    "oldPrice": 66.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Singleton Уиски 15YO Single Malt - Произход: Шотландия. Аромат: Леко малцов с поразително плодови нотки на зелена ябълка, кокос и банан. Вкус: Мек и сладникав малцов вкус с нотки на масло, сушени плодове, захаросани цитруси и ванилия. Завършек: Плодов завършек със средна продължителност и малцов нюанс. Отлежалост: 15 години",
+    "quantity": "0,7 л",
+    "price": 53.63,
+    "oldPrice": 104.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Dalmore Уиски 12YO Single Malt -Произход: Шотландия. Аромат: Цитрусови плодове, сливи, шоколад и ароматни подправки. Вкус: Цитруси, Олоросо шери, ванилов крем, канела, коледен сладкиш, кафе. Завършек: Шоколад и печено смляно кафе. Отлежалост: 12 години",
+    "quantity": "0,7 л",
+    "price": 76.64,
+    "oldPrice": 149.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Chivas Regal Уиски Extra - Произход: Шотландия. Аромат: Портокалова кора, пролетен мед и ръжена подправка. Вкус: Започва силно в средата на небцето с изящни нотки на ванилия, а портокалова кора, ръжена подправка и ванилия се появяват в задната част на устата. Леко напомняне за бисквитки с джинджифил при втората глътка. Завършек: С нотки на ванилия, ръжена подправка, портокал и елемент на въглен от бъчви. Отлежалост: 13 години",
+    "quantity": "0,7 л",
+    "price": 38.81,
+    "oldPrice": 75.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Bushmills Уиски 10YO Single Malt - Произход: Ирландия. Аромат: Свеж и леко пикантен, мед, узрели плодове, ванилия и млечен шоколад Вкус: Свежа ванилия, млечен шоколад, обгорено дърво. Завършек: Свеж, пречистен, леко сух. Отлежалост: 10 години",
+    "quantity": null,
+    "price": 31.65,
+    "oldPrice": 61.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Chivas Regal Уиски Regal 18YO - Произход: Шотландия. Аромат: Богат, но в същото време и много фин, напомнящ за карамел, плодове, малц и подправки. Вкус: С нотки на черен шоколад и мармалад, и портокалови акорди, последвани от дъбово усещане за финал. Завършек: Смесица от сладост и пикантност. Отлежалост: 18 години",
+    "quantity": "0,7 л",
+    "price": 68.97,
+    "oldPrice": 134.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Jameson Ирландско Уиски Single Pot Still - Произход: Ирландия. Аромат: Сладък мед и солен карамел, които са придружени от пикантен дъб, канела и индийско орехче, плюс нюанси на зрели плодове и зеленчуци. Вкус: Богат, с черен шоколад, пикантен карамел и смляна канела с нотки на джинджифил и портокалова кора. Комбинацията от дъбове добавя сложни тонове на опушено дърво с деликатни танини. Завършек: Дълготраен и плодов с впечатления от пикантен дъб",
+    "quantity": "0,7 л",
+    "price": 42.39,
+    "oldPrice": 82.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Aberlour Уиски 12YO Single Malt - Произход: Шотландия. Аромат: Мек със завършек на червена ябълка и кафява захар. Вкус: Деликатен шери характер с невероятен баланс от шоколад, карамел, канела и джинджифилена пикантност. Завършек: Смесица от сладост и пикантност. Отлежалост: 12 години",
+    "quantity": "0,7 л",
+    "price": 47.5,
+    "oldPrice": 92.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "The Balvenie Уиски 12YO Single Malt - Произход: Шотландия. Аромат: Сладки плодове с нотки на шери Олоросо, допълнени от мед и ванилия. Вкус: Захаросани портокалови и лимонови кори, ванилов карамел и масло, пластове цветен мед Завършек: Богат и малцов с фини нотки на ванилия и подравки с нежен опушен малц на финала. Отлежалост: 12 години",
+    "quantity": "0,7 л",
+    "price": 84.31,
+    "oldPrice": 164.9,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Lavazza Мляно кафе вакум Qualita rossa",
     "quantity": "250 г",
+    "price": 8.02,
+    "oldPrice": 15.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Фитолек Чай",
+    "quantity": "30 г",
+    "price": 2.24,
+    "oldPrice": 4.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Salza Гризини",
+    "quantity": "235 г",
+    "price": 1.61,
+    "oldPrice": 3.15,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Born Winner Десерт Flap Jack",
+    "quantity": "100 г",
+    "price": 1.53,
+    "oldPrice": 2.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Sante зърнена закуска",
+    "quantity": "300 г",
+    "price": 3.32,
+    "oldPrice": 6.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa Конфитюр ягода",
+    "quantity": "340 г",
+    "price": 2.19,
+    "oldPrice": 4.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Nice Bites Сурово Кашу XXL",
+    "quantity": "500 г",
+    "price": 8.18,
+    "oldPrice": 15.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Coca Cola газирана напитка",
+    "quantity": "0,33 л",
+    "price": 0.86,
+    "oldPrice": 1.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Monster енергийна напитка",
+    "quantity": "0,5 л",
+    "price": 1.3,
+    "oldPrice": 2.55,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Happy Day 100% сок портокал",
+    "quantity": "1,5 л",
+    "price": 4.65,
+    "oldPrice": 9.09,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Florina нектар 25% банан",
+    "quantity": "1 л",
+    "price": 1.78,
+    "oldPrice": 3.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "BBB нектар портокал",
+    "quantity": "0,2 л",
+    "price": 0.61,
+    "oldPrice": 1.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Billa сок 100% ябълка",
+    "quantity": "3 л",
+    "price": 3.83,
+    "oldPrice": 7.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Clever трапезна вода",
+    "quantity": "10 л",
+    "price": 1.02,
+    "oldPrice": 1.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Johnnie Walker Уиски Red Label",
+    "quantity": "1 л",
+    "price": 21.91,
+    "oldPrice": 42.85,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Pogues Ирландско Уиски",
+    "quantity": "0,7 л",
+    "price": 17.74,
+    "oldPrice": 34.69,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "JP. Chenet Вино",
+    "quantity": "0,75 л",
+    "price": 6.85,
+    "oldPrice": 13.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Пещера Мастика",
+    "quantity": "0,7 л",
+    "price": 7.41,
+    "oldPrice": 14.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "12 Узо",
+    "quantity": "0,7 л",
+    "price": 12.27,
+    "oldPrice": 23.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Kiwi Cuvee Вино",
+    "quantity": "0,75 л",
+    "price": 9.1,
+    "oldPrice": 17.79,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Mr. Proper Почистващ препарат за под",
+    "quantity": "1 л",
+    "price": 3.76,
+    "oldPrice": 7.35,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Meglio Marseille Спрей за баня",
+    "quantity": "750 мл",
+    "price": 3.57,
+    "oldPrice": 6.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Santia Салфетки, Българска шевица 33/25 , в опаковка",
+    "quantity": "100 бр.",
+    "price": 0.97,
+    "oldPrice": 1.89,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Cif Абразивен препарат",
+    "quantity": "500 мл",
+    "price": 3.4,
+    "oldPrice": 6.65,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Friskies Суха храна за котки с пиле",
+    "quantity": "1,5 кг",
+    "price": 6.33,
+    "oldPrice": 12.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Sensodyne Repair &Protect Whitening Паста за зъби",
+    "quantity": "75 мл",
+    "price": 6.74,
+    "oldPrice": 13.19,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Discreet Дамски превръзки",
+    "quantity": "60 бр.",
+    "price": 3.57,
+    "oldPrice": 6.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Libresse Ultra Дамски превръзки 1 опаковка",
+    "quantity": "40 бр.",
+    "price": 5.31,
+    "oldPrice": 10.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Brio Mocca Тенджера с незалепващо покритие, 24 см",
+    "quantity": "1 бр.",
+    "price": 29.99,
+    "oldPrice": 55.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Prima pack Хартия за печене",
+    "quantity": "8 м",
+    "price": 2.99,
+    "oldPrice": 4.89,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Стъклена купа 23 см",
+    "quantity": "1 бр.",
+    "price": 6.99,
+    "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Brio Комплект иноксови лъжици, вилици или ножове,",
+    "quantity": "3 бр.",
     "price": 5.99,
     "oldPrice": 7.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Бира Пиринско Младо",
-    "quantity": "0,33 л",
-    "price": 0.59,
-    "oldPrice": 0.89,
+    "name": "Fackelmann Миксер за кафе и мляко",
+    "quantity": "1 бр.",
+    "price": 5.99,
+    "oldPrice": 7.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Бира Carlsberg кен",
-    "quantity": "0,5 л",
-    "price": 1.19,
+    "name": "Vivess Кутия за масло",
+    "quantity": "1 бр.",
+    "price": 4.99,
+    "oldPrice": 6.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Fackelmann Комплект за сол и пипер 1 комплект",
+    "quantity": null,
+    "price": 5.59,
+    "oldPrice": 6.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Lenor Омекотител 82 пранета",
+    "quantity": null,
+    "price": 8.18,
+    "oldPrice": 15.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Savex Premium Гел за пране 24 пранета, различни видове 1 изпиране = в./0,19 €/ 24 пранета",
+    "quantity": "0,22 л",
+    "price": 7.1,
+    "oldPrice": 13.89,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "Krispa Сапун за петна",
+    "quantity": "250 г",
+    "price": 2.04,
+    "oldPrice": 3.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Пиперки червени",
+    "quantity": "1 кг",
+    "price": 3.06,
+    "oldPrice": 5.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Свински врат с кост нарязан",
+    "quantity": "1 кг",
+    "price": 6.9,
+    "oldPrice": 13.49,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Somersby сайдер",
+    "quantity": "0,33 л",
+    "price": 1.17,
+    "oldPrice": 2.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Billa Боб или нахут буркан",
+    "quantity": "540 г",
+    "price": 1.73,
+    "oldPrice": 3.39,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Deutsche Markenbutter краве масло",
+    "quantity": "250 г",
+    "price": 4.6,
+    "oldPrice": 8.99,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- 7 Days Кроасан",
+    "quantity": "92 г",
+    "price": 0.81,
+    "oldPrice": 1.59,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Wegenstein Вино",
+    "quantity": "0,75 л",
+    "price": 3.73,
+    "oldPrice": 7.29,
+    "category": null,
+    "picUrl": null,
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
+  },
+  {
+    "name": "- Billa Брашно бяло тип 500",
+    "quantity": "1 кг",
+    "price": 0.86,
     "oldPrice": 1.69,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Бира Шуменско кен",
-    "quantity": "5 + 1 бр. х 0,5 л",
-    "price": 4.99,
-    "oldPrice": 5.95,
+    "name": "- Schweppes газирана напитка",
+    "quantity": "1,25 л",
+    "price": 1.43,
+    "oldPrice": 2.79,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Бира Staropramen",
-    "quantity": "6 бр. х 0,5 л",
-    "price": 6.99,
-    "oldPrice": 8.45,
+    "name": "- Nova Brasilia мляно кафе",
+    "quantity": "450 г",
+    "price": 9.04,
+    "oldPrice": 17.69,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Бира Heineken Мултипак",
-    "quantity": "4 х 0,5 л",
-    "price": 5.29,
-    "oldPrice": 5.67,
+    "name": "- Merci Шоколадови бонБони",
+    "quantity": "400 г",
+    "price": 11.75,
+    "oldPrice": 22.99,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   },
   {
-    "name": "Узо 12 + чаша",
-    "quantity": "0,7 л",
-    "price": 14.69,
-    "oldPrice": 18.99,
+    "name": "- Свински медальони на шиш От топлата витрина Billa Ready",
+    "quantity": "1 бр.",
+    "price": 1.38,
+    "oldPrice": 2.69,
     "category": null,
     "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Ариана",
-    "quantity": "2 л",
-    "price": 1.77,
-    "oldPrice": 2.45,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Zatecky Hus",
-    "quantity": "1 л",
-    "price": 1.45,
-    "oldPrice": 1.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Пиринско бутилка",
-    "quantity": "0,5 л",
-    "price": 0.85,
-    "oldPrice": 1.05,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Вино Мавруд Брестовица",
-    "quantity": "0,75 л",
-    "price": 5.29,
-    "oldPrice": 6.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Вино Мерло& Малбек Castra Rubra Classic",
-    "quantity": "0,75 л",
-    "price": 8.49,
-    "oldPrice": 10.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Шуменско кен",
-    "quantity": "0,5 л",
-    "price": 0.89,
-    "oldPrice": 1.25,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Ирландско Уиски Jameson",
-    "quantity": "1 л",
-    "price": 32.99,
-    "oldPrice": 44.49,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Спиртна напитка Ямболска гроздова",
-    "quantity": "0,7 л",
-    "price": 9.49,
-    "oldPrice": 12.59,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Starobrno кен",
-    "quantity": "0.5л",
-    "price": 1.3,
-    "oldPrice": 2.65,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Moretti кен",
-    "quantity": "0.5л",
-    "price": 1.39,
-    "oldPrice": 2.15,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Уиски Claymore",
-    "quantity": "0.7л",
-    "price": 11.995,
-    "oldPrice": 23.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Tuborg кен",
-    "quantity": "0.5л",
-    "price": 1.33,
-    "oldPrice": 2.19,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Вино Montado",
-    "quantity": "0.75л",
-    "price": 7.99,
-    "oldPrice": 10.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Уиски Johnnie Walker Red Label",
-    "quantity": "0.7л",
-    "price": 18.99,
-    "oldPrice": 28.99,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
-  },
-  {
-    "name": "Бира Starobrno кен",
-    "quantity": "0.5л",
-    "price": 1.225,
-    "oldPrice": 2.45,
-    "category": null,
-    "picUrl": null,
-    "validFrom": "2021-03-18",
-    "validUntil": "2021-03-24"
+    "validFrom": "2025-08-07",
+    "validUntil": "2025-08-13"
   }
 ]
