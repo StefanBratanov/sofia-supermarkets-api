@@ -75,7 +75,8 @@ class BillaProductsExtractor : UrlProductsExtractor {
       .map {
         val productName = it.select(".actualProduct").text()
         val oldPrice = it.select(priceClass).first()?.text()
-        val price = it.select(priceClass).last()?.text()
+        // price tag in лв is in 3rd place (last is EUR)
+        val price = it.select(priceClass).getOrNull(2)?.text()
 
         Product(
           name = productName,
