@@ -8,9 +8,9 @@ import com.stefanbratanov.sofiasupermarketsapi.readResource
 import com.stefanbratanov.sofiasupermarketsapi.testObjectMapper
 import io.mockk.every
 import io.mockk.mockk
-import org.junit.jupiter.api.Disabled
 import java.net.URI
 import java.time.LocalDate
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.skyscreamer.jsonassert.JSONAssert
 import org.skyscreamer.jsonassert.JSONCompareMode
