@@ -12,7 +12,11 @@ import org.jsoup.nodes.Document
 import org.springframework.http.HttpStatus
 
 fun normalizePrice(price: String?): Double? {
-  return price?.replace("(лв|\\*).*".toRegex(), "")?.replace(',', '.')?.trim()?.toDoubleOrNull()
+  return price
+    ?.replace("(лв|\\*).*".toRegex(IGNORE_CASE), "")
+    ?.replace(',', '.')
+    ?.trim()
+    ?.toDoubleOrNull()
 }
 
 fun getHtmlDocument(url: URL): Document {

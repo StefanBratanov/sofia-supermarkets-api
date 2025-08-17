@@ -22,10 +22,10 @@ internal class LidlProductExtractorTest {
 
     val expectedProduct =
       Product(
-        name = "Багета Рустик",
-        quantity = "250 g/бр.",
-        price = 0.99,
-        oldPrice = 1.99,
+        name = "Розе Престиж",
+        quantity = "0.75 l/опаковка",
+        price = 7.49,
+        oldPrice = 9.99,
         category = null,
         picUrl = null,
       )
@@ -34,11 +34,11 @@ internal class LidlProductExtractorTest {
       .isNotNull()
       .isEqualToIgnoringGivenProperties(expectedProduct, Product::validFrom, Product::validUntil)
 
-    assertThat(product?.validFrom?.dayOfMonth).isEqualTo(30)
-    assertThat(product?.validFrom?.month).isEqualTo(Month.OCTOBER)
+    assertThat(product?.validFrom?.dayOfMonth).isEqualTo(11)
+    assertThat(product?.validFrom?.month).isEqualTo(Month.AUGUST)
     assertThat(product?.validFrom?.year).isEqualTo(LocalDate.now().year)
-    assertThat(product?.validUntil?.dayOfMonth).isEqualTo(5)
-    assertThat(product?.validUntil?.month).isEqualTo(Month.NOVEMBER)
+    assertThat(product?.validUntil?.dayOfMonth).isEqualTo(17)
+    assertThat(product?.validUntil?.month).isEqualTo(Month.AUGUST)
     assertThat(product?.validUntil?.year).isEqualTo(LocalDate.now().year)
   }
 }

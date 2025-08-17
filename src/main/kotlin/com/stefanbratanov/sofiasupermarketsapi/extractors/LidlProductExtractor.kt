@@ -20,17 +20,18 @@ class LidlProductExtractor {
 
     val document = getHtmlDocument(url)
 
-    val name = document.selectFirst("h1.keyfacts__title")?.text()
-    val quantity = document.selectFirst("div.price-footer")?.text()
-    val price = document.selectFirst("div.m-price__price")?.text()
-    val oldPrice = document.selectFirst("span.m-price__rrp")?.text()
+    val name = document.selectFirst("h1.heading__title")?.text()
+    val quantity = document.select("div.ods-price__footer").lastOrNull()?.text()
+    // first is лв., second is EUR
+    val price = document.selectFirst("div.ods-price__value")?.text()
+    val oldPrice = document.selectFirst("div.ods-price__stroke-price")?.text()
 
     if (name == null) {
       return null
     }
 
     val dateRange =
-      document.selectFirst("span[data-v-35dadb86]")?.text()?.trim()?.let { dateSpan ->
+      document.selectFirst("h3.availability")?.text()?.trim()?.let { dateSpan ->
         "\\d+.\\d+.".toRegex().findAll(dateSpan).map { date ->
           val match = date.groupValues[0]
           try {

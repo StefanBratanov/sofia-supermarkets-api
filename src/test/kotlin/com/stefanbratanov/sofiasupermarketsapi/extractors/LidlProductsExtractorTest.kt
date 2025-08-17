@@ -10,7 +10,6 @@ import io.mockk.every
 import io.mockk.mockk
 import java.net.URI
 import java.time.LocalDate
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.skyscreamer.jsonassert.JSONAssert
 import org.skyscreamer.jsonassert.JSONCompareMode
@@ -50,14 +49,14 @@ internal class LidlProductsExtractorTest {
   }
 
   @Test
-  @Disabled("used for manual testing")
+  // @Disabled("used for manual testing")
   fun `test fetching from real url`() {
     // use real product extractor
     val underTest =
       LidlProductsExtractor(URI("https://www.lidl.bg").toURL(), LidlProductExtractor())
     val lidlUrl =
       URI(
-          "https://www.lidl.bg/c/niska-tsena-visoko-kachestvo/a10031916?channel=store&tabCode=Current_Sales_Week"
+          "https://www.lidl.bg/c/niska-tsena-visoko-kachestvo/a10076411?channel=store&tabCode=Current_Sales_Week"
         )
         .toURL()
     val products = underTest.extract(lidlUrl)
