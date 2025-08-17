@@ -8,6 +8,7 @@ import com.stefanbratanov.sofiasupermarketsapi.readResource
 import com.stefanbratanov.sofiasupermarketsapi.testObjectMapper
 import io.mockk.every
 import io.mockk.mockk
+import org.junit.jupiter.api.Disabled
 import java.net.URI
 import java.time.LocalDate
 import org.junit.jupiter.api.Test
@@ -49,7 +50,7 @@ internal class LidlProductsExtractorTest {
   }
 
   @Test
-  // @Disabled("used for manual testing")
+  @Disabled("used for manual testing")
   fun `test fetching from real url`() {
     // use real product extractor
     val underTest =
