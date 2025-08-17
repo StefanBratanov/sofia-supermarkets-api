@@ -100,6 +100,6 @@ tasks.withType<Test> {
   testLogging { showStandardStreams = true }
 }
 
-configure<SpotlessExtension> { kotlin { ktfmt("0.53").googleStyle() } }
+configure<SpotlessExtension> { kotlin { ktfmt("0.56").googleStyle() } }
 
 tasks.jacocoTestReport { reports { xml.required.set(true) } }
