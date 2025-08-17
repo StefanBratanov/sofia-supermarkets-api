@@ -14,7 +14,7 @@ import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
 import io.mockk.verify
 import io.mockk.verifyAll
-import java.net.URL
+import java.net.URI
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 
@@ -31,9 +31,9 @@ internal class LidlFlowTest {
 
   @Test
   fun `runs flow for Lidl`() {
-    val url1 = URL("http://stefan.com")
-    val url2 = URL("http://aivaras.com")
-    val url3 = URL("http://bogdan.com")
+    val url1 = URI("http://stefan.com").toURL()
+    val url2 = URI("http://aivaras.com").toURL()
+    val url3 = URI("http://bogdan.com").toURL()
 
     every { lidlSublinksScraper.getSublinks() } returns listOf(url1, url2, url3)
 

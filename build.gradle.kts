@@ -89,11 +89,15 @@ tasks.withType<KotlinJvmCompile>().configureEach {
   }
 }
 
+tasks.withType<KotlinCompile>().configureEach {
+  compilerOptions {
+    freeCompilerArgs = listOf("-Xannotation-default-target=param-property")
+  }
+}
+
 tasks.withType<Test> {
   useJUnitPlatform()
   testLogging { showStandardStreams = true }
 }
 
 configure<SpotlessExtension> { kotlin { ktfmt("0.53").googleStyle() } }
-
-tasks.jacocoTestReport { reports { xml.required.set(true) } }

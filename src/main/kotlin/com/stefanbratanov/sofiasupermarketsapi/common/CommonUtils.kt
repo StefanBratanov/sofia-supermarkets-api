@@ -1,6 +1,7 @@
 package com.stefanbratanov.sofiasupermarketsapi.common
 
 import java.net.HttpURLConnection
+import java.net.URI
 import java.net.URL
 import java.nio.charset.StandardCharsets
 import java.nio.file.Paths
@@ -41,7 +42,7 @@ fun separateNameAndQuantity(name: String): Pair<String?, String?> {
 
 fun checkIfUrlHasAcceptableHttpResponse(url: String?): Boolean {
   return try {
-    val connection = URL(url).openConnection() as HttpURLConnection
+    val connection = URI(url).toURL().openConnection() as HttpURLConnection
     connection.requestMethod = "HEAD"
     connection.instanceFollowRedirects = false
     val responseCode = connection.responseCode

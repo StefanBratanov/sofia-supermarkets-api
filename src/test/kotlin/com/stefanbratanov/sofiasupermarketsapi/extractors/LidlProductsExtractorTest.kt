@@ -8,7 +8,7 @@ import com.stefanbratanov.sofiasupermarketsapi.readResource
 import com.stefanbratanov.sofiasupermarketsapi.testObjectMapper
 import io.mockk.every
 import io.mockk.mockk
-import java.net.URL
+import java.net.URI
 import java.time.LocalDate
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
@@ -21,7 +21,8 @@ internal class LidlProductsExtractorTest {
 
   private val lidlProductExtractor: LidlProductExtractor = mockk()
 
-  private val underTest = LidlProductsExtractor(URL("https://www.lidl.bg"), lidlProductExtractor)
+  private val underTest =
+    LidlProductsExtractor(URI("https://www.lidl.bg").toURL(), lidlProductExtractor)
 
   @Test
   fun `test extracting products`() {
@@ -52,11 +53,13 @@ internal class LidlProductsExtractorTest {
   @Disabled("used for manual testing")
   fun `test fetching from real url`() {
     // use real product extractor
-    val underTest = LidlProductsExtractor(URL("https://www.lidl.bg"), LidlProductExtractor())
+    val underTest =
+      LidlProductsExtractor(URI("https://www.lidl.bg").toURL(), LidlProductExtractor())
     val lidlUrl =
-      URL(
-        "https://www.lidl.bg/c/niska-tsena-visoko-kachestvo/a10031916?channel=store&tabCode=Current_Sales_Week"
-      )
+      URI(
+          "https://www.lidl.bg/c/niska-tsena-visoko-kachestvo/a10031916?channel=store&tabCode=Current_Sales_Week"
+        )
+        .toURL()
     val products = underTest.extract(lidlUrl)
 
     products.forEach { println(it) }

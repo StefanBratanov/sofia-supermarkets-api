@@ -5,7 +5,7 @@ import assertk.assertions.isNotEmpty
 import com.stefanbratanov.sofiasupermarketsapi.getUri
 import com.stefanbratanov.sofiasupermarketsapi.readResource
 import com.stefanbratanov.sofiasupermarketsapi.testObjectMapper
-import java.net.URL
+import java.net.URI
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.skyscreamer.jsonassert.JSONAssert
@@ -32,7 +32,7 @@ internal class BillaProductsExtractorTest {
   @Test
   @Disabled("used for manual testing")
   fun `test fetching from real url`() {
-    val billaUrl = URL("https://ssbbilla.site/weekly")
+    val billaUrl = URI("https://ssbbilla.site/weekly").toURL()
     val products = underTest.extract(billaUrl)
 
     assertThat(products).isNotEmpty()

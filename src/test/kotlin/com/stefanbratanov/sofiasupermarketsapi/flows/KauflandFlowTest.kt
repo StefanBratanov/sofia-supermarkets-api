@@ -11,13 +11,14 @@ import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.verify
+import java.net.URI
 import java.net.URL
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 internal class KauflandFlowTest {
 
-  private val kauflandBaseUrl: URL = URL("http://foo.bar")
+  private val kauflandBaseUrl: URL = URI("http://foo.bar").toURL()
 
   @MockK lateinit var urlProductsExtractor: UrlProductsExtractor
 

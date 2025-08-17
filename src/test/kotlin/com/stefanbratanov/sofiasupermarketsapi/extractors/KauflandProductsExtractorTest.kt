@@ -5,7 +5,7 @@ import assertk.assertions.isNotEmpty
 import com.stefanbratanov.sofiasupermarketsapi.getUri
 import com.stefanbratanov.sofiasupermarketsapi.readResource
 import com.stefanbratanov.sofiasupermarketsapi.testObjectMapper
-import java.net.URL
+import java.net.URI
 import org.junit.jupiter.api.Test
 import org.skyscreamer.jsonassert.JSONAssert
 import org.skyscreamer.jsonassert.JSONCompareMode.STRICT
@@ -30,7 +30,7 @@ internal class KauflandProductsExtractorTest {
 
   @Test
   fun `test fetching from real url`() {
-    val kauflandUrl = URL("https://www.kaufland.bg/aktualni-predlozheniya/oferti.html")
+    val kauflandUrl = URI("https://www.kaufland.bg/aktualni-predlozheniya/oferti.html").toURL()
     val products = underTest.extract(kauflandUrl)
 
     assertThat(products).isNotEmpty()

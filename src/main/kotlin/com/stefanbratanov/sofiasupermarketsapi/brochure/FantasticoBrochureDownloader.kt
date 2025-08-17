@@ -8,6 +8,7 @@ import com.stefanbratanov.sofiasupermarketsapi.common.getNameMinusThePath
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.BrochureDownloader
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.BrochureDownloader.Brochure
 import io.github.bonigarcia.wdm.WebDriverManager
+import java.net.URI
 import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets.UTF_8
@@ -88,7 +89,7 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
                 By.cssSelector("div.brochure-container.first a[title='Сваляне']")
               driver.findElement(downloadSelector).getAttribute("href")
             } else {
-              getHtmlDocument(URL(iFrameUrl))
+              getHtmlDocument(URI(iFrameUrl).toURL())
                 .selectFirst("a#brochure__controls__download")
                 ?.attr("href")!!
             }
@@ -99,7 +100,7 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
               filenameMinusPath,
               URLEncoder.encode(filenameMinusPath, UTF_8.name()),
             )
-          val downloadUrl = URL(encodedHref)
+          val downloadUrl = URI(encodedHref).toURL()
 
           val tempDirectory = Files.createTempDirectory("brochures-download")
           val filename =

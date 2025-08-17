@@ -5,7 +5,7 @@ import assertk.assertions.isNotEmpty
 import com.stefanbratanov.sofiasupermarketsapi.getUri
 import com.stefanbratanov.sofiasupermarketsapi.readResource
 import com.stefanbratanov.sofiasupermarketsapi.testObjectMapper
-import java.net.URL
+import java.net.URI
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.skyscreamer.jsonassert.JSONAssert
@@ -32,7 +32,7 @@ internal class TMarketProductsExtractorTest {
   @Test
   @Disabled("used for manual testing")
   fun `test fetching from real url`() {
-    val tmarketUrl = URL("https://tmarketonline.bg/category/visokoalkoholni-napitki")
+    val tmarketUrl = URI("https://tmarketonline.bg/category/visokoalkoholni-napitki").toURL()
     val products = underTest.extract(tmarketUrl)
 
     assertThat(products).isNotEmpty()

@@ -4,7 +4,7 @@ import assertk.assertThat
 import assertk.assertions.containsExactlyInAnyOrder
 import assertk.assertions.isNotEmpty
 import com.stefanbratanov.sofiasupermarketsapi.getUri
-import java.net.URL
+import java.net.URI
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
@@ -24,15 +24,15 @@ internal class BillaSublinksScraperTest {
 
     assertThat(result)
       .containsExactlyInAnyOrder(
-        URL("https://ssbbilla.site/weekly"),
-        URL("https://ssbbilla.site/sixth"),
-        URL("https://ssbbilla.site/nine"),
+        URI("https://ssbbilla.site/weekly").toURL(),
+        URI("https://ssbbilla.site/sixth").toURL(),
+        URI("https://ssbbilla.site/nine").toURL(),
       )
   }
 
   @Test
   fun `scrapes real billa website`() {
-    underTest = BillaSublinksScraper(URL("https://ssbbilla.site/"))
+    underTest = BillaSublinksScraper(URI("https://ssbbilla.site/").toURL())
 
     val result = underTest.getSublinks()
 
