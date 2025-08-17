@@ -101,3 +101,5 @@ tasks.withType<Test> {
 }
 
 configure<SpotlessExtension> { kotlin { ktfmt("0.53").googleStyle() } }
+
+tasks.jacocoTestReport { reports { xml.required.set(true) } }
