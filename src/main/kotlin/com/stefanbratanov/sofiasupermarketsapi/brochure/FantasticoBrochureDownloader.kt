@@ -87,6 +87,8 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
           val downloadUrl =
             URI(driver.findElement(downloadSelector).getDomProperty("href")!!).toURL()
 
+          log.info("Downloading brochure from {}", downloadUrl)
+
           val tempDirectory = Files.createTempDirectory("brochures-download")
 
           val downloadPath =
@@ -94,7 +96,7 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
 
           val downloadedBytes = copyURLToFile(downloadUrl, downloadPath)
 
-          log.info("Downloaded {} ({} bytes)", downloadUrl, downloadedBytes)
+          log.info("Downloaded brochure to {} ({} bytes)", downloadPath, downloadedBytes)
 
           Brochure(downloadPath, dateRange?.first, dateRange?.second)
         }
@@ -131,6 +133,7 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
     val popupWindowSelector = By.cssSelector("button[title=\"Download\"]")
     waitDriver.until(elementToBeClickable(popupWindowSelector)).click()
     waitDriver.until(elementToBeClickable(downloadSelector)).click()
+    log.info("Clicked download button")
     // sleep a bit after clicking
     TimeUnit.SECONDS.sleep(2)
   }
