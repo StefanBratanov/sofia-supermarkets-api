@@ -35,11 +35,6 @@ jacoco { toolVersion = "0.8.13" }
 
 repositories { mavenCentral() }
 
-// version compatible with PhantomJS
-val seleniumVersion = "4.8.1"
-// https://docs.spring.io/spring-boot/appendix/dependency-versions/properties.html
-extra["selenium.version"] = seleniumVersion
-
 val junitVersion = "5.13.0"
 extra["junit-jupiter.version"] = junitVersion
 
@@ -51,7 +46,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-cache")
   implementation("org.springframework.boot:spring-boot-starter-validation")
   implementation("org.postgresql:postgresql")
-  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.4")
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
@@ -63,9 +58,8 @@ dependencies {
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
   implementation("com.cloudinary:cloudinary-http45:1.39.0")
-  implementation("org.seleniumhq.selenium:selenium-java:$seleniumVersion")
-  implementation("com.codeborne:phantomjsdriver:1.5.0")
-  implementation("io.github.bonigarcia:webdrivermanager:4.4.3") // no PhantomJS driver in 5.x.x
+  implementation("org.seleniumhq.selenium:selenium-java:4.35.0")
+  implementation("io.github.bonigarcia:webdrivermanager:6.2.0")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.28.0")

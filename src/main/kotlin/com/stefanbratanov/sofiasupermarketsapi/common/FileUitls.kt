@@ -10,11 +10,3 @@ fun copyURLToFile(source: URL, destination: Path): Long {
     Files.copy(inputStream, destination, StandardCopyOption.REPLACE_EXISTING)
   }
 }
-
-/** This method is based on org.apache.commons.io.FilenameUtils.getName() */
-fun getNameMinusThePath(fileName: String): String {
-  val lastUnixPos = fileName.lastIndexOf('/')
-  val lastWindowsPos = fileName.lastIndexOf('\\')
-  val indexOfLastSeparator = lastUnixPos.coerceAtLeast(lastWindowsPos)
-  return fileName.substring(indexOfLastSeparator + 1)
-}
