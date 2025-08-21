@@ -14,8 +14,10 @@ import java.time.Duration
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter.ofPattern
 import java.util.concurrent.TimeUnit
+import java.util.concurrent.TimeoutException
 import kotlin.text.RegexOption.IGNORE_CASE
 import org.openqa.selenium.By
+import org.openqa.selenium.PageLoadStrategy
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable
@@ -39,6 +41,7 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
       options.addArguments("--window-size=1920,1200")
       options.addArguments("--no-sandbox")
       options.addArguments("--disable-dev-shm-usage")
+      options.setPageLoadStrategy(PageLoadStrategy.NONE)
     }
   }
 
@@ -52,7 +55,7 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
 
     val driver = ChromeDriver(options)
 
-    val waitDriver = WebDriverWait(driver, Duration.ofSeconds(10))
+    val waitDriver = WebDriverWait(driver, Duration.ofSeconds(30))
 
     val brochures =
       htmlDoc
@@ -77,7 +80,13 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
           val flippingBookUrl = it.attr("data-url")
 
           // loading the flipping book
-          driver.get(flippingBookUrl)
+          repeat(3) {
+            try {
+              driver.get(flippingBookUrl)
+            } catch (_: TimeoutException) {
+              log.warn("Retrying loading flipping book due to timeout...")
+            }
+          }
 
           val downloadSelector =
             By.cssSelector("a[aria-label=\"Download the flipbook as a PDF file\"]")
