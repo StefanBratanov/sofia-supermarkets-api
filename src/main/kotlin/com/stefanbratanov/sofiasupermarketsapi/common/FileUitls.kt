@@ -5,10 +5,10 @@ import java.net.URL
 import java.nio.file.Path
 import kotlin.io.path.fileSize
 import org.apache.hc.client5.http.classic.methods.HttpGet
-import org.apache.hc.client5.http.impl.classic.HttpClients
+import org.apache.hc.client5.http.impl.classic.HttpClientBuilder
 
 fun copyURLToFile(source: URL, destination: Path): Long {
-  val client = HttpClients.createDefault()
+  val client = HttpClientBuilder.create().disableContentCompression().build()
   val request =
     HttpGet(source.toURI()).apply {
       setHeader(
