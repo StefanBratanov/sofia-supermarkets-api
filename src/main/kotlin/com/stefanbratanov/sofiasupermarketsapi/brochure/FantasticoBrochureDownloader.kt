@@ -80,10 +80,11 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
           val flippingBookUrl = it.attr("data-url")
 
           // loading the flipping book
-          repeat(3) {
-            try {
-              driver.get(flippingBookUrl)
-            } catch (_: TimeoutException) {
+          for (attempt in 1..3) try {
+            driver.get(flippingBookUrl)
+            break
+          } catch (_: TimeoutException) {
+            if (attempt != 3) {
               log.warn("Retrying loading flipping book due to timeout...")
             }
           }
