@@ -12,14 +12,21 @@ import org.springframework.stereotype.Component
 @Component
 class LidlSublinksScraper(@Value("\${lidl.base.url}") private val baseUrl: URL) : SublinksScraper {
 
+  private val sublinksToAccept =
+    listOf("niska-tsena-visoko-kachestvo".toRegex(), "lidl-plus".toRegex())
+
   override fun getSublinks(): List<URL> {
     log.info("Scraping {} for sublinks", baseUrl)
 
     return getHtmlDocument(baseUrl)
       .select("li.AHeroStageItems__Item > a")
-      .map {
+      .mapNotNull {
         val href = it.attr("href")
-        baseUrl.toURI().resolve(href).toURL()
+        if (sublinksToAccept.none { rgx -> href.contains(rgx) }) {
+          null
+        } else {
+          baseUrl.toURI().resolve(href).toURL()
+        }
       }
       .distinct()
   }

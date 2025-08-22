@@ -54,10 +54,9 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
     val htmlDoc = getHtmlDocument(url)
 
     val driver = ChromeDriver(options)
-
     val waitDriver = WebDriverWait(driver, Duration.ofSeconds(30))
 
-    val brochures =
+    return try {
       htmlDoc
         .select("div.brochure-container.first div.hold-options")
         .filter {
@@ -81,6 +80,7 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
 
           // loading the flipping book
           for (attempt in 1..3) try {
+            log.info("Loading flipping book from {}", flippingBookUrl)
             driver.get(flippingBookUrl)
             break
           } catch (_: TimeoutException) {
@@ -110,10 +110,9 @@ class FantasticoBrochureDownloader(@Value("\${fantastico.url}") private val url:
 
           Brochure(downloadPath, dateRange?.first, dateRange?.second)
         }
-
-    driver.quit()
-
-    return brochures
+    } finally {
+      driver.quit()
+    }
   }
 
   private fun extractDateRange(description: String?): Pair<LocalDate?, LocalDate?>? {
