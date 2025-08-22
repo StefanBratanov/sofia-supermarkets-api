@@ -24,4 +24,8 @@ class ScheduledFlowsRunner(val flows: Map<Supermarket, SupermarketFlow>) {
     flows.forEach { (_, flow) -> flow.runSafely() }
     isRunning.set(false)
   }
+
+  fun isRunning(): Boolean {
+    return isRunning.get()
+  }
 }

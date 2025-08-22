@@ -15,12 +15,17 @@ class ScheduledImagesVerifier(
   val googleImageSearch: GoogleImageSearch,
   val cacheManager: CacheManager,
   val productImageRepository: ProductImageRepository,
+  val flowsRunner: ScheduledFlowsRunner,
 ) {
 
   @Scheduled(cron = "\${image.verifier.cron}")
   @Suppress("UNCHECKED_CAST")
   fun verifyImages() {
     log.info("Scheduled to verify images")
+    if (flowsRunner.isRunning()) {
+      log.info("Skipping because the supermarkets flow is running")
+      return
+    }
     val productImagesCache =
       cacheManager.getCache("productImages")?.nativeCache as MutableMap<String?, Any?>?
 

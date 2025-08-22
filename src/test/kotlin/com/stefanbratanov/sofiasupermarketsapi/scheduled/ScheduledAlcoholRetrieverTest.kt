@@ -14,11 +14,13 @@ import org.junit.jupiter.api.extension.ExtendWith
 internal class ScheduledAlcoholRetrieverTest {
 
   @MockK lateinit var alcoholController: AlcoholController
+  @MockK lateinit var flowsRunner: ScheduledFlowsRunner
 
   @InjectMockKs lateinit var scheduledAlcoholRetriever: ScheduledAlcoholRetriever
 
   @Test
   fun `retrieves alcohol`() {
+    every { flowsRunner.isRunning() } returns false
     every { alcoholController.alcohol(any(), any(), any()) } returns emptyList()
 
     scheduledAlcoholRetriever.retrieveAlcohol()

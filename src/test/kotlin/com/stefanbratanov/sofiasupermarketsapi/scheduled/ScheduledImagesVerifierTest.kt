@@ -37,6 +37,8 @@ internal class ScheduledImagesVerifierTest {
 
   @MockkBean lateinit var productImageRepository: ProductImageRepository
 
+  @MockkBean lateinit var flowsRunner: ScheduledFlowsRunner
+
   @Autowired lateinit var underTest: ScheduledImagesVerifier
 
   @Autowired lateinit var cacheManager: CacheManager
@@ -49,6 +51,7 @@ internal class ScheduledImagesVerifierTest {
     cache["test"] = invalidUrl
     cache["another test"] = "https://bbc.co.uk"
 
+    every { flowsRunner.isRunning() } returns false
     every { googleImageSearch.search("test", false) } returns "https://www.telegraph.co.uk/"
     every { productImageRepository.findById("test") } returns
       Optional.of(ProductImage("test", invalidUrl))
