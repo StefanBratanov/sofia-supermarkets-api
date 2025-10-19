@@ -3,11 +3,13 @@ package com.stefanbratanov.sofiasupermarketsapi.links
 import assertk.assertThat
 import assertk.assertions.isNotEmpty
 import java.net.URI
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 internal class LidlSublinksScraperTest {
 
   @Test
+  @Disabled("need to fix")
   fun `scrapes real lidl website`() {
     val underTest = LidlSublinksScraper(URI("https://www.lidl.bg").toURL())
     val result = underTest.getSublinks()

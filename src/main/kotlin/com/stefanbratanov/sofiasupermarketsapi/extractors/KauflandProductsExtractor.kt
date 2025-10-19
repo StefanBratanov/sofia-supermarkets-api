@@ -4,13 +4,13 @@ import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
-import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
 import com.stefanbratanov.sofiasupermarketsapi.common.normalizePrice
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.UrlProductsExtractor
 import com.stefanbratanov.sofiasupermarketsapi.model.Product
 import java.net.URL
 import java.time.LocalDate
 import org.apache.commons.lang3.StringUtils
+import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.springframework.stereotype.Component
 
@@ -21,7 +21,10 @@ class KauflandProductsExtractor(val objectMapper: ObjectMapper) : UrlProductsExt
   override fun extract(url: URL): List<Product> {
     log.info("Processing Kaufland URL: {}", url.toString())
 
-    val document = getHtmlDocument(url)
+    val document =
+      Jsoup.connect(url.toExternalForm())
+        .maxBodySize(10 * 1024 * 1024) // 10 MB limit for handling a large json
+        .get()
 
     val offersTemplateJson = getOffersTemplateJson(document) ?: return emptyList()
 
@@ -43,7 +46,7 @@ class KauflandProductsExtractor(val objectMapper: ObjectMapper) : UrlProductsExt
   }
 
   private fun getOffersTemplateJson(document: Document): JsonNode? {
-    val jsonRegex = """\{"component":.*$""".toRegex()
+    val jsonRegex = """\{"component":.*""".toRegex(RegexOption.DOT_MATCHES_ALL)
     return document
       .selectFirst("script:containsData(OfferTemplate)")
       ?.data()
