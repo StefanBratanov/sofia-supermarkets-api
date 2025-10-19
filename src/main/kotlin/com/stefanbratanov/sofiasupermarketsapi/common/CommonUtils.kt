@@ -19,11 +19,13 @@ fun normalizePrice(price: String?): Double? {
     ?.toDoubleOrNull()
 }
 
-fun getHtmlDocument(url: URL): Document {
+fun getHtmlDocument(url: URL, maxBodySize: Int? = null): Document {
   if (url.protocol == "file") {
     return Jsoup.parse(Paths.get(url.toURI()).toFile(), StandardCharsets.UTF_8.name())
   }
-  return Jsoup.parse(url, 60000)
+  val connection = Jsoup.connect(url.toExternalForm()).timeout(6000)
+  maxBodySize?.let { connection.maxBodySize(it) }
+  return connection.get()
 }
 
 private val quantityRegexes =
