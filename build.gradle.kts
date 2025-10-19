@@ -35,7 +35,7 @@ jacoco { toolVersion = "0.8.13" }
 
 repositories { mavenCentral() }
 
-val junitVersion = "5.13.0"
+val junitVersion = "6.0.0"
 extra["junit-jupiter.version"] = junitVersion
 
 dependencies {
