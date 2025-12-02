@@ -30,7 +30,7 @@ class Main(
   val alcoholController: AlcoholController,
 ) : CommandLineRunner {
 
-  override fun run(vararg args: String?) {
+  override fun run(vararg args: String) {
     scheduledFlowsRunner.runFlows()
     log.info("Warming up the /products/alcohol endpoint")
     alcoholController.alcohol(ProductCriteria(null, true), null, true)
