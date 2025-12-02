@@ -11,7 +11,7 @@ plugins {
   id("org.springframework.boot") version "3.5.0"
   id("io.spring.dependency-management") version "1.1.0"
   id("me.qoomon.git-versioning") version "6.4.1"
-  id("com.diffplug.spotless") version "8.0.0"
+  id("com.diffplug.spotless") version "8.1.0"
   id("jacoco")
 }
 
