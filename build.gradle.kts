@@ -8,7 +8,7 @@ plugins {
   kotlin("jvm") version kotlinVersion
   kotlin("plugin.spring") version kotlinVersion
   kotlin("plugin.jpa") version kotlinVersion
-  id("org.springframework.boot") version "3.5.0"
+  id("org.springframework.boot") version "4.0.0"
   id("io.spring.dependency-management") version "1.1.0"
   id("me.qoomon.git-versioning") version "6.4.1"
   id("com.diffplug.spotless") version "8.1.0"
@@ -39,7 +39,7 @@ val junitVersion = "6.0.0"
 extra["junit-jupiter.version"] = junitVersion
 
 dependencies {
-  implementation("org.springframework.boot:spring-boot-starter-web")
+  implementation("org.springframework.boot:spring-boot-starter-webmvc")
   implementation("org.springframework.boot:spring-boot-starter-actuator")
   implementation("org.springframework.data:spring-data-keyvalue")
   implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -61,7 +61,8 @@ dependencies {
   implementation("org.seleniumhq.selenium:selenium-java:4.39.0")
   implementation("io.github.bonigarcia:webdrivermanager:6.3.1")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
-  testImplementation("org.springframework.boot:spring-boot-starter-test")
+  testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+  testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
   testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.28.0")
   testImplementation("io.mockk:mockk:1.14.2")
   testImplementation("com.ninja-squad:springmockk:5.0.1")
