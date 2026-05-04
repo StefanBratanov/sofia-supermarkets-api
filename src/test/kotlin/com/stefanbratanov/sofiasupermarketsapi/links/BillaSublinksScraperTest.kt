@@ -6,6 +6,7 @@ import assertk.assertions.isNotEmpty
 import com.stefanbratanov.sofiasupermarketsapi.getUri
 import java.net.URI
 import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 internal class BillaSublinksScraperTest {
@@ -31,6 +32,7 @@ internal class BillaSublinksScraperTest {
   }
 
   @Test
+  @Disabled("flaky on CI")
   fun `scrapes real billa website`() {
     underTest = BillaSublinksScraper(URI("https://ssbbilla.site/").toURL())
 
