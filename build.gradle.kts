@@ -8,8 +8,8 @@ plugins {
   kotlin("jvm") version kotlinVersion
   kotlin("plugin.spring") version kotlinVersion
   kotlin("plugin.jpa") version kotlinVersion
-  id("org.springframework.boot") version "3.5.0"
-  id("io.spring.dependency-management") version "1.1.0"
+  id("org.springframework.boot") version "4.0.0"
+  id("io.spring.dependency-management") version "1.1.7"
   id("me.qoomon.git-versioning") version "6.4.1"
   id("com.diffplug.spotless") version "8.2.1"
   id("jacoco")
@@ -27,8 +27,8 @@ gitVersioning.apply {
 }
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_17
-  targetCompatibility = JavaVersion.VERSION_17
+  sourceCompatibility = JavaVersion.VERSION_21
+  targetCompatibility = JavaVersion.VERSION_21
 }
 
 jacoco { toolVersion = "0.8.13" }
@@ -50,9 +50,8 @@ dependencies {
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
-  implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+  implementation("tools.jackson.module:jackson-module-kotlin")
   implementation("org.apache.commons:commons-lang3")
-  implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
   implementation("org.apache.commons:commons-math3:3.6.1")
   implementation("org.jsoup:jsoup:1.22.1")
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
@@ -62,6 +61,8 @@ dependencies {
   implementation("io.github.bonigarcia:webdrivermanager:6.3.1")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
+  testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+  testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
   testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.28.0")
   testImplementation("io.mockk:mockk:1.14.2")
   testImplementation("com.ninja-squad:springmockk:5.0.1")
@@ -79,7 +80,7 @@ tasks.getByName<Jar>("jar") { enabled = false }
 tasks.withType<KotlinJvmCompile>().configureEach {
   compilerOptions {
     freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all-compatibility")
-    jvmTarget.set(JvmTarget.JVM_17)
+    jvmTarget.set(JvmTarget.JVM_21)
   }
 }
 

@@ -1,26 +1,30 @@
 package com.stefanbratanov.sofiasupermarketsapi.api
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.fasterxml.jackson.module.kotlin.readValue
 import com.ninjasquad.springmockk.MockkBean
+import com.stefanbratanov.sofiasupermarketsapi.CachingConfig
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.CdnUploader
 import com.stefanbratanov.sofiasupermarketsapi.interfaces.ImageSearch
 import com.stefanbratanov.sofiasupermarketsapi.readResource
 import io.mockk.every
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.FilterType
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
+import tools.jackson.module.kotlin.jacksonObjectMapper
+import tools.jackson.module.kotlin.readValue
 
 @WebMvcTest(
   controllers = [AlcoholController::class],
   excludeFilters =
-    [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
+    [
+      ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class]),
+      ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [CachingConfig::class]),
+    ],
 )
 internal class AlcoholControllerTest(@Autowired val mockMvc: MockMvc) {
 

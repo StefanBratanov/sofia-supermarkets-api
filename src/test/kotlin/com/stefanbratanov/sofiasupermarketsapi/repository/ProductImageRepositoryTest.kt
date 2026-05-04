@@ -4,13 +4,19 @@ import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.assertions.isFalse
 import assertk.assertions.isTrue
+import com.stefanbratanov.sofiasupermarketsapi.CachingConfig
 import com.stefanbratanov.sofiasupermarketsapi.model.ProductImage
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
+import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest
+import org.springframework.context.annotation.ComponentScan
+import org.springframework.context.annotation.FilterType
 import org.springframework.test.context.ActiveProfiles
 
-@DataJpaTest
+@DataJpaTest(
+  excludeFilters =
+    [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [CachingConfig::class])]
+)
 @ActiveProfiles("test")
 class ProductImageRepositoryTest {
 

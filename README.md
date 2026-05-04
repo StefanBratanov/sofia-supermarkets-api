@@ -63,7 +63,7 @@ reformat code, run:
 
 ## Running Locally
 
-Install JDK 17 or above from [here](https://jdk.java.net/).
+Install JDK 21 or above from [here](https://jdk.java.net/).
 
 * **Unix**
 

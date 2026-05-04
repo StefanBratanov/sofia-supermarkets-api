@@ -1,7 +1,5 @@
 package com.stefanbratanov.sofiasupermarketsapi.extractors
 
-import com.fasterxml.jackson.databind.JsonNode
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
@@ -13,6 +11,8 @@ import java.time.LocalDate
 import org.apache.commons.lang3.StringUtils
 import org.jsoup.nodes.Document
 import org.springframework.stereotype.Component
+import tools.jackson.databind.JsonNode
+import tools.jackson.databind.ObjectMapper
 
 @Log
 @Component("Kaufland")
@@ -53,18 +53,18 @@ class KauflandProductsExtractor(val objectMapper: ObjectMapper) : UrlProductsExt
   }
 
   private fun extractProduct(categoryName: String, offer: JsonNode): Product {
-    val title = offer.get("title").asText()
-    val subtitle = offer.get("subtitle")?.asText()
+    val title = offer.get("title").asString()
+    val subtitle = offer.get("subtitle")?.asString()
     val name = subtitle?.let { "$title $it" } ?: title
     return Product(
       name = StringUtils.normalizeSpace(name),
-      quantity = offer.get("unit")?.asText()?.let { StringUtils.normalizeSpace(it) },
-      price = normalizePrice(offer.get("formattedPrice").asText()),
-      oldPrice = normalizePrice(offer.get("formattedOldPrice")?.asText()),
+      quantity = offer.get("unit")?.asString()?.let { StringUtils.normalizeSpace(it) },
+      price = normalizePrice(offer.get("formattedPrice").asString()),
+      oldPrice = normalizePrice(offer.get("formattedOldPrice")?.asString()),
       category = categoryName,
-      picUrl = offer.get("listImage")?.asText(),
-      validFrom = offer.get("dateFrom")?.asText()?.let { LocalDate.parse(it) },
-      validUntil = offer.get("dateTo")?.asText()?.let { LocalDate.parse(it) },
+      picUrl = offer.get("listImage")?.asString(),
+      validFrom = offer.get("dateFrom")?.asString()?.let { LocalDate.parse(it) },
+      validUntil = offer.get("dateTo")?.asString()?.let { LocalDate.parse(it) },
     )
   }
 }

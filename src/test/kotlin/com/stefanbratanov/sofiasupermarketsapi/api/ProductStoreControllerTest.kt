@@ -1,6 +1,7 @@
 package com.stefanbratanov.sofiasupermarketsapi.api
 
 import com.ninjasquad.springmockk.MockkBean
+import com.stefanbratanov.sofiasupermarketsapi.CachingConfig
 import com.stefanbratanov.sofiasupermarketsapi.getProduct
 import com.stefanbratanov.sofiasupermarketsapi.model.Product
 import com.stefanbratanov.sofiasupermarketsapi.model.ProductStore
@@ -9,7 +10,7 @@ import com.stefanbratanov.sofiasupermarketsapi.repository.ProductStoreRepository
 import io.mockk.every
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.FilterType
 import org.springframework.http.MediaType
@@ -21,7 +22,10 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 @WebMvcTest(
   controllers = [ProductStoreController::class],
   excludeFilters =
-    [ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class])],
+    [
+      ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [ApiConfig::class]),
+      ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [CachingConfig::class]),
+    ],
 )
 internal class ProductStoreControllerTest(@Autowired val mockMvc: MockMvc) {
 

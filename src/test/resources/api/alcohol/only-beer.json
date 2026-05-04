@@ -1,7 +1,7 @@
 [
   {
     "supermarket": "Lidl",
-    "updatedAt": "2021-03-24T11:00:46.659+00:00",
+    "updatedAt": "2021-03-24T11:00:46.659Z",
     "products": [
       {
         "name": "Mythos Бира",
@@ -15,7 +15,7 @@
   },
   {
     "supermarket": "Billa",
-    "updatedAt": "2021-03-24T11:00:34.233+00:00",
+    "updatedAt": "2021-03-24T11:00:34.233Z",
     "products": [
       {
         "name": "Бира Загорка 0,5 л",
@@ -53,7 +53,7 @@
   },
   {
     "supermarket": "Kaufland",
-    "updatedAt": "2021-03-24T11:00:42.095+00:00",
+    "updatedAt": "2021-03-24T11:00:42.095Z",
     "products": [
       {
         "name": "Загорка ретро Светло пиво",
@@ -83,7 +83,7 @@
   },
   {
     "supermarket": "T-Market",
-    "updatedAt": "2021-03-24T11:01:18.112+00:00",
+    "updatedAt": "2021-03-24T11:01:18.112Z",
     "products": [
       {
         "name": "Бира ПИРИНСКО буилка 500мл",
@@ -273,7 +273,7 @@
   },
   {
     "supermarket": "Fantastico",
-    "updatedAt": "2021-03-24T11:00:51.355+00:00",
+    "updatedAt": "2021-03-24T11:00:51.355Z",
     "products": [
       {
         "name": "Бира SCHOFFERHOFER пшенична бутилка",

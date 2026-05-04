@@ -1,7 +1,7 @@
 [
   {
     "supermarket": "Lidl",
-    "updatedAt": "2021-03-24T11:00:46.659+00:00",
+    "updatedAt": "2021-03-24T11:00:46.659Z",
     "products": [
       {
         "name": "Узо",
@@ -168,7 +168,7 @@
   },
   {
     "supermarket": "Billa",
-    "updatedAt": "2021-03-24T11:00:34.233+00:00",
+    "updatedAt": "2021-03-24T11:00:34.233Z",
     "products": [
       {
         "name": "Бонбони Raffaello 230 г",
@@ -430,7 +430,7 @@
   },
   {
     "supermarket": "Kaufland",
-    "updatedAt": "2021-03-24T11:00:42.095+00:00",
+    "updatedAt": "2021-03-24T11:00:42.095Z",
     "products": [
       {
         "name": "МЕС-КО Петрохан от нашата витрина",
@@ -700,7 +700,7 @@
   },
   {
     "supermarket": "T-Market",
-    "updatedAt": "2021-03-24T11:01:18.112+00:00",
+    "updatedAt": "2021-03-24T11:01:18.112Z",
     "products": [
       {
         "name": "Минерална вода ВЕЛИНГРАД 1.5л",
@@ -1394,7 +1394,7 @@
   },
   {
     "supermarket": "Fantastico",
-    "updatedAt": "2021-03-24T11:00:51.355+00:00",
+    "updatedAt": "2021-03-24T11:00:51.355Z",
     "products": [
       {
         "name": "Халба за бира",
