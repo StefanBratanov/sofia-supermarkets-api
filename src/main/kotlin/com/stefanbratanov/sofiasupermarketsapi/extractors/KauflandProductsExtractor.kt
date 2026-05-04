@@ -1,7 +1,5 @@
 package com.stefanbratanov.sofiasupermarketsapi.extractors
 
-import com.fasterxml.jackson.databind.JsonNode
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
 import com.stefanbratanov.sofiasupermarketsapi.common.getHtmlDocument
@@ -13,6 +11,8 @@ import java.time.LocalDate
 import org.apache.commons.lang3.StringUtils
 import org.jsoup.nodes.Document
 import org.springframework.stereotype.Component
+import tools.jackson.databind.JsonNode
+import tools.jackson.databind.ObjectMapper
 
 @Log
 @Component("Kaufland")

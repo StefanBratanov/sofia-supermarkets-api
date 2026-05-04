@@ -9,6 +9,7 @@ import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.cache.annotation.EnableCaching
+import org.springframework.context.annotation.Configuration
 import org.springframework.data.map.repository.config.EnableMapRepositories
 import org.springframework.scheduling.annotation.EnableScheduling
 import org.springframework.stereotype.Component
@@ -16,8 +17,9 @@ import org.springframework.stereotype.Component
 @SpringBootApplication
 @EnableMapRepositories
 @EnableScheduling
-@EnableCaching
 class SofiaSupermarketsApiApplication
+
+@Configuration @EnableCaching class CachingConfig
 
 fun main(args: Array<String>) {
   runApplication<SofiaSupermarketsApiApplication>(*args)
@@ -30,7 +32,7 @@ class Main(
   val alcoholController: AlcoholController,
 ) : CommandLineRunner {
 
-  override fun run(vararg args: String?) {
+  override fun run(vararg args: String) {
     scheduledFlowsRunner.runFlows()
     log.info("Warming up the /products/alcohol endpoint")
     alcoholController.alcohol(ProductCriteria(null, true), null, true)

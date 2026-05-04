@@ -1,9 +1,5 @@
 package com.stefanbratanov.sofiasupermarketsapi.api
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize
-import com.fasterxml.jackson.databind.annotation.JsonSerialize
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer
 import com.stefanbratanov.sofiasupermarketsapi.common.Log
 import com.stefanbratanov.sofiasupermarketsapi.common.Log.Companion.log
 import io.swagger.v3.oas.annotations.Operation
@@ -15,6 +11,10 @@ import kotlin.math.absoluteValue
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
+import tools.jackson.databind.annotation.JsonDeserialize
+import tools.jackson.databind.annotation.JsonSerialize
+import tools.jackson.databind.ext.javatime.deser.LocalDateDeserializer
+import tools.jackson.databind.ext.javatime.ser.LocalDateSerializer
 
 @Tag(name = "Product", description = "All operations for supermarket products")
 @RestController
