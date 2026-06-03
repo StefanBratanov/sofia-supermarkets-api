@@ -57,7 +57,7 @@ dependencies {
   implementation("org.apache.pdfbox:pdfbox:3.0.0")
   implementation("me.xdrop:fuzzywuzzy:1.4.0")
   implementation("com.cloudinary:cloudinary-http45:1.39.0")
-  implementation("org.seleniumhq.selenium:selenium-java:4.40.0")
+  implementation("org.seleniumhq.selenium:selenium-java:4.44.0")
   implementation("io.github.bonigarcia:webdrivermanager:6.3.1")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
